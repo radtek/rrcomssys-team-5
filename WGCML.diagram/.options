@@ -1,0 +1,7 @@
+# Tracing options for the WGCML.diagram plug-in
+
+# Common issues
+WGCML.diagram/debug=false
+
+# Visual IDs
+WGCML.diagram/debug/visualID=false
