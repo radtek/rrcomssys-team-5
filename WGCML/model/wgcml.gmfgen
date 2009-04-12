@@ -442,14 +442,14 @@
     <palette>
       <groups title="gcml">
         <entries xsi:type="gmfgen:ToolEntry" title="Connection" description="Create new Connection" genNodes="//@diagram/@topLevelNodes.0" genLinks="//@diagram/@links.0"/>
-        <entries xsi:type="gmfgen:ToolEntry" title="Device" description="Create new Device" genLinks="//@diagram/@links.8"/>
-        <entries xsi:type="gmfgen:ToolEntry" title="Form" description="Create new Form" genNodes="//@diagram/@topLevelNodes.1" genLinks="//@diagram/@links.1"/>
-        <entries xsi:type="gmfgen:ToolEntry" title="IsAttached" description="Create new IsAttached" genNodes="//@diagram/@topLevelNodes.2" genLinks="//@diagram/@links.3"/>
-        <entries xsi:type="gmfgen:ToolEntry" title="Medium" description="Create new Medium" genNodes="//@diagram/@topLevelNodes.3" genLinks="//@diagram/@links.5"/>
-        <entries xsi:type="gmfgen:ToolEntry" title="Person" description="Create new Person" genNodes="//@diagram/@topLevelNodes.4" genLinks="//@diagram/@links.4"/>
-        <entries xsi:type="gmfgen:ToolEntry" title="Boundary" description="Create new Boundary" genNodes="//@diagram/@topLevelNodes.5" genLinks="//@diagram/@links.6"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Device" description="Create new Device" genNodes="//@diagram/@topLevelNodes.4" genLinks="//@diagram/@links.8"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Form" description="Create new Form" genNodes="//@diagram/@topLevelNodes.1 //@diagram/@topLevelNodes.5" genLinks="//@diagram/@links.1"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="IsAttached" description="Create new IsAttached" genNodes="//@diagram/@topLevelNodes.3" genLinks="//@diagram/@links.3"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Medium" description="Create new Medium" genNodes="//@diagram/@topLevelNodes.2" genLinks="//@diagram/@links.5"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Person" description="Create new Person" genLinks="//@diagram/@links.4"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Boundary" description="Create new Boundary" genNodes="//@diagram/@topLevelNodes.7" genLinks="//@diagram/@links.6"/>
         <entries xsi:type="gmfgen:ToolEntry" title="Call" description="Create new Call" genNodes="//@diagram/@topLevelNodes.6" genLinks="//@diagram/@links.7"/>
-        <entries xsi:type="gmfgen:ToolEntry" title="Activities" description="Create new Activities" genNodes="//@diagram/@topLevelNodes.7" genLinks="//@diagram/@links.9"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Activities" description="Create new Activities" genLinks="//@diagram/@links.9"/>
         <entries xsi:type="gmfgen:ToolEntry" title="Decision" description="Create new Decision" genNodes="//@diagram/@topLevelNodes.8" genLinks="//@diagram/@links.2"/>
       </groups>
     </palette>
