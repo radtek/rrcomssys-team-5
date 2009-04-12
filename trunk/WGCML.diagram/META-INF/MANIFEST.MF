@@ -7,7 +7,7 @@ Bundle-ClassPath: .
 Bundle-Activator: gcml.diagram.part.WgcmlDiagramEditorPlugin
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Export-Package: gcml.diagram.edit.parts, 
+Export-Package: gcml.diagram.edit.parts,
  gcml.diagram.part,
  gcml.diagram.providers
 Require-Bundle: org.eclipse.core.runtime,
