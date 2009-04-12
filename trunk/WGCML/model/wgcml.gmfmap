@@ -102,7 +102,7 @@
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
-          href="wgcml.gmftool#//@palette/@tools.0/@tools.3"/>
+          href="wgcml.gmftool#//@palette/@tools.0/@tools.4"/>
       <diagramNode
           href="wgcml.gmfgraph#Medium"/>
     </ownedChild>
@@ -115,7 +115,7 @@
           href="wgcml.ecore#//IsAttached"/>
       <tool
           xsi:type="gmftool:CreationTool"
-          href="wgcml.gmftool#//@palette/@tools.0/@tools.4"/>
+          href="wgcml.gmftool#//@palette/@tools.0/@tools.3"/>
       <diagramNode
           href="wgcml.gmfgraph#IsAttached"/>
     </ownedChild>
@@ -149,7 +149,7 @@
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
-          href="wgcml.gmftool#//@palette/@tools.0/@tools.5"/>
+          href="wgcml.gmftool#//@palette/@tools.0/@tools.1"/>
       <diagramNode
           href="wgcml.gmfgraph#Device"/>
     </ownedChild>
@@ -197,7 +197,7 @@
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
-          href="wgcml.gmftool#//@palette/@tools.0/@tools.6"/>
+          href="wgcml.gmftool#//@palette/@tools.0/@tools.2"/>
       <diagramNode
           href="wgcml.gmfgraph#Form"/>
     </ownedChild>
@@ -261,7 +261,7 @@
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
-          href="wgcml.gmftool#//@palette/@tools.0/@tools.8"/>
+          href="wgcml.gmftool#//@palette/@tools.0/@tools.6"/>
       <diagramNode
           href="wgcml.gmfgraph#Boundary"/>
     </ownedChild>
