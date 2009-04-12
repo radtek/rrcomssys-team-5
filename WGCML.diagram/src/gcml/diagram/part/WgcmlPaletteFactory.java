@@ -65,12 +65,12 @@ public class WgcmlPaletteFactory {
 	 */
 	private ToolEntry createDevice2CreationTool() {
 		List/*<IElementType>*/types = new ArrayList/*<IElementType>*/(1);
-		types.add(WgcmlElementTypes.FormToConnection_4002);
-		LinkToolEntry entry = new LinkToolEntry(
+		types.add(WgcmlElementTypes.Device_2005);
+		NodeToolEntry entry = new NodeToolEntry(
 				Messages.Device2CreationTool_title,
 				Messages.Device2CreationTool_desc, types);
 		entry.setSmallIcon(WgcmlElementTypes
-				.getImageDescriptor(WgcmlElementTypes.FormToConnection_4002));
+				.getImageDescriptor(WgcmlElementTypes.Device_2005));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -79,8 +79,9 @@ public class WgcmlPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createForm3CreationTool() {
-		List/*<IElementType>*/types = new ArrayList/*<IElementType>*/(1);
+		List/*<IElementType>*/types = new ArrayList/*<IElementType>*/(2);
 		types.add(WgcmlElementTypes.Person_2002);
+		types.add(WgcmlElementTypes.Form_2006);
 		NodeToolEntry entry = new NodeToolEntry(
 				Messages.Form3CreationTool_title,
 				Messages.Form3CreationTool_desc, types);
@@ -95,25 +96,10 @@ public class WgcmlPaletteFactory {
 	 */
 	private ToolEntry createIsAttached4CreationTool() {
 		List/*<IElementType>*/types = new ArrayList/*<IElementType>*/(1);
-		types.add(WgcmlElementTypes.Medium_2003);
+		types.add(WgcmlElementTypes.IsAttached_2004);
 		NodeToolEntry entry = new NodeToolEntry(
 				Messages.IsAttached4CreationTool_title,
 				Messages.IsAttached4CreationTool_desc, types);
-		entry.setSmallIcon(WgcmlElementTypes
-				.getImageDescriptor(WgcmlElementTypes.Medium_2003));
-		entry.setLargeIcon(entry.getSmallIcon());
-		return entry;
-	}
-
-	/**
-	 * @generated
-	 */
-	private ToolEntry createMedium5CreationTool() {
-		List/*<IElementType>*/types = new ArrayList/*<IElementType>*/(1);
-		types.add(WgcmlElementTypes.IsAttached_2004);
-		NodeToolEntry entry = new NodeToolEntry(
-				Messages.Medium5CreationTool_title,
-				Messages.Medium5CreationTool_desc, types);
 		entry.setSmallIcon(WgcmlElementTypes
 				.getImageDescriptor(WgcmlElementTypes.IsAttached_2004));
 		entry.setLargeIcon(entry.getSmallIcon());
@@ -123,14 +109,29 @@ public class WgcmlPaletteFactory {
 	/**
 	 * @generated
 	 */
+	private ToolEntry createMedium5CreationTool() {
+		List/*<IElementType>*/types = new ArrayList/*<IElementType>*/(1);
+		types.add(WgcmlElementTypes.Medium_2003);
+		NodeToolEntry entry = new NodeToolEntry(
+				Messages.Medium5CreationTool_title,
+				Messages.Medium5CreationTool_desc, types);
+		entry.setSmallIcon(WgcmlElementTypes
+				.getImageDescriptor(WgcmlElementTypes.Medium_2003));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
 	private ToolEntry createPerson6CreationTool() {
 		List/*<IElementType>*/types = new ArrayList/*<IElementType>*/(1);
-		types.add(WgcmlElementTypes.Device_2005);
-		NodeToolEntry entry = new NodeToolEntry(
+		types.add(WgcmlElementTypes.MediumToForm_4006);
+		LinkToolEntry entry = new LinkToolEntry(
 				Messages.Person6CreationTool_title,
 				Messages.Person6CreationTool_desc, types);
 		entry.setSmallIcon(WgcmlElementTypes
-				.getImageDescriptor(WgcmlElementTypes.Device_2005));
+				.getImageDescriptor(WgcmlElementTypes.MediumToForm_4006));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -140,12 +141,12 @@ public class WgcmlPaletteFactory {
 	 */
 	private ToolEntry createBoundary7CreationTool() {
 		List/*<IElementType>*/types = new ArrayList/*<IElementType>*/(1);
-		types.add(WgcmlElementTypes.Form_2006);
+		types.add(WgcmlElementTypes.Boundary_2011);
 		NodeToolEntry entry = new NodeToolEntry(
 				Messages.Boundary7CreationTool_title,
 				Messages.Boundary7CreationTool_desc, types);
 		entry.setSmallIcon(WgcmlElementTypes
-				.getImageDescriptor(WgcmlElementTypes.Form_2006));
+				.getImageDescriptor(WgcmlElementTypes.Boundary_2011));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -170,12 +171,12 @@ public class WgcmlPaletteFactory {
 	 */
 	private ToolEntry createActivities9CreationTool() {
 		List/*<IElementType>*/types = new ArrayList/*<IElementType>*/(1);
-		types.add(WgcmlElementTypes.Boundary_2011);
-		NodeToolEntry entry = new NodeToolEntry(
+		types.add(WgcmlElementTypes.FormToParentForm_4009);
+		LinkToolEntry entry = new LinkToolEntry(
 				Messages.Activities9CreationTool_title,
 				Messages.Activities9CreationTool_desc, types);
 		entry.setSmallIcon(WgcmlElementTypes
-				.getImageDescriptor(WgcmlElementTypes.Boundary_2011));
+				.getImageDescriptor(WgcmlElementTypes.FormToParentForm_4009));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
