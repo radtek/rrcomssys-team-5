@@ -40,7 +40,7 @@ public enum BoundaryType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	END(0, "End", "End");
+	END(1, "End", "End");
 
 	/**
 	 * The '<em><b>Start</b></em>' literal value.
@@ -70,7 +70,7 @@ public enum BoundaryType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int END_VALUE = 0;
+	public static final int END_VALUE = 1;
 
 	/**
 	 * An array of all the '<em><b>Boundary Type</b></em>' enumerators.
@@ -133,6 +133,7 @@ public enum BoundaryType implements Enumerator {
 	public static BoundaryType get(int value) {
 		switch (value) {
 			case START_VALUE: return START;
+			case END_VALUE: return END;
 		}
 		return null;
 	}

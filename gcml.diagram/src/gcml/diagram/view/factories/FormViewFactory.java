@@ -1,6 +1,11 @@
 package gcml.diagram.view.factories;
 
+import gcml.diagram.edit.parts.FormActionEditPart;
 import gcml.diagram.edit.parts.FormEditPart;
+import gcml.diagram.edit.parts.FormFormTypeNameEditPart;
+import gcml.diagram.edit.parts.FormMediumDataTypeEditPart;
+import gcml.diagram.edit.parts.FormSuggestedApplicationEditPart;
+import gcml.diagram.edit.parts.FormVoiceCommandEditPart;
 import gcml.diagram.edit.parts.GcmlEditPart;
 import gcml.diagram.part.GcmlVisualIDRegistry;
 
@@ -9,8 +14,11 @@ import java.util.List;
 
 import org.eclipse.core.runtime.IAdaptable;
 import org.eclipse.emf.ecore.EAnnotation;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EcoreFactory;
+import org.eclipse.gmf.runtime.diagram.core.util.ViewUtil;
 import org.eclipse.gmf.runtime.diagram.ui.view.factories.AbstractShapeViewFactory;
+import org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter;
 import org.eclipse.gmf.runtime.notation.NotationFactory;
 import org.eclipse.gmf.runtime.notation.View;
 
@@ -49,5 +57,37 @@ public class FormViewFactory extends AbstractShapeViewFactory {
 					"modelID", GcmlEditPart.MODEL_ID); //$NON-NLS-1$
 			view.getEAnnotations().add(shortcutAnnotation);
 		}
+		IAdaptable eObjectAdapter = null;
+		EObject eObject = (EObject) semanticAdapter.getAdapter(EObject.class);
+		if (eObject != null) {
+			eObjectAdapter = new EObjectAdapter(eObject);
+		}
+		getViewService().createNode(eObjectAdapter, view,
+				GcmlVisualIDRegistry.getType(FormActionEditPart.VISUAL_ID),
+				ViewUtil.APPEND, true, getPreferencesHint());
+		getViewService().createNode(
+				eObjectAdapter,
+				view,
+				GcmlVisualIDRegistry
+						.getType(FormFormTypeNameEditPart.VISUAL_ID),
+				ViewUtil.APPEND, true, getPreferencesHint());
+		getViewService().createNode(
+				eObjectAdapter,
+				view,
+				GcmlVisualIDRegistry
+						.getType(FormMediumDataTypeEditPart.VISUAL_ID),
+				ViewUtil.APPEND, true, getPreferencesHint());
+		getViewService().createNode(
+				eObjectAdapter,
+				view,
+				GcmlVisualIDRegistry
+						.getType(FormSuggestedApplicationEditPart.VISUAL_ID),
+				ViewUtil.APPEND, true, getPreferencesHint());
+		getViewService().createNode(
+				eObjectAdapter,
+				view,
+				GcmlVisualIDRegistry
+						.getType(FormVoiceCommandEditPart.VISUAL_ID),
+				ViewUtil.APPEND, true, getPreferencesHint());
 	}
 }
