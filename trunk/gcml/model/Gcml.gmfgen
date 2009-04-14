@@ -1,946 +1,540 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<gmfgen:GenEditorGenerator xmi:version="2.0"
-    xmlns:xmi="http://www.omg.org/XMI"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:gmfgen="http://www.eclipse.org/gmf/2008/GenModel">
-  <diagram
-      visualID="1000"
-      editPartClassName="GcmlEditPart"
-      itemSemanticEditPolicyClassName="GcmlItemSemanticEditPolicy"
-      notationViewFactoryClassName="GcmlViewFactory"
-      canonicalEditPolicyClassName="GcmlCanonicalEditPolicy"
-      iconProviderPriority="Low"
-      validationProviderPriority="Low">
-    <diagramRunTimeClass
-        href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Diagram"/>
-    <elementType
-        xsi:type="gmfgen:MetamodelType"
-        editHelperClassName="GcmlEditHelper"/>
-    <viewmap
-        xsi:type="gmfgen:FigureViewmap"
-        figureQualifiedClassName="org.eclipse.draw2d.FreeformLayer"/>
-    <domainDiagramElement
-        href="Gcml.genmodel#//gcml/Gcml"/>
-    <topLevelNodes
-        visualID="2001"
-        editPartClassName="DeviceEditPart"
-        itemSemanticEditPolicyClassName="DeviceItemSemanticEditPolicy"
-        notationViewFactoryClassName="DeviceViewFactory"
-        canonicalEditPolicyClassName="DeviceCanonicalEditPolicy"
-        graphicalNodeEditPolicyClassName="DeviceGraphicalNodeEditPolicy"
-        createCommandClassName="DeviceCreateCommand">
-      <diagramRunTimeClass
-          href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
-      <elementType
-          xsi:type="gmfgen:MetamodelType"
-          editHelperClassName="DeviceEditHelper"/>
-      <viewmap
-          xsi:type="gmfgen:InnerClassViewmap"
-          layoutType="FLOW_LAYOUT"
-          className="DeviceFigure"
-          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class DeviceFigure extends org.eclipse.draw2d.RectangleFigure {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureDeviceIsLocalFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureDeviceDeviceCapabilityFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureDeviceIsVirtualFigure; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public DeviceFigure() {&#xA;&#x9;&#x9;&#xA;&#x9;org.eclipse.draw2d.FlowLayout layoutThis = new org.eclipse.draw2d.FlowLayout();&#xA;&#x9;layoutThis.setStretchMinorAxis(false);&#xA;&#x9;layoutThis.setMinorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP&#xA;);&#xA;&#xA;&#x9;layoutThis.setMajorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP&#xA;);&#xA;&#x9;layoutThis.setMajorSpacing(5);&#xA;&#x9;layoutThis.setMinorSpacing(5);&#xA;&#x9;layoutThis.setHorizontal(true);&#xA;&#xA;&#x9;this.setLayoutManager(layoutThis);&#xA;&#xA;&#x9;&#x9;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureDeviceIsLocalFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigureDeviceIsLocalFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigureDeviceIsLocalFigure);&#xA;&#xA;&#xA;&#xA;fFigureDeviceDeviceCapabilityFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigureDeviceDeviceCapabilityFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigureDeviceDeviceCapabilityFigure);&#xA;&#xA;&#xA;&#xA;fFigureDeviceIsVirtualFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigureDeviceIsVirtualFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigureDeviceIsVirtualFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private boolean myUseLocalCoordinates = false;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;protected boolean useLocalCoordinates() {&#xA;&#x9;&#x9;return myUseLocalCoordinates;&#xA;&#x9;}&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;protected void setUseLocalCoordinates(boolean useLocalCoordinates) {&#xA;&#x9;&#x9;myUseLocalCoordinates = useLocalCoordinates;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureDeviceIsLocalFigure() {&#xA;&#x9;&#x9;return fFigureDeviceIsLocalFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureDeviceDeviceCapabilityFigure() {&#xA;&#x9;&#x9;return fFigureDeviceDeviceCapabilityFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureDeviceIsVirtualFigure() {&#xA;&#x9;&#x9;return fFigureDeviceIsVirtualFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;">
+<gmfgen:GenEditorGenerator xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gmfgen="http://www.eclipse.org/gmf/2008/GenModel">
+  <diagram visualID="1000" editPartClassName="GcmlEditPart" itemSemanticEditPolicyClassName="GcmlItemSemanticEditPolicy" notationViewFactoryClassName="GcmlViewFactory" canonicalEditPolicyClassName="GcmlCanonicalEditPolicy" iconProviderPriority="Low" validationProviderPriority="Low">
+    <diagramRunTimeClass href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Diagram"/>
+    <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="GcmlEditHelper"/>
+    <viewmap xsi:type="gmfgen:FigureViewmap" figureQualifiedClassName="org.eclipse.draw2d.FreeformLayer"/>
+    <domainDiagramElement href="Gcml.genmodel#//gcml/Gcml"/>
+    <topLevelNodes visualID="2001" editPartClassName="DeviceEditPart" itemSemanticEditPolicyClassName="DeviceItemSemanticEditPolicy" notationViewFactoryClassName="DeviceViewFactory" canonicalEditPolicyClassName="DeviceCanonicalEditPolicy" graphicalNodeEditPolicyClassName="DeviceGraphicalNodeEditPolicy" createCommandClassName="DeviceCreateCommand">
+      <diagramRunTimeClass href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="DeviceEditHelper"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" layoutType="FLOW_LAYOUT" className="DeviceFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class DeviceFigure extends org.eclipse.draw2d.RectangleFigure {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureDeviceIsLocalFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureDeviceDeviceCapabilityFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureDeviceIsVirtualFigure; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public DeviceFigure() {&#xA;&#x9;&#x9;&#xA;&#x9;org.eclipse.draw2d.FlowLayout layoutThis = new org.eclipse.draw2d.FlowLayout();&#xA;&#x9;layoutThis.setStretchMinorAxis(false);&#xA;&#x9;layoutThis.setMinorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP&#xA;);&#xA;&#xA;&#x9;layoutThis.setMajorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP&#xA;);&#xA;&#x9;layoutThis.setMajorSpacing(5);&#xA;&#x9;layoutThis.setMinorSpacing(5);&#xA;&#x9;layoutThis.setHorizontal(true);&#xA;&#xA;&#x9;this.setLayoutManager(layoutThis);&#xA;&#xA;&#x9;&#x9;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureDeviceIsLocalFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigureDeviceIsLocalFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigureDeviceIsLocalFigure);&#xA;&#xA;&#xA;&#xA;fFigureDeviceDeviceCapabilityFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigureDeviceDeviceCapabilityFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigureDeviceDeviceCapabilityFigure);&#xA;&#xA;&#xA;&#xA;fFigureDeviceIsVirtualFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigureDeviceIsVirtualFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigureDeviceIsVirtualFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private boolean myUseLocalCoordinates = false;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;protected boolean useLocalCoordinates() {&#xA;&#x9;&#x9;return myUseLocalCoordinates;&#xA;&#x9;}&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;protected void setUseLocalCoordinates(boolean useLocalCoordinates) {&#xA;&#x9;&#x9;myUseLocalCoordinates = useLocalCoordinates;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureDeviceIsLocalFigure() {&#xA;&#x9;&#x9;return fFigureDeviceIsLocalFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureDeviceDeviceCapabilityFigure() {&#xA;&#x9;&#x9;return fFigureDeviceDeviceCapabilityFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureDeviceIsVirtualFigure() {&#xA;&#x9;&#x9;return fFigureDeviceIsVirtualFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;">
         <requiredPluginIDs>org.eclipse.gmf.runtime.draw2d.ui</requiredPluginIDs>
       </viewmap>
       <modelFacet>
-        <metaClass
-            href="Gcml.genmodel#//gcml/Device"/>
-        <containmentMetaFeature
-            href="Gcml.genmodel#//gcml/Gcml/device"/>
-        <childMetaFeature
-            href="Gcml.genmodel#//gcml/Gcml/device"/>
+        <metaClass href="Gcml.genmodel#//gcml/Device"/>
+        <containmentMetaFeature href="Gcml.genmodel#//gcml/Gcml/device"/>
+        <childMetaFeature href="Gcml.genmodel#//gcml/Gcml/device"/>
       </modelFacet>
+      <labels visualID="5001" editPartClassName="DeviceDeviceCapabilityEditPart" itemSemanticEditPolicyClassName="DeviceDeviceCapabilityItemSemanticEditPolicy" notationViewFactoryClassName="DeviceDeviceCapabilityViewFactory" elementIcon="true">
+        <diagramRunTimeClass href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureDeviceDeviceCapabilityFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet">
+          <metaFeatures href="Gcml.genmodel#//gcml/Device/deviceCapability"/>
+        </modelFacet>
+      </labels>
+      <labels visualID="5002" editPartClassName="DeviceIsLocalEditPart" itemSemanticEditPolicyClassName="DeviceIsLocalItemSemanticEditPolicy" notationViewFactoryClassName="DeviceIsLocalViewFactory" elementIcon="true">
+        <diagramRunTimeClass href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureDeviceIsLocalFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet">
+          <metaFeatures href="Gcml.genmodel#//gcml/Device/isLocal"/>
+        </modelFacet>
+      </labels>
+      <labels visualID="5003" editPartClassName="DeviceIsVirtualEditPart" itemSemanticEditPolicyClassName="DeviceIsVirtualItemSemanticEditPolicy" notationViewFactoryClassName="DeviceIsVirtualViewFactory" elementIcon="true">
+        <diagramRunTimeClass href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureDeviceIsVirtualFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet">
+          <metaFeatures href="Gcml.genmodel#//gcml/Device/isVirtual"/>
+        </modelFacet>
+      </labels>
     </topLevelNodes>
-    <topLevelNodes
-        visualID="2002"
-        editPartClassName="FormEditPart"
-        itemSemanticEditPolicyClassName="FormItemSemanticEditPolicy"
-        notationViewFactoryClassName="FormViewFactory"
-        canonicalEditPolicyClassName="FormCanonicalEditPolicy"
-        graphicalNodeEditPolicyClassName="FormGraphicalNodeEditPolicy"
-        createCommandClassName="FormCreateCommand">
-      <diagramRunTimeClass
-          href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
-      <elementType
-          xsi:type="gmfgen:MetamodelType"
-          editHelperClassName="FormEditHelper"/>
-      <viewmap
-          xsi:type="gmfgen:InnerClassViewmap"
-          layoutType="FLOW_LAYOUT"
-          className="FormFigure"
-          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class FormFigure extends org.eclipse.draw2d.RectangleFigure {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureFormFormTypeNameFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureFormActionFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureFormMediumDataTypeFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureFormSuggestedApplicationFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureFormVoiceCommandFigure; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public FormFigure() {&#xA;&#x9;&#x9;&#xA;&#x9;org.eclipse.draw2d.FlowLayout layoutThis = new org.eclipse.draw2d.FlowLayout();&#xA;&#x9;layoutThis.setStretchMinorAxis(false);&#xA;&#x9;layoutThis.setMinorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP&#xA;);&#xA;&#xA;&#x9;layoutThis.setMajorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP&#xA;);&#xA;&#x9;layoutThis.setMajorSpacing(5);&#xA;&#x9;layoutThis.setMinorSpacing(5);&#xA;&#x9;layoutThis.setHorizontal(true);&#xA;&#xA;&#x9;this.setLayoutManager(layoutThis);&#xA;&#xA;&#x9;&#x9;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureFormFormTypeNameFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigureFormFormTypeNameFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigureFormFormTypeNameFigure);&#xA;&#xA;&#xA;&#xA;fFigureFormActionFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigureFormActionFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigureFormActionFigure);&#xA;&#xA;&#xA;&#xA;fFigureFormMediumDataTypeFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigureFormMediumDataTypeFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigureFormMediumDataTypeFigure);&#xA;&#xA;&#xA;&#xA;fFigureFormSuggestedApplicationFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigureFormSuggestedApplicationFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigureFormSuggestedApplicationFigure);&#xA;&#xA;&#xA;&#xA;fFigureFormVoiceCommandFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigureFormVoiceCommandFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigureFormVoiceCommandFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private boolean myUseLocalCoordinates = false;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;protected boolean useLocalCoordinates() {&#xA;&#x9;&#x9;return myUseLocalCoordinates;&#xA;&#x9;}&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;protected void setUseLocalCoordinates(boolean useLocalCoordinates) {&#xA;&#x9;&#x9;myUseLocalCoordinates = useLocalCoordinates;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureFormFormTypeNameFigure() {&#xA;&#x9;&#x9;return fFigureFormFormTypeNameFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureFormActionFigure() {&#xA;&#x9;&#x9;return fFigureFormActionFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureFormMediumDataTypeFigure() {&#xA;&#x9;&#x9;return fFigureFormMediumDataTypeFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureFormSuggestedApplicationFigure() {&#xA;&#x9;&#x9;return fFigureFormSuggestedApplicationFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureFormVoiceCommandFigure() {&#xA;&#x9;&#x9;return fFigureFormVoiceCommandFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;">
+    <topLevelNodes visualID="2002" editPartClassName="FormEditPart" itemSemanticEditPolicyClassName="FormItemSemanticEditPolicy" notationViewFactoryClassName="FormViewFactory" canonicalEditPolicyClassName="FormCanonicalEditPolicy" graphicalNodeEditPolicyClassName="FormGraphicalNodeEditPolicy" createCommandClassName="FormCreateCommand">
+      <diagramRunTimeClass href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="FormEditHelper"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" layoutType="FLOW_LAYOUT" className="FormFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class FormFigure extends org.eclipse.draw2d.RectangleFigure {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureFormFormTypeNameFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureFormActionFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureFormMediumDataTypeFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureFormSuggestedApplicationFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureFormVoiceCommandFigure; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public FormFigure() {&#xA;&#x9;&#x9;&#xA;&#x9;org.eclipse.draw2d.FlowLayout layoutThis = new org.eclipse.draw2d.FlowLayout();&#xA;&#x9;layoutThis.setStretchMinorAxis(false);&#xA;&#x9;layoutThis.setMinorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP&#xA;);&#xA;&#xA;&#x9;layoutThis.setMajorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP&#xA;);&#xA;&#x9;layoutThis.setMajorSpacing(5);&#xA;&#x9;layoutThis.setMinorSpacing(5);&#xA;&#x9;layoutThis.setHorizontal(true);&#xA;&#xA;&#x9;this.setLayoutManager(layoutThis);&#xA;&#xA;&#x9;&#x9;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureFormFormTypeNameFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigureFormFormTypeNameFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigureFormFormTypeNameFigure);&#xA;&#xA;&#xA;&#xA;fFigureFormActionFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigureFormActionFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigureFormActionFigure);&#xA;&#xA;&#xA;&#xA;fFigureFormMediumDataTypeFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigureFormMediumDataTypeFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigureFormMediumDataTypeFigure);&#xA;&#xA;&#xA;&#xA;fFigureFormSuggestedApplicationFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigureFormSuggestedApplicationFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigureFormSuggestedApplicationFigure);&#xA;&#xA;&#xA;&#xA;fFigureFormVoiceCommandFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigureFormVoiceCommandFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigureFormVoiceCommandFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private boolean myUseLocalCoordinates = false;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;protected boolean useLocalCoordinates() {&#xA;&#x9;&#x9;return myUseLocalCoordinates;&#xA;&#x9;}&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;protected void setUseLocalCoordinates(boolean useLocalCoordinates) {&#xA;&#x9;&#x9;myUseLocalCoordinates = useLocalCoordinates;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureFormFormTypeNameFigure() {&#xA;&#x9;&#x9;return fFigureFormFormTypeNameFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureFormActionFigure() {&#xA;&#x9;&#x9;return fFigureFormActionFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureFormMediumDataTypeFigure() {&#xA;&#x9;&#x9;return fFigureFormMediumDataTypeFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureFormSuggestedApplicationFigure() {&#xA;&#x9;&#x9;return fFigureFormSuggestedApplicationFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureFormVoiceCommandFigure() {&#xA;&#x9;&#x9;return fFigureFormVoiceCommandFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;">
         <requiredPluginIDs>org.eclipse.gmf.runtime.draw2d.ui</requiredPluginIDs>
       </viewmap>
       <modelFacet>
-        <metaClass
-            href="Gcml.genmodel#//gcml/Form"/>
-        <containmentMetaFeature
-            href="Gcml.genmodel#//gcml/Gcml/form"/>
-        <childMetaFeature
-            href="Gcml.genmodel#//gcml/Gcml/form"/>
+        <metaClass href="Gcml.genmodel#//gcml/Form"/>
+        <containmentMetaFeature href="Gcml.genmodel#//gcml/Gcml/form"/>
+        <childMetaFeature href="Gcml.genmodel#//gcml/Gcml/form"/>
       </modelFacet>
+      <labels visualID="5004" editPartClassName="FormActionEditPart" itemSemanticEditPolicyClassName="FormActionItemSemanticEditPolicy" notationViewFactoryClassName="FormActionViewFactory" elementIcon="true">
+        <diagramRunTimeClass href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureFormActionFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet">
+          <metaFeatures href="Gcml.genmodel#//gcml/Form/action"/>
+        </modelFacet>
+      </labels>
+      <labels visualID="5005" editPartClassName="FormFormTypeNameEditPart" itemSemanticEditPolicyClassName="FormFormTypeNameItemSemanticEditPolicy" notationViewFactoryClassName="FormFormTypeNameViewFactory" elementIcon="true">
+        <diagramRunTimeClass href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureFormFormTypeNameFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet">
+          <metaFeatures href="Gcml.genmodel#//gcml/Form/formTypeName"/>
+        </modelFacet>
+      </labels>
+      <labels visualID="5006" editPartClassName="FormMediumDataTypeEditPart" itemSemanticEditPolicyClassName="FormMediumDataTypeItemSemanticEditPolicy" notationViewFactoryClassName="FormMediumDataTypeViewFactory" elementIcon="true">
+        <diagramRunTimeClass href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureFormMediumDataTypeFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" editPattern="">
+          <metaFeatures href="Gcml.genmodel#//gcml/Form/mediumDataType"/>
+        </modelFacet>
+      </labels>
+      <labels visualID="5007" editPartClassName="FormSuggestedApplicationEditPart" itemSemanticEditPolicyClassName="FormSuggestedApplicationItemSemanticEditPolicy" notationViewFactoryClassName="FormSuggestedApplicationViewFactory" elementIcon="true">
+        <diagramRunTimeClass href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureFormSuggestedApplicationFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet">
+          <metaFeatures href="Gcml.genmodel#//gcml/Form/suggestedApplication"/>
+        </modelFacet>
+      </labels>
+      <labels visualID="5008" editPartClassName="FormVoiceCommandEditPart" itemSemanticEditPolicyClassName="FormVoiceCommandItemSemanticEditPolicy" notationViewFactoryClassName="FormVoiceCommandViewFactory" elementIcon="true">
+        <diagramRunTimeClass href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureFormVoiceCommandFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet">
+          <metaFeatures href="Gcml.genmodel#//gcml/Form/voiceCommand"/>
+        </modelFacet>
+      </labels>
     </topLevelNodes>
-    <topLevelNodes
-        visualID="2003"
-        editPartClassName="MediumEditPart"
-        itemSemanticEditPolicyClassName="MediumItemSemanticEditPolicy"
-        notationViewFactoryClassName="MediumViewFactory"
-        canonicalEditPolicyClassName="MediumCanonicalEditPolicy"
-        graphicalNodeEditPolicyClassName="MediumGraphicalNodeEditPolicy"
-        createCommandClassName="MediumCreateCommand">
-      <diagramRunTimeClass
-          href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
-      <elementType
-          xsi:type="gmfgen:MetamodelType"
-          editHelperClassName="MediumEditHelper"/>
-      <viewmap
-          xsi:type="gmfgen:InnerClassViewmap"
-          layoutType="FLOW_LAYOUT"
-          className="MediumFigure"
-          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class MediumFigure extends org.eclipse.draw2d.RectangleFigure {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureMediumDerivedFromBuiltInTypeFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureMediumMediumTypeNameFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureMediumSuggestedApplicationFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureMediumVoiceCommandFigure; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public MediumFigure() {&#xA;&#x9;&#x9;&#xA;&#x9;org.eclipse.draw2d.FlowLayout layoutThis = new org.eclipse.draw2d.FlowLayout();&#xA;&#x9;layoutThis.setStretchMinorAxis(false);&#xA;&#x9;layoutThis.setMinorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP&#xA;);&#xA;&#xA;&#x9;layoutThis.setMajorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP&#xA;);&#xA;&#x9;layoutThis.setMajorSpacing(5);&#xA;&#x9;layoutThis.setMinorSpacing(5);&#xA;&#x9;layoutThis.setHorizontal(true);&#xA;&#xA;&#x9;this.setLayoutManager(layoutThis);&#xA;&#xA;&#x9;&#x9;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureMediumDerivedFromBuiltInTypeFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigureMediumDerivedFromBuiltInTypeFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigureMediumDerivedFromBuiltInTypeFigure);&#xA;&#xA;&#xA;&#xA;fFigureMediumMediumTypeNameFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigureMediumMediumTypeNameFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigureMediumMediumTypeNameFigure);&#xA;&#xA;&#xA;&#xA;fFigureMediumSuggestedApplicationFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigureMediumSuggestedApplicationFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigureMediumSuggestedApplicationFigure);&#xA;&#xA;&#xA;&#xA;fFigureMediumVoiceCommandFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigureMediumVoiceCommandFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigureMediumVoiceCommandFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private boolean myUseLocalCoordinates = false;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;protected boolean useLocalCoordinates() {&#xA;&#x9;&#x9;return myUseLocalCoordinates;&#xA;&#x9;}&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;protected void setUseLocalCoordinates(boolean useLocalCoordinates) {&#xA;&#x9;&#x9;myUseLocalCoordinates = useLocalCoordinates;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureMediumDerivedFromBuiltInTypeFigure() {&#xA;&#x9;&#x9;return fFigureMediumDerivedFromBuiltInTypeFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureMediumMediumTypeNameFigure() {&#xA;&#x9;&#x9;return fFigureMediumMediumTypeNameFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureMediumSuggestedApplicationFigure() {&#xA;&#x9;&#x9;return fFigureMediumSuggestedApplicationFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureMediumVoiceCommandFigure() {&#xA;&#x9;&#x9;return fFigureMediumVoiceCommandFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;">
+    <topLevelNodes visualID="2003" editPartClassName="MediumEditPart" itemSemanticEditPolicyClassName="MediumItemSemanticEditPolicy" notationViewFactoryClassName="MediumViewFactory" canonicalEditPolicyClassName="MediumCanonicalEditPolicy" graphicalNodeEditPolicyClassName="MediumGraphicalNodeEditPolicy" createCommandClassName="MediumCreateCommand">
+      <diagramRunTimeClass href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="MediumEditHelper"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" layoutType="FLOW_LAYOUT" className="MediumFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class MediumFigure extends org.eclipse.draw2d.RectangleFigure {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureMediumDerivedFromBuiltInTypeFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureMediumMediumTypeNameFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureMediumSuggestedApplicationFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureMediumVoiceCommandFigure; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public MediumFigure() {&#xA;&#x9;&#x9;&#xA;&#x9;org.eclipse.draw2d.FlowLayout layoutThis = new org.eclipse.draw2d.FlowLayout();&#xA;&#x9;layoutThis.setStretchMinorAxis(false);&#xA;&#x9;layoutThis.setMinorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP&#xA;);&#xA;&#xA;&#x9;layoutThis.setMajorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP&#xA;);&#xA;&#x9;layoutThis.setMajorSpacing(5);&#xA;&#x9;layoutThis.setMinorSpacing(5);&#xA;&#x9;layoutThis.setHorizontal(true);&#xA;&#xA;&#x9;this.setLayoutManager(layoutThis);&#xA;&#xA;&#x9;&#x9;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureMediumDerivedFromBuiltInTypeFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigureMediumDerivedFromBuiltInTypeFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigureMediumDerivedFromBuiltInTypeFigure);&#xA;&#xA;&#xA;&#xA;fFigureMediumMediumTypeNameFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigureMediumMediumTypeNameFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigureMediumMediumTypeNameFigure);&#xA;&#xA;&#xA;&#xA;fFigureMediumSuggestedApplicationFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigureMediumSuggestedApplicationFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigureMediumSuggestedApplicationFigure);&#xA;&#xA;&#xA;&#xA;fFigureMediumVoiceCommandFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigureMediumVoiceCommandFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigureMediumVoiceCommandFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private boolean myUseLocalCoordinates = false;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;protected boolean useLocalCoordinates() {&#xA;&#x9;&#x9;return myUseLocalCoordinates;&#xA;&#x9;}&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;protected void setUseLocalCoordinates(boolean useLocalCoordinates) {&#xA;&#x9;&#x9;myUseLocalCoordinates = useLocalCoordinates;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureMediumDerivedFromBuiltInTypeFigure() {&#xA;&#x9;&#x9;return fFigureMediumDerivedFromBuiltInTypeFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureMediumMediumTypeNameFigure() {&#xA;&#x9;&#x9;return fFigureMediumMediumTypeNameFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureMediumSuggestedApplicationFigure() {&#xA;&#x9;&#x9;return fFigureMediumSuggestedApplicationFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureMediumVoiceCommandFigure() {&#xA;&#x9;&#x9;return fFigureMediumVoiceCommandFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;">
         <requiredPluginIDs>org.eclipse.gmf.runtime.draw2d.ui</requiredPluginIDs>
       </viewmap>
       <modelFacet>
-        <metaClass
-            href="Gcml.genmodel#//gcml/Medium"/>
-        <containmentMetaFeature
-            href="Gcml.genmodel#//gcml/Gcml/medium"/>
-        <childMetaFeature
-            href="Gcml.genmodel#//gcml/Gcml/medium"/>
+        <metaClass href="Gcml.genmodel#//gcml/Medium"/>
+        <containmentMetaFeature href="Gcml.genmodel#//gcml/Gcml/medium"/>
+        <childMetaFeature href="Gcml.genmodel#//gcml/Gcml/medium"/>
       </modelFacet>
+      <labels visualID="5009" editPartClassName="MediumDerivedFromBuiltInTypeEditPart" itemSemanticEditPolicyClassName="MediumDerivedFromBuiltInTypeItemSemanticEditPolicy" notationViewFactoryClassName="MediumDerivedFromBuiltInTypeViewFactory" elementIcon="true">
+        <diagramRunTimeClass href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureMediumDerivedFromBuiltInTypeFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet">
+          <metaFeatures href="Gcml.genmodel#//gcml/Medium/derivedFromBuiltInType"/>
+        </modelFacet>
+      </labels>
+      <labels visualID="5010" editPartClassName="MediumMediumTypeNameEditPart" itemSemanticEditPolicyClassName="MediumMediumTypeNameItemSemanticEditPolicy" notationViewFactoryClassName="MediumMediumTypeNameViewFactory" elementIcon="true">
+        <diagramRunTimeClass href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureMediumMediumTypeNameFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet">
+          <metaFeatures href="Gcml.genmodel#//gcml/Medium/mediumTypeName"/>
+        </modelFacet>
+      </labels>
+      <labels visualID="5011" editPartClassName="MediumSuggestedApplicationEditPart" itemSemanticEditPolicyClassName="MediumSuggestedApplicationItemSemanticEditPolicy" notationViewFactoryClassName="MediumSuggestedApplicationViewFactory" elementIcon="true">
+        <diagramRunTimeClass href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureMediumSuggestedApplicationFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet">
+          <metaFeatures href="Gcml.genmodel#//gcml/Medium/suggestedApplication"/>
+        </modelFacet>
+      </labels>
+      <labels visualID="5012" editPartClassName="MediumVoiceCommandEditPart" itemSemanticEditPolicyClassName="MediumVoiceCommandItemSemanticEditPolicy" notationViewFactoryClassName="MediumVoiceCommandViewFactory" elementIcon="true">
+        <diagramRunTimeClass href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureMediumVoiceCommandFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet">
+          <metaFeatures href="Gcml.genmodel#//gcml/Medium/voiceCommand"/>
+        </modelFacet>
+      </labels>
     </topLevelNodes>
-    <topLevelNodes
-        visualID="2004"
-        editPartClassName="CallEditPart"
-        itemSemanticEditPolicyClassName="CallItemSemanticEditPolicy"
-        notationViewFactoryClassName="CallViewFactory"
-        canonicalEditPolicyClassName="CallCanonicalEditPolicy"
-        graphicalNodeEditPolicyClassName="CallGraphicalNodeEditPolicy"
-        createCommandClassName="CallCreateCommand">
-      <diagramRunTimeClass
-          href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
-      <elementType
-          xsi:type="gmfgen:MetamodelType"
-          editHelperClassName="CallEditHelper"/>
-      <viewmap
-          xsi:type="gmfgen:InnerClassViewmap"
-          layoutType="FLOW_LAYOUT"
-          className="CallFigure"
-          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class CallFigure extends org.eclipse.draw2d.RectangleFigure {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureCallActivityIDFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureCallOutcomeFigure; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public CallFigure() {&#xA;&#x9;&#x9;&#xA;&#x9;org.eclipse.draw2d.FlowLayout layoutThis = new org.eclipse.draw2d.FlowLayout();&#xA;&#x9;layoutThis.setStretchMinorAxis(false);&#xA;&#x9;layoutThis.setMinorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP&#xA;);&#xA;&#xA;&#x9;layoutThis.setMajorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP&#xA;);&#xA;&#x9;layoutThis.setMajorSpacing(5);&#xA;&#x9;layoutThis.setMinorSpacing(5);&#xA;&#x9;layoutThis.setHorizontal(true);&#xA;&#xA;&#x9;this.setLayoutManager(layoutThis);&#xA;&#xA;&#x9;&#x9;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureCallActivityIDFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigureCallActivityIDFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigureCallActivityIDFigure);&#xA;&#xA;&#xA;&#xA;fFigureCallOutcomeFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigureCallOutcomeFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigureCallOutcomeFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private boolean myUseLocalCoordinates = false;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;protected boolean useLocalCoordinates() {&#xA;&#x9;&#x9;return myUseLocalCoordinates;&#xA;&#x9;}&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;protected void setUseLocalCoordinates(boolean useLocalCoordinates) {&#xA;&#x9;&#x9;myUseLocalCoordinates = useLocalCoordinates;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureCallActivityIDFigure() {&#xA;&#x9;&#x9;return fFigureCallActivityIDFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureCallOutcomeFigure() {&#xA;&#x9;&#x9;return fFigureCallOutcomeFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;">
+    <topLevelNodes visualID="2004" editPartClassName="CallEditPart" itemSemanticEditPolicyClassName="CallItemSemanticEditPolicy" notationViewFactoryClassName="CallViewFactory" canonicalEditPolicyClassName="CallCanonicalEditPolicy" graphicalNodeEditPolicyClassName="CallGraphicalNodeEditPolicy" createCommandClassName="CallCreateCommand">
+      <diagramRunTimeClass href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="CallEditHelper"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" layoutType="FLOW_LAYOUT" className="CallFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class CallFigure extends org.eclipse.draw2d.RectangleFigure {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureCallActivityIDFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureCallOutcomeFigure; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public CallFigure() {&#xA;&#x9;&#x9;&#xA;&#x9;org.eclipse.draw2d.FlowLayout layoutThis = new org.eclipse.draw2d.FlowLayout();&#xA;&#x9;layoutThis.setStretchMinorAxis(false);&#xA;&#x9;layoutThis.setMinorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP&#xA;);&#xA;&#xA;&#x9;layoutThis.setMajorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP&#xA;);&#xA;&#x9;layoutThis.setMajorSpacing(5);&#xA;&#x9;layoutThis.setMinorSpacing(5);&#xA;&#x9;layoutThis.setHorizontal(true);&#xA;&#xA;&#x9;this.setLayoutManager(layoutThis);&#xA;&#xA;&#x9;&#x9;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureCallActivityIDFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigureCallActivityIDFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigureCallActivityIDFigure);&#xA;&#xA;&#xA;&#xA;fFigureCallOutcomeFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigureCallOutcomeFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigureCallOutcomeFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private boolean myUseLocalCoordinates = false;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;protected boolean useLocalCoordinates() {&#xA;&#x9;&#x9;return myUseLocalCoordinates;&#xA;&#x9;}&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;protected void setUseLocalCoordinates(boolean useLocalCoordinates) {&#xA;&#x9;&#x9;myUseLocalCoordinates = useLocalCoordinates;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureCallActivityIDFigure() {&#xA;&#x9;&#x9;return fFigureCallActivityIDFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureCallOutcomeFigure() {&#xA;&#x9;&#x9;return fFigureCallOutcomeFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;">
         <requiredPluginIDs>org.eclipse.gmf.runtime.draw2d.ui</requiredPluginIDs>
       </viewmap>
       <modelFacet>
-        <metaClass
-            href="Gcml.genmodel#//gcml/Call"/>
-        <containmentMetaFeature
-            href="Gcml.genmodel#//gcml/Gcml/activities"/>
-        <childMetaFeature
-            href="Gcml.genmodel#//gcml/Gcml/activities"/>
+        <metaClass href="Gcml.genmodel#//gcml/Call"/>
+        <containmentMetaFeature href="Gcml.genmodel#//gcml/Gcml/activities"/>
+        <childMetaFeature href="Gcml.genmodel#//gcml/Gcml/activities"/>
       </modelFacet>
+      <labels visualID="5013" editPartClassName="CallActivityIDEditPart" itemSemanticEditPolicyClassName="CallActivityIDItemSemanticEditPolicy" notationViewFactoryClassName="CallActivityIDViewFactory" elementIcon="true">
+        <diagramRunTimeClass href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureCallActivityIDFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet">
+          <metaFeatures href="Gcml.genmodel#//gcml/Activity/ActivityID"/>
+        </modelFacet>
+      </labels>
+      <labels visualID="5014" editPartClassName="CallOutcomeEditPart" itemSemanticEditPolicyClassName="CallOutcomeItemSemanticEditPolicy" notationViewFactoryClassName="CallOutcomeViewFactory" elementIcon="true">
+        <diagramRunTimeClass href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureCallOutcomeFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet">
+          <metaFeatures href="Gcml.genmodel#//gcml/Call/outcome"/>
+        </modelFacet>
+      </labels>
     </topLevelNodes>
-    <topLevelNodes
-        visualID="2005"
-        editPartClassName="BoundaryEditPart"
-        itemSemanticEditPolicyClassName="BoundaryItemSemanticEditPolicy"
-        notationViewFactoryClassName="BoundaryViewFactory"
-        canonicalEditPolicyClassName="BoundaryCanonicalEditPolicy"
-        graphicalNodeEditPolicyClassName="BoundaryGraphicalNodeEditPolicy"
-        createCommandClassName="BoundaryCreateCommand">
-      <diagramRunTimeClass
-          href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
-      <elementType
-          xsi:type="gmfgen:MetamodelType"
-          editHelperClassName="BoundaryEditHelper"/>
-      <viewmap
-          xsi:type="gmfgen:InnerClassViewmap"
-          layoutType="FLOW_LAYOUT"
-          className="BoundaryFigure"
-          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class BoundaryFigure extends org.eclipse.draw2d.RectangleFigure {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureBoundaryActivityIDFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureBoundaryTypeFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureBoundaryOutcomeFigure; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public BoundaryFigure() {&#xA;&#x9;&#x9;&#xA;&#x9;org.eclipse.draw2d.FlowLayout layoutThis = new org.eclipse.draw2d.FlowLayout();&#xA;&#x9;layoutThis.setStretchMinorAxis(false);&#xA;&#x9;layoutThis.setMinorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP&#xA;);&#xA;&#xA;&#x9;layoutThis.setMajorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP&#xA;);&#xA;&#x9;layoutThis.setMajorSpacing(5);&#xA;&#x9;layoutThis.setMinorSpacing(5);&#xA;&#x9;layoutThis.setHorizontal(true);&#xA;&#xA;&#x9;this.setLayoutManager(layoutThis);&#xA;&#xA;&#x9;&#x9;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureBoundaryActivityIDFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigureBoundaryActivityIDFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigureBoundaryActivityIDFigure);&#xA;&#xA;&#xA;&#xA;fFigureBoundaryTypeFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigureBoundaryTypeFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigureBoundaryTypeFigure);&#xA;&#xA;&#xA;&#xA;fFigureBoundaryOutcomeFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigureBoundaryOutcomeFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigureBoundaryOutcomeFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private boolean myUseLocalCoordinates = false;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;protected boolean useLocalCoordinates() {&#xA;&#x9;&#x9;return myUseLocalCoordinates;&#xA;&#x9;}&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;protected void setUseLocalCoordinates(boolean useLocalCoordinates) {&#xA;&#x9;&#x9;myUseLocalCoordinates = useLocalCoordinates;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureBoundaryActivityIDFigure() {&#xA;&#x9;&#x9;return fFigureBoundaryActivityIDFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureBoundaryTypeFigure() {&#xA;&#x9;&#x9;return fFigureBoundaryTypeFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureBoundaryOutcomeFigure() {&#xA;&#x9;&#x9;return fFigureBoundaryOutcomeFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;">
+    <topLevelNodes visualID="2005" editPartClassName="BoundaryEditPart" itemSemanticEditPolicyClassName="BoundaryItemSemanticEditPolicy" notationViewFactoryClassName="BoundaryViewFactory" canonicalEditPolicyClassName="BoundaryCanonicalEditPolicy" graphicalNodeEditPolicyClassName="BoundaryGraphicalNodeEditPolicy" createCommandClassName="BoundaryCreateCommand">
+      <diagramRunTimeClass href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="BoundaryEditHelper"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" layoutType="FLOW_LAYOUT" className="BoundaryFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class BoundaryFigure extends org.eclipse.draw2d.RectangleFigure {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureBoundaryActivityIDFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureBoundaryTypeFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureBoundaryOutcomeFigure; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public BoundaryFigure() {&#xA;&#x9;&#x9;&#xA;&#x9;org.eclipse.draw2d.FlowLayout layoutThis = new org.eclipse.draw2d.FlowLayout();&#xA;&#x9;layoutThis.setStretchMinorAxis(false);&#xA;&#x9;layoutThis.setMinorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP&#xA;);&#xA;&#xA;&#x9;layoutThis.setMajorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP&#xA;);&#xA;&#x9;layoutThis.setMajorSpacing(5);&#xA;&#x9;layoutThis.setMinorSpacing(5);&#xA;&#x9;layoutThis.setHorizontal(true);&#xA;&#xA;&#x9;this.setLayoutManager(layoutThis);&#xA;&#xA;&#x9;&#x9;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureBoundaryActivityIDFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigureBoundaryActivityIDFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigureBoundaryActivityIDFigure);&#xA;&#xA;&#xA;&#xA;fFigureBoundaryTypeFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigureBoundaryTypeFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigureBoundaryTypeFigure);&#xA;&#xA;&#xA;&#xA;fFigureBoundaryOutcomeFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigureBoundaryOutcomeFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigureBoundaryOutcomeFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private boolean myUseLocalCoordinates = false;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;protected boolean useLocalCoordinates() {&#xA;&#x9;&#x9;return myUseLocalCoordinates;&#xA;&#x9;}&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;protected void setUseLocalCoordinates(boolean useLocalCoordinates) {&#xA;&#x9;&#x9;myUseLocalCoordinates = useLocalCoordinates;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureBoundaryActivityIDFigure() {&#xA;&#x9;&#x9;return fFigureBoundaryActivityIDFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureBoundaryTypeFigure() {&#xA;&#x9;&#x9;return fFigureBoundaryTypeFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureBoundaryOutcomeFigure() {&#xA;&#x9;&#x9;return fFigureBoundaryOutcomeFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;">
         <requiredPluginIDs>org.eclipse.gmf.runtime.draw2d.ui</requiredPluginIDs>
       </viewmap>
       <modelFacet>
-        <metaClass
-            href="Gcml.genmodel#//gcml/Boundary"/>
-        <containmentMetaFeature
-            href="Gcml.genmodel#//gcml/Gcml/activities"/>
-        <childMetaFeature
-            href="Gcml.genmodel#//gcml/Gcml/activities"/>
+        <metaClass href="Gcml.genmodel#//gcml/Boundary"/>
+        <containmentMetaFeature href="Gcml.genmodel#//gcml/Gcml/activities"/>
+        <childMetaFeature href="Gcml.genmodel#//gcml/Gcml/activities"/>
       </modelFacet>
+      <labels visualID="5015" editPartClassName="BoundaryActivityIDEditPart" itemSemanticEditPolicyClassName="BoundaryActivityIDItemSemanticEditPolicy" notationViewFactoryClassName="BoundaryActivityIDViewFactory" elementIcon="true">
+        <diagramRunTimeClass href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureBoundaryActivityIDFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet">
+          <metaFeatures href="Gcml.genmodel#//gcml/Activity/ActivityID"/>
+        </modelFacet>
+      </labels>
+      <labels visualID="5016" editPartClassName="BoundaryTypeEditPart" itemSemanticEditPolicyClassName="BoundaryTypeItemSemanticEditPolicy" notationViewFactoryClassName="BoundaryTypeViewFactory" elementIcon="true">
+        <diagramRunTimeClass href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureBoundaryTypeFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet">
+          <metaFeatures href="Gcml.genmodel#//gcml/Boundary/Type"/>
+        </modelFacet>
+      </labels>
     </topLevelNodes>
-    <topLevelNodes
-        visualID="2006"
-        editPartClassName="PersonEditPart"
-        itemSemanticEditPolicyClassName="PersonItemSemanticEditPolicy"
-        notationViewFactoryClassName="PersonViewFactory"
-        canonicalEditPolicyClassName="PersonCanonicalEditPolicy"
-        graphicalNodeEditPolicyClassName="PersonGraphicalNodeEditPolicy"
-        createCommandClassName="PersonCreateCommand">
-      <diagramRunTimeClass
-          href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
-      <elementType
-          xsi:type="gmfgen:MetamodelType"
-          editHelperClassName="PersonEditHelper"/>
-      <viewmap
-          xsi:type="gmfgen:InnerClassViewmap"
-          layoutType="FLOW_LAYOUT"
-          className="PersonFigure"
-          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class PersonFigure extends org.eclipse.draw2d.RectangleFigure {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigurePersonPersonIDFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigurePersonPersonNameFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigurePersonPersonRoleFigure; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public PersonFigure() {&#xA;&#x9;&#x9;&#xA;&#x9;org.eclipse.draw2d.FlowLayout layoutThis = new org.eclipse.draw2d.FlowLayout();&#xA;&#x9;layoutThis.setStretchMinorAxis(false);&#xA;&#x9;layoutThis.setMinorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP&#xA;);&#xA;&#xA;&#x9;layoutThis.setMajorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP&#xA;);&#xA;&#x9;layoutThis.setMajorSpacing(5);&#xA;&#x9;layoutThis.setMinorSpacing(5);&#xA;&#x9;layoutThis.setHorizontal(true);&#xA;&#xA;&#x9;this.setLayoutManager(layoutThis);&#xA;&#xA;&#x9;&#x9;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigurePersonPersonIDFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigurePersonPersonIDFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigurePersonPersonIDFigure);&#xA;&#xA;&#xA;&#xA;fFigurePersonPersonNameFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigurePersonPersonNameFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigurePersonPersonNameFigure);&#xA;&#xA;&#xA;&#xA;fFigurePersonPersonRoleFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigurePersonPersonRoleFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigurePersonPersonRoleFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private boolean myUseLocalCoordinates = false;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;protected boolean useLocalCoordinates() {&#xA;&#x9;&#x9;return myUseLocalCoordinates;&#xA;&#x9;}&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;protected void setUseLocalCoordinates(boolean useLocalCoordinates) {&#xA;&#x9;&#x9;myUseLocalCoordinates = useLocalCoordinates;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigurePersonPersonIDFigure() {&#xA;&#x9;&#x9;return fFigurePersonPersonIDFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigurePersonPersonNameFigure() {&#xA;&#x9;&#x9;return fFigurePersonPersonNameFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigurePersonPersonRoleFigure() {&#xA;&#x9;&#x9;return fFigurePersonPersonRoleFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;">
+    <topLevelNodes visualID="2006" editPartClassName="PersonEditPart" itemSemanticEditPolicyClassName="PersonItemSemanticEditPolicy" notationViewFactoryClassName="PersonViewFactory" canonicalEditPolicyClassName="PersonCanonicalEditPolicy" graphicalNodeEditPolicyClassName="PersonGraphicalNodeEditPolicy" createCommandClassName="PersonCreateCommand">
+      <diagramRunTimeClass href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="PersonEditHelper"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" layoutType="FLOW_LAYOUT" className="PersonFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class PersonFigure extends org.eclipse.draw2d.RectangleFigure {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigurePersonPersonIDFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigurePersonPersonNameFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigurePersonPersonRoleFigure; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public PersonFigure() {&#xA;&#x9;&#x9;&#xA;&#x9;org.eclipse.draw2d.FlowLayout layoutThis = new org.eclipse.draw2d.FlowLayout();&#xA;&#x9;layoutThis.setStretchMinorAxis(false);&#xA;&#x9;layoutThis.setMinorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP&#xA;);&#xA;&#xA;&#x9;layoutThis.setMajorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP&#xA;);&#xA;&#x9;layoutThis.setMajorSpacing(5);&#xA;&#x9;layoutThis.setMinorSpacing(5);&#xA;&#x9;layoutThis.setHorizontal(true);&#xA;&#xA;&#x9;this.setLayoutManager(layoutThis);&#xA;&#xA;&#x9;&#x9;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigurePersonPersonIDFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigurePersonPersonIDFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigurePersonPersonIDFigure);&#xA;&#xA;&#xA;&#xA;fFigurePersonPersonNameFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigurePersonPersonNameFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigurePersonPersonNameFigure);&#xA;&#xA;&#xA;&#xA;fFigurePersonPersonRoleFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigurePersonPersonRoleFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigurePersonPersonRoleFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private boolean myUseLocalCoordinates = false;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;protected boolean useLocalCoordinates() {&#xA;&#x9;&#x9;return myUseLocalCoordinates;&#xA;&#x9;}&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;protected void setUseLocalCoordinates(boolean useLocalCoordinates) {&#xA;&#x9;&#x9;myUseLocalCoordinates = useLocalCoordinates;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigurePersonPersonIDFigure() {&#xA;&#x9;&#x9;return fFigurePersonPersonIDFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigurePersonPersonNameFigure() {&#xA;&#x9;&#x9;return fFigurePersonPersonNameFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigurePersonPersonRoleFigure() {&#xA;&#x9;&#x9;return fFigurePersonPersonRoleFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;">
         <requiredPluginIDs>org.eclipse.gmf.runtime.draw2d.ui</requiredPluginIDs>
       </viewmap>
       <modelFacet>
-        <metaClass
-            href="Gcml.genmodel#//gcml/Person"/>
-        <containmentMetaFeature
-            href="Gcml.genmodel#//gcml/Gcml/person"/>
-        <childMetaFeature
-            href="Gcml.genmodel#//gcml/Gcml/person"/>
+        <metaClass href="Gcml.genmodel#//gcml/Person"/>
+        <containmentMetaFeature href="Gcml.genmodel#//gcml/Gcml/person"/>
+        <childMetaFeature href="Gcml.genmodel#//gcml/Gcml/person"/>
       </modelFacet>
+      <labels visualID="5017" editPartClassName="PersonPersonIDEditPart" itemSemanticEditPolicyClassName="PersonPersonIDItemSemanticEditPolicy" notationViewFactoryClassName="PersonPersonIDViewFactory" elementIcon="true">
+        <diagramRunTimeClass href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigurePersonPersonIDFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet">
+          <metaFeatures href="Gcml.genmodel#//gcml/Person/personID"/>
+        </modelFacet>
+      </labels>
+      <labels visualID="5018" editPartClassName="PersonPersonNameEditPart" itemSemanticEditPolicyClassName="PersonPersonNameItemSemanticEditPolicy" notationViewFactoryClassName="PersonPersonNameViewFactory" elementIcon="true">
+        <diagramRunTimeClass href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigurePersonPersonNameFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet">
+          <metaFeatures href="Gcml.genmodel#//gcml/Person/personName"/>
+        </modelFacet>
+      </labels>
+      <labels visualID="5019" editPartClassName="PersonPersonRoleEditPart" itemSemanticEditPolicyClassName="PersonPersonRoleItemSemanticEditPolicy" notationViewFactoryClassName="PersonPersonRoleViewFactory" elementIcon="true">
+        <diagramRunTimeClass href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigurePersonPersonRoleFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet">
+          <metaFeatures href="Gcml.genmodel#//gcml/Person/personRole"/>
+        </modelFacet>
+      </labels>
     </topLevelNodes>
-    <topLevelNodes
-        visualID="2007"
-        editPartClassName="IsAttachedEditPart"
-        itemSemanticEditPolicyClassName="IsAttachedItemSemanticEditPolicy"
-        notationViewFactoryClassName="IsAttachedViewFactory"
-        canonicalEditPolicyClassName="IsAttachedCanonicalEditPolicy"
-        graphicalNodeEditPolicyClassName="IsAttachedGraphicalNodeEditPolicy"
-        createCommandClassName="IsAttachedCreateCommand">
-      <diagramRunTimeClass
-          href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
-      <elementType
-          xsi:type="gmfgen:MetamodelType"
-          editHelperClassName="IsAttachedEditHelper"/>
-      <viewmap
-          xsi:type="gmfgen:FigureViewmap"
-          figureQualifiedClassName="org.eclipse.draw2d.RectangleFigure">
+    <topLevelNodes visualID="2007" editPartClassName="IsAttachedEditPart" itemSemanticEditPolicyClassName="IsAttachedItemSemanticEditPolicy" notationViewFactoryClassName="IsAttachedViewFactory" canonicalEditPolicyClassName="IsAttachedCanonicalEditPolicy" graphicalNodeEditPolicyClassName="IsAttachedGraphicalNodeEditPolicy" createCommandClassName="IsAttachedCreateCommand">
+      <diagramRunTimeClass href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="IsAttachedEditHelper"/>
+      <viewmap xsi:type="gmfgen:FigureViewmap" figureQualifiedClassName="org.eclipse.draw2d.RectangleFigure">
         <requiredPluginIDs>org.eclipse.gmf.runtime.draw2d.ui</requiredPluginIDs>
       </viewmap>
       <modelFacet>
-        <metaClass
-            href="Gcml.genmodel#//gcml/IsAttached"/>
-        <containmentMetaFeature
-            href="Gcml.genmodel#//gcml/Gcml/isAttached"/>
-        <childMetaFeature
-            href="Gcml.genmodel#//gcml/Gcml/isAttached"/>
+        <metaClass href="Gcml.genmodel#//gcml/IsAttached"/>
+        <containmentMetaFeature href="Gcml.genmodel#//gcml/Gcml/isAttached"/>
+        <childMetaFeature href="Gcml.genmodel#//gcml/Gcml/isAttached"/>
       </modelFacet>
     </topLevelNodes>
-    <topLevelNodes
-        visualID="2008"
-        editPartClassName="DecisionEditPart"
-        itemSemanticEditPolicyClassName="DecisionItemSemanticEditPolicy"
-        notationViewFactoryClassName="DecisionViewFactory"
-        canonicalEditPolicyClassName="DecisionCanonicalEditPolicy"
-        graphicalNodeEditPolicyClassName="DecisionGraphicalNodeEditPolicy"
-        createCommandClassName="DecisionCreateCommand">
-      <diagramRunTimeClass
-          href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
-      <elementType
-          xsi:type="gmfgen:MetamodelType"
-          editHelperClassName="DecisionEditHelper"/>
-      <viewmap
-          xsi:type="gmfgen:InnerClassViewmap"
-          layoutType="FLOW_LAYOUT"
-          className="DecisionFigure"
-          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class DecisionFigure extends org.eclipse.draw2d.RectangleFigure {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureDecisionActivityIDFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureDecisionSourceActivityIDFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureDecisionSuccessPathIDFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureDecisionFailPathIDFigure; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public DecisionFigure() {&#xA;&#x9;&#x9;&#xA;&#x9;org.eclipse.draw2d.FlowLayout layoutThis = new org.eclipse.draw2d.FlowLayout();&#xA;&#x9;layoutThis.setStretchMinorAxis(false);&#xA;&#x9;layoutThis.setMinorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP&#xA;);&#xA;&#xA;&#x9;layoutThis.setMajorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP&#xA;);&#xA;&#x9;layoutThis.setMajorSpacing(5);&#xA;&#x9;layoutThis.setMinorSpacing(5);&#xA;&#x9;layoutThis.setHorizontal(true);&#xA;&#xA;&#x9;this.setLayoutManager(layoutThis);&#xA;&#xA;&#x9;&#x9;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureDecisionActivityIDFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigureDecisionActivityIDFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigureDecisionActivityIDFigure);&#xA;&#xA;&#xA;&#xA;fFigureDecisionSourceActivityIDFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigureDecisionSourceActivityIDFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigureDecisionSourceActivityIDFigure);&#xA;&#xA;&#xA;&#xA;fFigureDecisionSuccessPathIDFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigureDecisionSuccessPathIDFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigureDecisionSuccessPathIDFigure);&#xA;&#xA;&#xA;&#xA;fFigureDecisionFailPathIDFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigureDecisionFailPathIDFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigureDecisionFailPathIDFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private boolean myUseLocalCoordinates = false;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;protected boolean useLocalCoordinates() {&#xA;&#x9;&#x9;return myUseLocalCoordinates;&#xA;&#x9;}&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;protected void setUseLocalCoordinates(boolean useLocalCoordinates) {&#xA;&#x9;&#x9;myUseLocalCoordinates = useLocalCoordinates;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureDecisionActivityIDFigure() {&#xA;&#x9;&#x9;return fFigureDecisionActivityIDFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureDecisionSourceActivityIDFigure() {&#xA;&#x9;&#x9;return fFigureDecisionSourceActivityIDFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureDecisionSuccessPathIDFigure() {&#xA;&#x9;&#x9;return fFigureDecisionSuccessPathIDFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureDecisionFailPathIDFigure() {&#xA;&#x9;&#x9;return fFigureDecisionFailPathIDFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;">
+    <topLevelNodes visualID="2008" editPartClassName="DecisionEditPart" itemSemanticEditPolicyClassName="DecisionItemSemanticEditPolicy" notationViewFactoryClassName="DecisionViewFactory" canonicalEditPolicyClassName="DecisionCanonicalEditPolicy" graphicalNodeEditPolicyClassName="DecisionGraphicalNodeEditPolicy" createCommandClassName="DecisionCreateCommand">
+      <diagramRunTimeClass href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="DecisionEditHelper"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" layoutType="FLOW_LAYOUT" className="DecisionFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class DecisionFigure extends org.eclipse.draw2d.RectangleFigure {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureDecisionActivityIDFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureDecisionSourceActivityIDFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureDecisionSuccessPathIDFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureDecisionFailPathIDFigure; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public DecisionFigure() {&#xA;&#x9;&#x9;&#xA;&#x9;org.eclipse.draw2d.FlowLayout layoutThis = new org.eclipse.draw2d.FlowLayout();&#xA;&#x9;layoutThis.setStretchMinorAxis(false);&#xA;&#x9;layoutThis.setMinorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP&#xA;);&#xA;&#xA;&#x9;layoutThis.setMajorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP&#xA;);&#xA;&#x9;layoutThis.setMajorSpacing(5);&#xA;&#x9;layoutThis.setMinorSpacing(5);&#xA;&#x9;layoutThis.setHorizontal(true);&#xA;&#xA;&#x9;this.setLayoutManager(layoutThis);&#xA;&#xA;&#x9;&#x9;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureDecisionActivityIDFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigureDecisionActivityIDFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigureDecisionActivityIDFigure);&#xA;&#xA;&#xA;&#xA;fFigureDecisionSourceActivityIDFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigureDecisionSourceActivityIDFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigureDecisionSourceActivityIDFigure);&#xA;&#xA;&#xA;&#xA;fFigureDecisionSuccessPathIDFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigureDecisionSuccessPathIDFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigureDecisionSuccessPathIDFigure);&#xA;&#xA;&#xA;&#xA;fFigureDecisionFailPathIDFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigureDecisionFailPathIDFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigureDecisionFailPathIDFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private boolean myUseLocalCoordinates = false;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;protected boolean useLocalCoordinates() {&#xA;&#x9;&#x9;return myUseLocalCoordinates;&#xA;&#x9;}&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;protected void setUseLocalCoordinates(boolean useLocalCoordinates) {&#xA;&#x9;&#x9;myUseLocalCoordinates = useLocalCoordinates;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureDecisionActivityIDFigure() {&#xA;&#x9;&#x9;return fFigureDecisionActivityIDFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureDecisionSourceActivityIDFigure() {&#xA;&#x9;&#x9;return fFigureDecisionSourceActivityIDFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureDecisionSuccessPathIDFigure() {&#xA;&#x9;&#x9;return fFigureDecisionSuccessPathIDFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureDecisionFailPathIDFigure() {&#xA;&#x9;&#x9;return fFigureDecisionFailPathIDFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;">
         <requiredPluginIDs>org.eclipse.gmf.runtime.draw2d.ui</requiredPluginIDs>
       </viewmap>
       <modelFacet>
-        <metaClass
-            href="Gcml.genmodel#//gcml/Decision"/>
-        <containmentMetaFeature
-            href="Gcml.genmodel#//gcml/Gcml/activities"/>
-        <childMetaFeature
-            href="Gcml.genmodel#//gcml/Gcml/activities"/>
+        <metaClass href="Gcml.genmodel#//gcml/Decision"/>
+        <containmentMetaFeature href="Gcml.genmodel#//gcml/Gcml/activities"/>
+        <childMetaFeature href="Gcml.genmodel#//gcml/Gcml/activities"/>
       </modelFacet>
+      <labels visualID="5020" editPartClassName="DecisionActivityIDEditPart" itemSemanticEditPolicyClassName="DecisionActivityIDItemSemanticEditPolicy" notationViewFactoryClassName="DecisionActivityIDViewFactory" elementIcon="true">
+        <diagramRunTimeClass href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureDecisionActivityIDFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" editPattern="">
+          <metaFeatures href="Gcml.genmodel#//gcml/Activity/ActivityID"/>
+        </modelFacet>
+      </labels>
+      <labels visualID="5021" editPartClassName="DecisionFailPathIDEditPart" itemSemanticEditPolicyClassName="DecisionFailPathIDItemSemanticEditPolicy" notationViewFactoryClassName="DecisionFailPathIDViewFactory" elementIcon="true">
+        <diagramRunTimeClass href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureDecisionFailPathIDFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet">
+          <metaFeatures href="Gcml.genmodel#//gcml/Decision/failPathID"/>
+        </modelFacet>
+      </labels>
+      <labels visualID="5022" editPartClassName="DecisionSourceActivityIDEditPart" itemSemanticEditPolicyClassName="DecisionSourceActivityIDItemSemanticEditPolicy" notationViewFactoryClassName="DecisionSourceActivityIDViewFactory" elementIcon="true">
+        <diagramRunTimeClass href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureDecisionSourceActivityIDFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet">
+          <metaFeatures href="Gcml.genmodel#//gcml/Decision/sourceActivityID"/>
+        </modelFacet>
+      </labels>
+      <labels visualID="5023" editPartClassName="DecisionSuccessPathIDEditPart" itemSemanticEditPolicyClassName="DecisionSuccessPathIDItemSemanticEditPolicy" notationViewFactoryClassName="DecisionSuccessPathIDViewFactory" elementIcon="true">
+        <diagramRunTimeClass href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureDecisionSuccessPathIDFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" editPattern="">
+          <metaFeatures href="Gcml.genmodel#//gcml/Decision/successPathID"/>
+        </modelFacet>
+      </labels>
     </topLevelNodes>
-    <topLevelNodes
-        visualID="2009"
-        editPartClassName="ConnectionEditPart"
-        itemSemanticEditPolicyClassName="ConnectionItemSemanticEditPolicy"
-        notationViewFactoryClassName="ConnectionViewFactory"
-        canonicalEditPolicyClassName="ConnectionCanonicalEditPolicy"
-        graphicalNodeEditPolicyClassName="ConnectionGraphicalNodeEditPolicy"
-        createCommandClassName="ConnectionCreateCommand">
-      <diagramRunTimeClass
-          href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
-      <elementType
-          xsi:type="gmfgen:MetamodelType"
-          editHelperClassName="ConnectionEditHelper"/>
-      <viewmap
-          xsi:type="gmfgen:InnerClassViewmap"
-          layoutType="FLOW_LAYOUT"
-          className="ConnectionFigure"
-          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class ConnectionFigure extends org.eclipse.draw2d.RectangleFigure {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureConnectionConnectionIDFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureConnectionBandwidthFigure; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public ConnectionFigure() {&#xA;&#x9;&#x9;&#xA;&#x9;org.eclipse.draw2d.FlowLayout layoutThis = new org.eclipse.draw2d.FlowLayout();&#xA;&#x9;layoutThis.setStretchMinorAxis(false);&#xA;&#x9;layoutThis.setMinorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP&#xA;);&#xA;&#xA;&#x9;layoutThis.setMajorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP&#xA;);&#xA;&#x9;layoutThis.setMajorSpacing(5);&#xA;&#x9;layoutThis.setMinorSpacing(5);&#xA;&#x9;layoutThis.setHorizontal(true);&#xA;&#xA;&#x9;this.setLayoutManager(layoutThis);&#xA;&#xA;&#x9;&#x9;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureConnectionConnectionIDFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigureConnectionConnectionIDFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigureConnectionConnectionIDFigure);&#xA;&#xA;&#xA;&#xA;fFigureConnectionBandwidthFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigureConnectionBandwidthFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigureConnectionBandwidthFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private boolean myUseLocalCoordinates = false;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;protected boolean useLocalCoordinates() {&#xA;&#x9;&#x9;return myUseLocalCoordinates;&#xA;&#x9;}&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;protected void setUseLocalCoordinates(boolean useLocalCoordinates) {&#xA;&#x9;&#x9;myUseLocalCoordinates = useLocalCoordinates;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureConnectionConnectionIDFigure() {&#xA;&#x9;&#x9;return fFigureConnectionConnectionIDFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureConnectionBandwidthFigure() {&#xA;&#x9;&#x9;return fFigureConnectionBandwidthFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;">
+    <topLevelNodes visualID="2009" editPartClassName="ConnectionEditPart" itemSemanticEditPolicyClassName="ConnectionItemSemanticEditPolicy" notationViewFactoryClassName="ConnectionViewFactory" canonicalEditPolicyClassName="ConnectionCanonicalEditPolicy" graphicalNodeEditPolicyClassName="ConnectionGraphicalNodeEditPolicy" createCommandClassName="ConnectionCreateCommand">
+      <diagramRunTimeClass href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="ConnectionEditHelper"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" layoutType="FLOW_LAYOUT" className="ConnectionFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class ConnectionFigure extends org.eclipse.draw2d.RectangleFigure {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureConnectionConnectionIDFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureConnectionBandwidthFigure; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public ConnectionFigure() {&#xA;&#x9;&#x9;&#xA;&#x9;org.eclipse.draw2d.FlowLayout layoutThis = new org.eclipse.draw2d.FlowLayout();&#xA;&#x9;layoutThis.setStretchMinorAxis(false);&#xA;&#x9;layoutThis.setMinorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP&#xA;);&#xA;&#xA;&#x9;layoutThis.setMajorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP&#xA;);&#xA;&#x9;layoutThis.setMajorSpacing(5);&#xA;&#x9;layoutThis.setMinorSpacing(5);&#xA;&#x9;layoutThis.setHorizontal(true);&#xA;&#xA;&#x9;this.setLayoutManager(layoutThis);&#xA;&#xA;&#x9;&#x9;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureConnectionConnectionIDFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigureConnectionConnectionIDFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigureConnectionConnectionIDFigure);&#xA;&#xA;&#xA;&#xA;fFigureConnectionBandwidthFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigureConnectionBandwidthFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigureConnectionBandwidthFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private boolean myUseLocalCoordinates = false;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;protected boolean useLocalCoordinates() {&#xA;&#x9;&#x9;return myUseLocalCoordinates;&#xA;&#x9;}&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;protected void setUseLocalCoordinates(boolean useLocalCoordinates) {&#xA;&#x9;&#x9;myUseLocalCoordinates = useLocalCoordinates;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureConnectionConnectionIDFigure() {&#xA;&#x9;&#x9;return fFigureConnectionConnectionIDFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureConnectionBandwidthFigure() {&#xA;&#x9;&#x9;return fFigureConnectionBandwidthFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;">
         <requiredPluginIDs>org.eclipse.gmf.runtime.draw2d.ui</requiredPluginIDs>
       </viewmap>
       <modelFacet>
-        <metaClass
-            href="Gcml.genmodel#//gcml/Connection"/>
-        <containmentMetaFeature
-            href="Gcml.genmodel#//gcml/Gcml/connection"/>
-        <childMetaFeature
-            href="Gcml.genmodel#//gcml/Gcml/connection"/>
+        <metaClass href="Gcml.genmodel#//gcml/Connection"/>
+        <containmentMetaFeature href="Gcml.genmodel#//gcml/Gcml/connection"/>
+        <childMetaFeature href="Gcml.genmodel#//gcml/Gcml/connection"/>
       </modelFacet>
+      <labels visualID="5024" editPartClassName="ConnectionBandwidthEditPart" itemSemanticEditPolicyClassName="ConnectionBandwidthItemSemanticEditPolicy" notationViewFactoryClassName="ConnectionBandwidthViewFactory" elementIcon="true">
+        <diagramRunTimeClass href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureConnectionBandwidthFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet">
+          <metaFeatures href="Gcml.genmodel#//gcml/Connection/bandwidth"/>
+        </modelFacet>
+      </labels>
+      <labels visualID="5025" editPartClassName="ConnectionConnectionIDEditPart" itemSemanticEditPolicyClassName="ConnectionConnectionIDItemSemanticEditPolicy" notationViewFactoryClassName="ConnectionConnectionIDViewFactory" elementIcon="true">
+        <diagramRunTimeClass href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureConnectionConnectionIDFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet">
+          <metaFeatures href="Gcml.genmodel#//gcml/Connection/connectionID"/>
+        </modelFacet>
+      </labels>
     </topLevelNodes>
-    <links
-        visualID="4001"
-        editPartClassName="PersonToIsAttachedEditPart"
-        itemSemanticEditPolicyClassName="PersonToIsAttachedItemSemanticEditPolicy"
-        notationViewFactoryClassName="PersonToIsAttachedViewFactory"
-        createCommandClassName="PersonToIsAttachedCreateCommand"
-        reorientCommandClassName="PersonToIsAttachedReorientCommand">
-      <diagramRunTimeClass
-          href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Edge"/>
-      <elementType
-          xsi:type="gmfgen:SpecializationType"/>
-      <viewmap
-          xsi:type="gmfgen:FigureViewmap"
-          figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx"/>
-      <modelFacet
-          xsi:type="gmfgen:FeatureLinkModelFacet">
-        <metaFeature
-            href="Gcml.genmodel#//gcml/Person/toIsAttached"/>
+    <links visualID="4001" editPartClassName="PersonToIsAttachedEditPart" itemSemanticEditPolicyClassName="PersonToIsAttachedItemSemanticEditPolicy" notationViewFactoryClassName="PersonToIsAttachedViewFactory" createCommandClassName="PersonToIsAttachedCreateCommand" reorientCommandClassName="PersonToIsAttachedReorientCommand">
+      <diagramRunTimeClass href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Edge"/>
+      <elementType xsi:type="gmfgen:SpecializationType"/>
+      <viewmap xsi:type="gmfgen:FigureViewmap" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx"/>
+      <modelFacet xsi:type="gmfgen:FeatureLinkModelFacet">
+        <metaFeature href="Gcml.genmodel#//gcml/Person/toIsAttached"/>
       </modelFacet>
     </links>
-    <links
-        visualID="4002"
-        editPartClassName="IsAttachedToDeviceEditPart"
-        itemSemanticEditPolicyClassName="IsAttachedToDeviceItemSemanticEditPolicy"
-        notationViewFactoryClassName="IsAttachedToDeviceViewFactory"
-        createCommandClassName="IsAttachedToDeviceCreateCommand"
-        reorientCommandClassName="IsAttachedToDeviceReorientCommand">
-      <diagramRunTimeClass
-          href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Edge"/>
-      <elementType
-          xsi:type="gmfgen:SpecializationType"/>
-      <viewmap
-          xsi:type="gmfgen:FigureViewmap"
-          figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx"/>
-      <modelFacet
-          xsi:type="gmfgen:FeatureLinkModelFacet">
-        <metaFeature
-            href="Gcml.genmodel#//gcml/IsAttached/toDevice"/>
+    <links visualID="4002" editPartClassName="IsAttachedToDeviceEditPart" itemSemanticEditPolicyClassName="IsAttachedToDeviceItemSemanticEditPolicy" notationViewFactoryClassName="IsAttachedToDeviceViewFactory" createCommandClassName="IsAttachedToDeviceCreateCommand" reorientCommandClassName="IsAttachedToDeviceReorientCommand">
+      <diagramRunTimeClass href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Edge"/>
+      <elementType xsi:type="gmfgen:SpecializationType"/>
+      <viewmap xsi:type="gmfgen:FigureViewmap" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx"/>
+      <modelFacet xsi:type="gmfgen:FeatureLinkModelFacet">
+        <metaFeature href="Gcml.genmodel#//gcml/IsAttached/toDevice"/>
       </modelFacet>
     </links>
-    <links
-        visualID="4003"
-        editPartClassName="DecisionDecisionToCallEditPart"
-        itemSemanticEditPolicyClassName="DecisionDecisionToCallItemSemanticEditPolicy"
-        notationViewFactoryClassName="DecisionDecisionToCallViewFactory"
-        createCommandClassName="DecisionDecisionToCallCreateCommand"
-        reorientCommandClassName="DecisionDecisionToCallReorientCommand">
-      <diagramRunTimeClass
-          href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Edge"/>
-      <elementType
-          xsi:type="gmfgen:SpecializationType"/>
-      <viewmap
-          xsi:type="gmfgen:FigureViewmap"
-          figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx"/>
-      <modelFacet
-          xsi:type="gmfgen:FeatureLinkModelFacet">
-        <metaFeature
-            href="Gcml.genmodel#//gcml/Decision/DecisionToCall"/>
+    <links visualID="4003" editPartClassName="DecisionDecisionToCallEditPart" itemSemanticEditPolicyClassName="DecisionDecisionToCallItemSemanticEditPolicy" notationViewFactoryClassName="DecisionDecisionToCallViewFactory" createCommandClassName="DecisionDecisionToCallCreateCommand" reorientCommandClassName="DecisionDecisionToCallReorientCommand">
+      <diagramRunTimeClass href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Edge"/>
+      <elementType xsi:type="gmfgen:SpecializationType"/>
+      <viewmap xsi:type="gmfgen:FigureViewmap" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx"/>
+      <modelFacet xsi:type="gmfgen:FeatureLinkModelFacet">
+        <metaFeature href="Gcml.genmodel#//gcml/Decision/DecisionToCall"/>
       </modelFacet>
     </links>
-    <links
-        visualID="4004"
-        editPartClassName="FormToParentFormEditPart"
-        itemSemanticEditPolicyClassName="FormToParentFormItemSemanticEditPolicy"
-        notationViewFactoryClassName="FormToParentFormViewFactory"
-        createCommandClassName="FormToParentFormCreateCommand"
-        reorientCommandClassName="FormToParentFormReorientCommand">
-      <diagramRunTimeClass
-          href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Edge"/>
-      <elementType
-          xsi:type="gmfgen:SpecializationType"/>
-      <viewmap
-          xsi:type="gmfgen:FigureViewmap"
-          figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx"/>
-      <modelFacet
-          xsi:type="gmfgen:FeatureLinkModelFacet">
-        <metaFeature
-            href="Gcml.genmodel#//gcml/Form/toParentForm"/>
+    <links visualID="4004" editPartClassName="FormToParentFormEditPart" itemSemanticEditPolicyClassName="FormToParentFormItemSemanticEditPolicy" notationViewFactoryClassName="FormToParentFormViewFactory" createCommandClassName="FormToParentFormCreateCommand" reorientCommandClassName="FormToParentFormReorientCommand">
+      <diagramRunTimeClass href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Edge"/>
+      <elementType xsi:type="gmfgen:SpecializationType"/>
+      <viewmap xsi:type="gmfgen:FigureViewmap" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx"/>
+      <modelFacet xsi:type="gmfgen:FeatureLinkModelFacet">
+        <metaFeature href="Gcml.genmodel#//gcml/Form/toParentForm"/>
       </modelFacet>
     </links>
-    <links
-        visualID="4005"
-        editPartClassName="BoundaryBoundaryToCallEditPart"
-        itemSemanticEditPolicyClassName="BoundaryBoundaryToCallItemSemanticEditPolicy"
-        notationViewFactoryClassName="BoundaryBoundaryToCallViewFactory"
-        createCommandClassName="BoundaryBoundaryToCallCreateCommand"
-        reorientCommandClassName="BoundaryBoundaryToCallReorientCommand">
-      <diagramRunTimeClass
-          href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Edge"/>
-      <elementType
-          xsi:type="gmfgen:SpecializationType"/>
-      <viewmap
-          xsi:type="gmfgen:FigureViewmap"
-          figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx"/>
-      <modelFacet
-          xsi:type="gmfgen:FeatureLinkModelFacet">
-        <metaFeature
-            href="Gcml.genmodel#//gcml/Boundary/BoundaryToCall"/>
+    <links visualID="4005" editPartClassName="BoundaryBoundaryToCallEditPart" itemSemanticEditPolicyClassName="BoundaryBoundaryToCallItemSemanticEditPolicy" notationViewFactoryClassName="BoundaryBoundaryToCallViewFactory" createCommandClassName="BoundaryBoundaryToCallCreateCommand" reorientCommandClassName="BoundaryBoundaryToCallReorientCommand">
+      <diagramRunTimeClass href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Edge"/>
+      <elementType xsi:type="gmfgen:SpecializationType"/>
+      <viewmap xsi:type="gmfgen:FigureViewmap" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx"/>
+      <modelFacet xsi:type="gmfgen:FeatureLinkModelFacet">
+        <metaFeature href="Gcml.genmodel#//gcml/Boundary/BoundaryToCall"/>
       </modelFacet>
     </links>
-    <links
-        visualID="4006"
-        editPartClassName="IsAttachedFromPersonEditPart"
-        itemSemanticEditPolicyClassName="IsAttachedFromPersonItemSemanticEditPolicy"
-        notationViewFactoryClassName="IsAttachedFromPersonViewFactory"
-        createCommandClassName="IsAttachedFromPersonCreateCommand"
-        reorientCommandClassName="IsAttachedFromPersonReorientCommand">
-      <diagramRunTimeClass
-          href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Edge"/>
-      <elementType
-          xsi:type="gmfgen:SpecializationType"/>
-      <viewmap
-          xsi:type="gmfgen:FigureViewmap"
-          figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx"/>
-      <modelFacet
-          xsi:type="gmfgen:FeatureLinkModelFacet">
-        <metaFeature
-            href="Gcml.genmodel#//gcml/IsAttached/fromPerson"/>
+    <links visualID="4006" editPartClassName="IsAttachedFromPersonEditPart" itemSemanticEditPolicyClassName="IsAttachedFromPersonItemSemanticEditPolicy" notationViewFactoryClassName="IsAttachedFromPersonViewFactory" createCommandClassName="IsAttachedFromPersonCreateCommand" reorientCommandClassName="IsAttachedFromPersonReorientCommand">
+      <diagramRunTimeClass href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Edge"/>
+      <elementType xsi:type="gmfgen:SpecializationType"/>
+      <viewmap xsi:type="gmfgen:FigureViewmap" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx"/>
+      <modelFacet xsi:type="gmfgen:FeatureLinkModelFacet">
+        <metaFeature href="Gcml.genmodel#//gcml/IsAttached/fromPerson"/>
       </modelFacet>
     </links>
-    <links
-        visualID="4007"
-        editPartClassName="ConnectionConnectionToCallEditPart"
-        itemSemanticEditPolicyClassName="ConnectionConnectionToCallItemSemanticEditPolicy"
-        notationViewFactoryClassName="ConnectionConnectionToCallViewFactory"
-        createCommandClassName="ConnectionConnectionToCallCreateCommand"
-        reorientCommandClassName="ConnectionConnectionToCallReorientCommand">
-      <diagramRunTimeClass
-          href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Edge"/>
-      <elementType
-          xsi:type="gmfgen:SpecializationType"/>
-      <viewmap
-          xsi:type="gmfgen:FigureViewmap"
-          figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx"/>
-      <modelFacet
-          xsi:type="gmfgen:FeatureLinkModelFacet">
-        <metaFeature
-            href="Gcml.genmodel#//gcml/Connection/ConnectionToCall"/>
+    <links visualID="4007" editPartClassName="ConnectionConnectionToCallEditPart" itemSemanticEditPolicyClassName="ConnectionConnectionToCallItemSemanticEditPolicy" notationViewFactoryClassName="ConnectionConnectionToCallViewFactory" createCommandClassName="ConnectionConnectionToCallCreateCommand" reorientCommandClassName="ConnectionConnectionToCallReorientCommand">
+      <diagramRunTimeClass href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Edge"/>
+      <elementType xsi:type="gmfgen:SpecializationType"/>
+      <viewmap xsi:type="gmfgen:FigureViewmap" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx"/>
+      <modelFacet xsi:type="gmfgen:FeatureLinkModelFacet">
+        <metaFeature href="Gcml.genmodel#//gcml/Connection/ConnectionToCall"/>
       </modelFacet>
     </links>
-    <links
-        visualID="4008"
-        editPartClassName="ConnectionFromDeviceEditPart"
-        itemSemanticEditPolicyClassName="ConnectionFromDeviceItemSemanticEditPolicy"
-        notationViewFactoryClassName="ConnectionFromDeviceViewFactory"
-        createCommandClassName="ConnectionFromDeviceCreateCommand"
-        reorientCommandClassName="ConnectionFromDeviceReorientCommand">
-      <diagramRunTimeClass
-          href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Edge"/>
-      <elementType
-          xsi:type="gmfgen:SpecializationType"/>
-      <viewmap
-          xsi:type="gmfgen:FigureViewmap"
-          figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx"/>
-      <modelFacet
-          xsi:type="gmfgen:FeatureLinkModelFacet">
-        <metaFeature
-            href="Gcml.genmodel#//gcml/Connection/fromDevice"/>
+    <links visualID="4008" editPartClassName="ConnectionFromDeviceEditPart" itemSemanticEditPolicyClassName="ConnectionFromDeviceItemSemanticEditPolicy" notationViewFactoryClassName="ConnectionFromDeviceViewFactory" createCommandClassName="ConnectionFromDeviceCreateCommand" reorientCommandClassName="ConnectionFromDeviceReorientCommand">
+      <diagramRunTimeClass href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Edge"/>
+      <elementType xsi:type="gmfgen:SpecializationType"/>
+      <viewmap xsi:type="gmfgen:FigureViewmap" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx"/>
+      <modelFacet xsi:type="gmfgen:FeatureLinkModelFacet">
+        <metaFeature href="Gcml.genmodel#//gcml/Connection/fromDevice"/>
       </modelFacet>
     </links>
-    <links
-        visualID="4009"
-        editPartClassName="FormToConnectionEditPart"
-        itemSemanticEditPolicyClassName="FormToConnectionItemSemanticEditPolicy"
-        notationViewFactoryClassName="FormToConnectionViewFactory"
-        createCommandClassName="FormToConnectionCreateCommand"
-        reorientCommandClassName="FormToConnectionReorientCommand">
-      <diagramRunTimeClass
-          href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Edge"/>
-      <elementType
-          xsi:type="gmfgen:SpecializationType"/>
-      <viewmap
-          xsi:type="gmfgen:FigureViewmap"
-          figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx"/>
-      <modelFacet
-          xsi:type="gmfgen:FeatureLinkModelFacet">
-        <metaFeature
-            href="Gcml.genmodel#//gcml/Form/toConnection"/>
+    <links visualID="4009" editPartClassName="FormToConnectionEditPart" itemSemanticEditPolicyClassName="FormToConnectionItemSemanticEditPolicy" notationViewFactoryClassName="FormToConnectionViewFactory" createCommandClassName="FormToConnectionCreateCommand" reorientCommandClassName="FormToConnectionReorientCommand">
+      <diagramRunTimeClass href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Edge"/>
+      <elementType xsi:type="gmfgen:SpecializationType"/>
+      <viewmap xsi:type="gmfgen:FigureViewmap" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx"/>
+      <modelFacet xsi:type="gmfgen:FeatureLinkModelFacet">
+        <metaFeature href="Gcml.genmodel#//gcml/Form/toConnection"/>
       </modelFacet>
     </links>
-    <links
-        visualID="4010"
-        editPartClassName="DeviceToConnectionEditPart"
-        itemSemanticEditPolicyClassName="DeviceToConnectionItemSemanticEditPolicy"
-        notationViewFactoryClassName="DeviceToConnectionViewFactory"
-        createCommandClassName="DeviceToConnectionCreateCommand"
-        reorientCommandClassName="DeviceToConnectionReorientCommand">
-      <diagramRunTimeClass
-          href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Edge"/>
-      <elementType
-          xsi:type="gmfgen:SpecializationType"/>
-      <viewmap
-          xsi:type="gmfgen:FigureViewmap"
-          figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx"/>
-      <modelFacet
-          xsi:type="gmfgen:FeatureLinkModelFacet">
-        <metaFeature
-            href="Gcml.genmodel#//gcml/Device/toConnection"/>
+    <links visualID="4010" editPartClassName="DeviceToConnectionEditPart" itemSemanticEditPolicyClassName="DeviceToConnectionItemSemanticEditPolicy" notationViewFactoryClassName="DeviceToConnectionViewFactory" createCommandClassName="DeviceToConnectionCreateCommand" reorientCommandClassName="DeviceToConnectionReorientCommand">
+      <diagramRunTimeClass href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Edge"/>
+      <elementType xsi:type="gmfgen:SpecializationType"/>
+      <viewmap xsi:type="gmfgen:FigureViewmap" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx"/>
+      <modelFacet xsi:type="gmfgen:FeatureLinkModelFacet">
+        <metaFeature href="Gcml.genmodel#//gcml/Device/toConnection"/>
       </modelFacet>
     </links>
-    <links
-        visualID="4011"
-        editPartClassName="CallCallToBoundaryEditPart"
-        itemSemanticEditPolicyClassName="CallCallToBoundaryItemSemanticEditPolicy"
-        notationViewFactoryClassName="CallCallToBoundaryViewFactory"
-        createCommandClassName="CallCallToBoundaryCreateCommand"
-        reorientCommandClassName="CallCallToBoundaryReorientCommand">
-      <diagramRunTimeClass
-          href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Edge"/>
-      <elementType
-          xsi:type="gmfgen:SpecializationType"/>
-      <viewmap
-          xsi:type="gmfgen:FigureViewmap"
-          figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx"/>
-      <modelFacet
-          xsi:type="gmfgen:FeatureLinkModelFacet">
-        <metaFeature
-            href="Gcml.genmodel#//gcml/Call/CallToBoundary"/>
+    <links visualID="4011" editPartClassName="CallCallToBoundaryEditPart" itemSemanticEditPolicyClassName="CallCallToBoundaryItemSemanticEditPolicy" notationViewFactoryClassName="CallCallToBoundaryViewFactory" createCommandClassName="CallCallToBoundaryCreateCommand" reorientCommandClassName="CallCallToBoundaryReorientCommand">
+      <diagramRunTimeClass href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Edge"/>
+      <elementType xsi:type="gmfgen:SpecializationType"/>
+      <viewmap xsi:type="gmfgen:FigureViewmap" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx"/>
+      <modelFacet xsi:type="gmfgen:FeatureLinkModelFacet">
+        <metaFeature href="Gcml.genmodel#//gcml/Call/CallToBoundary"/>
       </modelFacet>
     </links>
-    <links
-        visualID="4012"
-        editPartClassName="CallCallToConnectionEditPart"
-        itemSemanticEditPolicyClassName="CallCallToConnectionItemSemanticEditPolicy"
-        notationViewFactoryClassName="CallCallToConnectionViewFactory"
-        createCommandClassName="CallCallToConnectionCreateCommand"
-        reorientCommandClassName="CallCallToConnectionReorientCommand">
-      <diagramRunTimeClass
-          href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Edge"/>
-      <elementType
-          xsi:type="gmfgen:SpecializationType"/>
-      <viewmap
-          xsi:type="gmfgen:FigureViewmap"
-          figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx"/>
-      <modelFacet
-          xsi:type="gmfgen:FeatureLinkModelFacet">
-        <metaFeature
-            href="Gcml.genmodel#//gcml/Call/CallToConnection"/>
+    <links visualID="4012" editPartClassName="CallCallToConnectionEditPart" itemSemanticEditPolicyClassName="CallCallToConnectionItemSemanticEditPolicy" notationViewFactoryClassName="CallCallToConnectionViewFactory" createCommandClassName="CallCallToConnectionCreateCommand" reorientCommandClassName="CallCallToConnectionReorientCommand">
+      <diagramRunTimeClass href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Edge"/>
+      <elementType xsi:type="gmfgen:SpecializationType"/>
+      <viewmap xsi:type="gmfgen:FigureViewmap" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx"/>
+      <modelFacet xsi:type="gmfgen:FeatureLinkModelFacet">
+        <metaFeature href="Gcml.genmodel#//gcml/Call/CallToConnection"/>
       </modelFacet>
     </links>
-    <links
-        visualID="4013"
-        editPartClassName="DecisionDecisionToBoundaryEditPart"
-        itemSemanticEditPolicyClassName="DecisionDecisionToBoundaryItemSemanticEditPolicy"
-        notationViewFactoryClassName="DecisionDecisionToBoundaryViewFactory"
-        createCommandClassName="DecisionDecisionToBoundaryCreateCommand"
-        reorientCommandClassName="DecisionDecisionToBoundaryReorientCommand">
-      <diagramRunTimeClass
-          href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Edge"/>
-      <elementType
-          xsi:type="gmfgen:SpecializationType"/>
-      <viewmap
-          xsi:type="gmfgen:FigureViewmap"
-          figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx"/>
-      <modelFacet
-          xsi:type="gmfgen:FeatureLinkModelFacet">
-        <metaFeature
-            href="Gcml.genmodel#//gcml/Decision/DecisionToBoundary"/>
+    <links visualID="4013" editPartClassName="DecisionDecisionToBoundaryEditPart" itemSemanticEditPolicyClassName="DecisionDecisionToBoundaryItemSemanticEditPolicy" notationViewFactoryClassName="DecisionDecisionToBoundaryViewFactory" createCommandClassName="DecisionDecisionToBoundaryCreateCommand" reorientCommandClassName="DecisionDecisionToBoundaryReorientCommand">
+      <diagramRunTimeClass href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Edge"/>
+      <elementType xsi:type="gmfgen:SpecializationType"/>
+      <viewmap xsi:type="gmfgen:FigureViewmap" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx"/>
+      <modelFacet xsi:type="gmfgen:FeatureLinkModelFacet">
+        <metaFeature href="Gcml.genmodel#//gcml/Decision/DecisionToBoundary"/>
       </modelFacet>
     </links>
-    <links
-        visualID="4014"
-        editPartClassName="DeviceFromIsAttachedEditPart"
-        itemSemanticEditPolicyClassName="DeviceFromIsAttachedItemSemanticEditPolicy"
-        notationViewFactoryClassName="DeviceFromIsAttachedViewFactory"
-        createCommandClassName="DeviceFromIsAttachedCreateCommand"
-        reorientCommandClassName="DeviceFromIsAttachedReorientCommand">
-      <diagramRunTimeClass
-          href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Edge"/>
-      <elementType
-          xsi:type="gmfgen:SpecializationType"/>
-      <viewmap
-          xsi:type="gmfgen:FigureViewmap"
-          figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx"/>
-      <modelFacet
-          xsi:type="gmfgen:FeatureLinkModelFacet">
-        <metaFeature
-            href="Gcml.genmodel#//gcml/Device/fromIsAttached"/>
+    <links visualID="4014" editPartClassName="DeviceFromIsAttachedEditPart" itemSemanticEditPolicyClassName="DeviceFromIsAttachedItemSemanticEditPolicy" notationViewFactoryClassName="DeviceFromIsAttachedViewFactory" createCommandClassName="DeviceFromIsAttachedCreateCommand" reorientCommandClassName="DeviceFromIsAttachedReorientCommand">
+      <diagramRunTimeClass href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Edge"/>
+      <elementType xsi:type="gmfgen:SpecializationType"/>
+      <viewmap xsi:type="gmfgen:FigureViewmap" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx"/>
+      <modelFacet xsi:type="gmfgen:FeatureLinkModelFacet">
+        <metaFeature href="Gcml.genmodel#//gcml/Device/fromIsAttached"/>
       </modelFacet>
     </links>
-    <links
-        visualID="4015"
-        editPartClassName="CallCallToDecisionEditPart"
-        itemSemanticEditPolicyClassName="CallCallToDecisionItemSemanticEditPolicy"
-        notationViewFactoryClassName="CallCallToDecisionViewFactory"
-        createCommandClassName="CallCallToDecisionCreateCommand"
-        reorientCommandClassName="CallCallToDecisionReorientCommand">
-      <diagramRunTimeClass
-          href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Edge"/>
-      <elementType
-          xsi:type="gmfgen:SpecializationType"/>
-      <viewmap
-          xsi:type="gmfgen:FigureViewmap"
-          figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx"/>
-      <modelFacet
-          xsi:type="gmfgen:FeatureLinkModelFacet">
-        <metaFeature
-            href="Gcml.genmodel#//gcml/Call/CallToDecision"/>
+    <links visualID="4015" editPartClassName="CallCallToDecisionEditPart" itemSemanticEditPolicyClassName="CallCallToDecisionItemSemanticEditPolicy" notationViewFactoryClassName="CallCallToDecisionViewFactory" createCommandClassName="CallCallToDecisionCreateCommand" reorientCommandClassName="CallCallToDecisionReorientCommand">
+      <diagramRunTimeClass href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Edge"/>
+      <elementType xsi:type="gmfgen:SpecializationType"/>
+      <viewmap xsi:type="gmfgen:FigureViewmap" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx"/>
+      <modelFacet xsi:type="gmfgen:FeatureLinkModelFacet">
+        <metaFeature href="Gcml.genmodel#//gcml/Call/CallToDecision"/>
       </modelFacet>
     </links>
-    <links
-        visualID="4016"
-        editPartClassName="MediumToConnectionEditPart"
-        itemSemanticEditPolicyClassName="MediumToConnectionItemSemanticEditPolicy"
-        notationViewFactoryClassName="MediumToConnectionViewFactory"
-        createCommandClassName="MediumToConnectionCreateCommand"
-        reorientCommandClassName="MediumToConnectionReorientCommand">
-      <diagramRunTimeClass
-          href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Edge"/>
-      <elementType
-          xsi:type="gmfgen:SpecializationType"/>
-      <viewmap
-          xsi:type="gmfgen:FigureViewmap"
-          figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx"/>
-      <modelFacet
-          xsi:type="gmfgen:FeatureLinkModelFacet">
-        <metaFeature
-            href="Gcml.genmodel#//gcml/Medium/toConnection"/>
+    <links visualID="4016" editPartClassName="MediumToConnectionEditPart" itemSemanticEditPolicyClassName="MediumToConnectionItemSemanticEditPolicy" notationViewFactoryClassName="MediumToConnectionViewFactory" createCommandClassName="MediumToConnectionCreateCommand" reorientCommandClassName="MediumToConnectionReorientCommand">
+      <diagramRunTimeClass href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Edge"/>
+      <elementType xsi:type="gmfgen:SpecializationType"/>
+      <viewmap xsi:type="gmfgen:FigureViewmap" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx"/>
+      <modelFacet xsi:type="gmfgen:FeatureLinkModelFacet">
+        <metaFeature href="Gcml.genmodel#//gcml/Medium/toConnection"/>
       </modelFacet>
     </links>
     <palette>
-      <groups
-          title="gcml">
-        <entries
-            xsi:type="gmfgen:ToolEntry"
-            title="Connection"
-            description="Create new Connection"
-            genNodes="//@diagram/@topLevelNodes.8"
-            genLinks="//@diagram/@links.6 //@diagram/@links.7"/>
-        <entries
-            xsi:type="gmfgen:ToolEntry"
-            title="Device"
-            description="Create new Device"
-            genNodes="//@diagram/@topLevelNodes.0"
-            genLinks="//@diagram/@links.8"/>
-        <entries
-            xsi:type="gmfgen:ToolEntry"
-            title="Form"
-            description="Create new Form"
-            genNodes="//@diagram/@topLevelNodes.1"
-            genLinks="//@diagram/@links.3 //@diagram/@links.15"/>
-        <entries
-            xsi:type="gmfgen:ToolEntry"
-            title="IsAttached"
-            description="Create new IsAttached"
-            genNodes="//@diagram/@topLevelNodes.6"
-            genLinks="//@diagram/@links.1 //@diagram/@links.13"/>
-        <entries
-            xsi:type="gmfgen:ToolEntry"
-            title="Medium"
-            description="Create new Medium"
-            genNodes="//@diagram/@topLevelNodes.2"
-            genLinks="//@diagram/@links.9"/>
-        <entries
-            xsi:type="gmfgen:ToolEntry"
-            title="Person"
-            description="Create new Person"
-            genNodes="//@diagram/@topLevelNodes.5"
-            genLinks="//@diagram/@links.0 //@diagram/@links.5"/>
-        <entries
-            xsi:type="gmfgen:ToolEntry"
-            title="Call"
-            description="Create new Call"
-            genNodes="//@diagram/@topLevelNodes.3"
-            genLinks="//@diagram/@links.10 //@diagram/@links.11 //@diagram/@links.14"/>
-        <entries
-            xsi:type="gmfgen:ToolEntry"
-            title="Decision"
-            description="Create new Decision"
-            genNodes="//@diagram/@topLevelNodes.7"
-            genLinks="//@diagram/@links.2 //@diagram/@links.12"/>
-        <entries
-            xsi:type="gmfgen:ToolEntry"
-            title="Boundary"
-            description="Create new Boundary"
-            genNodes="//@diagram/@topLevelNodes.4"
-            genLinks="//@diagram/@links.4"/>
+      <groups title="gcml">
+        <entries xsi:type="gmfgen:ToolEntry" title="Connection" description="Create new Connection" largeIconPath="/gcml.edit/icons/full/obj16/Connection_32x32.png" smallIconPath="/gcml.edit/icons/full/obj16/Connection_16x16.png" genNodes="//@diagram/@topLevelNodes.8" genLinks="//@diagram/@links.6 //@diagram/@links.7"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Device" description="Create new Device" largeIconPath="/gcml.edit/icons/full/obj16/Device_16x16.png" smallIconPath="/gcml.edit/icons/full/obj16/Device_32x32.png" genNodes="//@diagram/@topLevelNodes.0" genLinks="//@diagram/@links.8"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Form" description="Create new Form" largeIconPath="/gcml.edit/icons/full/obj16/Form_32x32.png" smallIconPath="/gcml.edit/icons/full/obj16/Form_16x16.png" genNodes="//@diagram/@topLevelNodes.1" genLinks="//@diagram/@links.3 //@diagram/@links.15"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="IsAttached" description="Create new IsAttached" largeIconPath="/gcml.edit/icons/full/obj16/IsAttached_32x32.png" smallIconPath="/gcml.edit/icons/full/obj16/IsAttached_16x16.png" genNodes="//@diagram/@topLevelNodes.6" genLinks="//@diagram/@links.1 //@diagram/@links.13"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Medium" description="Create new Medium" largeIconPath="/gcml.edit/icons/full/obj16/Medium_32x32.png" smallIconPath="/gcml.edit/icons/full/obj16/Medium_16x16.png" genNodes="//@diagram/@topLevelNodes.2" genLinks="//@diagram/@links.9"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Person" description="Create new Person" largeIconPath="/gcml.edit/icons/full/obj16/Person_32x32.png" smallIconPath="/gcml.edit/icons/full/obj16/Person_16x16.png" genNodes="//@diagram/@topLevelNodes.5" genLinks="//@diagram/@links.0 //@diagram/@links.5"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Call" description="Create new Call" largeIconPath="/gcml.edit/icons/full/obj16/Call_32x32.png" smallIconPath="/gcml.edit/icons/full/obj16/Call_16x16.png" genNodes="//@diagram/@topLevelNodes.3" genLinks="//@diagram/@links.10 //@diagram/@links.11 //@diagram/@links.14"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Decision" description="Create new Decision" largeIconPath="/gcml.edit/icons/full/obj16/Decision_32x32.png" smallIconPath="/gcml.edit/icons/full/obj16/Decision_16x16.png" genNodes="//@diagram/@topLevelNodes.7" genLinks="//@diagram/@links.2 //@diagram/@links.12"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Boundary" description="Create new Boundary" largeIconPath="/gcml.edit/icons/full/obj16/Boundary_32x32.png" smallIconPath="/gcml.edit/icons/full/obj16/Boundary_16x16.png" genNodes="//@diagram/@topLevelNodes.4" genLinks="//@diagram/@links.4"/>
       </groups>
     </palette>
-    <preferencePages
-        xsi:type="gmfgen:GenStandardPreferencePage"
-        iD="gcml.diagram.general"
-        name="Gcml Diagram">
-      <children
-          xsi:type="gmfgen:GenStandardPreferencePage"
-          iD="gcml.diagram.appearance"
-          name="Appearance"
-          kind="Appearance"/>
-      <children
-          xsi:type="gmfgen:GenStandardPreferencePage"
-          iD="gcml.diagram.connections"
-          name="Connections"
-          kind="Connections"/>
-      <children
-          xsi:type="gmfgen:GenStandardPreferencePage"
-          iD="gcml.diagram.printing"
-          name="Printing"
-          kind="Printing"/>
-      <children
-          xsi:type="gmfgen:GenStandardPreferencePage"
-          iD="gcml.diagram.rulersAndGrid"
-          name="Rulers And Grid"
-          kind="RulersAndGrid"/>
-      <children
-          xsi:type="gmfgen:GenStandardPreferencePage"
-          iD="gcml.diagram.pathmaps"
-          name="Pathmaps"
-          kind="Pathmaps"/>
+    <preferencePages xsi:type="gmfgen:GenStandardPreferencePage" iD="gcml.diagram.general" name="Gcml Diagram">
+      <children xsi:type="gmfgen:GenStandardPreferencePage" iD="gcml.diagram.appearance" name="Appearance" kind="Appearance"/>
+      <children xsi:type="gmfgen:GenStandardPreferencePage" iD="gcml.diagram.connections" name="Connections" kind="Connections"/>
+      <children xsi:type="gmfgen:GenStandardPreferencePage" iD="gcml.diagram.printing" name="Printing" kind="Printing"/>
+      <children xsi:type="gmfgen:GenStandardPreferencePage" iD="gcml.diagram.rulersAndGrid" name="Rulers And Grid" kind="RulersAndGrid"/>
+      <children xsi:type="gmfgen:GenStandardPreferencePage" iD="gcml.diagram.pathmaps" name="Pathmaps" kind="Pathmaps"/>
     </preferencePages>
   </diagram>
   <plugin/>
   <editor/>
   <diagramUpdater/>
   <propertySheet>
-    <tabs
-        xsi:type="gmfgen:GenStandardPropertyTab"
-        iD="appearance"/>
-    <tabs
-        xsi:type="gmfgen:GenStandardPropertyTab"
-        iD="diagram"/>
-    <tabs
-        xsi:type="gmfgen:GenCustomPropertyTab"
-        iD="domain"
-        label="Core">
-      <filter
-          xsi:type="gmfgen:TypeTabFilter">
+    <tabs xsi:type="gmfgen:GenStandardPropertyTab" iD="appearance"/>
+    <tabs xsi:type="gmfgen:GenStandardPropertyTab" iD="diagram"/>
+    <tabs xsi:type="gmfgen:GenCustomPropertyTab" iD="domain" label="Core">
+      <filter xsi:type="gmfgen:TypeTabFilter">
         <types>org.eclipse.gmf.runtime.notation.View</types>
         <types>org.eclipse.gef.EditPart</types>
       </filter>
     </tabs>
   </propertySheet>
   <application>
-    <sharedContributionItems
-        xsi:type="gmfgen:GenActionFactoryContributionItem"
-        name="CLOSE"/>
-    <sharedContributionItems
-        xsi:type="gmfgen:GenActionFactoryContributionItem"
-        name="CLOSE_ALL"/>
-    <sharedContributionItems
-        xsi:type="gmfgen:GenActionFactoryContributionItem"
-        name="SAVE"/>
-    <sharedContributionItems
-        xsi:type="gmfgen:GenActionFactoryContributionItem"
-        name="SAVE_AS"/>
-    <sharedContributionItems
-        xsi:type="gmfgen:GenActionFactoryContributionItem"
-        name="SAVE_ALL"/>
-    <sharedContributionItems
-        xsi:type="gmfgen:GenActionFactoryContributionItem"
-        name="QUIT"/>
-    <sharedContributionItems
-        xsi:type="gmfgen:GenActionFactoryContributionItem"
-        name="UNDO"/>
-    <sharedContributionItems
-        xsi:type="gmfgen:GenActionFactoryContributionItem"
-        name="REDO"/>
-    <sharedContributionItems
-        xsi:type="gmfgen:GenActionFactoryContributionItem"
-        name="CUT"/>
-    <sharedContributionItems
-        xsi:type="gmfgen:GenActionFactoryContributionItem"
-        name="COPY"/>
-    <sharedContributionItems
-        xsi:type="gmfgen:GenActionFactoryContributionItem"
-        name="PASTE"/>
-    <sharedContributionItems
-        xsi:type="gmfgen:GenActionFactoryContributionItem"
-        name="DELETE"/>
-    <sharedContributionItems
-        xsi:type="gmfgen:GenActionFactoryContributionItem"
-        name="SELECT_ALL"/>
-    <sharedContributionItems
-        xsi:type="gmfgen:GenActionFactoryContributionItem"
-        name="OPEN_NEW_WINDOW"/>
-    <sharedContributionItems
-        xsi:type="gmfgen:GenActionFactoryContributionItem"
-        name="PRINT"/>
+    <sharedContributionItems xsi:type="gmfgen:GenActionFactoryContributionItem" name="CLOSE"/>
+    <sharedContributionItems xsi:type="gmfgen:GenActionFactoryContributionItem" name="CLOSE_ALL"/>
+    <sharedContributionItems xsi:type="gmfgen:GenActionFactoryContributionItem" name="SAVE"/>
+    <sharedContributionItems xsi:type="gmfgen:GenActionFactoryContributionItem" name="SAVE_AS"/>
+    <sharedContributionItems xsi:type="gmfgen:GenActionFactoryContributionItem" name="SAVE_ALL"/>
+    <sharedContributionItems xsi:type="gmfgen:GenActionFactoryContributionItem" name="QUIT"/>
+    <sharedContributionItems xsi:type="gmfgen:GenActionFactoryContributionItem" name="UNDO"/>
+    <sharedContributionItems xsi:type="gmfgen:GenActionFactoryContributionItem" name="REDO"/>
+    <sharedContributionItems xsi:type="gmfgen:GenActionFactoryContributionItem" name="CUT"/>
+    <sharedContributionItems xsi:type="gmfgen:GenActionFactoryContributionItem" name="COPY"/>
+    <sharedContributionItems xsi:type="gmfgen:GenActionFactoryContributionItem" name="PASTE"/>
+    <sharedContributionItems xsi:type="gmfgen:GenActionFactoryContributionItem" name="DELETE"/>
+    <sharedContributionItems xsi:type="gmfgen:GenActionFactoryContributionItem" name="SELECT_ALL"/>
+    <sharedContributionItems xsi:type="gmfgen:GenActionFactoryContributionItem" name="OPEN_NEW_WINDOW"/>
+    <sharedContributionItems xsi:type="gmfgen:GenActionFactoryContributionItem" name="PRINT"/>
     <mainMenu>
-      <items
-          xsi:type="gmfgen:GenMenuManager"
-          iD="org.eclipse.ui.IWorkbenchActionConstants.M_FILE"
-          name="&amp;File">
-        <items
-            xsi:type="gmfgen:GenGroupMarker"
-            groupName="org.eclipse.ui.IWorkbenchActionConstants.FILE_START"/>
-        <items
-            xsi:type="gmfgen:GenMenuManager"
-            iD="&quot;new&quot;"
-            name="&amp;New">
-          <items
-              xsi:type="gmfgen:GenGroupMarker"
-              groupName="org.eclipse.ui.IWorkbenchActionConstants.MB_ADDITIONS"/>
+      <items xsi:type="gmfgen:GenMenuManager" iD="org.eclipse.ui.IWorkbenchActionConstants.M_FILE" name="&amp;File">
+        <items xsi:type="gmfgen:GenGroupMarker" groupName="org.eclipse.ui.IWorkbenchActionConstants.FILE_START"/>
+        <items xsi:type="gmfgen:GenMenuManager" iD="&quot;new&quot;" name="&amp;New">
+          <items xsi:type="gmfgen:GenGroupMarker" groupName="org.eclipse.ui.IWorkbenchActionConstants.MB_ADDITIONS"/>
         </items>
-        <items
-            xsi:type="gmfgen:GenSeparator"/>
-        <items
-            xsi:type="gmfgen:GenGroupMarker"
-            groupName="org.eclipse.ui.IWorkbenchActionConstants.MB_ADDITIONS"/>
-        <items
-            xsi:type="gmfgen:GenSeparator"/>
-        <items
-            xsi:type="gmfgen:GenSharedContributionItem"
-            actualItem="//@application/@sharedContributionItems.0"/>
-        <items
-            xsi:type="gmfgen:GenSharedContributionItem"
-            actualItem="//@application/@sharedContributionItems.1"/>
-        <items
-            xsi:type="gmfgen:GenSeparator"/>
-        <items
-            xsi:type="gmfgen:GenSharedContributionItem"
-            actualItem="//@application/@sharedContributionItems.2"/>
-        <items
-            xsi:type="gmfgen:GenSharedContributionItem"
-            actualItem="//@application/@sharedContributionItems.3"/>
-        <items
-            xsi:type="gmfgen:GenSharedContributionItem"
-            actualItem="//@application/@sharedContributionItems.4"/>
-        <items
-            xsi:type="gmfgen:GenSeparator"/>
-        <items
-            xsi:type="gmfgen:GenSharedContributionItem"
-            actualItem="//@application/@sharedContributionItems.5"/>
-        <items
-            xsi:type="gmfgen:GenGroupMarker"
-            groupName="org.eclipse.ui.IWorkbenchActionConstants.FILE_END"/>
+        <items xsi:type="gmfgen:GenSeparator"/>
+        <items xsi:type="gmfgen:GenGroupMarker" groupName="org.eclipse.ui.IWorkbenchActionConstants.MB_ADDITIONS"/>
+        <items xsi:type="gmfgen:GenSeparator"/>
+        <items xsi:type="gmfgen:GenSharedContributionItem" actualItem="//@application/@sharedContributionItems.0"/>
+        <items xsi:type="gmfgen:GenSharedContributionItem" actualItem="//@application/@sharedContributionItems.1"/>
+        <items xsi:type="gmfgen:GenSeparator"/>
+        <items xsi:type="gmfgen:GenSharedContributionItem" actualItem="//@application/@sharedContributionItems.2"/>
+        <items xsi:type="gmfgen:GenSharedContributionItem" actualItem="//@application/@sharedContributionItems.3"/>
+        <items xsi:type="gmfgen:GenSharedContributionItem" actualItem="//@application/@sharedContributionItems.4"/>
+        <items xsi:type="gmfgen:GenSeparator"/>
+        <items xsi:type="gmfgen:GenSharedContributionItem" actualItem="//@application/@sharedContributionItems.5"/>
+        <items xsi:type="gmfgen:GenGroupMarker" groupName="org.eclipse.ui.IWorkbenchActionConstants.FILE_END"/>
       </items>
-      <items
-          xsi:type="gmfgen:GenMenuManager"
-          iD="org.eclipse.ui.IWorkbenchActionConstants.M_EDIT"
-          name="&amp;Edit">
-        <items
-            xsi:type="gmfgen:GenGroupMarker"
-            groupName="org.eclipse.ui.IWorkbenchActionConstants.EDIT_START"/>
-        <items
-            xsi:type="gmfgen:GenSharedContributionItem"
-            actualItem="//@application/@sharedContributionItems.6"/>
-        <items
-            xsi:type="gmfgen:GenSharedContributionItem"
-            actualItem="//@application/@sharedContributionItems.7"/>
-        <items
-            xsi:type="gmfgen:GenGroupMarker"
-            groupName="org.eclipse.ui.IWorkbenchActionConstants.UNDO_EXT"/>
-        <items
-            xsi:type="gmfgen:GenSeparator"/>
-        <items
-            xsi:type="gmfgen:GenSharedContributionItem"
-            actualItem="//@application/@sharedContributionItems.8"/>
-        <items
-            xsi:type="gmfgen:GenSharedContributionItem"
-            actualItem="//@application/@sharedContributionItems.9"/>
-        <items
-            xsi:type="gmfgen:GenSharedContributionItem"
-            actualItem="//@application/@sharedContributionItems.10"/>
-        <items
-            xsi:type="gmfgen:GenGroupMarker"
-            groupName="org.eclipse.ui.IWorkbenchActionConstants.CUT_EXT"/>
-        <items
-            xsi:type="gmfgen:GenSeparator"/>
-        <items
-            xsi:type="gmfgen:GenSharedContributionItem"
-            actualItem="//@application/@sharedContributionItems.11"/>
-        <items
-            xsi:type="gmfgen:GenSharedContributionItem"
-            actualItem="//@application/@sharedContributionItems.12"/>
-        <items
-            xsi:type="gmfgen:GenSeparator"/>
-        <items
-            xsi:type="gmfgen:GenGroupMarker"
-            groupName="org.eclipse.ui.IWorkbenchActionConstants.ADD_EXT"/>
-        <items
-            xsi:type="gmfgen:GenGroupMarker"
-            groupName="org.eclipse.ui.IWorkbenchActionConstants.EDIT_END"/>
-        <items
-            xsi:type="gmfgen:GenSeparator"
-            groupName="org.eclipse.ui.IWorkbenchActionConstants.MB_ADDITIONS"/>
+      <items xsi:type="gmfgen:GenMenuManager" iD="org.eclipse.ui.IWorkbenchActionConstants.M_EDIT" name="&amp;Edit">
+        <items xsi:type="gmfgen:GenGroupMarker" groupName="org.eclipse.ui.IWorkbenchActionConstants.EDIT_START"/>
+        <items xsi:type="gmfgen:GenSharedContributionItem" actualItem="//@application/@sharedContributionItems.6"/>
+        <items xsi:type="gmfgen:GenSharedContributionItem" actualItem="//@application/@sharedContributionItems.7"/>
+        <items xsi:type="gmfgen:GenGroupMarker" groupName="org.eclipse.ui.IWorkbenchActionConstants.UNDO_EXT"/>
+        <items xsi:type="gmfgen:GenSeparator"/>
+        <items xsi:type="gmfgen:GenSharedContributionItem" actualItem="//@application/@sharedContributionItems.8"/>
+        <items xsi:type="gmfgen:GenSharedContributionItem" actualItem="//@application/@sharedContributionItems.9"/>
+        <items xsi:type="gmfgen:GenSharedContributionItem" actualItem="//@application/@sharedContributionItems.10"/>
+        <items xsi:type="gmfgen:GenGroupMarker" groupName="org.eclipse.ui.IWorkbenchActionConstants.CUT_EXT"/>
+        <items xsi:type="gmfgen:GenSeparator"/>
+        <items xsi:type="gmfgen:GenSharedContributionItem" actualItem="//@application/@sharedContributionItems.11"/>
+        <items xsi:type="gmfgen:GenSharedContributionItem" actualItem="//@application/@sharedContributionItems.12"/>
+        <items xsi:type="gmfgen:GenSeparator"/>
+        <items xsi:type="gmfgen:GenGroupMarker" groupName="org.eclipse.ui.IWorkbenchActionConstants.ADD_EXT"/>
+        <items xsi:type="gmfgen:GenGroupMarker" groupName="org.eclipse.ui.IWorkbenchActionConstants.EDIT_END"/>
+        <items xsi:type="gmfgen:GenSeparator" groupName="org.eclipse.ui.IWorkbenchActionConstants.MB_ADDITIONS"/>
       </items>
-      <items
-          xsi:type="gmfgen:GenGroupMarker"
-          groupName="org.eclipse.ui.IWorkbenchActionConstants.MB_ADDITIONS"/>
-      <items
-          xsi:type="gmfgen:GenMenuManager"
-          iD="org.eclipse.ui.IWorkbenchActionConstants.M_WINDOW"
-          name="&amp;Window">
-        <items
-            xsi:type="gmfgen:GenSharedContributionItem"
-            actualItem="//@application/@sharedContributionItems.13"/>
-        <items
-            xsi:type="gmfgen:GenGroupMarker"
-            groupName="org.eclipse.ui.IWorkbenchActionConstants.MB_ADDITIONS"/>
+      <items xsi:type="gmfgen:GenGroupMarker" groupName="org.eclipse.ui.IWorkbenchActionConstants.MB_ADDITIONS"/>
+      <items xsi:type="gmfgen:GenMenuManager" iD="org.eclipse.ui.IWorkbenchActionConstants.M_WINDOW" name="&amp;Window">
+        <items xsi:type="gmfgen:GenSharedContributionItem" actualItem="//@application/@sharedContributionItems.13"/>
+        <items xsi:type="gmfgen:GenGroupMarker" groupName="org.eclipse.ui.IWorkbenchActionConstants.MB_ADDITIONS"/>
       </items>
-      <items
-          xsi:type="gmfgen:GenMenuManager"
-          iD="org.eclipse.ui.IWorkbenchActionConstants.M_HELP"
-          name="&amp;Help">
-        <items
-            xsi:type="gmfgen:GenGroupMarker"
-            groupName="org.eclipse.ui.IWorkbenchActionConstants.HELP_START"/>
-        <items
-            xsi:type="gmfgen:GenGroupMarker"
-            groupName="org.eclipse.ui.IWorkbenchActionConstants.HELP_END"/>
-        <items
-            xsi:type="gmfgen:GenGroupMarker"
-            groupName="org.eclipse.ui.IWorkbenchActionConstants.MB_ADDITIONS"/>
+      <items xsi:type="gmfgen:GenMenuManager" iD="org.eclipse.ui.IWorkbenchActionConstants.M_HELP" name="&amp;Help">
+        <items xsi:type="gmfgen:GenGroupMarker" groupName="org.eclipse.ui.IWorkbenchActionConstants.HELP_START"/>
+        <items xsi:type="gmfgen:GenGroupMarker" groupName="org.eclipse.ui.IWorkbenchActionConstants.HELP_END"/>
+        <items xsi:type="gmfgen:GenGroupMarker" groupName="org.eclipse.ui.IWorkbenchActionConstants.MB_ADDITIONS"/>
       </items>
     </mainMenu>
     <mainToolBar>
-      <items
-          xsi:type="gmfgen:GenGroupMarker"
-          groupName="&quot;group.file&quot;"/>
-      <items
-          xsi:type="gmfgen:GenToolBarManager"
-          iD="org.eclipse.ui.IWorkbenchActionConstants.TOOLBAR_FILE">
-        <items
-            xsi:type="gmfgen:GenSeparator"
-            groupName="org.eclipse.ui.IWorkbenchActionConstants.NEW_GROUP"/>
-        <items
-            xsi:type="gmfgen:GenGroupMarker"
-            groupName="org.eclipse.ui.IWorkbenchActionConstants.NEW_EXT"/>
-        <items
-            xsi:type="gmfgen:GenGroupMarker"
-            groupName="org.eclipse.ui.IWorkbenchActionConstants.SAVE_GROUP"/>
-        <items
-            xsi:type="gmfgen:GenSharedContributionItem"
-            actualItem="//@application/@sharedContributionItems.2"/>
-        <items
-            xsi:type="gmfgen:GenGroupMarker"
-            groupName="org.eclipse.ui.IWorkbenchActionConstants.SAVE_EXT"/>
-        <items
-            xsi:type="gmfgen:GenSharedContributionItem"
-            actualItem="//@application/@sharedContributionItems.14"/>
-        <items
-            xsi:type="gmfgen:GenGroupMarker"
-            groupName="org.eclipse.ui.IWorkbenchActionConstants.PRINT_EXT"/>
-        <items
-            xsi:type="gmfgen:GenSeparator"
-            groupName="org.eclipse.ui.IWorkbenchActionConstants.MB_ADDITIONS"/>
+      <items xsi:type="gmfgen:GenGroupMarker" groupName="&quot;group.file&quot;"/>
+      <items xsi:type="gmfgen:GenToolBarManager" iD="org.eclipse.ui.IWorkbenchActionConstants.TOOLBAR_FILE">
+        <items xsi:type="gmfgen:GenSeparator" groupName="org.eclipse.ui.IWorkbenchActionConstants.NEW_GROUP"/>
+        <items xsi:type="gmfgen:GenGroupMarker" groupName="org.eclipse.ui.IWorkbenchActionConstants.NEW_EXT"/>
+        <items xsi:type="gmfgen:GenGroupMarker" groupName="org.eclipse.ui.IWorkbenchActionConstants.SAVE_GROUP"/>
+        <items xsi:type="gmfgen:GenSharedContributionItem" actualItem="//@application/@sharedContributionItems.2"/>
+        <items xsi:type="gmfgen:GenGroupMarker" groupName="org.eclipse.ui.IWorkbenchActionConstants.SAVE_EXT"/>
+        <items xsi:type="gmfgen:GenSharedContributionItem" actualItem="//@application/@sharedContributionItems.14"/>
+        <items xsi:type="gmfgen:GenGroupMarker" groupName="org.eclipse.ui.IWorkbenchActionConstants.PRINT_EXT"/>
+        <items xsi:type="gmfgen:GenSeparator" groupName="org.eclipse.ui.IWorkbenchActionConstants.MB_ADDITIONS"/>
       </items>
-      <items
-          xsi:type="gmfgen:GenGroupMarker"
-          groupName="org.eclipse.ui.IWorkbenchActionConstants.MB_ADDITIONS"/>
-      <items
-          xsi:type="gmfgen:GenGroupMarker"
-          groupName="&quot;group.nav&quot;"/>
-      <items
-          xsi:type="gmfgen:GenGroupMarker"
-          groupName="org.eclipse.ui.IWorkbenchActionConstants.GROUP_EDITOR"/>
-      <items
-          xsi:type="gmfgen:GenGroupMarker"
-          groupName="org.eclipse.ui.IWorkbenchActionConstants.GROUP_HELP"/>
-      <items
-          xsi:type="gmfgen:GenToolBarManager"
-          iD="org.eclipse.ui.IWorkbenchActionConstants.TOOLBAR_HELP">
-        <items
-            xsi:type="gmfgen:GenSeparator"
-            groupName="org.eclipse.ui.IWorkbenchActionConstants.GROUP_HELP"/>
-        <items
-            xsi:type="gmfgen:GenGroupMarker"
-            groupName="org.eclipse.ui.IWorkbenchActionConstants.GROUP_APP"/>
+      <items xsi:type="gmfgen:GenGroupMarker" groupName="org.eclipse.ui.IWorkbenchActionConstants.MB_ADDITIONS"/>
+      <items xsi:type="gmfgen:GenGroupMarker" groupName="&quot;group.nav&quot;"/>
+      <items xsi:type="gmfgen:GenGroupMarker" groupName="org.eclipse.ui.IWorkbenchActionConstants.GROUP_EDITOR"/>
+      <items xsi:type="gmfgen:GenGroupMarker" groupName="org.eclipse.ui.IWorkbenchActionConstants.GROUP_HELP"/>
+      <items xsi:type="gmfgen:GenToolBarManager" iD="org.eclipse.ui.IWorkbenchActionConstants.TOOLBAR_HELP">
+        <items xsi:type="gmfgen:GenSeparator" groupName="org.eclipse.ui.IWorkbenchActionConstants.GROUP_HELP"/>
+        <items xsi:type="gmfgen:GenGroupMarker" groupName="org.eclipse.ui.IWorkbenchActionConstants.GROUP_APP"/>
       </items>
     </mainToolBar>
   </application>
-  <domainGenModel
-      href="Gcml.genmodel#/"/>
+  <domainGenModel href="Gcml.genmodel#/"/>
 </gmfgen:GenEditorGenerator>

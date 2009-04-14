@@ -28,6 +28,7 @@ package gcml;
 public interface Boundary extends Activity {
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' attribute.
+	 * The default value is <code>""</code>.
 	 * The literals are from the enumeration {@link gcml.BoundaryType}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -39,7 +40,7 @@ public interface Boundary extends Activity {
 	 * @see gcml.BoundaryType
 	 * @see #setType(BoundaryType)
 	 * @see gcml.GcmlPackage#getBoundary_Type()
-	 * @model
+	 * @model default="" required="true"
 	 * @generated
 	 */
 	BoundaryType getType();

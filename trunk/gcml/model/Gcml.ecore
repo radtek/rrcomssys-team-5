@@ -121,13 +121,14 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="DecisionToBoundary" eType="#//Boundary"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Boundary" eSuperTypes="#//Activity">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Type" eType="#//BoundaryType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Type" lowerBound="1" eType="#//BoundaryType"
+        defaultValueLiteral=""/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="outcome" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="BoundaryToCall" eType="#//Call"
         eOpposite="#//Call/CallToBoundary"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="BoundaryType">
     <eLiterals name="Start"/>
-    <eLiterals name="End"/>
+    <eLiterals name="End" value="1"/>
   </eClassifiers>
 </ecore:EPackage>

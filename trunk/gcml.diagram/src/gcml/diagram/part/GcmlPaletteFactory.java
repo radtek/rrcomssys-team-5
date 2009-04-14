@@ -53,9 +53,12 @@ public class GcmlPaletteFactory {
 		NodeToolEntry entry = new NodeToolEntry(
 				Messages.Connection1CreationTool_title,
 				Messages.Connection1CreationTool_desc, types);
-		entry.setSmallIcon(GcmlElementTypes
-				.getImageDescriptor(GcmlElementTypes.Connection_2009));
-		entry.setLargeIcon(entry.getSmallIcon());
+		entry
+				.setSmallIcon(GcmlDiagramEditorPlugin
+						.findImageDescriptor("/gcml.edit/icons/full/obj16/Connection_16x16.png")); //$NON-NLS-1$
+		entry
+				.setLargeIcon(GcmlDiagramEditorPlugin
+						.findImageDescriptor("/gcml.edit/icons/full/obj16/Connection_32x32.png")); //$NON-NLS-1$
 		return entry;
 	}
 
@@ -68,9 +71,12 @@ public class GcmlPaletteFactory {
 		NodeToolEntry entry = new NodeToolEntry(
 				Messages.Device2CreationTool_title,
 				Messages.Device2CreationTool_desc, types);
-		entry.setSmallIcon(GcmlElementTypes
-				.getImageDescriptor(GcmlElementTypes.Device_2001));
-		entry.setLargeIcon(entry.getSmallIcon());
+		entry
+				.setSmallIcon(GcmlDiagramEditorPlugin
+						.findImageDescriptor("/gcml.edit/icons/full/obj16/Device_32x32.png")); //$NON-NLS-1$
+		entry
+				.setLargeIcon(GcmlDiagramEditorPlugin
+						.findImageDescriptor("/gcml.edit/icons/full/obj16/Device_16x16.png")); //$NON-NLS-1$
 		return entry;
 	}
 
@@ -83,9 +89,12 @@ public class GcmlPaletteFactory {
 		NodeToolEntry entry = new NodeToolEntry(
 				Messages.Form3CreationTool_title,
 				Messages.Form3CreationTool_desc, types);
-		entry.setSmallIcon(GcmlElementTypes
-				.getImageDescriptor(GcmlElementTypes.Form_2002));
-		entry.setLargeIcon(entry.getSmallIcon());
+		entry
+				.setSmallIcon(GcmlDiagramEditorPlugin
+						.findImageDescriptor("/gcml.edit/icons/full/obj16/Form_16x16.png")); //$NON-NLS-1$
+		entry
+				.setLargeIcon(GcmlDiagramEditorPlugin
+						.findImageDescriptor("/gcml.edit/icons/full/obj16/Form_32x32.png")); //$NON-NLS-1$
 		return entry;
 	}
 
@@ -98,9 +107,12 @@ public class GcmlPaletteFactory {
 		NodeToolEntry entry = new NodeToolEntry(
 				Messages.IsAttached4CreationTool_title,
 				Messages.IsAttached4CreationTool_desc, types);
-		entry.setSmallIcon(GcmlElementTypes
-				.getImageDescriptor(GcmlElementTypes.IsAttached_2007));
-		entry.setLargeIcon(entry.getSmallIcon());
+		entry
+				.setSmallIcon(GcmlDiagramEditorPlugin
+						.findImageDescriptor("/gcml.edit/icons/full/obj16/IsAttached_16x16.png")); //$NON-NLS-1$
+		entry
+				.setLargeIcon(GcmlDiagramEditorPlugin
+						.findImageDescriptor("/gcml.edit/icons/full/obj16/IsAttached_32x32.png")); //$NON-NLS-1$
 		return entry;
 	}
 
@@ -113,9 +125,12 @@ public class GcmlPaletteFactory {
 		NodeToolEntry entry = new NodeToolEntry(
 				Messages.Medium5CreationTool_title,
 				Messages.Medium5CreationTool_desc, types);
-		entry.setSmallIcon(GcmlElementTypes
-				.getImageDescriptor(GcmlElementTypes.Medium_2003));
-		entry.setLargeIcon(entry.getSmallIcon());
+		entry
+				.setSmallIcon(GcmlDiagramEditorPlugin
+						.findImageDescriptor("/gcml.edit/icons/full/obj16/Medium_16x16.png")); //$NON-NLS-1$
+		entry
+				.setLargeIcon(GcmlDiagramEditorPlugin
+						.findImageDescriptor("/gcml.edit/icons/full/obj16/Medium_32x32.png")); //$NON-NLS-1$
 		return entry;
 	}
 
@@ -128,9 +143,12 @@ public class GcmlPaletteFactory {
 		NodeToolEntry entry = new NodeToolEntry(
 				Messages.Person6CreationTool_title,
 				Messages.Person6CreationTool_desc, types);
-		entry.setSmallIcon(GcmlElementTypes
-				.getImageDescriptor(GcmlElementTypes.Person_2006));
-		entry.setLargeIcon(entry.getSmallIcon());
+		entry
+				.setSmallIcon(GcmlDiagramEditorPlugin
+						.findImageDescriptor("/gcml.edit/icons/full/obj16/Person_16x16.png")); //$NON-NLS-1$
+		entry
+				.setLargeIcon(GcmlDiagramEditorPlugin
+						.findImageDescriptor("/gcml.edit/icons/full/obj16/Person_32x32.png")); //$NON-NLS-1$
 		return entry;
 	}
 
@@ -143,9 +161,12 @@ public class GcmlPaletteFactory {
 		NodeToolEntry entry = new NodeToolEntry(
 				Messages.Call7CreationTool_title,
 				Messages.Call7CreationTool_desc, types);
-		entry.setSmallIcon(GcmlElementTypes
-				.getImageDescriptor(GcmlElementTypes.Call_2004));
-		entry.setLargeIcon(entry.getSmallIcon());
+		entry
+				.setSmallIcon(GcmlDiagramEditorPlugin
+						.findImageDescriptor("/gcml.edit/icons/full/obj16/Call_16x16.png")); //$NON-NLS-1$
+		entry
+				.setLargeIcon(GcmlDiagramEditorPlugin
+						.findImageDescriptor("/gcml.edit/icons/full/obj16/Call_32x32.png")); //$NON-NLS-1$
 		return entry;
 	}
 
@@ -158,9 +179,12 @@ public class GcmlPaletteFactory {
 		NodeToolEntry entry = new NodeToolEntry(
 				Messages.Decision8CreationTool_title,
 				Messages.Decision8CreationTool_desc, types);
-		entry.setSmallIcon(GcmlElementTypes
-				.getImageDescriptor(GcmlElementTypes.Decision_2008));
-		entry.setLargeIcon(entry.getSmallIcon());
+		entry
+				.setSmallIcon(GcmlDiagramEditorPlugin
+						.findImageDescriptor("/gcml.edit/icons/full/obj16/Decision_16x16.png")); //$NON-NLS-1$
+		entry
+				.setLargeIcon(GcmlDiagramEditorPlugin
+						.findImageDescriptor("/gcml.edit/icons/full/obj16/Decision_32x32.png")); //$NON-NLS-1$
 		return entry;
 	}
 
@@ -173,9 +197,12 @@ public class GcmlPaletteFactory {
 		NodeToolEntry entry = new NodeToolEntry(
 				Messages.Boundary9CreationTool_title,
 				Messages.Boundary9CreationTool_desc, types);
-		entry.setSmallIcon(GcmlElementTypes
-				.getImageDescriptor(GcmlElementTypes.Boundary_2005));
-		entry.setLargeIcon(entry.getSmallIcon());
+		entry
+				.setSmallIcon(GcmlDiagramEditorPlugin
+						.findImageDescriptor("/gcml.edit/icons/full/obj16/Boundary_16x16.png")); //$NON-NLS-1$
+		entry
+				.setLargeIcon(GcmlDiagramEditorPlugin
+						.findImageDescriptor("/gcml.edit/icons/full/obj16/Boundary_32x32.png")); //$NON-NLS-1$
 		return entry;
 	}
 

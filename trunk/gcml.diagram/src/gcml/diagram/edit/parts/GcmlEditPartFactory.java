@@ -35,20 +35,77 @@ public class GcmlEditPartFactory implements EditPartFactory {
 			case DeviceEditPart.VISUAL_ID:
 				return new DeviceEditPart(view);
 
+			case DeviceDeviceCapabilityEditPart.VISUAL_ID:
+				return new DeviceDeviceCapabilityEditPart(view);
+
+			case DeviceIsLocalEditPart.VISUAL_ID:
+				return new DeviceIsLocalEditPart(view);
+
+			case DeviceIsVirtualEditPart.VISUAL_ID:
+				return new DeviceIsVirtualEditPart(view);
+
 			case FormEditPart.VISUAL_ID:
 				return new FormEditPart(view);
+
+			case FormActionEditPart.VISUAL_ID:
+				return new FormActionEditPart(view);
+
+			case FormFormTypeNameEditPart.VISUAL_ID:
+				return new FormFormTypeNameEditPart(view);
+
+			case FormMediumDataTypeEditPart.VISUAL_ID:
+				return new FormMediumDataTypeEditPart(view);
+
+			case FormSuggestedApplicationEditPart.VISUAL_ID:
+				return new FormSuggestedApplicationEditPart(view);
+
+			case FormVoiceCommandEditPart.VISUAL_ID:
+				return new FormVoiceCommandEditPart(view);
 
 			case MediumEditPart.VISUAL_ID:
 				return new MediumEditPart(view);
 
+			case MediumDerivedFromBuiltInTypeEditPart.VISUAL_ID:
+				return new MediumDerivedFromBuiltInTypeEditPart(view);
+
+			case MediumMediumTypeNameEditPart.VISUAL_ID:
+				return new MediumMediumTypeNameEditPart(view);
+
+			case MediumSuggestedApplicationEditPart.VISUAL_ID:
+				return new MediumSuggestedApplicationEditPart(view);
+
+			case MediumVoiceCommandEditPart.VISUAL_ID:
+				return new MediumVoiceCommandEditPart(view);
+
 			case CallEditPart.VISUAL_ID:
 				return new CallEditPart(view);
+
+			case CallActivityIDEditPart.VISUAL_ID:
+				return new CallActivityIDEditPart(view);
+
+			case CallOutcomeEditPart.VISUAL_ID:
+				return new CallOutcomeEditPart(view);
 
 			case BoundaryEditPart.VISUAL_ID:
 				return new BoundaryEditPart(view);
 
+			case BoundaryActivityIDEditPart.VISUAL_ID:
+				return new BoundaryActivityIDEditPart(view);
+
+			case BoundaryTypeEditPart.VISUAL_ID:
+				return new BoundaryTypeEditPart(view);
+
 			case PersonEditPart.VISUAL_ID:
 				return new PersonEditPart(view);
+
+			case PersonPersonIDEditPart.VISUAL_ID:
+				return new PersonPersonIDEditPart(view);
+
+			case PersonPersonNameEditPart.VISUAL_ID:
+				return new PersonPersonNameEditPart(view);
+
+			case PersonPersonRoleEditPart.VISUAL_ID:
+				return new PersonPersonRoleEditPart(view);
 
 			case IsAttachedEditPart.VISUAL_ID:
 				return new IsAttachedEditPart(view);
@@ -56,8 +113,26 @@ public class GcmlEditPartFactory implements EditPartFactory {
 			case DecisionEditPart.VISUAL_ID:
 				return new DecisionEditPart(view);
 
+			case DecisionActivityIDEditPart.VISUAL_ID:
+				return new DecisionActivityIDEditPart(view);
+
+			case DecisionFailPathIDEditPart.VISUAL_ID:
+				return new DecisionFailPathIDEditPart(view);
+
+			case DecisionSourceActivityIDEditPart.VISUAL_ID:
+				return new DecisionSourceActivityIDEditPart(view);
+
+			case DecisionSuccessPathIDEditPart.VISUAL_ID:
+				return new DecisionSuccessPathIDEditPart(view);
+
 			case ConnectionEditPart.VISUAL_ID:
 				return new ConnectionEditPart(view);
+
+			case ConnectionBandwidthEditPart.VISUAL_ID:
+				return new ConnectionBandwidthEditPart(view);
+
+			case ConnectionConnectionIDEditPart.VISUAL_ID:
+				return new ConnectionConnectionIDEditPart(view);
 
 			case PersonToIsAttachedEditPart.VISUAL_ID:
 				return new PersonToIsAttachedEditPart(view);

@@ -2,6 +2,7 @@ package gcml.diagram.edit.parts;
 
 import gcml.diagram.edit.policies.PersonItemSemanticEditPolicy;
 
+import gcml.diagram.part.GcmlVisualIDRegistry;
 import org.eclipse.draw2d.FlowLayout;
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.RectangleFigure;
@@ -12,8 +13,10 @@ import org.eclipse.gef.commands.Command;
 import org.eclipse.gef.editpolicies.FlowLayoutEditPolicy;
 import org.eclipse.gef.editpolicies.LayoutEditPolicy;
 import org.eclipse.gef.requests.CreateRequest;
+import org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.ShapeNodeEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
+import org.eclipse.gmf.runtime.draw2d.ui.figures.ConstrainedToolbarLayout;
 import org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel;
 import org.eclipse.gmf.runtime.gef.ui.figures.DefaultSizeNodeFigure;
 import org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure;
@@ -99,6 +102,66 @@ public class PersonEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
+	protected boolean addFixedChild(EditPart childEditPart) {
+		if (childEditPart instanceof PersonPersonIDEditPart) {
+			((PersonPersonIDEditPart) childEditPart).setLabel(getPrimaryShape()
+					.getFigurePersonPersonIDFigure());
+			return true;
+		}
+		if (childEditPart instanceof PersonPersonNameEditPart) {
+			((PersonPersonNameEditPart) childEditPart)
+					.setLabel(getPrimaryShape()
+							.getFigurePersonPersonNameFigure());
+			return true;
+		}
+		if (childEditPart instanceof PersonPersonRoleEditPart) {
+			((PersonPersonRoleEditPart) childEditPart)
+					.setLabel(getPrimaryShape()
+							.getFigurePersonPersonRoleFigure());
+			return true;
+		}
+		return false;
+	}
+
+	/**
+	 * @generated
+	 */
+	protected boolean removeFixedChild(EditPart childEditPart) {
+
+		return false;
+	}
+
+	/**
+	 * @generated
+	 */
+	protected void addChildVisual(EditPart childEditPart, int index) {
+		if (addFixedChild(childEditPart)) {
+			return;
+		}
+		super.addChildVisual(childEditPart, -1);
+	}
+
+	/**
+	 * @generated
+	 */
+	protected void removeChildVisual(EditPart childEditPart) {
+		if (removeFixedChild(childEditPart)) {
+			return;
+		}
+		super.removeChildVisual(childEditPart);
+	}
+
+	/**
+	 * @generated
+	 */
+	protected IFigure getContentPaneFor(IGraphicalEditPart editPart) {
+
+		return super.getContentPaneFor(editPart);
+	}
+
+	/**
+	 * @generated
+	 */
 	protected NodeFigure createNodePlate() {
 		DefaultSizeNodeFigure result = new DefaultSizeNodeFigure(getMapMode()
 				.DPtoLP(40), getMapMode().DPtoLP(40));
@@ -129,6 +192,11 @@ public class PersonEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected IFigure setupContentPane(IFigure nodeShape) {
+		if (nodeShape.getLayoutManager() == null) {
+			ConstrainedToolbarLayout layout = new ConstrainedToolbarLayout();
+			layout.setSpacing(getMapMode().DPtoLP(5));
+			nodeShape.setLayoutManager(layout);
+		}
 		return nodeShape; // use nodeShape itself as contentPane
 	}
 
@@ -140,6 +208,14 @@ public class PersonEditPart extends ShapeNodeEditPart {
 			return contentPane;
 		}
 		return super.getContentPane();
+	}
+
+	/**
+	 * @generated
+	 */
+	public EditPart getPrimaryChildEditPart() {
+		return getChildBySemanticHint(GcmlVisualIDRegistry
+				.getType(PersonPersonIDEditPart.VISUAL_ID));
 	}
 
 	/**
