@@ -1,0 +1,9 @@
+#Sun Apr 12 19:17:39 EDT 2009
+eclipse.preferences.version=1
+gmf_dashboard/domainGenerationModel=platform\:/resource/gcml/model/Gcml.genmodel
+gmf_dashboard/domainModel=platform\:/resource/gcml/model/Gcml.ecore
+gmf_dashboard/generationModel=platform\:/resource/gcml/model/Gcml.gmfgen
+gmf_dashboard/graphicalDefinitionModel=platform\:/resource/gcml/model/Gcml.gmfgraph
+gmf_dashboard/mappingModel=platform\:/resource/gcml/model/Gcml.gmfmap
+gmf_dashboard/option_rcp=*
+gmf_dashboard/toolingDefinitionModel=platform\:/resource/gcml/model/Gcml.gmftool

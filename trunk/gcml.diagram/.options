@@ -1,0 +1,7 @@
+# Tracing options for the gcml.diagram plug-in
+
+# Common issues
+gcml.diagram/debug=false
+
+# Visual IDs
+gcml.diagram/debug/visualID=false
