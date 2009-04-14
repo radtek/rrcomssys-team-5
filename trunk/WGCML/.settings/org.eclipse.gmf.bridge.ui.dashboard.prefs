@@ -1,9 +1,0 @@
-#Sat Apr 11 21:25:08 EDT 2009
-eclipse.preferences.version=1
-gmf_dashboard/domainGenerationModel=platform\:/resource/WGCML/model/wgcml.genmodel
-gmf_dashboard/domainModel=platform\:/resource/WGCML/model/wgcml.ecore
-gmf_dashboard/generationModel=platform\:/resource/WGCML/model/wgcml.gmfgen
-gmf_dashboard/graphicalDefinitionModel=platform\:/resource/WGCML/model/wgcml.gmfgraph
-gmf_dashboard/mappingModel=platform\:/resource/WGCML/model/wgcml.gmfmap
-gmf_dashboard/option_rcp=*
-gmf_dashboard/toolingDefinitionModel=platform\:/resource/WGCML/model/wgcml.gmftool
