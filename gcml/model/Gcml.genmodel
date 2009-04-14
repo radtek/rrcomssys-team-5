@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/gcml/src"
+    modelPluginID="gcml" modelName="Gcml" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="6.0" copyrightFields="false">
+  <foreignModel>Gcml.ecore</foreignModel>
+  <genPackages prefix="Gcml" disposableProviderFactory="true" ecorePackage="Gcml.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Gcml.ecore#//Action">
+      <genEnumLiterals ecoreEnumLiteral="Gcml.ecore#//Action/send"/>
+      <genEnumLiterals ecoreEnumLiteral="Gcml.ecore#//Action/doNotSend"/>
+      <genEnumLiterals ecoreEnumLiteral="Gcml.ecore#//Action/start"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Gcml.ecore#//Capability">
+      <genEnumLiterals ecoreEnumLiteral="Gcml.ecore#//Capability/TextFile"/>
+      <genEnumLiterals ecoreEnumLiteral="Gcml.ecore#//Capability/BinaryFile"/>
+      <genEnumLiterals ecoreEnumLiteral="Gcml.ecore#//Capability/StreamFile"/>
+      <genEnumLiterals ecoreEnumLiteral="Gcml.ecore#//Capability/NonStreamFile"/>
+      <genEnumLiterals ecoreEnumLiteral="Gcml.ecore#//Capability/AudioFile"/>
+      <genEnumLiterals ecoreEnumLiteral="Gcml.ecore#//Capability/VideoFile"/>
+      <genEnumLiterals ecoreEnumLiteral="Gcml.ecore#//Capability/AVFile"/>
+      <genEnumLiterals ecoreEnumLiteral="Gcml.ecore#//Capability/Text"/>
+      <genEnumLiterals ecoreEnumLiteral="Gcml.ecore#//Capability/LiveStream"/>
+      <genEnumLiterals ecoreEnumLiteral="Gcml.ecore#//Capability/LiveAudio"/>
+      <genEnumLiterals ecoreEnumLiteral="Gcml.ecore#//Capability/LiveVideo"/>
+      <genEnumLiterals ecoreEnumLiteral="Gcml.ecore#//Capability/LiveAV"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Gcml.ecore#//BoundaryType">
+      <genEnumLiterals ecoreEnumLiteral="Gcml.ecore#//BoundaryType/Start"/>
+      <genEnumLiterals ecoreEnumLiteral="Gcml.ecore#//BoundaryType/End"/>
+    </genEnums>
+    <genClasses ecoreClass="Gcml.ecore#//Connection">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gcml.ecore#//Connection/connectionID"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Gcml.ecore#//Connection/fromDevice"/>
+      <genFeatures notify="false" createChild="false" propertyCategory="" propertySortChoices="true"
+          ecoreFeature="ecore:EReference Gcml.ecore#//Connection/ConnectionToCall"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gcml.ecore#//Connection/bandwidth"/>
+    </genClasses>
+    <genClasses ecoreClass="Gcml.ecore#//Device">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gcml.ecore#//Device/isLocal"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gcml.ecore#//Device/deviceCapability"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gcml.ecore#//Device/isVirtual"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Gcml.ecore#//Device/toConnection"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Gcml.ecore#//Device/fromIsAttached"/>
+    </genClasses>
+    <genClasses ecoreClass="Gcml.ecore#//Form">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gcml.ecore#//Form/formTypeName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gcml.ecore#//Form/action"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gcml.ecore#//Form/mediumDataType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gcml.ecore#//Form/suggestedApplication"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gcml.ecore#//Form/voiceCommand"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Gcml.ecore#//Form/toConnection"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Gcml.ecore#//Form/toParentForm"/>
+    </genClasses>
+    <genClasses ecoreClass="Gcml.ecore#//Gcml">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gcml.ecore#//Gcml/connection"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gcml.ecore#//Gcml/medium"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gcml.ecore#//Gcml/form"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gcml.ecore#//Gcml/person"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gcml.ecore#//Gcml/isAttached"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gcml.ecore#//Gcml/device"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gcml.ecore#//Gcml/activities"/>
+    </genClasses>
+    <genClasses ecoreClass="Gcml.ecore#//IsAttached">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Gcml.ecore#//IsAttached/toDevice"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Gcml.ecore#//IsAttached/fromPerson"/>
+    </genClasses>
+    <genClasses ecoreClass="Gcml.ecore#//Medium">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gcml.ecore#//Medium/derivedFromBuiltInType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gcml.ecore#//Medium/mediumTypeName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gcml.ecore#//Medium/suggestedApplication"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gcml.ecore#//Medium/voiceCommand"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Gcml.ecore#//Medium/toConnection"/>
+    </genClasses>
+    <genClasses ecoreClass="Gcml.ecore#//Person">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gcml.ecore#//Person/personName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gcml.ecore#//Person/personID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gcml.ecore#//Person/personRole"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Gcml.ecore#//Person/toIsAttached"/>
+    </genClasses>
+    <genClasses ecoreClass="Gcml.ecore#//Activity">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gcml.ecore#//Activity/ActivityID"/>
+    </genClasses>
+    <genClasses ecoreClass="Gcml.ecore#//Call">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gcml.ecore#//Call/outcome"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Gcml.ecore#//Call/CallToConnection"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Gcml.ecore#//Call/CallToDecision"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Gcml.ecore#//Call/CallToBoundary"/>
+    </genClasses>
+    <genClasses ecoreClass="Gcml.ecore#//Decision">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gcml.ecore#//Decision/sourceActivityID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gcml.ecore#//Decision/successPathID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gcml.ecore#//Decision/failPathID"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Gcml.ecore#//Decision/DecisionToCall"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Gcml.ecore#//Decision/DecisionToBoundary"/>
+    </genClasses>
+    <genClasses ecoreClass="Gcml.ecore#//Boundary">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gcml.ecore#//Boundary/Type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gcml.ecore#//Boundary/outcome"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Gcml.ecore#//Boundary/BoundaryToCall"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
