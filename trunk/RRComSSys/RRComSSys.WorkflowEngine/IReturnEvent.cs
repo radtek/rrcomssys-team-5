@@ -9,6 +9,10 @@
 //
 //
 
-
-public interface IReturnEvent : WFRunner {
+namespace RRComSSys.WorkflowEngine
+{
+    public interface IReturnEvent
+    {
+        void returnValueHandler(int result);
+    }
 }

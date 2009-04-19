@@ -8,7 +8,17 @@
 //  @ Author : 
 //
 //
+namespace RRComSSys.WorkflowEngine
+{
+    public class Decision : IActivity
+    {
+        #region Implementation of IActivity
 
-
-public class Decision : IActivity{
+        public bool processActivity()
+        {
+            return true;
+        }
+        #endregion
+    }
 }
+

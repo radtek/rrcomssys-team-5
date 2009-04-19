@@ -8,7 +8,20 @@
 //  @ Author : 
 //
 //
+namespace RRComSSys.WorkflowEngine
+{
+    public class Call : IActivity
+    {
+        #region Implementation of IActivity
+
+        public bool processActivity()
+        {
+            return true;
+        }
+
+        #endregion
+    }
+
+} 
 
 
-public class Call : IActivity, IActivity{
-}

@@ -9,8 +9,10 @@
 //
 //
 
-
-public class ActivityFactory {
-	public IActivity createActivity(){
-	}
+namespace RRComSSys.WorkflowEngine
+{
+    interface ActivityFactory
+    {
+        IActivity createActivity();
+    }
 }
