@@ -1,0 +1,46 @@
+﻿<Window
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    x:Class="RRComSSys.View.ExecutionWindow"
+    Title="ExecutionWindow" Height="414" Width="682" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" Background="#FF6D6969">
+	<Grid>        
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto" MinHeight="45"/>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="0.822*"/>
+			<ColumnDefinition MaxWidth="120" MinWidth="120" Width="0.178*"/>
+		</Grid.ColumnDefinitions>
+		<StackPanel Margin="0,5,0,5" VerticalAlignment="Center" Orientation="Horizontal" Grid.Column="1" ToolTip="Execute XCML" HorizontalAlignment="Right">
+			<Button Width="Auto" Height="Auto" Margin="0,0,10,0" ToolTip="Load GCML" HorizontalAlignment="Right" VerticalAlignment="Stretch" x:Name="LoadButton" BorderBrush="#FF000000" >
+				<Button.Background>
+					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+						<GradientStop Color="#FFFFFFFF" Offset="0"/>
+						<GradientStop Color="#FFE3E5F0" Offset="0.5"/>
+						<GradientStop Color="#FF54545A" Offset="1"/>
+					</LinearGradientBrush>
+				</Button.Background>
+				<Image Width="32" Height="32" Source="Images\folder-new.png" Stretch="Fill"/>
+			</Button>
+			<Button Width="Auto" Height="Auto" Margin="0,0,5,0" HorizontalAlignment="Right" VerticalAlignment="Stretch" x:Name="ExecuteButton" BorderBrush="#FF000000">
+				<Button.Background>
+					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+						<GradientStop Color="#FFFFFFFF" Offset="0"/>
+						<GradientStop Color="#FFE3E5F0" Offset="0.5"/>
+						<GradientStop Color="#FF54545A" Offset="1"/>
+					</LinearGradientBrush>
+				</Button.Background>
+				<Image Width="32" Height="20.164" Source="Images\edit-redo.png" Stretch="Fill"/>
+			</Button>
+		</StackPanel>
+        
+		<Grid Margin="0,0,0,0" Grid.Row="1" Grid.ColumnSpan="2">
+			<TextBox Text="Connection Log" TextWrapping="Wrap" Margin="5,5,5,5" Background="#72FFFFFF" BorderBrush="#72000000" Foreground="#FFA22E2E" x:Name="txtConnectionLog" Focusable="False" IsTabStop="False" IsHitTestVisible="False"/>
+		</Grid>
+		<Grid Margin="0,0,0.254,0">
+			<TextBox HorizontalAlignment="Stretch" Margin="5,5,5,5" Width="Auto" Text="Click the Load Button to browse for the gcml file you wish to use" TextWrapping="Wrap" Background="#72FFFFFF" BorderBrush="#72000000" Foreground="#FF1E6216" x:Name="txtHelpMessage" Focusable="False" IsTabStop="False" IsHitTestVisible="False"/>
+		</Grid>
+        
+	</Grid>
+</Window>
