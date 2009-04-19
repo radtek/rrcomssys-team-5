@@ -27,7 +27,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * <ul>
  *   <li>{@link gcml.impl.BoundaryImpl#getType <em>Type</em>}</li>
- *   <li>{@link gcml.impl.BoundaryImpl#isOutcome <em>Outcome</em>}</li>
  *   <li>{@link gcml.impl.BoundaryImpl#getBoundaryToCall <em>Boundary To Call</em>}</li>
  * </ul>
  * </p>
@@ -54,26 +53,6 @@ public class BoundaryImpl extends ActivityImpl implements Boundary {
 	 * @ordered
 	 */
 	protected BoundaryType type = TYPE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #isOutcome() <em>Outcome</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isOutcome()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean OUTCOME_EDEFAULT = false;
-
-	/**
-	 * The cached value of the '{@link #isOutcome() <em>Outcome</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isOutcome()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean outcome = OUTCOME_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getBoundaryToCall() <em>Boundary To Call</em>}' reference.
@@ -123,27 +102,6 @@ public class BoundaryImpl extends ActivityImpl implements Boundary {
 		type = newType == null ? TYPE_EDEFAULT : newType;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, GcmlPackage.BOUNDARY__TYPE, oldType, type));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isOutcome() {
-		return outcome;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setOutcome(boolean newOutcome) {
-		boolean oldOutcome = outcome;
-		outcome = newOutcome;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GcmlPackage.BOUNDARY__OUTCOME, oldOutcome, outcome));
 	}
 
 	/**
@@ -246,8 +204,6 @@ public class BoundaryImpl extends ActivityImpl implements Boundary {
 		switch (featureID) {
 			case GcmlPackage.BOUNDARY__TYPE:
 				return getType();
-			case GcmlPackage.BOUNDARY__OUTCOME:
-				return isOutcome() ? Boolean.TRUE : Boolean.FALSE;
 			case GcmlPackage.BOUNDARY__BOUNDARY_TO_CALL:
 				if (resolve) return getBoundaryToCall();
 				return basicGetBoundaryToCall();
@@ -265,9 +221,6 @@ public class BoundaryImpl extends ActivityImpl implements Boundary {
 		switch (featureID) {
 			case GcmlPackage.BOUNDARY__TYPE:
 				setType((BoundaryType)newValue);
-				return;
-			case GcmlPackage.BOUNDARY__OUTCOME:
-				setOutcome(((Boolean)newValue).booleanValue());
 				return;
 			case GcmlPackage.BOUNDARY__BOUNDARY_TO_CALL:
 				setBoundaryToCall((Call)newValue);
@@ -287,9 +240,6 @@ public class BoundaryImpl extends ActivityImpl implements Boundary {
 			case GcmlPackage.BOUNDARY__TYPE:
 				setType(TYPE_EDEFAULT);
 				return;
-			case GcmlPackage.BOUNDARY__OUTCOME:
-				setOutcome(OUTCOME_EDEFAULT);
-				return;
 			case GcmlPackage.BOUNDARY__BOUNDARY_TO_CALL:
 				setBoundaryToCall((Call)null);
 				return;
@@ -307,8 +257,6 @@ public class BoundaryImpl extends ActivityImpl implements Boundary {
 		switch (featureID) {
 			case GcmlPackage.BOUNDARY__TYPE:
 				return type != TYPE_EDEFAULT;
-			case GcmlPackage.BOUNDARY__OUTCOME:
-				return outcome != OUTCOME_EDEFAULT;
 			case GcmlPackage.BOUNDARY__BOUNDARY_TO_CALL:
 				return boundaryToCall != null;
 		}
@@ -327,8 +275,6 @@ public class BoundaryImpl extends ActivityImpl implements Boundary {
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (Type: ");
 		result.append(type);
-		result.append(", outcome: ");
-		result.append(outcome);
 		result.append(')');
 		return result.toString();
 	}

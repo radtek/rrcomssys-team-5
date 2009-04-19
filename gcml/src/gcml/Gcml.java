@@ -24,7 +24,9 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link gcml.Gcml#getPerson <em>Person</em>}</li>
  *   <li>{@link gcml.Gcml#getIsAttached <em>Is Attached</em>}</li>
  *   <li>{@link gcml.Gcml#getDevice <em>Device</em>}</li>
- *   <li>{@link gcml.Gcml#getActivities <em>Activities</em>}</li>
+ *   <li>{@link gcml.Gcml#getCall <em>Call</em>}</li>
+ *   <li>{@link gcml.Gcml#getDecision <em>Decision</em>}</li>
+ *   <li>{@link gcml.Gcml#getBoundary <em>Boundary</em>}</li>
  * </ul>
  * </p>
  *
@@ -130,19 +132,51 @@ public interface Gcml extends EObject {
 	EList<Device> getDevice();
 
 	/**
-	 * Returns the value of the '<em><b>Activities</b></em>' containment reference list.
-	 * The list contents are of type {@link gcml.Activity}.
+	 * Returns the value of the '<em><b>Call</b></em>' containment reference list.
+	 * The list contents are of type {@link gcml.Call}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Activities</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Call</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Activities</em>' containment reference list.
-	 * @see gcml.GcmlPackage#getGcml_Activities()
+	 * @return the value of the '<em>Call</em>' containment reference list.
+	 * @see gcml.GcmlPackage#getGcml_Call()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Activity> getActivities();
+	EList<Call> getCall();
+
+	/**
+	 * Returns the value of the '<em><b>Decision</b></em>' containment reference list.
+	 * The list contents are of type {@link gcml.Decision}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Decision</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Decision</em>' containment reference list.
+	 * @see gcml.GcmlPackage#getGcml_Decision()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Decision> getDecision();
+
+	/**
+	 * Returns the value of the '<em><b>Boundary</b></em>' containment reference list.
+	 * The list contents are of type {@link gcml.Boundary}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Boundary</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Boundary</em>' containment reference list.
+	 * @see gcml.GcmlPackage#getGcml_Boundary()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Boundary> getBoundary();
 
 } // Gcml

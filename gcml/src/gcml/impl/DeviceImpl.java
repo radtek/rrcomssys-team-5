@@ -41,6 +41,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link gcml.impl.DeviceImpl#isIsVirtual <em>Is Virtual</em>}</li>
  *   <li>{@link gcml.impl.DeviceImpl#getToConnection <em>To Connection</em>}</li>
  *   <li>{@link gcml.impl.DeviceImpl#getFromIsAttached <em>From Is Attached</em>}</li>
+ *   <li>{@link gcml.impl.DeviceImpl#getDeviceID <em>Device ID</em>}</li>
  * </ul>
  * </p>
  *
@@ -134,6 +135,26 @@ public class DeviceImpl extends EObjectImpl implements Device {
 	 * @ordered
 	 */
 	protected EList<IsAttached> fromIsAttached;
+
+	/**
+	 * The default value of the '{@link #getDeviceID() <em>Device ID</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDeviceID()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DEVICE_ID_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getDeviceID() <em>Device ID</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDeviceID()
+	 * @generated
+	 * @ordered
+	 */
+	protected String deviceID = DEVICE_ID_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -287,6 +308,27 @@ public class DeviceImpl extends EObjectImpl implements Device {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getDeviceID() {
+		return deviceID;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDeviceID(String newDeviceID) {
+		String oldDeviceID = deviceID;
+		deviceID = newDeviceID;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GcmlPackage.DEVICE__DEVICE_ID, oldDeviceID, deviceID));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -333,6 +375,8 @@ public class DeviceImpl extends EObjectImpl implements Device {
 				return getToConnection();
 			case GcmlPackage.DEVICE__FROM_IS_ATTACHED:
 				return getFromIsAttached();
+			case GcmlPackage.DEVICE__DEVICE_ID:
+				return getDeviceID();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -364,6 +408,9 @@ public class DeviceImpl extends EObjectImpl implements Device {
 				getFromIsAttached().clear();
 				getFromIsAttached().addAll((Collection<? extends IsAttached>)newValue);
 				return;
+			case GcmlPackage.DEVICE__DEVICE_ID:
+				setDeviceID((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -391,6 +438,9 @@ public class DeviceImpl extends EObjectImpl implements Device {
 			case GcmlPackage.DEVICE__FROM_IS_ATTACHED:
 				getFromIsAttached().clear();
 				return;
+			case GcmlPackage.DEVICE__DEVICE_ID:
+				setDeviceID(DEVICE_ID_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -413,6 +463,8 @@ public class DeviceImpl extends EObjectImpl implements Device {
 				return toConnection != null && !toConnection.isEmpty();
 			case GcmlPackage.DEVICE__FROM_IS_ATTACHED:
 				return fromIsAttached != null && !fromIsAttached.isEmpty();
+			case GcmlPackage.DEVICE__DEVICE_ID:
+				return DEVICE_ID_EDEFAULT == null ? deviceID != null : !DEVICE_ID_EDEFAULT.equals(deviceID);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -433,6 +485,8 @@ public class DeviceImpl extends EObjectImpl implements Device {
 		result.append(deviceCapability);
 		result.append(", isVirtual: ");
 		if (isVirtualESet) result.append(isVirtual); else result.append("<unset>");
+		result.append(", deviceID: ");
+		result.append(deviceID);
 		result.append(')');
 		return result.toString();
 	}

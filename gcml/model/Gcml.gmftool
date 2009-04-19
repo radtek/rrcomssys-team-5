@@ -13,117 +13,198 @@
           title="Connection"
           description="Create new Connection">
         <smallIcon
-            xsi:type="gmftool:BundleImage"
-            path="\icons\full\obj16\Connection_16x16.png"
-            bundle="gcml.edit"/>
+            xsi:type="gmftool:DefaultImage"/>
         <largeIcon
-            xsi:type="gmftool:BundleImage"
-            path="\icons\full\obj16\Connection_32x32.png"
-            bundle="gcml.edit"/>
+            xsi:type="gmftool:DefaultImage"/>
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
           title="Device"
           description="Create new Device">
         <smallIcon
-            xsi:type="gmftool:BundleImage"
-            path="\icons\full\obj16\Device_32x32.png"
-            bundle="gcml.edit"/>
+            xsi:type="gmftool:DefaultImage"/>
         <largeIcon
-            xsi:type="gmftool:BundleImage"
-            path="\icons\full\obj16\Device_16x16.png"
-            bundle="gcml.edit"/>
+            xsi:type="gmftool:DefaultImage"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="DeviceToConnection"
+          description="Create new DeviceToConnection">
+        <smallIcon
+            xsi:type="gmftool:DefaultImage"/>
+        <largeIcon
+            xsi:type="gmftool:DefaultImage"/>
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
           title="Form"
           description="Create new Form">
         <smallIcon
-            xsi:type="gmftool:BundleImage"
-            path="\icons\full\obj16\Form_16x16.png"
-            bundle="gcml.edit"/>
+            xsi:type="gmftool:DefaultImage"/>
         <largeIcon
-            xsi:type="gmftool:BundleImage"
-            path="\icons\full\obj16\Form_32x32.png"
-            bundle="gcml.edit"/>
+            xsi:type="gmftool:DefaultImage"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="FormToConnection"
+          description="Create new FormToConnection">
+        <smallIcon
+            xsi:type="gmftool:DefaultImage"/>
+        <largeIcon
+            xsi:type="gmftool:DefaultImage"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="FormToParentForm"
+          description="Create new FormToParentForm">
+        <smallIcon
+            xsi:type="gmftool:DefaultImage"/>
+        <largeIcon
+            xsi:type="gmftool:DefaultImage"/>
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
           title="IsAttached"
           description="Create new IsAttached">
         <smallIcon
-            xsi:type="gmftool:BundleImage"
-            path="\icons\full\obj16\IsAttached_16x16.png"
-            bundle="gcml.edit"/>
+            xsi:type="gmftool:DefaultImage"/>
         <largeIcon
-            xsi:type="gmftool:BundleImage"
-            path="\icons\full\obj16\IsAttached_32x32.png"
-            bundle="gcml.edit"/>
+            xsi:type="gmftool:DefaultImage"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="IsAttachedToDevice"
+          description="Create new IsAttachedToDevice">
+        <smallIcon
+            xsi:type="gmftool:DefaultImage"/>
+        <largeIcon
+            xsi:type="gmftool:DefaultImage"/>
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
           title="Medium"
           description="Create new Medium">
         <smallIcon
-            xsi:type="gmftool:BundleImage"
-            path="\icons\full\obj16\Medium_16x16.png"
-            bundle="gcml.edit"/>
+            xsi:type="gmftool:DefaultImage"/>
         <largeIcon
-            xsi:type="gmftool:BundleImage"
-            path="\icons\full\obj16\Medium_32x32.png"
-            bundle="gcml.edit"/>
+            xsi:type="gmftool:DefaultImage"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="MediumToConnection"
+          description="Create new MediumToConnection">
+        <smallIcon
+            xsi:type="gmftool:DefaultImage"/>
+        <largeIcon
+            xsi:type="gmftool:DefaultImage"/>
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
           title="Person"
           description="Create new Person">
         <smallIcon
-            xsi:type="gmftool:BundleImage"
-            path="\icons\full\obj16\Person_16x16.png"
-            bundle="gcml.edit"/>
+            xsi:type="gmftool:DefaultImage"/>
         <largeIcon
-            xsi:type="gmftool:BundleImage"
-            path="\icons\full\obj16\Person_32x32.png"
-            bundle="gcml.edit"/>
+            xsi:type="gmftool:DefaultImage"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="PersonToIsAttached"
+          description="Create new PersonToIsAttached">
+        <smallIcon
+            xsi:type="gmftool:DefaultImage"/>
+        <largeIcon
+            xsi:type="gmftool:DefaultImage"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Activity"
+          description="Create new Activity">
+        <smallIcon
+            xsi:type="gmftool:DefaultImage"/>
+        <largeIcon
+            xsi:type="gmftool:DefaultImage"/>
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
           title="Call"
           description="Create new Call">
         <smallIcon
-            xsi:type="gmftool:BundleImage"
-            path="\icons\full\obj16\Call_16x16.png"
-            bundle="gcml.edit"/>
+            xsi:type="gmftool:DefaultImage"/>
         <largeIcon
-            xsi:type="gmftool:BundleImage"
-            path="\icons\full\obj16\Call_32x32.png"
-            bundle="gcml.edit"/>
+            xsi:type="gmftool:DefaultImage"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="CallCallToConnection"
+          description="Create new CallCallToConnection">
+        <smallIcon
+            xsi:type="gmftool:DefaultImage"/>
+        <largeIcon
+            xsi:type="gmftool:DefaultImage"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="CallCallToDecision"
+          description="Create new CallCallToDecision">
+        <smallIcon
+            xsi:type="gmftool:DefaultImage"/>
+        <largeIcon
+            xsi:type="gmftool:DefaultImage"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="CallCallToBoundary"
+          description="Create new CallCallToBoundary">
+        <smallIcon
+            xsi:type="gmftool:DefaultImage"/>
+        <largeIcon
+            xsi:type="gmftool:DefaultImage"/>
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
           title="Decision"
           description="Create new Decision">
         <smallIcon
-            xsi:type="gmftool:BundleImage"
-            path="\icons\full\obj16\Decision_16x16.png"
-            bundle="gcml.edit"/>
+            xsi:type="gmftool:DefaultImage"/>
         <largeIcon
-            xsi:type="gmftool:BundleImage"
-            path="\icons\full\obj16\Decision_32x32.png"
-            bundle="gcml.edit"/>
+            xsi:type="gmftool:DefaultImage"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="DecisionDecisionToCall"
+          description="Create new DecisionDecisionToCall">
+        <smallIcon
+            xsi:type="gmftool:DefaultImage"/>
+        <largeIcon
+            xsi:type="gmftool:DefaultImage"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="DecisionDecisionToBoundary"
+          description="Create new DecisionDecisionToBoundary">
+        <smallIcon
+            xsi:type="gmftool:DefaultImage"/>
+        <largeIcon
+            xsi:type="gmftool:DefaultImage"/>
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
           title="Boundary"
           description="Create new Boundary">
         <smallIcon
-            xsi:type="gmftool:BundleImage"
-            path="\icons\full\obj16\Boundary_16x16.png"
-            bundle="gcml.edit"/>
+            xsi:type="gmftool:DefaultImage"/>
         <largeIcon
-            xsi:type="gmftool:BundleImage"
-            path="\icons\full\obj16\Boundary_32x32.png"
-            bundle="gcml.edit"/>
+            xsi:type="gmftool:DefaultImage"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="BoundaryBoundaryToCall"
+          description="Create new BoundaryBoundaryToCall">
+        <smallIcon
+            xsi:type="gmftool:DefaultImage"/>
+        <largeIcon
+            xsi:type="gmftool:DefaultImage"/>
       </tools>
     </tools>
   </palette>
