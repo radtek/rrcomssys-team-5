@@ -10,5 +10,21 @@
 //
 
 
-public class BoundaryFactory : ActivityFactory, ActivityFactory{
+using RRComSSys.WorkflowEngine;
+
+namespace RRComSSys.WorkflowEngine
+{
+    public class BoundaryFactory : ActivityFactory
+    {
+        #region Implementation of ActivityFactory
+
+        public IActivity createActivity()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        #endregion
+    }
+
 }
+

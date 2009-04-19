@@ -9,6 +9,19 @@
 //
 //
 
+using RRComSys.WorkflowEngine;
 
-public class DecisionFactory : ActivityFactory, ActivityFactory{
+namespace RRComSSys.WorkflowEngine
+{
+    public class DecisionFactory : ActivityFactory
+    {
+        #region ActivityFactory Members
+
+        public IActivity createActivity()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        #endregion
+    }
 }

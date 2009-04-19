@@ -8,10 +8,9 @@
 //  @ Author : 
 //
 //
-
-
-public class IActivity {
-	public object wxcml : data ;
-	public void processActivity(){
-	}
+namespace RRComSSys.WorkflowEngine
+{
+    public interface IActivity {
+        bool processActivity();
+    }
 }

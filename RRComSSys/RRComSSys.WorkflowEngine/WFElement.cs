@@ -8,10 +8,14 @@
 //  @ Author : 
 //
 //
-
-
-public class WFElement {
-	public ActivityFactory factory ;
-	public void getData(){
-	}
+namespace RRComSSys.WorkflowEngine
+{
+    public class WFElement
+    {
+        public ActivityFactory factory;
+        public void getData()
+        {
+        }
+    }
 }
+

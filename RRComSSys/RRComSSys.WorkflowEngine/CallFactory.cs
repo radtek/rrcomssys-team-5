@@ -10,5 +10,19 @@
 //
 
 
-public class CallFactory : ActivityFactory{
+using RRComSSys.WorkflowEngine;
+
+namespace RRComSSys.WorkflowEngine
+{
+    public class CallFactory : ActivityFactory
+    {
+        #region Implementation of ActivityFactory
+
+        public IActivity createActivity()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        #endregion
+    }
 }

@@ -9,6 +9,17 @@
 //
 //
 
+namespace RRComSSys.WorkflowEngine
+{
+    public class Boundary : IActivity
+    {
+        #region Implementation of IActivity
 
-public class Boundary : IActivity{
+        public bool processActivity()
+        {
+            return true;
+        }
+
+        #endregion
+    }
 }
