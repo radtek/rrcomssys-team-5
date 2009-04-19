@@ -7,7 +7,7 @@
 namespace RRComSSys.TransformationEngine.ObjectModel
 {
     using System.Collections.Generic;
-    using System.ComponentModel; 
+    using System.ComponentModel;
     using System.IO;
 
 
@@ -23,69 +23,69 @@ namespace RRComSSys.TransformationEngine.ObjectModel
         private WorkflowActivities activitiesField;
 
         [EditorBrowsable(EditorBrowsableState.Never)]
-        private Boundary boundaryField;
+        private List<Boundary> boundaryField;
 
         [EditorBrowsable(EditorBrowsableState.Never)]
-        private Call callField;
+        private List<Call> callField;
 
         [EditorBrowsable(EditorBrowsableState.Never)]
-        private Decision decisionField;
+        private List<Decision> decisionField;
 
         [EditorBrowsable(EditorBrowsableState.Never)]
-        private Connection connectionField;
+        private List<Connection> connectionField;
 
         [EditorBrowsable(EditorBrowsableState.Never)]
-        private Form formField;
+        private List<Form> formField;
 
         [EditorBrowsable(EditorBrowsableState.Never)]
-        private Device deviceField;
+        private List<Device> deviceField;
 
         [EditorBrowsable(EditorBrowsableState.Never)]
-        private Person personField;
+        private List<Person> personField;
 
         [EditorBrowsable(EditorBrowsableState.Never)]
-        private IsAttached isAttachedField;
+        private List<IsAttached> isAttachedField;
 
         [EditorBrowsable(EditorBrowsableState.Never)]
-        private Medium mediumField;
+        private List<Medium> mediumField;
 
         public Workflow()
         {
             if ((this.mediumField == null))
             {
-                this.mediumField = new Medium();
+                this.mediumField = new List<Medium>();
             }
             if ((this.isAttachedField == null))
             {
-                this.isAttachedField = new IsAttached();
+                this.isAttachedField = new List<IsAttached>();
             }
             if ((this.personField == null))
             {
-                this.personField = new Person();
+                this.personField = new List<Person>();
             }
             if ((this.deviceField == null))
             {
-                this.deviceField = new Device();
+                this.deviceField = new List<Device>();
             }
             if ((this.formField == null))
             {
-                this.formField = new Form();
+                this.formField = new List<Form>();
             }
             if ((this.connectionField == null))
             {
-                this.connectionField = new Connection();
+                this.connectionField = new List<Connection>();
             }
             if ((this.decisionField == null))
             {
-                this.decisionField = new Decision();
+                this.decisionField = new List<Decision>();
             }
             if ((this.callField == null))
             {
-                this.callField = new Call();
+                this.callField = new List<Call>();
             }
             if ((this.boundaryField == null))
             {
-                this.boundaryField = new Boundary();
+                this.boundaryField = new List<Boundary>();
             }
             if ((this.activitiesField == null))
             {
@@ -119,7 +119,8 @@ namespace RRComSSys.TransformationEngine.ObjectModel
         }
 
         /// <remarks/>
-        public Boundary Boundary
+        [System.Xml.Serialization.XmlElementAttribute("Boundary")]
+        public List<Boundary> Boundary
         {
             get
             {
@@ -144,7 +145,8 @@ namespace RRComSSys.TransformationEngine.ObjectModel
         }
 
         /// <remarks/>
-        public Call Call
+        [System.Xml.Serialization.XmlElementAttribute("Call")]
+        public List<Call> Call
         {
             get
             {
@@ -169,7 +171,8 @@ namespace RRComSSys.TransformationEngine.ObjectModel
         }
 
         /// <remarks/>
-        public Decision Decision
+        [System.Xml.Serialization.XmlElementAttribute("Decision")]
+        public List<Decision> Decision
         {
             get
             {
@@ -194,7 +197,8 @@ namespace RRComSSys.TransformationEngine.ObjectModel
         }
 
         /// <remarks/>
-        public Connection Connection
+        [System.Xml.Serialization.XmlElementAttribute("Connection")]
+        public List<Connection> Connection
         {
             get
             {
@@ -219,7 +223,8 @@ namespace RRComSSys.TransformationEngine.ObjectModel
         }
 
         /// <remarks/>
-        public Form Form
+        [System.Xml.Serialization.XmlElementAttribute("Form")]
+        public List<Form> Form
         {
             get
             {
@@ -244,7 +249,8 @@ namespace RRComSSys.TransformationEngine.ObjectModel
         }
 
         /// <remarks/>
-        public Device Device
+        [System.Xml.Serialization.XmlElementAttribute("Device")]
+        public List<Device> Device
         {
             get
             {
@@ -269,7 +275,8 @@ namespace RRComSSys.TransformationEngine.ObjectModel
         }
 
         /// <remarks/>
-        public Person Person
+        [System.Xml.Serialization.XmlElementAttribute("Person")]
+        public List<Person> Person
         {
             get
             {
@@ -294,7 +301,8 @@ namespace RRComSSys.TransformationEngine.ObjectModel
         }
 
         /// <remarks/>
-        public IsAttached IsAttached
+        [System.Xml.Serialization.XmlElementAttribute("IsAttached")]
+        public List<IsAttached> IsAttached
         {
             get
             {
@@ -319,7 +327,8 @@ namespace RRComSSys.TransformationEngine.ObjectModel
         }
 
         /// <remarks/>
-        public Medium Medium
+        [System.Xml.Serialization.XmlElementAttribute("Medium")]
+        public List<Medium> Medium
         {
             get
             {
@@ -411,7 +420,7 @@ namespace RRComSSys.TransformationEngine.ObjectModel
                 streamWriter.WriteLine(xmlString);
                 streamWriter.Close();
                 return true;
-            } 
+            }
             catch (System.Exception e)
             {
                 exception = e;
