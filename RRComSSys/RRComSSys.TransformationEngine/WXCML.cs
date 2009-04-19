@@ -411,7 +411,7 @@ namespace RRComSSys.TransformationEngine.ObjectModel
                 streamWriter.WriteLine(xmlString);
                 streamWriter.Close();
                 return true;
-            }
+            } 
             catch (System.Exception e)
             {
                 exception = e;
