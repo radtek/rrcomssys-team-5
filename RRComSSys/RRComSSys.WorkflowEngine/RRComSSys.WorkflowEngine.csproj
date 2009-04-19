@@ -58,6 +58,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WFElement.cs" />
     <Compile Include="WFRunner.cs" />
+    <Compile Include="WorkflowFactory.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RRComSSys.TransformationEngine\RRComSSys.TransformationEngine.csproj">
+      <Project>{7E60066B-C794-4213-BCEA-B89ED858B295}</Project>
+      <Name>RRComSSys.TransformationEngine</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
