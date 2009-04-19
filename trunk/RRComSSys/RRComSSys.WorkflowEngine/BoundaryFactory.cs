@@ -16,15 +16,16 @@ namespace RRComSSys.WorkflowEngine
 {
     public class BoundaryFactory : ActivityFactory
     {
-        #region Implementation of ActivityFactory
+        #region Overrides of ActivityFactory
 
-        public IActivity createActivity()
+        public override IActivity createActvity()
         {
             throw new System.NotImplementedException();
         }
 
         #endregion
     }
+
 
 }
 

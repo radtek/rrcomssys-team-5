@@ -9,15 +9,13 @@
 //
 //
 
-using RRComSys.WorkflowEngine;
-
 namespace RRComSSys.WorkflowEngine
 {
     public class DecisionFactory : ActivityFactory
     {
-        #region ActivityFactory Members
+        #region Overrides of ActivityFactory
 
-        public IActivity createActivity()
+        public override IActivity createActvity()
         {
             throw new System.NotImplementedException();
         }

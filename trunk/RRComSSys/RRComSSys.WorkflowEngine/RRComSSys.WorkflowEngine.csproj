@@ -53,6 +53,7 @@
     <Compile Include="Decision.cs" />
     <Compile Include="DecisionFactory.cs" />
     <Compile Include="IActivity.cs" />
+    <Compile Include="IActivityCreator.cs" />
     <Compile Include="IReturnEvent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WFElement.cs" />
