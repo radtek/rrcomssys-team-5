@@ -14,7 +14,7 @@ http://www.altova.com/mapforce
 	<xsl:template match="/">
 		<n:Workflow>
 			<xsl:attribute name="xsi:schemaLocation">
-				<xsl:value-of select="'http://workflowxcml.model E:/Grammars/2009_04_18/2ndGCML/WXCML.xsd'"/>
+				<xsl:value-of select="'http://workflowxcml.model E:/Grammars/2009_04_19/WXCML.xsd'"/>
 			</xsl:attribute>
 			<xsl:variable name="var1_instance" select="."/>
 			<xsl:for-each select="$var1_instance/n2:Gcml">
@@ -24,6 +24,11 @@ http://www.altova.com/mapforce
 						<xsl:attribute name="activityID">
 							<xsl:value-of select="string(@ActivityID)"/>
 						</xsl:attribute>
+						<xsl:if test="$var4_boundary/@xmi:label">
+							<xsl:attribute name="Name">
+								<xsl:value-of select="string(@xmi:label)"/>
+							</xsl:attribute>
+						</xsl:if>
 						<xsl:attribute name="Type">
 							<xsl:value-of select="string(@Type)"/>
 						</xsl:attribute>
@@ -40,11 +45,6 @@ http://www.altova.com/mapforce
 						<xsl:attribute name="activityID">
 							<xsl:value-of select="string(@ActivityID)"/>
 						</xsl:attribute>
-						<xsl:if test="$var6_call/@outcome">
-							<xsl:attribute name="Outcome">
-								<xsl:value-of select="((('0' != string(@outcome)) and ('false' != string(@outcome))) and boolean(string(@outcome)))"/>
-							</xsl:attribute>
-						</xsl:if>
 						<xsl:if test="$var6_call/@CallToConnection">
 							<xsl:attribute name="CallToConnection">
 								<xsl:value-of select="string(@CallToConnection)"/>
@@ -293,9 +293,6 @@ http://www.altova.com/mapforce
 								<xsl:value-of select="string(@fromDevice)"/>
 							</xsl:attribute>
 						</xsl:if>
-						<xsl:attribute name="ConnectionID">
-							<xsl:value-of select="string(@connectionID)"/>
-						</xsl:attribute>
 					</n:Connection>
 				</xsl:for-each>
 				<xsl:for-each select="form">

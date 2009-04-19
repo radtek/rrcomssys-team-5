@@ -233,15 +233,15 @@ CMLINCLUDE src=&amp;quot;CMLFORM/mediumName&amp;quot;CMLINCLUDE src=&amp;quot;CM
           </xsd:sequence>
         </xsd:complexType>
       </xsd:element>
-      <xsd:element name="Boundary" type="wxc:Boundary" />
-      <xsd:element name="Call" type="wxc:Call" />
-      <xsd:element name="Decision" type="wxc:Decision" />
-      <xsd:element name="Connection" type="wxc:Connection" />
-      <xsd:element name="Form" type="wxc:Form" />
-      <xsd:element name="Device" type="wxc:Device" />
-      <xsd:element name="Person" type="wxc:Person" />
-      <xsd:element name="IsAttached" type="wxc:IsAttached" />
-      <xsd:element name="Medium" type="wxc:Medium" />
+      <xsd:element minOccurs="2" maxOccurs="unbounded" name="Boundary" type="wxc:Boundary" />
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="Call" type="wxc:Call" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="Decision" type="wxc:Decision" />
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="Connection" type="wxc:Connection" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="Form" type="wxc:Form" />
+      <xsd:element minOccurs="2" maxOccurs="unbounded" name="Device" type="wxc:Device" />
+      <xsd:element minOccurs="2" maxOccurs="unbounded" name="Person" type="wxc:Person" />
+      <xsd:element minOccurs="2" maxOccurs="unbounded" name="IsAttached" type="wxc:IsAttached" />
+      <xsd:element minOccurs="2" maxOccurs="unbounded" name="Medium" type="wxc:Medium" />
     </xsd:sequence>
   </xsd:complexType>
   <xsd:element name="Workflow" type="wxc:Workflow">
