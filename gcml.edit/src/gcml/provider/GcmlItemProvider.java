@@ -87,7 +87,9 @@ public class GcmlItemProvider
 			childrenFeatures.add(GcmlPackage.Literals.GCML__PERSON);
 			childrenFeatures.add(GcmlPackage.Literals.GCML__IS_ATTACHED);
 			childrenFeatures.add(GcmlPackage.Literals.GCML__DEVICE);
-			childrenFeatures.add(GcmlPackage.Literals.GCML__ACTIVITIES);
+			childrenFeatures.add(GcmlPackage.Literals.GCML__CALL);
+			childrenFeatures.add(GcmlPackage.Literals.GCML__DECISION);
+			childrenFeatures.add(GcmlPackage.Literals.GCML__BOUNDARY);
 		}
 		return childrenFeatures;
 	}
@@ -145,7 +147,9 @@ public class GcmlItemProvider
 			case GcmlPackage.GCML__PERSON:
 			case GcmlPackage.GCML__IS_ATTACHED:
 			case GcmlPackage.GCML__DEVICE:
-			case GcmlPackage.GCML__ACTIVITIES:
+			case GcmlPackage.GCML__CALL:
+			case GcmlPackage.GCML__DECISION:
+			case GcmlPackage.GCML__BOUNDARY:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -195,22 +199,17 @@ public class GcmlItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(GcmlPackage.Literals.GCML__ACTIVITIES,
-				 GcmlFactory.eINSTANCE.createActivity()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(GcmlPackage.Literals.GCML__ACTIVITIES,
+				(GcmlPackage.Literals.GCML__CALL,
 				 GcmlFactory.eINSTANCE.createCall()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(GcmlPackage.Literals.GCML__ACTIVITIES,
+				(GcmlPackage.Literals.GCML__DECISION,
 				 GcmlFactory.eINSTANCE.createDecision()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(GcmlPackage.Literals.GCML__ACTIVITIES,
+				(GcmlPackage.Literals.GCML__BOUNDARY,
 				 GcmlFactory.eINSTANCE.createBoundary()));
 	}
 

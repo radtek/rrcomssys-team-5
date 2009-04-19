@@ -69,6 +69,7 @@ public class DeviceItemProvider
 			addIsVirtualPropertyDescriptor(object);
 			addToConnectionPropertyDescriptor(object);
 			addFromIsAttachedPropertyDescriptor(object);
+			addDeviceIDPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -184,6 +185,28 @@ public class DeviceItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Device ID feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDeviceIDPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Device_deviceID_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Device_deviceID_feature", "_UI_Device_type"),
+				 GcmlPackage.Literals.DEVICE__DEVICE_ID,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns Device.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -221,6 +244,7 @@ public class DeviceItemProvider
 			case GcmlPackage.DEVICE__IS_LOCAL:
 			case GcmlPackage.DEVICE__DEVICE_CAPABILITY:
 			case GcmlPackage.DEVICE__IS_VIRTUAL:
+			case GcmlPackage.DEVICE__DEVICE_ID:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
