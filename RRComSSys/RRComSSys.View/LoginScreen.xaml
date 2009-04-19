@@ -19,24 +19,31 @@
     				<GradientStop Color="#FF0C0C0C" Offset="0.162"/>
     				<GradientStop Color="#FFFFFFFF" Offset="1"/>
     			</LinearGradientBrush>
-    		</Border.Background>
-    	</Border>
+    		</Border.Background>            
+        </Border>
     	<StackPanel Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Stretch" Grid.Column="1" Grid.Row="0">
     		<Label Margin="20,20,0,0" VerticalAlignment="Top" Height="Auto" Content="Welcome to CVM" FontSize="24" HorizontalAlignment="Left" Foreground="#FF000000"/>
     		<Label Margin="0,15,0,0" Content="Please Log In:" Grid.Column="1" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center"/>
     	</StackPanel>  
     	<StackPanel Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Column="1" Grid.Row="1">
     		<Label Content="Username" HorizontalAlignment="Left" Margin="30,0,15,0" VerticalAlignment="Center"/>
-    		<TextBox Margin="15,0,0,0" VerticalAlignment="Center" Width="217" Height="Auto" Text="" TextWrapping="Wrap"/>        
+    		<TextBox Margin="15,0,0,0" VerticalAlignment="Center" Width="217" Height="Auto" Text="" TextWrapping="Wrap" TabIndex="1" Name="txtUserName" />        
     	</StackPanel>		
     	<StackPanel Margin="0,0,0,0" Grid.Column="1" Grid.Row="2" Orientation="Horizontal">
     		<Label HorizontalAlignment="Left" Margin="30,0,15,0" VerticalAlignment="Center" Width="Auto" Height="Auto" Content="Password"/>
-            <PasswordBox ToolTip="Password" Name="txtPassword" Margin="18,0,0,0" VerticalAlignment="Center" Width="217" Height="Auto" />
+            <PasswordBox ToolTip="Password" Name="txtPassword" Margin="18,0,0,0" VerticalAlignment="Center" Width="217" Height="Auto" TabIndex="2" />
         </StackPanel>
-    	<StackPanel HorizontalAlignment="Right" Margin="0,0,0,0" VerticalAlignment="Bottom" Width="Auto" Height="Auto" Grid.Column="1" Grid.Row="3" Orientation="Horizontal">
-    		<Button Height="Auto" Content="Login" HorizontalAlignment="Right" Margin="0,0,15,15" VerticalAlignment="Bottom" Width="45"/>
-    		<Button HorizontalAlignment="Right" Margin="0,0,15,15" VerticalAlignment="Bottom" Width="45" Height="Auto" Content="Cancel"/>
-    	</StackPanel>
+        <Grid Grid.Row="3" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Content="" Foreground="Red" Name="errorLabel" VerticalAlignment="Center" HorizontalAlignment="Center" Visibility="Hidden" Margin="0,0,0,0" />
+            <StackPanel HorizontalAlignment="Right" Margin="0,0,0,0" VerticalAlignment="Bottom" Width="Auto" Height="Auto" Grid.Row="1" Orientation="Horizontal">
+                <Button Height="Auto" Content="Login" HorizontalAlignment="Right" Margin="0,0,15,15" VerticalAlignment="Bottom" Width="45" TabIndex="3" Name="LoginButton" Click="LoginButton_Click" />
+                <Button HorizontalAlignment="Right" Margin="0,0,15,15" VerticalAlignment="Bottom" Width="45" Height="Auto" Content="Cancel" TabIndex="4" Name="CancelButton" Click="CancelButton_Click" />
+            </StackPanel>
+        </Grid>    	
     	<Border HorizontalAlignment="Stretch" Margin="0,0,0,0" Width="Auto" Grid.RowSpan="4" BorderBrush="#FF000000" BorderThickness="0,0,5,0" Opacity="1" OpacityMask="{x:Null}" Background="#7F000000">
     		<Image Width="Auto" Height="Auto" Source="Images\__communication__.jpg" Stretch="Fill"/>
     	</Border>		
