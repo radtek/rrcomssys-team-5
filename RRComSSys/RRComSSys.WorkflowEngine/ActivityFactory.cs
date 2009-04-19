@@ -11,8 +11,12 @@
 
 namespace RRComSSys.WorkflowEngine
 {
-    interface ActivityFactory
+    public abstract class ActivityFactory : IActivityCreator
     {
-        IActivity createActivity();
+        #region Implementation of IActivityCreator
+
+        public abstract IActivity createActvity();
+
+        #endregion
     }
 }
