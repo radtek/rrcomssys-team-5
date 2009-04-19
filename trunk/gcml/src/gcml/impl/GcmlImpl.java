@@ -6,8 +6,11 @@
  */
 package gcml.impl;
 
+import gcml.Boundary;
+import gcml.Call;
 import gcml.Activity;
 import gcml.Connection;
+import gcml.Decision;
 import gcml.Device;
 import gcml.Form;
 import gcml.Gcml;
@@ -43,7 +46,9 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link gcml.impl.GcmlImpl#getPerson <em>Person</em>}</li>
  *   <li>{@link gcml.impl.GcmlImpl#getIsAttached <em>Is Attached</em>}</li>
  *   <li>{@link gcml.impl.GcmlImpl#getDevice <em>Device</em>}</li>
- *   <li>{@link gcml.impl.GcmlImpl#getActivities <em>Activities</em>}</li>
+ *   <li>{@link gcml.impl.GcmlImpl#getCall <em>Call</em>}</li>
+ *   <li>{@link gcml.impl.GcmlImpl#getDecision <em>Decision</em>}</li>
+ *   <li>{@link gcml.impl.GcmlImpl#getBoundary <em>Boundary</em>}</li>
  * </ul>
  * </p>
  *
@@ -111,14 +116,34 @@ public class GcmlImpl extends EObjectImpl implements Gcml {
 	protected EList<Device> device;
 
 	/**
-	 * The cached value of the '{@link #getActivities() <em>Activities</em>}' containment reference list.
+	 * The cached value of the '{@link #getCall() <em>Call</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getActivities()
+	 * @see #getCall()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Activity> activities;
+	protected EList<Call> call;
+
+	/**
+	 * The cached value of the '{@link #getDecision() <em>Decision</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDecision()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Decision> decision;
+
+	/**
+	 * The cached value of the '{@link #getBoundary() <em>Boundary</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBoundary()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Boundary> boundary;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -216,11 +241,35 @@ public class GcmlImpl extends EObjectImpl implements Gcml {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Activity> getActivities() {
-		if (activities == null) {
-			activities = new EObjectContainmentEList<Activity>(Activity.class, this, GcmlPackage.GCML__ACTIVITIES);
+	public EList<Call> getCall() {
+		if (call == null) {
+			call = new EObjectContainmentEList<Call>(Call.class, this, GcmlPackage.GCML__CALL);
 		}
-		return activities;
+		return call;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Decision> getDecision() {
+		if (decision == null) {
+			decision = new EObjectContainmentEList<Decision>(Decision.class, this, GcmlPackage.GCML__DECISION);
+		}
+		return decision;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Boundary> getBoundary() {
+		if (boundary == null) {
+			boundary = new EObjectContainmentEList<Boundary>(Boundary.class, this, GcmlPackage.GCML__BOUNDARY);
+		}
+		return boundary;
 	}
 
 	/**
@@ -243,8 +292,12 @@ public class GcmlImpl extends EObjectImpl implements Gcml {
 				return ((InternalEList<?>)getIsAttached()).basicRemove(otherEnd, msgs);
 			case GcmlPackage.GCML__DEVICE:
 				return ((InternalEList<?>)getDevice()).basicRemove(otherEnd, msgs);
-			case GcmlPackage.GCML__ACTIVITIES:
-				return ((InternalEList<?>)getActivities()).basicRemove(otherEnd, msgs);
+			case GcmlPackage.GCML__CALL:
+				return ((InternalEList<?>)getCall()).basicRemove(otherEnd, msgs);
+			case GcmlPackage.GCML__DECISION:
+				return ((InternalEList<?>)getDecision()).basicRemove(otherEnd, msgs);
+			case GcmlPackage.GCML__BOUNDARY:
+				return ((InternalEList<?>)getBoundary()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -269,8 +322,12 @@ public class GcmlImpl extends EObjectImpl implements Gcml {
 				return getIsAttached();
 			case GcmlPackage.GCML__DEVICE:
 				return getDevice();
-			case GcmlPackage.GCML__ACTIVITIES:
-				return getActivities();
+			case GcmlPackage.GCML__CALL:
+				return getCall();
+			case GcmlPackage.GCML__DECISION:
+				return getDecision();
+			case GcmlPackage.GCML__BOUNDARY:
+				return getBoundary();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -308,9 +365,17 @@ public class GcmlImpl extends EObjectImpl implements Gcml {
 				getDevice().clear();
 				getDevice().addAll((Collection<? extends Device>)newValue);
 				return;
-			case GcmlPackage.GCML__ACTIVITIES:
-				getActivities().clear();
-				getActivities().addAll((Collection<? extends Activity>)newValue);
+			case GcmlPackage.GCML__CALL:
+				getCall().clear();
+				getCall().addAll((Collection<? extends Call>)newValue);
+				return;
+			case GcmlPackage.GCML__DECISION:
+				getDecision().clear();
+				getDecision().addAll((Collection<? extends Decision>)newValue);
+				return;
+			case GcmlPackage.GCML__BOUNDARY:
+				getBoundary().clear();
+				getBoundary().addAll((Collection<? extends Boundary>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -342,8 +407,14 @@ public class GcmlImpl extends EObjectImpl implements Gcml {
 			case GcmlPackage.GCML__DEVICE:
 				getDevice().clear();
 				return;
-			case GcmlPackage.GCML__ACTIVITIES:
-				getActivities().clear();
+			case GcmlPackage.GCML__CALL:
+				getCall().clear();
+				return;
+			case GcmlPackage.GCML__DECISION:
+				getDecision().clear();
+				return;
+			case GcmlPackage.GCML__BOUNDARY:
+				getBoundary().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -369,8 +440,12 @@ public class GcmlImpl extends EObjectImpl implements Gcml {
 				return isAttached != null && !isAttached.isEmpty();
 			case GcmlPackage.GCML__DEVICE:
 				return device != null && !device.isEmpty();
-			case GcmlPackage.GCML__ACTIVITIES:
-				return activities != null && !activities.isEmpty();
+			case GcmlPackage.GCML__CALL:
+				return call != null && !call.isEmpty();
+			case GcmlPackage.GCML__DECISION:
+				return decision != null && !decision.isEmpty();
+			case GcmlPackage.GCML__BOUNDARY:
+				return boundary != null && !boundary.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

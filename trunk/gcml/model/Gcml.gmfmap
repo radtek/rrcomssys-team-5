@@ -11,27 +11,6 @@
     <ownedChild>
       <domainMetaElement
           href="Gcml.ecore#//Device"/>
-      <labelMappings
-          xsi:type="gmfmap:FeatureLabelMapping">
-        <diagramLabel
-            href="Gcml.gmfgraph#DeviceDeviceCapability"/>
-        <features
-            href="Gcml.ecore#//Device/deviceCapability"/>
-      </labelMappings>
-      <labelMappings
-          xsi:type="gmfmap:FeatureLabelMapping">
-        <diagramLabel
-            href="Gcml.gmfgraph#DeviceIsLocal"/>
-        <features
-            href="Gcml.ecore#//Device/isLocal"/>
-      </labelMappings>
-      <labelMappings
-          xsi:type="gmfmap:FeatureLabelMapping">
-        <diagramLabel
-            href="Gcml.gmfgraph#DeviceIsVirtual"/>
-        <features
-            href="Gcml.ecore#//Device/isVirtual"/>
-      </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
           href="Gcml.gmftool#//@palette/@tools.0/@tools.1"/>
@@ -41,144 +20,13 @@
   </nodes>
   <nodes>
     <containmentFeature
-        href="Gcml.ecore#//Gcml/form"/>
-    <ownedChild>
-      <domainMetaElement
-          href="Gcml.ecore#//Form"/>
-      <labelMappings
-          xsi:type="gmfmap:FeatureLabelMapping">
-        <diagramLabel
-            href="Gcml.gmfgraph#FormAction"/>
-        <features
-            href="Gcml.ecore#//Form/action"/>
-      </labelMappings>
-      <labelMappings
-          xsi:type="gmfmap:FeatureLabelMapping">
-        <diagramLabel
-            href="Gcml.gmfgraph#FormFormTypeName"/>
-        <features
-            href="Gcml.ecore#//Form/formTypeName"/>
-      </labelMappings>
-      <labelMappings
-          xsi:type="gmfmap:FeatureLabelMapping"
-          editPattern="">
-        <diagramLabel
-            href="Gcml.gmfgraph#FormMediumDataType"/>
-        <features
-            href="Gcml.ecore#//Form/mediumDataType"/>
-      </labelMappings>
-      <labelMappings
-          xsi:type="gmfmap:FeatureLabelMapping">
-        <diagramLabel
-            href="Gcml.gmfgraph#FormSuggestedApplication"/>
-        <features
-            href="Gcml.ecore#//Form/suggestedApplication"/>
-      </labelMappings>
-      <labelMappings
-          xsi:type="gmfmap:FeatureLabelMapping">
-        <diagramLabel
-            href="Gcml.gmfgraph#FormVoiceCommand"/>
-        <features
-            href="Gcml.ecore#//Form/voiceCommand"/>
-      </labelMappings>
-      <tool
-          xsi:type="gmftool:CreationTool"
-          href="Gcml.gmftool#//@palette/@tools.0/@tools.2"/>
-      <diagramNode
-          href="Gcml.gmfgraph#Form"/>
-    </ownedChild>
-  </nodes>
-  <nodes>
-    <containmentFeature
-        href="Gcml.ecore#//Gcml/medium"/>
-    <ownedChild>
-      <domainMetaElement
-          href="Gcml.ecore#//Medium"/>
-      <labelMappings
-          xsi:type="gmfmap:FeatureLabelMapping">
-        <diagramLabel
-            href="Gcml.gmfgraph#MediumDerivedFromBuiltInType"/>
-        <features
-            href="Gcml.ecore#//Medium/derivedFromBuiltInType"/>
-      </labelMappings>
-      <labelMappings
-          xsi:type="gmfmap:FeatureLabelMapping">
-        <diagramLabel
-            href="Gcml.gmfgraph#MediumMediumTypeName"/>
-        <features
-            href="Gcml.ecore#//Medium/mediumTypeName"/>
-      </labelMappings>
-      <labelMappings
-          xsi:type="gmfmap:FeatureLabelMapping">
-        <diagramLabel
-            href="Gcml.gmfgraph#MediumSuggestedApplication"/>
-        <features
-            href="Gcml.ecore#//Medium/suggestedApplication"/>
-      </labelMappings>
-      <labelMappings
-          xsi:type="gmfmap:FeatureLabelMapping">
-        <diagramLabel
-            href="Gcml.gmfgraph#MediumVoiceCommand"/>
-        <features
-            href="Gcml.ecore#//Medium/voiceCommand"/>
-      </labelMappings>
-      <tool
-          xsi:type="gmftool:CreationTool"
-          href="Gcml.gmftool#//@palette/@tools.0/@tools.4"/>
-      <diagramNode
-          href="Gcml.gmfgraph#Medium"/>
-    </ownedChild>
-  </nodes>
-  <nodes>
-    <containmentFeature
-        href="Gcml.ecore#//Gcml/activities"/>
-    <ownedChild>
-      <domainMetaElement
-          href="Gcml.ecore#//Call"/>
-      <labelMappings
-          xsi:type="gmfmap:FeatureLabelMapping">
-        <diagramLabel
-            href="Gcml.gmfgraph#CallActivityID"/>
-        <features
-            href="Gcml.ecore#//Activity/ActivityID"/>
-      </labelMappings>
-      <labelMappings
-          xsi:type="gmfmap:FeatureLabelMapping">
-        <diagramLabel
-            href="Gcml.gmfgraph#CallOutcome"/>
-        <features
-            href="Gcml.ecore#//Call/outcome"/>
-      </labelMappings>
-      <tool
-          xsi:type="gmftool:CreationTool"
-          href="Gcml.gmftool#//@palette/@tools.0/@tools.6"/>
-      <diagramNode
-          href="Gcml.gmfgraph#Call"/>
-    </ownedChild>
-  </nodes>
-  <nodes>
-    <containmentFeature
-        href="Gcml.ecore#//Gcml/activities"/>
+        href="Gcml.ecore#//Gcml/boundary"/>
     <ownedChild>
       <domainMetaElement
           href="Gcml.ecore#//Boundary"/>
-      <labelMappings
-          xsi:type="gmfmap:FeatureLabelMapping">
-        <diagramLabel
-            href="Gcml.gmfgraph#BoundaryActivityID"/>
-        <features
-            href="Gcml.ecore#//Activity/ActivityID"/>
-      </labelMappings>
-      <labelMappings
-          xsi:type="gmfmap:FeatureLabelMapping">
-        <diagramLabel
-            href="Gcml.gmfgraph#BoundaryType"/>
-        <features
-            href="Gcml.ecore#//Boundary/Type"/>
-      </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
-          href="Gcml.gmftool#//@palette/@tools.0/@tools.8"/>
+          href="Gcml.gmftool#//@palette/@tools.0/@tools.20"/>
       <diagramNode
           href="Gcml.gmfgraph#Boundary"/>
     </ownedChild>
@@ -189,30 +37,9 @@
     <ownedChild>
       <domainMetaElement
           href="Gcml.ecore#//Person"/>
-      <labelMappings
-          xsi:type="gmfmap:FeatureLabelMapping">
-        <diagramLabel
-            href="Gcml.gmfgraph#PersonPersonID"/>
-        <features
-            href="Gcml.ecore#//Person/personID"/>
-      </labelMappings>
-      <labelMappings
-          xsi:type="gmfmap:FeatureLabelMapping">
-        <diagramLabel
-            href="Gcml.gmfgraph#PersonPersonName"/>
-        <features
-            href="Gcml.ecore#//Person/personName"/>
-      </labelMappings>
-      <labelMappings
-          xsi:type="gmfmap:FeatureLabelMapping">
-        <diagramLabel
-            href="Gcml.gmfgraph#PersonPersonRole"/>
-        <features
-            href="Gcml.ecore#//Person/personRole"/>
-      </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
-          href="Gcml.gmftool#//@palette/@tools.0/@tools.5"/>
+          href="Gcml.gmftool#//@palette/@tools.0/@tools.10"/>
       <diagramNode
           href="Gcml.gmfgraph#Person"/>
     </ownedChild>
@@ -225,52 +52,9 @@
           href="Gcml.ecore#//IsAttached"/>
       <tool
           xsi:type="gmftool:CreationTool"
-          href="Gcml.gmftool#//@palette/@tools.0/@tools.3"/>
+          href="Gcml.gmftool#//@palette/@tools.0/@tools.6"/>
       <diagramNode
           href="Gcml.gmfgraph#IsAttached"/>
-    </ownedChild>
-  </nodes>
-  <nodes>
-    <containmentFeature
-        href="Gcml.ecore#//Gcml/activities"/>
-    <ownedChild>
-      <domainMetaElement
-          href="Gcml.ecore#//Decision"/>
-      <labelMappings
-          xsi:type="gmfmap:FeatureLabelMapping"
-          editPattern="">
-        <diagramLabel
-            href="Gcml.gmfgraph#DecisionActivityID"/>
-        <features
-            href="Gcml.ecore#//Activity/ActivityID"/>
-      </labelMappings>
-      <labelMappings
-          xsi:type="gmfmap:FeatureLabelMapping">
-        <diagramLabel
-            href="Gcml.gmfgraph#DecisionFailPathID"/>
-        <features
-            href="Gcml.ecore#//Decision/failPathID"/>
-      </labelMappings>
-      <labelMappings
-          xsi:type="gmfmap:FeatureLabelMapping">
-        <diagramLabel
-            href="Gcml.gmfgraph#DecisionSourceActivityID"/>
-        <features
-            href="Gcml.ecore#//Decision/sourceActivityID"/>
-      </labelMappings>
-      <labelMappings
-          xsi:type="gmfmap:FeatureLabelMapping"
-          editPattern="">
-        <diagramLabel
-            href="Gcml.gmfgraph#DecisionSuccessPathID"/>
-        <features
-            href="Gcml.ecore#//Decision/successPathID"/>
-      </labelMappings>
-      <tool
-          xsi:type="gmftool:CreationTool"
-          href="Gcml.gmftool#//@palette/@tools.0/@tools.7"/>
-      <diagramNode
-          href="Gcml.gmfgraph#Decision"/>
     </ownedChild>
   </nodes>
   <nodes>
@@ -279,20 +63,6 @@
     <ownedChild>
       <domainMetaElement
           href="Gcml.ecore#//Connection"/>
-      <labelMappings
-          xsi:type="gmfmap:FeatureLabelMapping">
-        <diagramLabel
-            href="Gcml.gmfgraph#ConnectionBandwidth"/>
-        <features
-            href="Gcml.ecore#//Connection/bandwidth"/>
-      </labelMappings>
-      <labelMappings
-          xsi:type="gmfmap:FeatureLabelMapping">
-        <diagramLabel
-            href="Gcml.gmfgraph#ConnectionConnectionID"/>
-        <features
-            href="Gcml.ecore#//Connection/connectionID"/>
-      </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
           href="Gcml.gmftool#//@palette/@tools.0/@tools.0"/>
@@ -300,52 +70,64 @@
           href="Gcml.gmfgraph#Connection"/>
     </ownedChild>
   </nodes>
+  <nodes>
+    <containmentFeature
+        href="Gcml.ecore#//Gcml/medium"/>
+    <ownedChild>
+      <domainMetaElement
+          href="Gcml.ecore#//Medium"/>
+      <tool
+          xsi:type="gmftool:CreationTool"
+          href="Gcml.gmftool#//@palette/@tools.0/@tools.8"/>
+      <diagramNode
+          href="Gcml.gmfgraph#Medium"/>
+    </ownedChild>
+  </nodes>
+  <nodes>
+    <containmentFeature
+        href="Gcml.ecore#//Gcml/call"/>
+    <ownedChild>
+      <domainMetaElement
+          href="Gcml.ecore#//Call"/>
+      <tool
+          xsi:type="gmftool:CreationTool"
+          href="Gcml.gmftool#//@palette/@tools.0/@tools.13"/>
+      <diagramNode
+          href="Gcml.gmfgraph#Call"/>
+    </ownedChild>
+  </nodes>
+  <nodes>
+    <containmentFeature
+        href="Gcml.ecore#//Gcml/decision"/>
+    <ownedChild>
+      <domainMetaElement
+          href="Gcml.ecore#//Decision"/>
+      <tool
+          xsi:type="gmftool:CreationTool"
+          href="Gcml.gmftool#//@palette/@tools.0/@tools.17"/>
+      <diagramNode
+          href="Gcml.gmfgraph#Decision"/>
+    </ownedChild>
+  </nodes>
+  <nodes>
+    <containmentFeature
+        href="Gcml.ecore#//Gcml/form"/>
+    <ownedChild>
+      <domainMetaElement
+          href="Gcml.ecore#//Form"/>
+      <tool
+          xsi:type="gmftool:CreationTool"
+          href="Gcml.gmftool#//@palette/@tools.0/@tools.3"/>
+      <diagramNode
+          href="Gcml.gmfgraph#Form"/>
+    </ownedChild>
+  </nodes>
   <links>
     <tool
         xsi:type="gmftool:CreationTool"
-        href="Gcml.gmftool#//@palette/@tools.0/@tools.5"/>
+        href="Gcml.gmftool#//@palette/@tools.0/@tools.21"/>
     <diagramLink
-        href="Gcml.gmfgraph#//@connections.0"/>
-    <linkMetaFeature
-        xsi:type="ecore:EReference"
-        href="Gcml.ecore#//Person/toIsAttached"/>
-  </links>
-  <links>
-    <tool
-        xsi:type="gmftool:CreationTool"
-        href="Gcml.gmftool#//@palette/@tools.0/@tools.3"/>
-    <diagramLink
-        href="Gcml.gmfgraph#//@connections.0"/>
-    <linkMetaFeature
-        xsi:type="ecore:EReference"
-        href="Gcml.ecore#//IsAttached/toDevice"/>
-  </links>
-  <links>
-    <tool
-        xsi:type="gmftool:CreationTool"
-        href="Gcml.gmftool#//@palette/@tools.0/@tools.7"/>
-    <diagramLink
-        href="Gcml.gmfgraph#//@connections.0"/>
-    <linkMetaFeature
-        xsi:type="ecore:EReference"
-        href="Gcml.ecore#//Decision/DecisionToCall"/>
-  </links>
-  <links>
-    <tool
-        xsi:type="gmftool:CreationTool"
-        href="Gcml.gmftool#//@palette/@tools.0/@tools.2"/>
-    <diagramLink
-        href="Gcml.gmfgraph#//@connections.0"/>
-    <linkMetaFeature
-        xsi:type="ecore:EReference"
-        href="Gcml.ecore#//Form/toParentForm"/>
-  </links>
-  <links>
-    <tool
-        xsi:type="gmftool:CreationTool"
-        href="Gcml.gmftool#//@palette/@tools.0/@tools.8"/>
-    <diagramLink
-        href="Gcml.gmfgraph#//@connections.0"/>
+        href="Gcml.gmfgraph#BoundaryBoundaryToCall"/>
     <linkMetaFeature
         xsi:type="ecore:EReference"
         href="Gcml.ecore#//Boundary/BoundaryToCall"/>
@@ -353,59 +135,9 @@
   <links>
     <tool
         xsi:type="gmftool:CreationTool"
-        href="Gcml.gmftool#//@palette/@tools.0/@tools.5"/>
+        href="Gcml.gmftool#//@palette/@tools.0/@tools.16"/>
     <diagramLink
-        href="Gcml.gmfgraph#//@connections.0"/>
-    <linkMetaFeature
-        xsi:type="ecore:EReference"
-        href="Gcml.ecore#//IsAttached/fromPerson"/>
-  </links>
-  <links>
-    <tool
-        xsi:type="gmftool:CreationTool"
-        href="Gcml.gmftool#//@palette/@tools.0/@tools.0"/>
-    <diagramLink
-        href="Gcml.gmfgraph#//@connections.0"/>
-    <linkMetaFeature
-        xsi:type="ecore:EReference"
-        href="Gcml.ecore#//Connection/ConnectionToCall"/>
-  </links>
-  <links>
-    <tool
-        xsi:type="gmftool:CreationTool"
-        href="Gcml.gmftool#//@palette/@tools.0/@tools.0"/>
-    <diagramLink
-        href="Gcml.gmfgraph#//@connections.0"/>
-    <linkMetaFeature
-        xsi:type="ecore:EReference"
-        href="Gcml.ecore#//Connection/fromDevice"/>
-  </links>
-  <links>
-    <tool
-        xsi:type="gmftool:CreationTool"
-        href="Gcml.gmftool#//@palette/@tools.0/@tools.1"/>
-    <diagramLink
-        href="Gcml.gmfgraph#//@connections.0"/>
-    <linkMetaFeature
-        xsi:type="ecore:EReference"
-        href="Gcml.ecore#//Form/toConnection"/>
-  </links>
-  <links>
-    <tool
-        xsi:type="gmftool:CreationTool"
-        href="Gcml.gmftool#//@palette/@tools.0/@tools.4"/>
-    <diagramLink
-        href="Gcml.gmfgraph#//@connections.0"/>
-    <linkMetaFeature
-        xsi:type="ecore:EReference"
-        href="Gcml.ecore#//Device/toConnection"/>
-  </links>
-  <links>
-    <tool
-        xsi:type="gmftool:CreationTool"
-        href="Gcml.gmftool#//@palette/@tools.0/@tools.6"/>
-    <diagramLink
-        href="Gcml.gmfgraph#//@connections.0"/>
+        href="Gcml.gmfgraph#CallCallToBoundary"/>
     <linkMetaFeature
         xsi:type="ecore:EReference"
         href="Gcml.ecore#//Call/CallToBoundary"/>
@@ -413,39 +145,29 @@
   <links>
     <tool
         xsi:type="gmftool:CreationTool"
-        href="Gcml.gmftool#//@palette/@tools.0/@tools.6"/>
+        href="Gcml.gmftool#//@palette/@tools.0/@tools.4"/>
     <diagramLink
-        href="Gcml.gmfgraph#//@connections.0"/>
+        href="Gcml.gmfgraph#FormToConnection"/>
     <linkMetaFeature
         xsi:type="ecore:EReference"
-        href="Gcml.ecore#//Call/CallToConnection"/>
+        href="Gcml.ecore#//Form/toConnection"/>
   </links>
   <links>
     <tool
         xsi:type="gmftool:CreationTool"
-        href="Gcml.gmftool#//@palette/@tools.0/@tools.7"/>
+        href="Gcml.gmftool#//@palette/@tools.0/@tools.18"/>
     <diagramLink
-        href="Gcml.gmfgraph#//@connections.0"/>
+        href="Gcml.gmfgraph#DecisionDecisionToCall"/>
     <linkMetaFeature
         xsi:type="ecore:EReference"
-        href="Gcml.ecore#//Decision/DecisionToBoundary"/>
+        href="Gcml.ecore#//Decision/DecisionToCall"/>
   </links>
   <links>
     <tool
         xsi:type="gmftool:CreationTool"
-        href="Gcml.gmftool#//@palette/@tools.0/@tools.3"/>
+        href="Gcml.gmftool#//@palette/@tools.0/@tools.15"/>
     <diagramLink
-        href="Gcml.gmfgraph#//@connections.0"/>
-    <linkMetaFeature
-        xsi:type="ecore:EReference"
-        href="Gcml.ecore#//Device/fromIsAttached"/>
-  </links>
-  <links>
-    <tool
-        xsi:type="gmftool:CreationTool"
-        href="Gcml.gmftool#//@palette/@tools.0/@tools.6"/>
-    <diagramLink
-        href="Gcml.gmfgraph#//@connections.0"/>
+        href="Gcml.gmfgraph#CallCallToDecision"/>
     <linkMetaFeature
         xsi:type="ecore:EReference"
         href="Gcml.ecore#//Call/CallToDecision"/>
@@ -453,12 +175,92 @@
   <links>
     <tool
         xsi:type="gmftool:CreationTool"
-        href="Gcml.gmftool#//@palette/@tools.0/@tools.2"/>
+        href="Gcml.gmftool#//@palette/@tools.0/@tools.11"/>
     <diagramLink
-        href="Gcml.gmfgraph#//@connections.0"/>
+        href="Gcml.gmfgraph#PersonToIsAttached"/>
+    <linkMetaFeature
+        xsi:type="ecore:EReference"
+        href="Gcml.ecore#//IsAttached/fromPerson"/>
+  </links>
+  <links>
+    <tool
+        xsi:type="gmftool:CreationTool"
+        href="Gcml.gmftool#//@palette/@tools.0/@tools.9"/>
+    <diagramLink
+        href="Gcml.gmfgraph#MediumToConnection"/>
     <linkMetaFeature
         xsi:type="ecore:EReference"
         href="Gcml.ecore#//Medium/toConnection"/>
+  </links>
+  <links>
+    <tool
+        xsi:type="gmftool:CreationTool"
+        href="Gcml.gmftool#//@palette/@tools.0/@tools.5"/>
+    <diagramLink
+        href="Gcml.gmfgraph#FormToParentForm"/>
+    <linkMetaFeature
+        xsi:type="ecore:EReference"
+        href="Gcml.ecore#//Form/toParentForm"/>
+  </links>
+  <links>
+    <tool
+        xsi:type="gmftool:CreationTool"
+        href="Gcml.gmftool#//@palette/@tools.0/@tools.2"/>
+    <diagramLink
+        href="Gcml.gmfgraph#DeviceToConnection"/>
+    <linkMetaFeature
+        xsi:type="ecore:EReference"
+        href="Gcml.ecore#//Connection/fromDevice"/>
+  </links>
+  <links>
+    <tool
+        xsi:type="gmftool:CreationTool"
+        href="Gcml.gmftool#//@palette/@tools.0/@tools.2"/>
+    <diagramLink
+        href="Gcml.gmfgraph#DeviceToConnection"/>
+    <linkMetaFeature
+        xsi:type="ecore:EReference"
+        href="Gcml.ecore#//Device/toConnection"/>
+  </links>
+  <links>
+    <tool
+        xsi:type="gmftool:CreationTool"
+        href="Gcml.gmftool#//@palette/@tools.0/@tools.19"/>
+    <diagramLink
+        href="Gcml.gmfgraph#DecisionDecisionToBoundary"/>
+    <linkMetaFeature
+        xsi:type="ecore:EReference"
+        href="Gcml.ecore#//Decision/DecisionToBoundary"/>
+  </links>
+  <links>
+    <tool
+        xsi:type="gmftool:CreationTool"
+        href="Gcml.gmftool#//@palette/@tools.0/@tools.7"/>
+    <diagramLink
+        href="Gcml.gmfgraph#IsAttachedToDevice"/>
+    <linkMetaFeature
+        xsi:type="ecore:EReference"
+        href="Gcml.ecore#//Device/fromIsAttached"/>
+  </links>
+  <links>
+    <tool
+        xsi:type="gmftool:CreationTool"
+        href="Gcml.gmftool#//@palette/@tools.0/@tools.7"/>
+    <diagramLink
+        href="Gcml.gmfgraph#IsAttachedToDevice"/>
+    <linkMetaFeature
+        xsi:type="ecore:EReference"
+        href="Gcml.ecore#//IsAttached/toDevice"/>
+  </links>
+  <links>
+    <tool
+        xsi:type="gmftool:CreationTool"
+        href="Gcml.gmftool#//@palette/@tools.0/@tools.14"/>
+    <diagramLink
+        href="Gcml.gmfgraph#CallCallToConnection"/>
+    <linkMetaFeature
+        xsi:type="ecore:EReference"
+        href="Gcml.ecore#//Call/CallToConnection"/>
   </links>
   <diagram>
     <diagramCanvas

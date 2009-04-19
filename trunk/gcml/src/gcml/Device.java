@@ -23,6 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link gcml.Device#isIsVirtual <em>Is Virtual</em>}</li>
  *   <li>{@link gcml.Device#getToConnection <em>To Connection</em>}</li>
  *   <li>{@link gcml.Device#getFromIsAttached <em>From Is Attached</em>}</li>
+ *   <li>{@link gcml.Device#getDeviceID <em>Device ID</em>}</li>
  * </ul>
  * </p>
  *
@@ -190,5 +191,31 @@ public interface Device extends EObject {
 	 * @generated
 	 */
 	EList<IsAttached> getFromIsAttached();
+
+	/**
+	 * Returns the value of the '<em><b>Device ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Device ID</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Device ID</em>' attribute.
+	 * @see #setDeviceID(String)
+	 * @see gcml.GcmlPackage#getDevice_DeviceID()
+	 * @model dataType="org.eclipse.emf.ecore.xml.type.String" required="true"
+	 * @generated
+	 */
+	String getDeviceID();
+
+	/**
+	 * Sets the value of the '{@link gcml.Device#getDeviceID <em>Device ID</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Device ID</em>' attribute.
+	 * @see #getDeviceID()
+	 * @generated
+	 */
+	void setDeviceID(String value);
 
 } // Device

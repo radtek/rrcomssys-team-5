@@ -5,6 +5,45 @@
     xmlns:gmfgraph="http://www.eclipse.org/gmf/2006/GraphicalDefinition" name="gcml">
   <figures
       name="Default">
+    <figures
+        xsi:type="gmfgraph:PolylineDecoration"
+        name="DeviceToConnectionTargetDecoration"/>
+    <figures
+        xsi:type="gmfgraph:PolylineDecoration"
+        name="DeviceFromIsAttachedTargetDecoration"/>
+    <figures
+        xsi:type="gmfgraph:PolylineDecoration"
+        name="FormToConnectionTargetDecoration"/>
+    <figures
+        xsi:type="gmfgraph:PolylineDecoration"
+        name="FormToParentFormTargetDecoration"/>
+    <figures
+        xsi:type="gmfgraph:PolylineDecoration"
+        name="IsAttachedToDeviceTargetDecoration"/>
+    <figures
+        xsi:type="gmfgraph:PolylineDecoration"
+        name="MediumToConnectionTargetDecoration"/>
+    <figures
+        xsi:type="gmfgraph:PolylineDecoration"
+        name="PersonToIsAttachedTargetDecoration"/>
+    <figures
+        xsi:type="gmfgraph:PolylineDecoration"
+        name="CallCallToConnectionTargetDecoration"/>
+    <figures
+        xsi:type="gmfgraph:PolylineDecoration"
+        name="CallCallToDecisionTargetDecoration"/>
+    <figures
+        xsi:type="gmfgraph:PolylineDecoration"
+        name="CallCallToBoundaryTargetDecoration"/>
+    <figures
+        xsi:type="gmfgraph:PolylineDecoration"
+        name="DecisionDecisionToCallTargetDecoration"/>
+    <figures
+        xsi:type="gmfgraph:PolylineDecoration"
+        name="DecisionDecisionToBoundaryTargetDecoration"/>
+    <figures
+        xsi:type="gmfgraph:PolylineDecoration"
+        name="BoundaryBoundaryToCallTargetDecoration"/>
     <descriptors
         name="ConnectionFigure">
       <actualFigure
@@ -45,6 +84,10 @@
             xsi:type="gmfgraph:Label"
             name="DeviceIsVirtualFigure"
             text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="DeviceDeviceIDFigure"
+            text="&lt;...>"/>
       </actualFigure>
       <accessors
           figure="//@figures.0/@descriptors.1/@actualFigure/@children.0"/>
@@ -52,6 +95,22 @@
           figure="//@figures.0/@descriptors.1/@actualFigure/@children.1"/>
       <accessors
           figure="//@figures.0/@descriptors.1/@actualFigure/@children.2"/>
+      <accessors
+          figure="//@figures.0/@descriptors.1/@actualFigure/@children.3"/>
+    </descriptors>
+    <descriptors
+        name="DeviceToConnectionFigure">
+      <actualFigure
+          xsi:type="gmfgraph:PolylineConnection"
+          name="DeviceToConnectionFigure"
+          targetDecoration="//@figures.0/@figures.0"/>
+    </descriptors>
+    <descriptors
+        name="DeviceFromIsAttachedFigure">
+      <actualFigure
+          xsi:type="gmfgraph:PolylineConnection"
+          name="DeviceFromIsAttachedFigure"
+          targetDecoration="//@figures.0/@figures.1"/>
     </descriptors>
     <descriptors
         name="FormFigure">
@@ -82,21 +141,42 @@
             text="&lt;...>"/>
       </actualFigure>
       <accessors
-          figure="//@figures.0/@descriptors.2/@actualFigure/@children.0"/>
+          figure="//@figures.0/@descriptors.4/@actualFigure/@children.0"/>
       <accessors
-          figure="//@figures.0/@descriptors.2/@actualFigure/@children.1"/>
+          figure="//@figures.0/@descriptors.4/@actualFigure/@children.1"/>
       <accessors
-          figure="//@figures.0/@descriptors.2/@actualFigure/@children.2"/>
+          figure="//@figures.0/@descriptors.4/@actualFigure/@children.2"/>
       <accessors
-          figure="//@figures.0/@descriptors.2/@actualFigure/@children.3"/>
+          figure="//@figures.0/@descriptors.4/@actualFigure/@children.3"/>
       <accessors
-          figure="//@figures.0/@descriptors.2/@actualFigure/@children.4"/>
+          figure="//@figures.0/@descriptors.4/@actualFigure/@children.4"/>
+    </descriptors>
+    <descriptors
+        name="FormToConnectionFigure">
+      <actualFigure
+          xsi:type="gmfgraph:PolylineConnection"
+          name="FormToConnectionFigure"
+          targetDecoration="//@figures.0/@figures.2"/>
+    </descriptors>
+    <descriptors
+        name="FormToParentFormFigure">
+      <actualFigure
+          xsi:type="gmfgraph:PolylineConnection"
+          name="FormToParentFormFigure"
+          targetDecoration="//@figures.0/@figures.3"/>
     </descriptors>
     <descriptors
         name="IsAttachedFigure">
       <actualFigure
           xsi:type="gmfgraph:Rectangle"
           name="IsAttachedFigure"/>
+    </descriptors>
+    <descriptors
+        name="IsAttachedToDeviceFigure">
+      <actualFigure
+          xsi:type="gmfgraph:PolylineConnection"
+          name="IsAttachedToDeviceFigure"
+          targetDecoration="//@figures.0/@figures.4"/>
     </descriptors>
     <descriptors
         name="MediumFigure">
@@ -123,13 +203,20 @@
             text="&lt;...>"/>
       </actualFigure>
       <accessors
-          figure="//@figures.0/@descriptors.4/@actualFigure/@children.0"/>
+          figure="//@figures.0/@descriptors.9/@actualFigure/@children.0"/>
       <accessors
-          figure="//@figures.0/@descriptors.4/@actualFigure/@children.1"/>
+          figure="//@figures.0/@descriptors.9/@actualFigure/@children.1"/>
       <accessors
-          figure="//@figures.0/@descriptors.4/@actualFigure/@children.2"/>
+          figure="//@figures.0/@descriptors.9/@actualFigure/@children.2"/>
       <accessors
-          figure="//@figures.0/@descriptors.4/@actualFigure/@children.3"/>
+          figure="//@figures.0/@descriptors.9/@actualFigure/@children.3"/>
+    </descriptors>
+    <descriptors
+        name="MediumToConnectionFigure">
+      <actualFigure
+          xsi:type="gmfgraph:PolylineConnection"
+          name="MediumToConnectionFigure"
+          targetDecoration="//@figures.0/@figures.5"/>
     </descriptors>
     <descriptors
         name="PersonFigure">
@@ -152,26 +239,18 @@
             text="&lt;...>"/>
       </actualFigure>
       <accessors
-          figure="//@figures.0/@descriptors.5/@actualFigure/@children.0"/>
+          figure="//@figures.0/@descriptors.11/@actualFigure/@children.0"/>
       <accessors
-          figure="//@figures.0/@descriptors.5/@actualFigure/@children.1"/>
+          figure="//@figures.0/@descriptors.11/@actualFigure/@children.1"/>
       <accessors
-          figure="//@figures.0/@descriptors.5/@actualFigure/@children.2"/>
+          figure="//@figures.0/@descriptors.11/@actualFigure/@children.2"/>
     </descriptors>
     <descriptors
-        name="ActivityFigure">
+        name="PersonToIsAttachedFigure">
       <actualFigure
-          xsi:type="gmfgraph:Rectangle"
-          name="ActivityFigure">
-        <layout
-            xsi:type="gmfgraph:FlowLayout"/>
-        <children
-            xsi:type="gmfgraph:Label"
-            name="ActivityActivityIDFigure"
-            text="&lt;...>"/>
-      </actualFigure>
-      <accessors
-          figure="//@figures.0/@descriptors.6/@actualFigure/@children.0"/>
+          xsi:type="gmfgraph:PolylineConnection"
+          name="PersonToIsAttachedFigure"
+          targetDecoration="//@figures.0/@figures.6"/>
     </descriptors>
     <descriptors
         name="CallFigure">
@@ -190,9 +269,30 @@
             text="&lt;...>"/>
       </actualFigure>
       <accessors
-          figure="//@figures.0/@descriptors.7/@actualFigure/@children.0"/>
+          figure="//@figures.0/@descriptors.13/@actualFigure/@children.0"/>
       <accessors
-          figure="//@figures.0/@descriptors.7/@actualFigure/@children.1"/>
+          figure="//@figures.0/@descriptors.13/@actualFigure/@children.1"/>
+    </descriptors>
+    <descriptors
+        name="CallCallToConnectionFigure">
+      <actualFigure
+          xsi:type="gmfgraph:PolylineConnection"
+          name="CallCallToConnectionFigure"
+          targetDecoration="//@figures.0/@figures.7"/>
+    </descriptors>
+    <descriptors
+        name="CallCallToDecisionFigure">
+      <actualFigure
+          xsi:type="gmfgraph:PolylineConnection"
+          name="CallCallToDecisionFigure"
+          targetDecoration="//@figures.0/@figures.8"/>
+    </descriptors>
+    <descriptors
+        name="CallCallToBoundaryFigure">
+      <actualFigure
+          xsi:type="gmfgraph:PolylineConnection"
+          name="CallCallToBoundaryFigure"
+          targetDecoration="//@figures.0/@figures.9"/>
     </descriptors>
     <descriptors
         name="DecisionFigure">
@@ -219,13 +319,27 @@
             text="&lt;...>"/>
       </actualFigure>
       <accessors
-          figure="//@figures.0/@descriptors.8/@actualFigure/@children.0"/>
+          figure="//@figures.0/@descriptors.17/@actualFigure/@children.0"/>
       <accessors
-          figure="//@figures.0/@descriptors.8/@actualFigure/@children.1"/>
+          figure="//@figures.0/@descriptors.17/@actualFigure/@children.1"/>
       <accessors
-          figure="//@figures.0/@descriptors.8/@actualFigure/@children.2"/>
+          figure="//@figures.0/@descriptors.17/@actualFigure/@children.2"/>
       <accessors
-          figure="//@figures.0/@descriptors.8/@actualFigure/@children.3"/>
+          figure="//@figures.0/@descriptors.17/@actualFigure/@children.3"/>
+    </descriptors>
+    <descriptors
+        name="DecisionDecisionToCallFigure">
+      <actualFigure
+          xsi:type="gmfgraph:PolylineConnection"
+          name="DecisionDecisionToCallFigure"
+          targetDecoration="//@figures.0/@figures.10"/>
+    </descriptors>
+    <descriptors
+        name="DecisionDecisionToBoundaryFigure">
+      <actualFigure
+          xsi:type="gmfgraph:PolylineConnection"
+          name="DecisionDecisionToBoundaryFigure"
+          targetDecoration="//@figures.0/@figures.11"/>
     </descriptors>
     <descriptors
         name="BoundaryFigure">
@@ -242,17 +356,18 @@
             xsi:type="gmfgraph:Label"
             name="BoundaryTypeFigure"
             text="&lt;...>"/>
-        <children
-            xsi:type="gmfgraph:Label"
-            name="BoundaryOutcomeFigure"
-            text="&lt;...>"/>
       </actualFigure>
       <accessors
-          figure="//@figures.0/@descriptors.9/@actualFigure/@children.0"/>
+          figure="//@figures.0/@descriptors.20/@actualFigure/@children.0"/>
       <accessors
-          figure="//@figures.0/@descriptors.9/@actualFigure/@children.1"/>
-      <accessors
-          figure="//@figures.0/@descriptors.9/@actualFigure/@children.2"/>
+          figure="//@figures.0/@descriptors.20/@actualFigure/@children.1"/>
+    </descriptors>
+    <descriptors
+        name="BoundaryBoundaryToCallFigure">
+      <actualFigure
+          xsi:type="gmfgraph:PolylineConnection"
+          name="BoundaryBoundaryToCallFigure"
+          targetDecoration="//@figures.0/@figures.12"/>
     </descriptors>
   </figures>
   <nodes
@@ -274,9 +389,6 @@
       name="Person"
       figure="PersonFigure"/>
   <nodes
-      name="Activity"
-      figure="ActivityFigure"/>
-  <nodes
       name="Call"
       figure="CallFigure"/>
   <nodes
@@ -285,7 +397,45 @@
   <nodes
       name="Boundary"
       figure="BoundaryFigure"/>
-  <connections/>
+  <connections
+      name="DeviceToConnection"
+      figure="DeviceToConnectionFigure"/>
+  <connections
+      name="DeviceFromIsAttached"
+      figure="DeviceFromIsAttachedFigure"/>
+  <connections
+      name="FormToConnection"
+      figure="FormToConnectionFigure"/>
+  <connections
+      name="FormToParentForm"
+      figure="FormToParentFormFigure"/>
+  <connections
+      name="IsAttachedToDevice"
+      figure="IsAttachedToDeviceFigure"/>
+  <connections
+      name="MediumToConnection"
+      figure="MediumToConnectionFigure"/>
+  <connections
+      name="PersonToIsAttached"
+      figure="PersonToIsAttachedFigure"/>
+  <connections
+      name="CallCallToConnection"
+      figure="CallCallToConnectionFigure"/>
+  <connections
+      name="CallCallToDecision"
+      figure="CallCallToDecisionFigure"/>
+  <connections
+      name="CallCallToBoundary"
+      figure="CallCallToBoundaryFigure"/>
+  <connections
+      name="DecisionDecisionToCall"
+      figure="DecisionDecisionToCallFigure"/>
+  <connections
+      name="DecisionDecisionToBoundary"
+      figure="DecisionDecisionToBoundaryFigure"/>
+  <connections
+      name="BoundaryBoundaryToCall"
+      figure="BoundaryBoundaryToCallFigure"/>
   <labels
       name="ConnectionConnectionID"
       figure="ConnectionFigure"
@@ -307,91 +457,87 @@
       figure="DeviceFigure"
       accessor="//@figures.0/@descriptors.1/@accessors.2"/>
   <labels
+      name="DeviceDeviceID"
+      figure="DeviceFigure"
+      accessor="//@figures.0/@descriptors.1/@accessors.3"/>
+  <labels
       name="FormFormTypeName"
       figure="FormFigure"
-      accessor="//@figures.0/@descriptors.2/@accessors.0"/>
+      accessor="//@figures.0/@descriptors.4/@accessors.0"/>
   <labels
       name="FormAction"
       figure="FormFigure"
-      accessor="//@figures.0/@descriptors.2/@accessors.1"/>
+      accessor="//@figures.0/@descriptors.4/@accessors.1"/>
   <labels
       name="FormMediumDataType"
       figure="FormFigure"
-      accessor="//@figures.0/@descriptors.2/@accessors.2"/>
+      accessor="//@figures.0/@descriptors.4/@accessors.2"/>
   <labels
       name="FormSuggestedApplication"
       figure="FormFigure"
-      accessor="//@figures.0/@descriptors.2/@accessors.3"/>
+      accessor="//@figures.0/@descriptors.4/@accessors.3"/>
   <labels
       name="FormVoiceCommand"
       figure="FormFigure"
-      accessor="//@figures.0/@descriptors.2/@accessors.4"/>
+      accessor="//@figures.0/@descriptors.4/@accessors.4"/>
   <labels
       name="MediumDerivedFromBuiltInType"
       figure="MediumFigure"
-      accessor="//@figures.0/@descriptors.4/@accessors.0"/>
+      accessor="//@figures.0/@descriptors.9/@accessors.0"/>
   <labels
       name="MediumMediumTypeName"
       figure="MediumFigure"
-      accessor="//@figures.0/@descriptors.4/@accessors.1"/>
+      accessor="//@figures.0/@descriptors.9/@accessors.1"/>
   <labels
       name="MediumSuggestedApplication"
       figure="MediumFigure"
-      accessor="//@figures.0/@descriptors.4/@accessors.2"/>
+      accessor="//@figures.0/@descriptors.9/@accessors.2"/>
   <labels
       name="MediumVoiceCommand"
       figure="MediumFigure"
-      accessor="//@figures.0/@descriptors.4/@accessors.3"/>
+      accessor="//@figures.0/@descriptors.9/@accessors.3"/>
   <labels
       name="PersonPersonID"
       figure="PersonFigure"
-      accessor="//@figures.0/@descriptors.5/@accessors.0"/>
+      accessor="//@figures.0/@descriptors.11/@accessors.0"/>
   <labels
       name="PersonPersonName"
       figure="PersonFigure"
-      accessor="//@figures.0/@descriptors.5/@accessors.1"/>
+      accessor="//@figures.0/@descriptors.11/@accessors.1"/>
   <labels
       name="PersonPersonRole"
       figure="PersonFigure"
-      accessor="//@figures.0/@descriptors.5/@accessors.2"/>
-  <labels
-      name="ActivityActivityID"
-      figure="ActivityFigure"
-      accessor="//@figures.0/@descriptors.6/@accessors.0"/>
+      accessor="//@figures.0/@descriptors.11/@accessors.2"/>
   <labels
       name="CallActivityID"
       figure="CallFigure"
-      accessor="//@figures.0/@descriptors.7/@accessors.0"/>
+      accessor="//@figures.0/@descriptors.13/@accessors.0"/>
   <labels
       name="CallOutcome"
       figure="CallFigure"
-      accessor="//@figures.0/@descriptors.7/@accessors.1"/>
+      accessor="//@figures.0/@descriptors.13/@accessors.1"/>
   <labels
       name="DecisionActivityID"
       figure="DecisionFigure"
-      accessor="//@figures.0/@descriptors.8/@accessors.0"/>
+      accessor="//@figures.0/@descriptors.17/@accessors.0"/>
   <labels
       name="DecisionSourceActivityID"
       figure="DecisionFigure"
-      accessor="//@figures.0/@descriptors.8/@accessors.1"/>
+      accessor="//@figures.0/@descriptors.17/@accessors.1"/>
   <labels
       name="DecisionSuccessPathID"
       figure="DecisionFigure"
-      accessor="//@figures.0/@descriptors.8/@accessors.2"/>
+      accessor="//@figures.0/@descriptors.17/@accessors.2"/>
   <labels
       name="DecisionFailPathID"
       figure="DecisionFigure"
-      accessor="//@figures.0/@descriptors.8/@accessors.3"/>
+      accessor="//@figures.0/@descriptors.17/@accessors.3"/>
   <labels
       name="BoundaryActivityID"
       figure="BoundaryFigure"
-      accessor="//@figures.0/@descriptors.9/@accessors.0"/>
+      accessor="//@figures.0/@descriptors.20/@accessors.0"/>
   <labels
       name="BoundaryType"
       figure="BoundaryFigure"
-      accessor="//@figures.0/@descriptors.9/@accessors.1"/>
-  <labels
-      name="BoundaryOutcome"
-      figure="BoundaryFigure"
-      accessor="//@figures.0/@descriptors.9/@accessors.2"/>
+      accessor="//@figures.0/@descriptors.20/@accessors.1"/>
 </gmfgraph:Canvas>

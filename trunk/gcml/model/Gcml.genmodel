@@ -32,8 +32,7 @@
     <genClasses ecoreClass="Gcml.ecore#//Connection">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gcml.ecore#//Connection/connectionID"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Gcml.ecore#//Connection/fromDevice"/>
-      <genFeatures notify="false" createChild="false" propertyCategory="" propertySortChoices="true"
-          ecoreFeature="ecore:EReference Gcml.ecore#//Connection/ConnectionToCall"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Gcml.ecore#//Connection/ConnectionToCall"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gcml.ecore#//Connection/bandwidth"/>
     </genClasses>
     <genClasses ecoreClass="Gcml.ecore#//Device">
@@ -42,6 +41,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gcml.ecore#//Device/isVirtual"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Gcml.ecore#//Device/toConnection"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Gcml.ecore#//Device/fromIsAttached"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gcml.ecore#//Device/deviceID"/>
     </genClasses>
     <genClasses ecoreClass="Gcml.ecore#//Form">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gcml.ecore#//Form/formTypeName"/>
@@ -59,7 +59,9 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gcml.ecore#//Gcml/person"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gcml.ecore#//Gcml/isAttached"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gcml.ecore#//Gcml/device"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gcml.ecore#//Gcml/activities"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gcml.ecore#//Gcml/call"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gcml.ecore#//Gcml/decision"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gcml.ecore#//Gcml/boundary"/>
     </genClasses>
     <genClasses ecoreClass="Gcml.ecore#//IsAttached">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Gcml.ecore#//IsAttached/toDevice"/>
@@ -73,8 +75,8 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Gcml.ecore#//Medium/toConnection"/>
     </genClasses>
     <genClasses ecoreClass="Gcml.ecore#//Person">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gcml.ecore#//Person/personName"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gcml.ecore#//Person/personID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gcml.ecore#//Person/personName"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gcml.ecore#//Person/personRole"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Gcml.ecore#//Person/toIsAttached"/>
     </genClasses>
@@ -96,7 +98,6 @@
     </genClasses>
     <genClasses ecoreClass="Gcml.ecore#//Boundary">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gcml.ecore#//Boundary/Type"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gcml.ecore#//Boundary/outcome"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Gcml.ecore#//Boundary/BoundaryToCall"/>
     </genClasses>
   </genPackages>

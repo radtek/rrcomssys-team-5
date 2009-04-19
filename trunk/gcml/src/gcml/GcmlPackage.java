@@ -171,13 +171,22 @@ public interface GcmlPackage extends EPackage {
 	int DEVICE__FROM_IS_ATTACHED = 4;
 
 	/**
+	 * The feature id for the '<em><b>Device ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEVICE__DEVICE_ID = 5;
+
+	/**
 	 * The number of structural features of the '<em>Device</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_FEATURE_COUNT = 5;
+	int DEVICE_FEATURE_COUNT = 6;
 
 	/**
 	 * The meta object id for the '{@link gcml.impl.FormImpl <em>Form</em>}' class.
@@ -326,13 +335,31 @@ public interface GcmlPackage extends EPackage {
 	int GCML__DEVICE = 5;
 
 	/**
-	 * The feature id for the '<em><b>Activities</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Call</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GCML__ACTIVITIES = 6;
+	int GCML__CALL = 6;
+
+	/**
+	 * The feature id for the '<em><b>Decision</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GCML__DECISION = 7;
+
+	/**
+	 * The feature id for the '<em><b>Boundary</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GCML__BOUNDARY = 8;
 
 	/**
 	 * The number of structural features of the '<em>Gcml</em>' class.
@@ -341,7 +368,7 @@ public interface GcmlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GCML_FEATURE_COUNT = 7;
+	int GCML_FEATURE_COUNT = 9;
 
 	/**
 	 * The meta object id for the '{@link gcml.impl.IsAttachedImpl <em>Is Attached</em>}' class.
@@ -693,22 +720,13 @@ public interface GcmlPackage extends EPackage {
 	int BOUNDARY__TYPE = ACTIVITY_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Outcome</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOUNDARY__OUTCOME = ACTIVITY_FEATURE_COUNT + 1;
-
-	/**
 	 * The feature id for the '<em><b>Boundary To Call</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOUNDARY__BOUNDARY_TO_CALL = ACTIVITY_FEATURE_COUNT + 2;
+	int BOUNDARY__BOUNDARY_TO_CALL = ACTIVITY_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Boundary</em>' class.
@@ -717,7 +735,7 @@ public interface GcmlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOUNDARY_FEATURE_COUNT = ACTIVITY_FEATURE_COUNT + 3;
+	int BOUNDARY_FEATURE_COUNT = ACTIVITY_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link gcml.Action <em>Action</em>}' enum.
@@ -868,6 +886,17 @@ public interface GcmlPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getDevice_FromIsAttached();
+
+	/**
+	 * Returns the meta object for the attribute '{@link gcml.Device#getDeviceID <em>Device ID</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Device ID</em>'.
+	 * @see gcml.Device#getDeviceID()
+	 * @see #getDevice()
+	 * @generated
+	 */
+	EAttribute getDevice_DeviceID();
 
 	/**
 	 * Returns the meta object for class '{@link gcml.Form <em>Form</em>}'.
@@ -1033,15 +1062,37 @@ public interface GcmlPackage extends EPackage {
 	EReference getGcml_Device();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link gcml.Gcml#getActivities <em>Activities</em>}'.
+	 * Returns the meta object for the containment reference list '{@link gcml.Gcml#getCall <em>Call</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Activities</em>'.
-	 * @see gcml.Gcml#getActivities()
+	 * @return the meta object for the containment reference list '<em>Call</em>'.
+	 * @see gcml.Gcml#getCall()
 	 * @see #getGcml()
 	 * @generated
 	 */
-	EReference getGcml_Activities();
+	EReference getGcml_Call();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link gcml.Gcml#getDecision <em>Decision</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Decision</em>'.
+	 * @see gcml.Gcml#getDecision()
+	 * @see #getGcml()
+	 * @generated
+	 */
+	EReference getGcml_Decision();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link gcml.Gcml#getBoundary <em>Boundary</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Boundary</em>'.
+	 * @see gcml.Gcml#getBoundary()
+	 * @see #getGcml()
+	 * @generated
+	 */
+	EReference getGcml_Boundary();
 
 	/**
 	 * Returns the meta object for class '{@link gcml.IsAttached <em>Is Attached</em>}'.
@@ -1356,17 +1407,6 @@ public interface GcmlPackage extends EPackage {
 	EAttribute getBoundary_Type();
 
 	/**
-	 * Returns the meta object for the attribute '{@link gcml.Boundary#isOutcome <em>Outcome</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Outcome</em>'.
-	 * @see gcml.Boundary#isOutcome()
-	 * @see #getBoundary()
-	 * @generated
-	 */
-	EAttribute getBoundary_Outcome();
-
-	/**
 	 * Returns the meta object for the reference '{@link gcml.Boundary#getBoundaryToCall <em>Boundary To Call</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1522,6 +1562,14 @@ public interface GcmlPackage extends EPackage {
 		EReference DEVICE__FROM_IS_ATTACHED = eINSTANCE.getDevice_FromIsAttached();
 
 		/**
+		 * The meta object literal for the '<em><b>Device ID</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DEVICE__DEVICE_ID = eINSTANCE.getDevice_DeviceID();
+
+		/**
 		 * The meta object literal for the '{@link gcml.impl.FormImpl <em>Form</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1646,12 +1694,28 @@ public interface GcmlPackage extends EPackage {
 		EReference GCML__DEVICE = eINSTANCE.getGcml_Device();
 
 		/**
-		 * The meta object literal for the '<em><b>Activities</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Call</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference GCML__ACTIVITIES = eINSTANCE.getGcml_Activities();
+		EReference GCML__CALL = eINSTANCE.getGcml_Call();
+
+		/**
+		 * The meta object literal for the '<em><b>Decision</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GCML__DECISION = eINSTANCE.getGcml_Decision();
+
+		/**
+		 * The meta object literal for the '<em><b>Boundary</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GCML__BOUNDARY = eINSTANCE.getGcml_Boundary();
 
 		/**
 		 * The meta object literal for the '{@link gcml.impl.IsAttachedImpl <em>Is Attached</em>}' class.
@@ -1898,14 +1962,6 @@ public interface GcmlPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute BOUNDARY__TYPE = eINSTANCE.getBoundary_Type();
-
-		/**
-		 * The meta object literal for the '<em><b>Outcome</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute BOUNDARY__OUTCOME = eINSTANCE.getBoundary_Outcome();
 
 		/**
 		 * The meta object literal for the '<em><b>Boundary To Call</b></em>' reference feature.

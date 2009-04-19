@@ -313,6 +313,15 @@ public class GcmlPackageImpl extends EPackageImpl implements GcmlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getDevice_DeviceID() {
+		return (EAttribute)deviceEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getForm() {
 		return formEClass;
 	}
@@ -448,8 +457,26 @@ public class GcmlPackageImpl extends EPackageImpl implements GcmlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getGcml_Activities() {
+	public EReference getGcml_Call() {
 		return (EReference)gcmlEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGcml_Decision() {
+		return (EReference)gcmlEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGcml_Boundary() {
+		return (EReference)gcmlEClass.getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -718,17 +745,8 @@ public class GcmlPackageImpl extends EPackageImpl implements GcmlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getBoundary_Outcome() {
-		return (EAttribute)boundaryEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getBoundary_BoundaryToCall() {
-		return (EReference)boundaryEClass.getEStructuralFeatures().get(2);
+		return (EReference)boundaryEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -798,6 +816,7 @@ public class GcmlPackageImpl extends EPackageImpl implements GcmlPackage {
 		createEAttribute(deviceEClass, DEVICE__IS_VIRTUAL);
 		createEReference(deviceEClass, DEVICE__TO_CONNECTION);
 		createEReference(deviceEClass, DEVICE__FROM_IS_ATTACHED);
+		createEAttribute(deviceEClass, DEVICE__DEVICE_ID);
 
 		formEClass = createEClass(FORM);
 		createEAttribute(formEClass, FORM__FORM_TYPE_NAME);
@@ -815,7 +834,9 @@ public class GcmlPackageImpl extends EPackageImpl implements GcmlPackage {
 		createEReference(gcmlEClass, GCML__PERSON);
 		createEReference(gcmlEClass, GCML__IS_ATTACHED);
 		createEReference(gcmlEClass, GCML__DEVICE);
-		createEReference(gcmlEClass, GCML__ACTIVITIES);
+		createEReference(gcmlEClass, GCML__CALL);
+		createEReference(gcmlEClass, GCML__DECISION);
+		createEReference(gcmlEClass, GCML__BOUNDARY);
 
 		isAttachedEClass = createEClass(IS_ATTACHED);
 		createEReference(isAttachedEClass, IS_ATTACHED__TO_DEVICE);
@@ -852,7 +873,6 @@ public class GcmlPackageImpl extends EPackageImpl implements GcmlPackage {
 
 		boundaryEClass = createEClass(BOUNDARY);
 		createEAttribute(boundaryEClass, BOUNDARY__TYPE);
-		createEAttribute(boundaryEClass, BOUNDARY__OUTCOME);
 		createEReference(boundaryEClass, BOUNDARY__BOUNDARY_TO_CALL);
 
 		// Create enums
@@ -909,6 +929,7 @@ public class GcmlPackageImpl extends EPackageImpl implements GcmlPackage {
 		initEAttribute(getDevice_IsVirtual(), theXMLTypePackage.getBoolean(), "isVirtual", null, 0, 1, Device.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDevice_ToConnection(), this.getConnection(), this.getConnection_FromDevice(), "toConnection", null, 1, -1, Device.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDevice_FromIsAttached(), this.getIsAttached(), this.getIsAttached_ToDevice(), "fromIsAttached", null, 1, -1, Device.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDevice_DeviceID(), theXMLTypePackage.getString(), "deviceID", null, 1, 1, Device.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(formEClass, Form.class, "Form", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getForm_FormTypeName(), theXMLTypePackage.getString(), "formTypeName", "", 1, 1, Form.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -926,7 +947,9 @@ public class GcmlPackageImpl extends EPackageImpl implements GcmlPackage {
 		initEReference(getGcml_Person(), this.getPerson(), null, "person", null, 0, -1, Gcml.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGcml_IsAttached(), this.getIsAttached(), null, "isAttached", null, 0, -1, Gcml.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGcml_Device(), this.getDevice(), null, "device", null, 0, -1, Gcml.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGcml_Activities(), this.getActivity(), null, "activities", null, 0, -1, Gcml.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGcml_Call(), this.getCall(), null, "call", null, 0, -1, Gcml.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGcml_Decision(), this.getDecision(), null, "decision", null, 0, -1, Gcml.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGcml_Boundary(), this.getBoundary(), null, "boundary", null, 0, -1, Gcml.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(isAttachedEClass, IsAttached.class, "IsAttached", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getIsAttached_ToDevice(), this.getDevice(), this.getDevice_FromIsAttached(), "toDevice", null, 1, 1, IsAttached.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -964,7 +987,6 @@ public class GcmlPackageImpl extends EPackageImpl implements GcmlPackage {
 
 		initEClass(boundaryEClass, Boundary.class, "Boundary", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getBoundary_Type(), this.getBoundaryType(), "Type", "", 1, 1, Boundary.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getBoundary_Outcome(), theXMLTypePackage.getBoolean(), "outcome", null, 0, 1, Boundary.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getBoundary_BoundaryToCall(), this.getCall(), this.getCall_CallToBoundary(), "BoundaryToCall", null, 0, 1, Boundary.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
