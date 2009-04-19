@@ -1,0 +1,44 @@
+﻿<Window x:Class="RRComSSys.View.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="CVM Login Screen" Height="350" Width="500" ResizeMode="NoResize">
+    <Grid>
+    	<Grid.RowDefinitions>
+    		<RowDefinition Height="0.399*"/>
+    		<RowDefinition Height="0.142*"/>
+    		<RowDefinition Height="0.154*"/>
+    		<RowDefinition Height="0.305*"/>
+    	</Grid.RowDefinitions>
+    	<Grid.ColumnDefinitions>
+    		<ColumnDefinition Width="0.291*"/>
+    		<ColumnDefinition Width="0.709*"/>
+    	</Grid.ColumnDefinitions>
+		<Border Margin="0,0,0,0" Grid.ColumnSpan="2" Grid.RowSpan="4" BorderBrush="#FF000000" BorderThickness="0,0,0,0" OpacityMask="#7F926969">
+    		<Border.Background>
+    			<LinearGradientBrush EndPoint="0.867,1.098" StartPoint="0.627,0.078">
+    				<GradientStop Color="#FF0C0C0C" Offset="0.162"/>
+    				<GradientStop Color="#FFFFFFFF" Offset="1"/>
+    			</LinearGradientBrush>
+    		</Border.Background>
+    	</Border>
+    	<StackPanel Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Stretch" Grid.Column="1" Grid.Row="0">
+    		<Label Margin="20,20,0,0" VerticalAlignment="Top" Height="Auto" Content="Welcome to CVM" FontSize="24" HorizontalAlignment="Left" Foreground="#FF000000"/>
+    		<Label Margin="0,15,0,0" Content="Please Log In:" Grid.Column="1" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    	</StackPanel>  
+    	<StackPanel Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Column="1" Grid.Row="1">
+    		<Label Content="Username" HorizontalAlignment="Left" Margin="30,0,15,0" VerticalAlignment="Center"/>
+    		<TextBox Margin="15,0,0,0" VerticalAlignment="Center" Width="217" Height="Auto" Text="" TextWrapping="Wrap"/>        
+    	</StackPanel>		
+    	<StackPanel Margin="0,0,0,0" Grid.Column="1" Grid.Row="2" Orientation="Horizontal">
+    		<Label HorizontalAlignment="Left" Margin="30,0,15,0" VerticalAlignment="Center" Width="Auto" Height="Auto" Content="Password"/>
+            <PasswordBox ToolTip="Password" Name="txtPassword" Margin="18,0,0,0" VerticalAlignment="Center" Width="217" Height="Auto" />
+        </StackPanel>
+    	<StackPanel HorizontalAlignment="Right" Margin="0,0,0,0" VerticalAlignment="Bottom" Width="Auto" Height="Auto" Grid.Column="1" Grid.Row="3" Orientation="Horizontal">
+    		<Button Height="Auto" Content="Login" HorizontalAlignment="Right" Margin="0,0,15,15" VerticalAlignment="Bottom" Width="45"/>
+    		<Button HorizontalAlignment="Right" Margin="0,0,15,15" VerticalAlignment="Bottom" Width="45" Height="Auto" Content="Cancel"/>
+    	</StackPanel>
+    	<Border HorizontalAlignment="Stretch" Margin="0,0,0,0" Width="Auto" Grid.RowSpan="4" BorderBrush="#FF000000" BorderThickness="0,0,5,0" Opacity="1" OpacityMask="{x:Null}" Background="#7F000000">
+    		<Image Width="Auto" Height="Auto" Source="Images\__communication__.jpg" Stretch="Fill"/>
+    	</Border>		
+    </Grid>
+</Window>
