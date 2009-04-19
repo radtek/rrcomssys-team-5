@@ -1,0 +1,47 @@
+﻿<Window
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	x:Class="RRComSSys.View.MissingInfoForm"
+	x:Name="Window"
+	Title="MissingInfoForm"
+	Width="332" Height="230" WindowStyle="None" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" Background="#FF989898">
+
+	<Grid x:Name="LayoutRoot">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="0.502*"/>
+			<RowDefinition Height="0.319*"/>
+			<RowDefinition Height="0.179*"/>
+		</Grid.RowDefinitions>
+		<Grid HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Width="Auto" Height="Auto" Grid.Row="1" Grid.RowSpan="1">
+			<TextBox Margin="45,0,45,0" VerticalAlignment="Top" Width="Auto" Height="Auto" Grid.Row="1" Text="" TextWrapping="Wrap" TabIndex="0"/>
+		</Grid>
+		<Grid Margin="0,0,0,0" VerticalAlignment="Stretch">
+			<StackPanel Margin="0,0,0,0" VerticalAlignment="Stretch" Height="23.277">
+				<Label Foreground="#FFBA0F0F" HorizontalAlignment="Center" Content="Enter the missing Attribute and Click OK" FontSize="12"/>
+				<Label HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Stretch" Width="Auto" Height="Auto" Content="" Foreground="#FFFFFFFF"/>
+			</StackPanel>
+		</Grid>
+		<StackPanel HorizontalAlignment="Right" Margin="0,0,0,0" VerticalAlignment="Stretch" Height="Auto" Grid.Row="2" Orientation="Horizontal">
+			<Button HorizontalAlignment="Right" Margin="0,0,15,0" VerticalAlignment="Center" Width="Auto" Height="Auto" ToolTip="OK" TabIndex="1">
+				<Button.Background>
+					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+						<GradientStop Color="#FFFFFFFF" Offset="0"/>
+						<GradientStop Color="#FFE3E5F0" Offset="0.5"/>
+						<GradientStop Color="#FF3B3A40" Offset="1"/>
+					</LinearGradientBrush>
+				</Button.Background>
+				<Image d:LayoutOverrides="GridBox" Width="32" Height="32" Source="Images\go-next.png" Stretch="Fill" ToolTip=""/>
+			</Button>
+			<Button HorizontalAlignment="Right" Margin="0,0,15,0" VerticalAlignment="Center" Width="Auto" Height="Auto" TabIndex="2" IsHitTestVisible="True" ToolTip="Cancel">
+				<Button.Background>
+					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+						<GradientStop Color="#FFFFFFFF" Offset="0"/>
+						<GradientStop Color="#FFE3E5F0" Offset="0.5"/>
+						<GradientStop Color="#FF3B3A40" Offset="1"/>
+					</LinearGradientBrush>
+				</Button.Background>
+				<Image d:LayoutOverrides="Width, Height, GridBox" Width="32" Height="32" Source="Images\process-stop.png" Stretch="Fill" ToolTip=""/>
+			</Button>
+		</StackPanel>
+	</Grid>
+</Window>

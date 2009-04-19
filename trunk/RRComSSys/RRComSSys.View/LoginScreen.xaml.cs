@@ -23,5 +23,26 @@ namespace RRComSSys.View
         {
             InitializeComponent();
         }
+
+        private void LoginButton_Click(object sender, RoutedEventArgs e)
+        {
+            if(Authorization.getUser(txtUserName.Text, txtPassword.Password))
+            {
+                ExecutionWindow exc = new ExecutionWindow();
+                this.Close();
+                exc.Show();
+            }
+            else
+            {
+                txtPassword.Password = "";
+                errorLabel.Content = "Invalid User Information";
+                errorLabel.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void CancelButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
