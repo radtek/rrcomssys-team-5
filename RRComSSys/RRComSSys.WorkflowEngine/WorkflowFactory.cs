@@ -5,7 +5,7 @@ using System.Text;
 using System.Xml;
 using System.Xml.Xsl;
 using System.Xml.Serialization;
-using RRComSSys.TransformationEngine.ObjectModel;
+using RRComSSys.TransformationEngine;
 
 namespace RRComSSys.WorkflowEngine
 {
@@ -21,10 +21,10 @@ namespace RRComSSys.WorkflowEngine
                 
                 if ( Workflow.Deserialize(strWXCML,out wf, out except) )
                 {
-                    TransformationEngine.ObjectModel.Boundary start =
+                    TransformationEngine.Boundary start =
                         wf.Boundary.Find(x => x.Type.Equals(BoundaryType.Start));
 
-                    TransformationEngine.ObjectModel.Boundary end =
+                    TransformationEngine.Boundary end =
                         wf.Boundary.Find(x => x.Type.Equals(BoundaryType.End));
                 }
                 else

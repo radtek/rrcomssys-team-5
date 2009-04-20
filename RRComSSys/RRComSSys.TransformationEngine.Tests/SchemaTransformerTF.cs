@@ -9,12 +9,20 @@ namespace RRComSSys.TransformationEngine.Tests
     [TestFixture]
     public class SchemaTransformerTF
     {
-        [Test]
-        public void Test()
+        SchemaTransformer st = new SchemaTransformer();
+        private const string XSLT_FILE_PATH = @"C:\Documents and Settings\jeanr\Desktop\RRComSSysTeam5\RRComSSys\RRComSSys.TransformationEngine\MappingMapToWXCML.xslt";
+        private const string GCML_FILE_PATH = @"C:\Documents and Settings\jeanr\Desktop\RRComSSysTeam5\RRComSSys\RRComSSys.TransformationEngine.Tests\TestResources.AlternateWithWorkflow2.gcml";
+
+        [SetUp]
+        public void SetUp()
         {
-            //
-            // TODO: Add test logic here
-            //
+
+        }
+
+        [Test]
+        public void TestTransform()
+        {
+            st.Transform(GCML_FILE_PATH);            
         }
     }
 }
