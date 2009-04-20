@@ -8,12 +8,12 @@ namespace RRComSSys.SynthesisEngine
 {
     public class Command
     {
-        delegate string Invoker(StringCollection parameters);
+        delegate void Invoker();
         static Invoker VoiceCall; //Add more commands here
         
         public Command(SkypeReceiver receiver)
         {
             VoiceCall = receiver.MakeAVoiceCall;
-        }        
+        }       
     }
 }
