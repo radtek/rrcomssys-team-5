@@ -50,6 +50,7 @@
     <Compile Include="CommandPattern.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SEClient.cs" />
+    <Compile Include="SkypeAPI.cs" />
     <Compile Include="SkypeReceiver.cs" />
   </ItemGroup>
   <ItemGroup>
