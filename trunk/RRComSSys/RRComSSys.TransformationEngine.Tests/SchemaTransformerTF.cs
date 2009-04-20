@@ -11,7 +11,7 @@ namespace RRComSSys.TransformationEngine.Tests
     {
         SchemaTransformer st = new SchemaTransformer();
         private const string XSLT_FILE_PATH = @"C:\Documents and Settings\jeanr\Desktop\RRComSSysTeam5\RRComSSys\RRComSSys.TransformationEngine\MappingMapToWXCML.xslt";
-        private const string GCML_FILE_PATH = @"C:\Documents and Settings\jeanr\Desktop\RRComSSysTeam5\RRComSSys\RRComSSys.TransformationEngine.Tests\TestResources.AlternateWithWorkflow2.gcml";
+        private const string GCML_FILE_PATH = @"C:\Documents and Settings\jeanr\Desktop\RRComSSysTeam5\RRComSSys\RRComSSys.TransformationEngine.Tests\TestResources\AlternateWithWorkflow2.gcml";
 
         [SetUp]
         public void SetUp()
@@ -20,9 +20,10 @@ namespace RRComSSys.TransformationEngine.Tests
         }
 
         [Test]
-        public void TestTransform()
+        public void TestTransformReturnsAWorkflow()
         {
-            st.Transform(GCML_FILE_PATH);            
+            Workflow doc = st.GetObjectModel(GCML_FILE_PATH);
+            Assert.AreNotEqual(doc, null);
         }
     }
 }

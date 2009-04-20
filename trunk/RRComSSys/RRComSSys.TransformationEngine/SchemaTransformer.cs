@@ -6,47 +6,62 @@ using System.Xml.Xsl;
 using System.IO;
 using System.Xml;
 using System.Xml.XPath;
+using System.Reflection;
 
 namespace RRComSSys.TransformationEngine
 {    
     public class SchemaTransformer
     {
-        private const string XSLT_FILE_PATH = @"C:\Documents and Settings\jeanr\Desktop\RRComSSysTeam5\RRComSSys\RRComSSys.TransformationEngine\MappingMapToWXCML.xslt";
-        StringBuilder _sb = new StringBuilder();
+        private string xsltFilePath = Path.Combine((Path.GetDirectoryName(
+            Assembly.GetExecutingAssembly().GetName().CodeBase)).Replace(@"file:\", ""), "MappingMapToWXCML.xslt");
 
+        
         public SchemaTransformer()
         {
         }
 
-        public void Transform(string gcmlPath)
+        public Workflow GetObjectModel(string gcmlPath)
         {
-            if(File.Exists(gcmlPath) && File.Exists(XSLT_FILE_PATH))
-            {   
-                XmlTextReader xmlSource = new XmlTextReader(gcmlPath);
-                XPathDocument xpathDoc = new XPathDocument(xmlSource);
-                XslCompiledTransform xsltDoc = new XslCompiledTransform();
-
-                xsltDoc.Load(XSLT_FILE_PATH);
-
-                
-                StringWriter sw = new StringWriter(_sb);
-
-                xsltDoc.Transform(xpathDoc, null, sw);
-            }
-        }
-
-        public Workflow GetObjectModel(string xcmlPath)
-        {
+            StringBuilder sw = Transform(gcmlPath);
             Workflow doc;
             Exception exc;
 
-            Workflow.Deserialize(_sb.ToString(), out doc, out exc);
+            Workflow.Deserialize(sw.ToString(), out doc, out exc);
 
             if (exc == null)
             {
+                throw new ValidationException("Validation Error: " + exc.Message);
             }
 
             return doc;
         }
+
+        private StringBuilder Transform(string gcmlPath)
+        {
+            if(!File.Exists(gcmlPath))
+            {
+                throw new GCMLFileNotFoundException("The GCML File" + gcmlPath + " does not exist.");
+            }
+
+            if(!File.Exists(xsltFilePath))
+            {
+                throw new XSLTFileNotFoundException("The XSLT File" + xsltFilePath + " does not exist.");
+            }
+        
+            StringBuilder sb = new StringBuilder();
+            XmlTextReader xmlSource = new XmlTextReader(gcmlPath);
+            XPathDocument xpathDoc = new XPathDocument(xmlSource);
+            XslCompiledTransform xsltDoc = new XslCompiledTransform();
+
+            xsltDoc.Load(xsltFilePath);
+
+            
+            StringWriter sw = new StringWriter(sb);
+
+            xsltDoc.Transform(xpathDoc, null, sw);
+
+            return sb;
+                    
+        }        
     }
 }
