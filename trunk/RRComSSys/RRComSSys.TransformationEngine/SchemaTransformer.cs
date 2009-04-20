@@ -28,7 +28,7 @@ namespace RRComSSys.TransformationEngine
 
             Workflow.Deserialize(sw.ToString(), out doc, out exc);
 
-            if (exc == null)
+            if (exc != null)
             {
                 throw new ValidationException("Validation Error: " + exc.Message);
             }
