@@ -10,17 +10,12 @@ using System.Reflection;
 
 namespace RRComSSys.TransformationEngine
 {    
-    public class SchemaTransformer
+    public static class SchemaTransformer
     {
-        private string xsltFilePath = Path.Combine((Path.GetDirectoryName(
+        private static string xsltFilePath = Path.Combine((Path.GetDirectoryName(
             Assembly.GetExecutingAssembly().GetName().CodeBase)).Replace(@"file:\", ""), "MappingMapToWXCML.xslt");
-
         
-        public SchemaTransformer()
-        {
-        }
-
-        public Workflow GetObjectModel(string gcmlPath)
+        public static Workflow GetObjectModel(string gcmlPath)
         {
             StringBuilder sw = Transform(gcmlPath);
             Workflow doc;
@@ -36,7 +31,7 @@ namespace RRComSSys.TransformationEngine
             return doc;
         }
 
-        private StringBuilder Transform(string gcmlPath)
+        private static StringBuilder Transform(string gcmlPath)
         {
             if(!File.Exists(gcmlPath))
             {
@@ -60,8 +55,7 @@ namespace RRComSSys.TransformationEngine
 
             xsltDoc.Transform(xpathDoc, null, sw);
 
-            return sb;
-                    
+            return sb;                    
         }        
     }
 }
