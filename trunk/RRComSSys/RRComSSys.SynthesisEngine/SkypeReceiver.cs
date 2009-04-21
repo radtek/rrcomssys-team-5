@@ -9,21 +9,39 @@ namespace RRComSSys.SynthesisEngine
 {
     public class SkypeReceiver
     {
-        private Skype _skypeObject;
+        private static Skype skype = new Skype();
 
         public SkypeReceiver()
         {       
-            _skypeObject.CallStatus +=new _ISkypeEvents_CallStatusEventHandler(_skypeObject_CallStatus);
+            skype.CallStatus +=new _ISkypeEvents_CallStatusEventHandler(skype_CallStatus);
+            
         }
 
-        void  _skypeObject_CallStatus(Call pCall, TCallStatus Status)
+        void  skype_CallStatus(Call pCall, TCallStatus Status)
         {
  	        throw new NotImplementedException();
         }
 
-        public void MakeAVoiceCall()
+        public void MakeAVoiceCall(List<string> users)
         {
-
+            throw new NotImplementedException();
         }
+
+        public void MakeAVideoCall(List<string> users)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void StartChat(List<string> users)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SendFile(List<string> users, string filePath)
+        {
+            throw new NotImplementedException();
+        }
+
+
     }
 }
