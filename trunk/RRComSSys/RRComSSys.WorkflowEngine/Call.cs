@@ -65,6 +65,9 @@ namespace RRComSSys.WorkflowEngine
         /// <returns></returns>
         public override bool processActivity()
         {
+            // JEAN....add your code here !!!!
+            
+            // DON'T FORGET TO SET OUTCOME
             return true;
         }
 

@@ -22,11 +22,16 @@ namespace RRComSSys.WorkflowEngine
             decision = aDecision;
         }
 
-        #region Implementation of IDecision
+      public TransformationEngine.Decision DecisionModel
+      {
+        get { return decision; }
+      }
+
+      #region Implementation of IDecision
 
         public string NextActivity(bool previousActivityOutcome)
         {
-            return previousActivityOutcome ? decision.successPathID : decision.failPathID;
+            return previousActivityOutcome ? DecisionModel.successPathID : DecisionModel.failPathID;
         }
 
         #endregion
@@ -40,12 +45,12 @@ namespace RRComSSys.WorkflowEngine
 
         public override string getActivityID()
         {
-            return decision.activityID;
+            return DecisionModel.activityID;
         }
 
         public override string nextActivityID()
         {
-            return decision.successPathID;
+            return DecisionModel.successPathID;
         }
 
         public override Type TypeOfActivity()
