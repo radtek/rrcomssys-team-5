@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Collections.Specialized;
 using SKYPE4COMLib;
+using System.Threading;
 
 namespace RRComSSys.SynthesisEngine
 {
@@ -90,10 +91,31 @@ namespace RRComSSys.SynthesisEngine
             return call;
         }
 
-        public void SendFile(string[] filePaths)
+        public void SendFile(string[] users, string filePath)
         {
-            throw new NotImplementedException();
+            IntPtr handle = IntPtr.Zero;
+
+            foreach(string user in users)
+            {
+                /*System.Threading.Thread t = new System.Threading.Thread(new System.Threading.ParameterizedThreadStart(openFileDialog));
+                t.SetApartmentState(System.Threading.ApartmentState.STA);
+
+                t.Start(new OpenFileArguments(user, filePath));
+
+                Thread.Sleep(2000);
+                PressKeys.sendString("TextConfig.txt");
+
+                t.Join(30000); */
+                skype.Client.OpenFileTransferDialog(user, System.IO.Path.GetDirectoryName(filePath)); 
+            }
         }
+
+        /*private void openFileDialog(object args)
+        {
+            OpenFileArguments fargs = (OpenFileArguments)args;
+                       
+        }*/
+
 
         public void StartChat(string[] users)
         {
@@ -102,6 +124,17 @@ namespace RRComSSys.SynthesisEngine
 
         #endregion
 
+        /*public class OpenFileArguments
+        {
+            public OpenFileArguments(string user, string filePath)
+            {
+                User = user;
+                FilePath = filePath;
+            }
+
+            public string User { get; private set; }
+            public string FilePath { get; private set; }
+        }*/
         
     }
 }

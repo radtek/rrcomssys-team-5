@@ -5,7 +5,7 @@ namespace RRComSSys.SynthesisEngine
     {
         void MakeAVideoCall(string[] users);
         void MakeAVoiceCall(string[] users);
-        void SendFile(string[] filePaths);
+        void SendFile(string[] users, string filePath);
         void StartChat(string[] users);
     }
 }
