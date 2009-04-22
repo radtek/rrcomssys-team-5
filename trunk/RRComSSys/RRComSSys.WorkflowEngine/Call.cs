@@ -25,6 +25,7 @@ namespace RRComSSys.WorkflowEngine
         private TransformationEngine.Call myActivity = null;
         private WorkflowEngine.Connection myConnection = null;
 
+       
         /// <summary>
         /// Gets or sets the call connection.
         /// </summary>
@@ -55,7 +56,9 @@ namespace RRComSSys.WorkflowEngine
         {
             try
             {
-                TransformationEngine.Connection aConnection = instance.Connection.Find(x => (x.ConnectionID == myActivity.CallToConnection));
+                TransformationEngine.Connection aConnection =
+                    instance.Connection[WorkflowFactory.IndexOfActivity(myActivity.CallToConnection)];
+                    //.Find(x => (x.ConnectionID == myActivity.CallToConnection));
                 CallConnection = new Connection(aConnection, instance);
             }
             catch (Exception)
@@ -63,6 +66,7 @@ namespace RRComSSys.WorkflowEngine
                 throw;
             }
         }
+
 
         #region Implementation of IActivity
 
@@ -72,6 +76,7 @@ namespace RRComSSys.WorkflowEngine
         /// <returns></returns>
         public override bool processActivity()
         {
+
             List<string> users = new List<string>();
             CommandType type = CommandType.Chat;
             for (int i = 1; i < CallConnection.RemotelyConnectedDevices(); i++)
@@ -115,6 +120,11 @@ namespace RRComSSys.WorkflowEngine
             resetEvent.Set();
         }
 
+        public TransformationEngine.Call CallModel()
+        {
+            return myActivity;
+        }
+
         /// <summary>
         /// Gets the activity ID.
         /// </summary>
@@ -130,10 +140,13 @@ namespace RRComSSys.WorkflowEngine
         /// <returns></returns>
         public override string nextActivityID()
         {
+            
+            /*
             if (string.IsNullOrEmpty(myActivity.CallToDecision) && (!string.IsNullOrEmpty(myActivity.CallToBoundary)))
                 return myActivity.CallToBoundary;
             if (string.IsNullOrEmpty(myActivity.CallToBoundary) && (!string.IsNullOrEmpty(myActivity.CallToDecision)))
                 return myActivity.CallToDecision;
+             */
             return string.Empty;
         }
 

@@ -16,18 +16,12 @@ namespace RRComSSys.WorkflowEngine
 {
     public abstract class WFElement : IActivity
     {
-        private TransformationEngine.Activity myActivity = null;
+
         private bool outcome = false;
         
         // In case of Call and End boundaries, it's possible to have multiple previous elements
         private List<WFElement> previousElements = new List<WFElement>();
-
-        public Activity MyActivity
-        {
-            get { return myActivity; }
-            set { myActivity = value; }
-        }
-
+        
         public bool Outcome
         {
             get { return outcome; }

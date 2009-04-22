@@ -29,7 +29,7 @@ namespace RRComSSys.WorkflowEngine
         /// <param name="wfInstance">The wf instance.</param>
         private void AttachToPerson(Workflow wfInstance)
         {
-            TransformationEngine.Person aPerson = wfInstance.Person.Find(x => (x.personID.Equals(isAttached.fromPerson)));
+            TransformationEngine.Person aPerson = wfInstance.Person.Find(x => x.personID.Equals(isAttached.fromPerson));//[WorkflowFactory.IndexOfActivity(isAttached.fromPerson)];//.Find(x => (x.personID.Equals(isAttached.fromPerson)));
             person = new WorkflowEngine.Person(aPerson);
         }
 

@@ -52,8 +52,16 @@ namespace RRComSSys.TransformationEngine
 
             
             StringWriter sw = new StringWriter(sb);
-
-            xsltDoc.Transform(xpathDoc, null, sw);
+            try
+            {
+                xsltDoc.Transform(xpathDoc, null, sw);
+            }
+            catch (XsltException except)
+            {
+                Console.WriteLine(except.Message);
+                throw except;
+            }
+            
 
             return sb;                    
         }        

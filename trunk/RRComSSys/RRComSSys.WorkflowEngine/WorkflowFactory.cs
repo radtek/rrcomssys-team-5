@@ -16,7 +16,7 @@ namespace RRComSSys.WorkflowEngine
         /// </summary>
         /// <param name="wfObj">The wf obj.</param>
         /// <returns></returns>
-        public static WFRunner CreateWorkflowRuntime(Workflow wfObj)
+        public  WFRunner CreateWorkflowRuntime(Workflow wfObj)
         {
             WFRunner runner = null;
             Exception except;
@@ -30,7 +30,7 @@ namespace RRComSSys.WorkflowEngine
                     wfObj.Boundary.Find(x => x.Type.Equals(BoundaryType.End));
 
                 ConnectTheLines(wfObj, start, end, out runner);
-
+                 
             }
             catch(Exception innerExcept)
             {
@@ -39,7 +39,7 @@ namespace RRComSSys.WorkflowEngine
             return runner;
         }
 
-        private static void ConnectTheLines(Workflow wfObj, TransformationEngine.Boundary start, TransformationEngine.Boundary end, out WFRunner runner)
+        private  void ConnectTheLines(Workflow wfObj, TransformationEngine.Boundary start, TransformationEngine.Boundary end, out WFRunner runner)
         {
             runner = new WFRunner();
             WFElement currentElement = new Boundary(start);
@@ -59,7 +59,7 @@ namespace RRComSSys.WorkflowEngine
         /// <param name="currentElement">The current element.</param>
         /// <param name="endElement">The end element.</param>
         /// <param name="wfInstance">The wf instance.</param>
-        private static void BuildNextElement(WFRunner runner, WFElement currentElement,WFElement endElement, Workflow wfInstance)
+        private  void BuildNextElement(WFRunner runner, WFElement currentElement,WFElement endElement, Workflow wfInstance)
         {
           WFElement outElement = null;
 
@@ -67,9 +67,11 @@ namespace RRComSSys.WorkflowEngine
           {
               // This should only be entered into during the top level invocation
               // i.e. for the "Start" boundary itself.
-              
-              TransformationEngine.Call aCall =
-                wfInstance.Call.Find(x => x.activityID.Equals(currentElement.nextActivityID()));
+
+              string nextActivity = currentElement.nextActivityID();
+              //TransformationEngine.Call aCall =
+              // wfInstance.Call.Find(x => x.activityID.Equals(nextActivity));
+              TransformationEngine.Call aCall = wfInstance.Call[WorkflowFactory.IndexOfActivity(nextActivity)];
               if ( null != aCall )
               {
                 // Create and add the new call...set this boundary as one of it's predecessors  
@@ -87,52 +89,99 @@ namespace RRComSSys.WorkflowEngine
                 }
               }
           }
-          else if (currentElement.GetType() == typeof (Call))
+          else if (currentElement.GetType() == typeof(Call))
           {
-            TransformationEngine.Decision isDecision =
-              wfInstance.Decision.Find(x => x.activityID.Equals(currentElement.nextActivityID()));
-            if (null != isDecision)
-            {
-              // If the next item is a DECISION
-              WFElement possibleElement = ElementExistsInWorkflow(runner, isDecision.activityID);
-              if (null == possibleElement)
+              //TransformationEngine.Decision isDecision =
+              //  wfInstance.Decision[WorkflowFactory.IndexOfActivity(currentElement.nextActivityID())]; //Find(x => x.activityID.Equals(currentElement.nextActivityID()));
+              Call theCall = (Call) currentElement;
+              string callToDecision = theCall.CallModel().CallToDecision;
+              string callToBoundary = theCall.CallModel().CallToBoundary;
+
+              TransformationEngine.Boundary calledBoundary = (!string.IsNullOrEmpty(callToBoundary)) ? wfInstance.Boundary[WorkflowFactory.IndexOfActivity(callToBoundary)] 
+                                                                                                    : null;
+
+              TransformationEngine.Decision calledDecision = (!string.IsNullOrEmpty(callToDecision)) ? wfInstance.Decision[WorkflowFactory.IndexOfActivity(callToDecision)]
+                                                                                                    : null;
+
+              if (null != calledBoundary )
               {
-                // Add this call as a previous Element of this Element, and unroll
-                if (!possibleElement.PreviousElements.Contains(currentElement))
-                  possibleElement.PreviousElements.Add(currentElement);
+                  if (calledBoundary.Type.Equals("End"))
+                  {
+                      if( (null != calledDecision ) && (null != currentElement.PreviousElements.Find(x=>x.getActivityID().Equals(calledDecision.activityID))))
+                      {
+                          throw new Exception(
+                              "Call Cannot be Connected to a Decision and End Elements without having parsed the Decision");
+                      }
+                      endElement.PreviousElements.Add(currentElement);
+                  }
               }
-              else
+               
+              if (null != calledDecision)
               {
-                outElement = new Decision(isDecision, wfInstance);
+                  if (null !=
+                      currentElement.PreviousElements.Find(x => x.getActivityID().Equals(calledDecision.activityID)))
+                  {
+                      throw new Exception("Decision was already connected to this Call"); 
+
+                  }
+                  else
+                  {
+                        outElement = new Decision(calledDecision, wfInstance);
                 
-                // Add the Call to the Decision's PreviousElements
-                outElement.PreviousElements.Add(currentElement);
+                        // Add the Call to the Decision's PreviousElements
+                        outElement.PreviousElements.Add(currentElement);
                 
-                // Add the Decision to the Workflow 
-                runner.WorkflowElements.Add(outElement);
+                        // Add the Decision to the Workflow 
+                        runner.WorkflowElements.Add(outElement);
                 
-                // Try to build next Element
-                BuildNextElement(runner, outElement, endElement, wfInstance);  
+                        // Try to build next Element
+                        BuildNextElement(runner, outElement, endElement, wfInstance);
+                  }
               }
-            }
-            else
-            {
-              // Otherwise we've hit a boundary ( which should be the end boundary, but let's make sure
-              TransformationEngine.Boundary isBoundary =
-                wfInstance.Boundary.Find(x => x.activityID.Equals(currentElement.nextActivityID()));
               
-              if (isBoundary.Type.Equals("End"))
-              {
-                endElement.PreviousElements.Add(currentElement);
-                // unroll 
-              }
-              else
-              {
-                throw new Exception("Boundary that isn't an end boundary encountered immediately after a Call activity");
-              }
-            }
+              //if (null != isDecision)
+              //{
+              // If the next item is a DECISION
+              //WFElement possibleElement = ElementExistsInWorkflow(runner, isDecision.activityID);
+              //if (null == possibleElement)
+              //{
+              //  // Add this call as a previous Element of this Element, and unroll
+              //  if (!possibleElement.PreviousElements.Contains(currentElement))
+              //    possibleElement.PreviousElements.Add(currentElement);
+             // }
+              //else
+              //{
+              //  outElement = new Decision(isDecision, wfInstance);
+              //  
+              //  // Add the Call to the Decision's PreviousElements
+              //  outElement.PreviousElements.Add(currentElement);
+              //  
+              //  // Add the Decision to the Workflow 
+              //  runner.WorkflowElements.Add(outElement);
+              //  
+              //  // Try to build next Element
+              //  BuildNextElement(runner, outElement, endElement, wfInstance);  
+              // }
+               //*/
+            //}
+            //else
+            //{
+            //   // Otherwise we've hit a boundary ( which should be the end boundary, but let's make sure
+            //    TransformationEngine.Boundary isBoundary =
+            //      wfInstance.Boundary[WorkflowFactory.IndexOfActivity(currentElement.nextActivityID())]; //.Find(x => x.activityID.Equals(currentElement.nextActivityID()));
+            //  
+            //  if (isBoundary.Type.Equals("End"))
+            //  {
+            //    endElement.PreviousElements.Add(currentElement);
+            //    // unroll 
+            //  }
+            //  else
+            //  {
+            //    throw new Exception("Boundary that isn't an end boundary encountered immediately after a Call activity");
+            //  }
+            
           }
-          else if (currentElement.GetType() == typeof (Decision))
+          else if (currentElement.GetType() == typeof(Decision))
           {
             TransformationEngine.Decision decision = ((Decision) currentElement).DecisionModel;
             string successID = decision.successPathID;
@@ -160,7 +209,7 @@ namespace RRComSSys.WorkflowEngine
         /// <param name="elementActivityID">The element activity ID.</param>
         /// <param name="endElement">The end element.</param>
         /// <param name="wfInstance">The wf instance.</param>
-        private static void ConstructDecisionBranch(WFRunner runner, WFElement currentElement, string elementActivityID, WFElement endElement, Workflow wfInstance)
+        private void ConstructDecisionBranch(WFRunner runner, WFElement currentElement, string elementActivityID, WFElement endElement, Workflow wfInstance)
         {
             TransformationEngine.Call possibleCall = wfInstance.Call.Find(x => x.activityID.Equals(elementActivityID));
             if (null != possibleCall)
@@ -192,11 +241,21 @@ namespace RRComSSys.WorkflowEngine
         /// <param name="runner">The runner.</param>
         /// <param name="activityID">The activity ID.</param>
         /// <returns></returns>
-        private static WFElement ElementExistsInWorkflow(WFRunner runner, string activityID)
+        private WFElement ElementExistsInWorkflow(WFRunner runner, string activityID)
         {
           return runner.WorkflowElements.Find(x => x.getActivityID().Equals(activityID));
         }
-      
+
+        /// <summary>
+        /// Indexes the of activity.
+        /// </summary>
+        /// <param name="activityId">The activity id.</param>
+        /// <returns></returns>
+        public static int IndexOfActivity(string activityId)
+        {
+            return int.Parse(activityId.Substring(activityId.LastIndexOf('.') + 1));
+        }
+
     }
     
 }
