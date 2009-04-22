@@ -8,6 +8,13 @@ namespace RRComSSys.Controller.Tests
 {
     public class MockExcWindow : IExecutionView
     {
+        private MainController _controller;
+
+        public MockExcWindow()
+        {
+            _controller = new MainController(this);
+            Log = "";
+        }
 
         #region IExecutionView Members
 
@@ -16,31 +23,11 @@ namespace RRComSSys.Controller.Tests
             return @"C:\Documents and Settings\jeanr\Desktop\RRComSSysTeam5\GCML Scenarios\AlternateWithWorkflow2.gcml";
         }
 
-        public StringBuilder Log
-        {
-            get
-            {
-                if (Log == null)
-                    return new StringBuilder("");
-                else
-                    return Log;
-            }
-            set
-            {
-                Log = value;
-            }
-        }
+        public string Log { get; set; }
 
-        public IMissingInfoView MissingInfoView
+        public string ShowMissingAttrForm(string attr)
         {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
+            throw new NotImplementedException();
         }
 
         #endregion

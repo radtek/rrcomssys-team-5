@@ -22,7 +22,11 @@ namespace RRComSSys.Controller.Tests
         [Test]
         public void LoadGCMLFile()
         {
-            
+            SetUp();
+            _controller.LoadFile();
+            Assert.AreEqual(_excView.Log.ToString(), "File found." + Environment.NewLine);
         }
+
+
     }
 }
