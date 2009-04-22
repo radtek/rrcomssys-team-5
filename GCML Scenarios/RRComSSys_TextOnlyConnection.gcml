@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gc:Gcml xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:gc="http://gcml.org">
+  <connection connectionID="textonli" fromDevice="//@device.0 //@device.1" bandwidth="1000"/>
+  <person personID="danto005" personName="Ubani" personRole="dr" toIsAttached="//@isAttached.0"/>
+  <person personID="saldk001" personName="salk" personRole="Sr." toIsAttached="//@isAttached.1"/>
+  <isAttached toDevice="//@device.0" fromPerson="danto005"/>
+  <isAttached toDevice="//@device.1" fromPerson="saldk001"/>
+  <device toConnection="//@connection.0" fromIsAttached="//@isAttached.0" deviceID="text">
+    <deviceCapability>Text</deviceCapability>
+  </device>
+  <device toConnection="//@connection.0" fromIsAttached="//@isAttached.1" deviceID="text2">
+    <deviceCapability>Text</deviceCapability>
+  </device>
+</gc:Gcml>
