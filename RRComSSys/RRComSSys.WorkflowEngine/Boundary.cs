@@ -9,17 +9,55 @@
 //
 //
 
+using System;
+
 namespace RRComSSys.WorkflowEngine
 {
-    public class Boundary : IActivity
+    public class Boundary :  WFElement
     {
-        #region Implementation of IActivity
+        private TransformationEngine.Boundary myActivity=null;
 
-        public bool processActivity()
+        public Boundary( TransformationEngine.Boundary obj)
         {
-            return true;
+            myActivity = obj;
+        }    
+
+        #region Overrides of WFElement
+
+        public override bool processActivity()
+        {
+            return true; // For now....just step through the workflow
         }
 
+        /// <summary>
+        /// Gets the activity ID.
+        /// </summary>
+        /// <returns></returns>
+        public override string getActivityID()
+        {
+            return myActivity.activityID;
+        }
+
+        public override string nextActivityID()
+        {
+            return myActivity.ToActivity;
+        }
+
+        public override Type TypeOfActivity()
+        {
+            return typeof (Boundary);
+        }
+
+        public bool Starts()
+        {
+            return myActivity.Type.Equals("Start");
+        }
+
+        public bool Ends()
+        {
+            return !Starts();
+        }
         #endregion
     }
+
 }

@@ -8,9 +8,14 @@
 //  @ Author : 
 //
 //
+using System;
+
 namespace RRComSSys.WorkflowEngine
 {
     public interface IActivity {
         bool processActivity();
+        string getActivityID();
+        string nextActivityID();
+        Type TypeOfActivity();
     }
 }

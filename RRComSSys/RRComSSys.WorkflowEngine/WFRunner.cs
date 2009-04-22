@@ -18,14 +18,48 @@ namespace RRComSSys.WorkflowEngine
 {
     internal class WFRunner : IReturnEvent
     {
-        private List<WFElement> elements;
+        private List<WFElement> elements = null;
+
+        public List<WFElement> WorkflowElements
+        {
+            get
+            {
+                if (null == elements)
+                  WorkflowElements = new List<WFElement>();
+
+                return elements;
+            }
+            private set
+            {
+                elements = value;
+            }
+        }
+
+        public WFRunner()
+        {
+        }
+
         public EventNotifier eventNotifier;
+        
+        public bool ExecuteWorkflow()
+        {
+            Boundary start = Start();
+            WFElement element = elements.Find(x => x.getActivityID().Equals(start.nextActivityID()));
+            processElement(element);
+            return true;
+        }
+
         private void processElement(WFElement nextElem)
         {
+
         }
-        private void start()
+
+        private Boundary Start()
         {
+            Boundary start = (Boundary) elements.Find(x=> ((x.TypeOfActivity() == typeof(Boundary)) && ((Boundary)x).Starts()));
+            return start;
         }
+
         private void end()
         {
         }
