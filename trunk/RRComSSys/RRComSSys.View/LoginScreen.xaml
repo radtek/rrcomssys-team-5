@@ -1,7 +1,7 @@
 ﻿<Window x:Class="RRComSSys.View.Window1"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    Title="CVM Login Screen" Height="350" Width="500" ResizeMode="NoResize">
+    Title="CVM Login Screen" Height="350" Width="500" ResizeMode="NoResize" Icon="/RRComSSys.View;component/RRComSSys.ico">
     <Grid>
     	<Grid.RowDefinitions>
     		<RowDefinition Height="0.399*"/>

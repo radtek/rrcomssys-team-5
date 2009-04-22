@@ -11,15 +11,15 @@ namespace RRComSSys.View
 
         static Authorization()
         {
-            users["Jean"] = "password";
-            users["Marcelo"] = "password";
-            users["Denis"] = "password";
-            users["Harika"] = "password";
+            users["jean"] = "password";
+            users["jarcelo"] = "password";
+            users["denis"] = "password";
+            users["harika"] = "password";
         }
 
         public static bool getUser(string username, string password)
         {
-            KeyValuePair<string, string> pair = new KeyValuePair<string,string>(username, password);
+            KeyValuePair<string, string> pair = new KeyValuePair<string,string>(username.ToLower(), password);
 
             return users.Contains(pair);
         }
