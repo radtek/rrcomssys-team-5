@@ -106,6 +106,7 @@ namespace RRComSSys.SynthesisEngine
                 PressKeys.sendString("TextConfig.txt");
 
                 t.Join(30000); */
+                
                 skype.Client.OpenFileTransferDialog(user, System.IO.Path.GetDirectoryName(filePath)); 
             }
         }
@@ -118,13 +119,15 @@ namespace RRComSSys.SynthesisEngine
 
 
         public void StartChat(string[] users)
-        {
-            
+        {            
             foreach (string user in users)
             {
                 if (string.IsNullOrEmpty(user))
                     continue;
                 User skypeUser = skype.get_User(user);
+
+                if (skypeUser == null)
+                    throw new UserDoesNotExistException("Unable to find user " + user + ".");
 
                 if (skypeUser.OnlineStatus == TOnlineStatus.olsOffline)
                 {
