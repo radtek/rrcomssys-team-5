@@ -4,7 +4,7 @@
 	x:Class="RRComSSys.View.MissingInfoForm"
 	x:Name="Window"
 	Title="MissingInfoForm"
-	Width="332" Height="230" WindowStyle="None" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" Background="#FF989898">
+	Width="425" Height="316" WindowStyle="None" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" Background="#FF989898" ResizeMode="NoResize" Icon="/RRComSSys.View;component/RRComSSys.ico">
 
 	<Grid x:Name="LayoutRoot">
 		<Grid.RowDefinitions>
