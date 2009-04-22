@@ -8,20 +8,50 @@ namespace RRComSSys.SynthesisEngine
 {
     public class Command
     {
-        delegate void Invoker(List<string> users);
+        delegate void Invoker(string[] users);
         static Invoker 
-        VoiceCall, VideoCall, Chat; //Add more commands here
+        VoiceCall, VideoCall, Chat, SendFile; //Add more commands here        
 
-        delegate void Invoker2(List<string> users, string filePath);
-        static Invoker2
-        SendFile;
-
-        public Command(SkypeReceiver receiver)
+        public Command(IReceiver receiver, CommandType type)
         {
             VoiceCall = receiver.MakeAVoiceCall;
             VideoCall = receiver.MakeAVideoCall;
             Chat = receiver.StartChat;
             SendFile = receiver.SendFile;
-        }       
+            Type = type;
+        }
+
+        public CommandType Type { get; set; }
+        public string[] Users { get; set; }
+        public string[] FilePaths { get; set; }
+
+        public void Execute()
+        {
+            switch (Type)
+            {
+                case CommandType.VoiceCall:
+                    VoiceCall(Users);
+                    break;
+                case CommandType.VideoCall:
+                    VideoCall(Users);
+                    break;
+                case CommandType.Chat:
+                    Chat(Users);
+                    break;
+                case CommandType.SendFile:
+                    SendFile(FilePaths);
+                    break;
+                default:
+                    break;
+            }
+        }        
+    }
+
+    public enum CommandType
+    {
+        VoiceCall,
+        VideoCall,
+        Chat,
+        SendFile
     }
 }

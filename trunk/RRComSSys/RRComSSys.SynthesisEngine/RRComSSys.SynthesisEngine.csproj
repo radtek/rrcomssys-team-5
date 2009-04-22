@@ -48,6 +48,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommandPattern.cs" />
+    <Compile Include="Exceptions.cs" />
+    <Compile Include="IReceiver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SEClient.cs" />
     <Compile Include="SkypeReceiver.cs" />
