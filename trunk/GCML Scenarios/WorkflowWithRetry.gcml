@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gc:Gcml xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:gc="http://gcml.org">
+  <connection connectionID="conn1" fromDevice="//@device.0 //@device.1" ConnectionToCall="//@call.0" bandwidth="1mbps"/>
+  <person personID="jmrodriguez24" personName="Jean" personRole="Doctor" toIsAttached="//@isAttached.0"/>
+  <person personID="marcelo.lopezjr" personName="Marcelo" personRole="Patient" toIsAttached="//@isAttached.1"/>
+  <isAttached toDevice="//@device.0" fromPerson="jmrodriguez24"/>
+  <isAttached toDevice="//@device.1" fromPerson="marcelo.lopezjr"/>
+  <device isLocal="true" toConnection="//@connection.0" fromIsAttached="//@isAttached.0" deviceID="device1">
+    <deviceCapability>LiveAudio</deviceCapability>
+  </device>
+  <device isVirtual="true" toConnection="//@connection.0" fromIsAttached="//@isAttached.1" deviceID="device2">
+    <deviceCapability>LiveAudio</deviceCapability>
+  </device>
+  <call ActivityID="call1" CallToConnection="//@connection.0" CallToDecision="//@decision.0" CallToBoundary="//@boundary.1"/>
+  <decision ActivityID="decision1" sourceActivityID="call1" successPathID="end1" failPathID="call1" DecisionToCall="//@call.0" DecisionToBoundary="//@boundary.1"/>
+  <boundary ActivityID="start1"/>
+  <boundary ActivityID="end1" BoundaryToCall="//@call.0"/>
+</gc:Gcml>

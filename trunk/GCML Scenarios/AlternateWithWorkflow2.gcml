@@ -14,7 +14,7 @@
   <isAttached toDevice="//@device.1" fromPerson="marcelo"/>
   <isAttached toDevice="//@device.2" fromPerson="jmrodriguez24"/>
   <isAttached toDevice="//@device.3" fromPerson="denis"/>
-  <device toConnection="//@connection.0" fromIsAttached="//@isAttached.0" deviceID="device1">
+  <device toConnection="//@connection.0" fromIsAttached="//@isAttached.0" deviceID="device1" isLocal="true">
     <deviceCapability>Text</deviceCapability>
     <deviceCapability>LiveAudio</deviceCapability>
     <deviceCapability>LiveVideo</deviceCapability>
@@ -38,5 +38,5 @@
   <call ActivityID="call2" CallToConnection="//@connection.1" CallToDecision="//@decision.0" CallToBoundary="//@boundary.0"/>
   <decision ActivityID="decision1" sourceActivityID="call1" successPathID="end1" failPathID="call2" DecisionToCall="//@call.0 //@call.1" DecisionToBoundary="//@boundary.0"/>
   <boundary ActivityID="end1" Type="End" BoundaryToCall="//@call.1"/>
-  <boundary ActivityID="start1" BoundaryToCall="//@call.0"/>
+  <boundary ActivityID="start1" Type="Start" BoundaryToCall="//@call.0"/>
 </gc:Gcml>
