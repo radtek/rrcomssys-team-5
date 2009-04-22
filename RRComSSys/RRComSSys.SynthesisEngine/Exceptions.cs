@@ -32,4 +32,25 @@ namespace RRComSSys.SynthesisEngine
             base(message)
         { }
     }
+
+    public class UserIsNotInContactList : Exception
+    {
+        public UserIsNotInContactList(string message) :
+            base(message)
+        { }
+    }
+
+    public class CallWasUnsuccessfulException : Exception
+    {
+        public CallWasUnsuccessfulException(string message) :
+            base(message)
+        { }
+    }
+
+    public class ChatUnsuccessfulException : Exception
+    {
+        public ChatUnsuccessfulException(string message) :
+            base(message)
+        { }
+    }
 }
