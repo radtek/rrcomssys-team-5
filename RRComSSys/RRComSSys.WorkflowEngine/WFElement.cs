@@ -9,6 +9,7 @@
 //
 //
 using System;
+using System.Collections.Generic;
 using RRComSSys.TransformationEngine;
 
 namespace RRComSSys.WorkflowEngine
@@ -17,6 +18,9 @@ namespace RRComSSys.WorkflowEngine
     {
         private TransformationEngine.Activity myActivity = null;
         private bool outcome = false;
+        
+        // In case of Call and End boundaries, it's possible to have multiple previous elements
+        private List<WFElement> previousElements = new List<WFElement>();
 
         public Activity MyActivity
         {
@@ -30,7 +34,13 @@ namespace RRComSSys.WorkflowEngine
             set { outcome = value; }
         }
 
-        #region Implementation of IActivity
+        public List<WFElement> PreviousElements
+        {
+          get { return previousElements; }
+          set { previousElements = value; }
+        }
+
+      #region Implementation of IActivity
 
         public abstract bool processActivity();
         public abstract string getActivityID();
