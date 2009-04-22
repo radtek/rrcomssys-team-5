@@ -12,11 +12,25 @@ namespace RRComSSys.View
 {
 	public partial class MissingInfoForm
 	{
-		public MissingInfoForm()
+		public MissingInfoForm(string attr)
 		{
 			this.InitializeComponent();
-			
-			// Insert code required on object creation below this point.
+            this.AttrMessageLabel.Content = attr;			
 		}
+
+        public string ReturnValue { get; private set; }
+
+        private void OK_Button_Click(object sender, RoutedEventArgs e)
+        {
+            if(!string.IsNullOrEmpty(ReturnValueTB.Text))
+                ReturnValue = ReturnValueTB.Text;
+
+            this.Close();
+        }
+
+        private void Cancel_Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
 	}
 }

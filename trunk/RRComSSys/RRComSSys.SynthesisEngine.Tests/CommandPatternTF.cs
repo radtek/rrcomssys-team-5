@@ -12,8 +12,8 @@ namespace RRComSSys.SynthesisEngine.Tests
     public class CommandPatternTF
     {
         private Command _command;
-        string[] _filePath = new string[] {@"C:\Documents and Settings\jeanr\Desktop\RRComSSysTeam5\RRComSSys\RRComSSys.SynthesisEngine.Tests\TestResources\AlternateWithWorkflow2.gcml"};
-        string[] _oneUser = new string[1] { "marcelo.lopezjr" };
+        string _filePath = @"C:\Documents and Settings\jeanr\Desktop\RRComSSysTeam5\RRComSSys\RRComSSys.SynthesisEngine.Tests\TestResources\AlternateWithWorkflow2.gcml";
+        string[] _oneUser = new string[1] { "danto005" };
         string[] _twoUsers = new string[2] {"danto005", "marcelo.lopezjr"};
 
         [Test]
@@ -45,22 +45,39 @@ namespace RRComSSys.SynthesisEngine.Tests
         {
             _command = new Command(new SkypeReceiver(), CommandType.SendFile);
             _command.Type = CommandType.SendFile;
-            _command.FilePaths = _filePath;
+            _command.FilePath = _filePath;
+            _command.Users = _oneUser;
             _command.Execute();
         }
 
         [Test]
-        public void PlaceCallWithUnknownUserTest()
+        public void PlaceCallWithOfflineUserTest()
         {
-            _command = new Command(new SkypeReceiver(), CommandType.VoiceCall);
-            _command.Users = new string[] {"Unknown"};
-            _command.Execute();
+            try
+            {
+                _command = new Command(new SkypeReceiver(), CommandType.VoiceCall);
+                _command.Users = new string[] { "Unknown" };
+                _command.Execute();
+            }
+            catch (Exception exc)
+            {
+                Assert.AreEqual(exc.Message, "The user Unknown is offline.");
+            }
         }
 
         [Test]
-        public void ReceiveVideoTest()
+        public void PlaceCallWithMyself()
         {
-            
+            try
+            {
+                _command = new Command(new SkypeReceiver(), CommandType.VoiceCall);
+                _command.Users = new string[] { "jmrodriguez24" };
+                _command.Execute();
+            }
+            catch (Exception exc)
+            {
+                Assert.AreEqual(exc.Message, "The user Unknown is offline.");
+            }
         }
     }
 }

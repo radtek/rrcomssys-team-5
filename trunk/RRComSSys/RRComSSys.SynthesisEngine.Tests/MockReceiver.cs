@@ -19,7 +19,7 @@ namespace RRComSSys.SynthesisEngine.Tests
             throw new NotImplementedException();
         }
 
-        public void SendFile(string[] filePaths)
+        public void SendFile(string[] users, string filePath)
         {
             throw new NotImplementedException();
         }

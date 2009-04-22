@@ -46,9 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IExecutionView.cs" />
-    <Compile Include="IMissingInfoView.cs" />
     <Compile Include="MainController.cs" />
-    <Compile Include="MissingInfoFormController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

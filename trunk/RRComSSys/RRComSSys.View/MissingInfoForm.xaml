@@ -13,16 +13,16 @@
 			<RowDefinition Height="0.179*"/>
 		</Grid.RowDefinitions>
 		<Grid HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Width="Auto" Height="Auto" Grid.Row="1" Grid.RowSpan="1">
-			<TextBox Margin="45,0,45,0" VerticalAlignment="Top" Width="Auto" Height="Auto" Grid.Row="1" Text="" TextWrapping="Wrap" TabIndex="0"/>
+			<TextBox Name="ReturnValueTB" Margin="45,0,45,0" VerticalAlignment="Top" Width="Auto" Height="Auto" Grid.Row="1" Text="" TextWrapping="Wrap" TabIndex="0"/>
 		</Grid>
 		<Grid Margin="0,0,0,0" VerticalAlignment="Stretch">
 			<StackPanel Margin="0,0,0,0" VerticalAlignment="Stretch" Height="23.277">
 				<Label Foreground="#FFBA0F0F" HorizontalAlignment="Center" Content="Enter the missing Attribute and Click OK" FontSize="12"/>
-				<Label HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Stretch" Width="Auto" Height="Auto" Content="" Foreground="#FFFFFFFF"/>
+				<Label Name="AttrMessageLabel" HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Stretch" Width="Auto" Height="Auto" Content="" Foreground="#FFFFFFFF"/>
 			</StackPanel>
 		</Grid>
 		<StackPanel HorizontalAlignment="Right" Margin="0,0,0,0" VerticalAlignment="Stretch" Height="Auto" Grid.Row="2" Orientation="Horizontal">
-			<Button HorizontalAlignment="Right" Margin="0,0,15,0" VerticalAlignment="Center" Width="Auto" Height="Auto" ToolTip="OK" TabIndex="1">
+			<Button HorizontalAlignment="Right" Margin="0,0,15,0" VerticalAlignment="Center" Width="Auto" Height="Auto" ToolTip="OK" TabIndex="1" Click="OK_Button_Click">
 				<Button.Background>
 					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
 						<GradientStop Color="#FFFFFFFF" Offset="0"/>
@@ -30,9 +30,9 @@
 						<GradientStop Color="#FF3B3A40" Offset="1"/>
 					</LinearGradientBrush>
 				</Button.Background>
-				<Image d:LayoutOverrides="GridBox" Width="32" Height="32" Source="Images\go-next.png" Stretch="Fill" ToolTip=""/>
+				<Image d:LayoutOverrides="GridBox" Width="32" Height="32" Source="Images\go-next.png" Stretch="Fill" ToolTip="" />
 			</Button>
-			<Button HorizontalAlignment="Right" Margin="0,0,15,0" VerticalAlignment="Center" Width="Auto" Height="Auto" TabIndex="2" IsHitTestVisible="True" ToolTip="Cancel">
+			<Button HorizontalAlignment="Right" Margin="0,0,15,0" VerticalAlignment="Center" Width="Auto" Height="Auto" TabIndex="2" IsHitTestVisible="True" ToolTip="Cancel" Click="Cancel_Button_Click">
 				<Button.Background>
 					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
 						<GradientStop Color="#FFFFFFFF" Offset="0"/>
