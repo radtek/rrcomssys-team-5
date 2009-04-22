@@ -10,7 +10,11 @@ namespace RRComSSys.SynthesisEngine
     {
         delegate void Invoker(string[] users);
         static Invoker 
-        VoiceCall, VideoCall, Chat, SendFile; //Add more commands here        
+        VoiceCall, VideoCall, Chat; //Add more commands here
+
+        delegate void Invoker2(string[] users, string filePath);
+        static Invoker2
+        SendFile; //Add more commands here
 
         public Command(IReceiver receiver, CommandType type)
         {
@@ -23,7 +27,7 @@ namespace RRComSSys.SynthesisEngine
 
         public CommandType Type { get; set; }
         public string[] Users { get; set; }
-        public string[] FilePaths { get; set; }
+        public string FilePath { get; set; }
 
         public void Execute()
         {
@@ -39,7 +43,7 @@ namespace RRComSSys.SynthesisEngine
                     Chat(Users);
                     break;
                 case CommandType.SendFile:
-                    SendFile(FilePaths);
+                    SendFile(Users, FilePath);
                     break;
                 default:
                     break;
