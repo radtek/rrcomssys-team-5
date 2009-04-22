@@ -35,6 +35,7 @@
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
@@ -68,6 +69,10 @@
     <Compile Include="WorkflowFactory.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\RRComSSys.SynthesisEngine\RRComSSys.SynthesisEngine.csproj">
+      <Project>{65EB9D82-B02F-45D3-BAB8-94D27CD906D3}</Project>
+      <Name>RRComSSys.SynthesisEngine</Name>
+    </ProjectReference>
     <ProjectReference Include="..\RRComSSys.TransformationEngine\RRComSSys.TransformationEngine.csproj">
       <Project>{7E60066B-C794-4213-BCEA-B89ED858B295}</Project>
       <Name>RRComSSys.TransformationEngine</Name>
