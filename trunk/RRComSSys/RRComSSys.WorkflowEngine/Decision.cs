@@ -8,15 +8,49 @@
 //  @ Author : 
 //
 //
+using System;
+using RRComSSys.TransformationEngine;
+
 namespace RRComSSys.WorkflowEngine
 {
-    public class Decision : IActivity
+    public class Decision : WFElement , IDecision
     {
-        #region Implementation of IActivity
+        private TransformationEngine.Decision decision = null;
 
-        public bool processActivity()
+        public Decision( TransformationEngine.Decision aDecision, Workflow wfInstance)
         {
-            return true;
+            decision = aDecision;
+        }
+
+        #region Implementation of IDecision
+
+        public string NextActivity(bool previousActivityOutcome)
+        {
+            return previousActivityOutcome ? decision.successPathID : decision.failPathID;
+        }
+
+        #endregion
+
+        #region Overrides of WFElement
+
+        public override bool processActivity()
+        {
+            return true; // simply an empty operation
+        }
+
+        public override string getActivityID()
+        {
+            return decision.activityID;
+        }
+
+        public override string nextActivityID()
+        {
+            return decision.successPathID;
+        }
+
+        public override Type TypeOfActivity()
+        {
+            return typeof (Decision);        
         }
         #endregion
     }
