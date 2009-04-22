@@ -59,8 +59,7 @@ namespace RRComSSys.View
 
         private void ExecuteClicked_Executed(object sender, ExecutedRoutedEventArgs e)
         {
-            
-
+            Controller.ExecuteXCML();
         }
 
         private void ExecuteClicked_CanExecute(object sender, CanExecuteRoutedEventArgs e)

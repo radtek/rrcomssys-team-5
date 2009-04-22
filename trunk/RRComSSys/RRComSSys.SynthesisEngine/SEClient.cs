@@ -2,14 +2,17 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using RRComSSys.TransformationEngine;
 
 namespace RRComSSys.SynthesisEngine
 {
     public class SEClient
     {
         private Command _command;
-        public SEClient()
-        {            
+        
+        public SEClient(CommandType type)
+        {
+            _command = new Command(new SkypeReceiver(), type);
         }
 
         public Command MyCommand
@@ -19,5 +22,10 @@ namespace RRComSSys.SynthesisEngine
                 return _command;
             }
         }
+
     }
+
+    
+
+    
 }

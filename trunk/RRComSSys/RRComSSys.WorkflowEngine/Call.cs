@@ -10,11 +10,18 @@
 //
 using System;
 using RRComSSys.TransformationEngine;
+using RRComSSys.SynthesisEngine;
+using System.Collections.Generic;
+using System.Windows.Forms;
+using System.Threading;
 
 namespace RRComSSys.WorkflowEngine
 {
+    
     public class Call : WFElement
     {
+        private AutoResetEvent resetEvent = new AutoResetEvent(false);
+        private Exception _exception = null;
         private TransformationEngine.Call myActivity = null;
         private WorkflowEngine.Connection myConnection = null;
 
@@ -65,10 +72,47 @@ namespace RRComSSys.WorkflowEngine
         /// <returns></returns>
         public override bool processActivity()
         {
-            // JEAN....add your code here !!!!
+            List<string> users = new List<string>();
+            CommandType type = CommandType.Chat;
+            for (int i = 1; i < CallConnection.RemotelyConnectedDevices(); i++)
+            {
+                Person p = CallConnection.DeviceAt(i).DeviceAttachesToPerson();
+                users.Add(p.PersonID);
+            }
+
+            foreach (Capability cap in CallConnection.DeviceAt(0).DeviceModel().deviceCapability)
+            {
+                if (cap == Capability.LiveAudio)
+                    type = CommandType.VoiceCall;
+                else if (cap == Capability.LiveVideo)
+                    type = CommandType.VideoCall;                
+            }
             
-            // DON'T FORGET TO SET OUTCOME
+            System.Threading.Thread t = new System.Threading.Thread(new System.Threading.ParameterizedThreadStart(ExecuteCall));
+            t.SetApartmentState(System.Threading.ApartmentState.STA);
+            
+            t.Start(new ExecutionArgs(users.ToArray(), type, ""));
+            resetEvent.WaitOne();
+
             return true;
+        }
+
+        private void ExecuteCall(object execArgs)
+        {
+            
+            ExecutionArgs args = (ExecutionArgs)execArgs;
+            SEClient sec = new SEClient(args.Type);
+            sec.MyCommand.Users = args.Users;
+            try
+            {
+                sec.MyCommand.Execute();
+            }
+            catch (Exception exc)
+            {
+                this.Outcome = false;
+                MessageBox.Show(exc.Message);
+            }
+            resetEvent.Set();
         }
 
         /// <summary>
@@ -98,6 +142,23 @@ namespace RRComSSys.WorkflowEngine
             return typeof (Call);
         }
 
+        #endregion
+
+        #region Execution Args
+
+        public class ExecutionArgs
+        {
+            public string[] Users { get; private set; }
+            public CommandType Type { get; private set; }
+            public string FilePath { get; private set; }
+
+            public ExecutionArgs (string [] users, CommandType type, string filePath)
+	        {
+                Users = users;
+                type = Type;
+                FilePath = filePath;
+	        }
+        }
         #endregion
     }
 

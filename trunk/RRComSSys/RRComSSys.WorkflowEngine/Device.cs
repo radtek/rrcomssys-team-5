@@ -35,5 +35,11 @@ namespace RRComSSys.WorkflowEngine
             return attachedTo.IsAttachedToPerson();
         }
 
+        public TransformationEngine.Device DeviceModel()
+        {
+            return device;
+        }
+
+
    }
 }

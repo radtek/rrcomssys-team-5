@@ -48,6 +48,8 @@ namespace RRComSSys.TransformationEngine
 
         private void checkDevices()
         {
+            bool localSpecified = false;
+
             foreach (Device dev in Document.Device)
             {
                 if (dev.deviceCapability.Count == 0)
@@ -55,7 +57,13 @@ namespace RRComSSys.TransformationEngine
 
                 if (!string.IsNullOrEmpty(dev.DeviceID))
                     dev.DeviceID = callMissingAttribute("Device ID");
+
+                if (dev.isLocalSpecified == true)
+                    localSpecified = true;
             }
+
+            if (!localSpecified)
+                throw new ValidationException("Is local should be specified for at least one device");
         }
 
         private void CheckDecision()
