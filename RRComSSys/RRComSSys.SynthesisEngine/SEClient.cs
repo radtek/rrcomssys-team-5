@@ -9,8 +9,7 @@ namespace RRComSSys.SynthesisEngine
     {
         private Command _command;
         public SEClient()
-        {
-            _command = new Command(new SkypeReceiver());
+        {            
         }
 
         public Command MyCommand
