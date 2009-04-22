@@ -54,6 +54,10 @@
       <Project>{7E60066B-C794-4213-BCEA-B89ED858B295}</Project>
       <Name>RRComSSys.TransformationEngine</Name>
     </ProjectReference>
+    <ProjectReference Include="..\RRComSSys.WorkflowEngine\RRComSSys.WorkflowEngine.csproj">
+      <Project>{973FD5E2-1ECA-4697-98D3-900079A73536}</Project>
+      <Name>RRComSSys.WorkflowEngine</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using RRComSSys.TransformationEngine;
+using RRComSSys.WorkflowEngine;
 using System.IO;
 
 namespace RRComSSys.Controller
@@ -17,6 +18,7 @@ namespace RRComSSys.Controller
 
         public IExecutionView View { get; set; }
         public string FilePath { get; set; }
+        public Workflow Document { get; set; }
 
         public void LoadFile()
         {
@@ -35,12 +37,12 @@ namespace RRComSSys.Controller
 
         public void TransformGCML()
         {
-            Workflow doc = null;            
+            Document = null;            
 
             try
             {
                 addToLog("Attempting to load Object model from" + FilePath + "......");
-                doc = SchemaTransformer.GetObjectModel(FilePath);
+                Document = SchemaTransformer.GetObjectModel(FilePath);
                 addToLog("File" + FilePath + "Loaded...");
             }
             catch (Exception exc)
@@ -51,7 +53,7 @@ namespace RRComSSys.Controller
             try
             {
                 addToLog("Instatiating Schema");
-                SchemaInstantiator sm = new SchemaInstantiator(doc, this);
+                SchemaInstantiator sm = new SchemaInstantiator(Document, this);
                 addToLog("Instance Complete and Validated");
             }
             catch (Exception exc)
@@ -74,5 +76,17 @@ namespace RRComSSys.Controller
         }
 
         #endregion
+
+        public void ExecuteXCML()
+        {
+            try
+            {
+                WorkflowFactory.CreateWorkflowRuntime(Document);
+            }
+            catch( Exception exc)
+            {
+                addToLog(exc.Message);
+            }
+        }
     }    
 }
