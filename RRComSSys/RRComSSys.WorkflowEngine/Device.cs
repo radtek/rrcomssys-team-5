@@ -26,7 +26,8 @@ namespace RRComSSys.WorkflowEngine
         private void CreateAttachmentTo(Workflow instance)
         {
             TransformationEngine.IsAttached attached =
-                instance.IsAttached.Find(x => (x.toDevice.Equals(device.DeviceID)));
+                instance.IsAttached[WorkflowFactory.IndexOfActivity(device.fromIsAttached)];
+             //   instance.IsAttached.Find(x => (x.toDevice.Equals(device.DeviceID)));
             AttachedTo = new IsAttached(attached,instance);
         }
 

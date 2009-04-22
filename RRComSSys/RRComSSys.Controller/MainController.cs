@@ -81,7 +81,7 @@ namespace RRComSSys.Controller
         {
             try
             {
-                WFRunner runner = WorkflowFactory.CreateWorkflowRuntime(Document);
+                WFRunner runner = new WorkflowFactory().CreateWorkflowRuntime(Document);
                 runner.ExecuteWorkflow();
             }
             catch( Exception exc)

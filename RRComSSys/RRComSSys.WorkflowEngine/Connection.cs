@@ -37,7 +37,7 @@ namespace RRComSSys.WorkflowEngine
 
             foreach (string deviceID in myConnection.fromDevice)
             {
-                TransformationEngine.Device aDevice = instance.Device.Find(x => (x.DeviceID.Equals(deviceID)));
+                TransformationEngine.Device aDevice = instance.Device[WorkflowFactory.IndexOfActivity(deviceID)];//.//Find(x => (x.DeviceID.Equals(deviceID)));
                 if (aDevice.isLocal)
                     deviceDictionary.Add(0, new Device(aDevice,instance));
                 else

@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using MbUnit.Framework;
 
 namespace RRComSSys.TransformationEngine.Tests
@@ -9,8 +6,11 @@ namespace RRComSSys.TransformationEngine.Tests
     [TestFixture]
     public class SchemaTransformerTF
     {        
-        private const string XSLT_FILE_PATH = @"C:\Documents and Settings\jeanr\Desktop\RRComSSysTeam5\RRComSSys\RRComSSys.TransformationEngine\MappingMapToWXCML.xslt";
-        private const string GCML_FILE_PATH = @"C:\Documents and Settings\jeanr\Desktop\RRComSSysTeam5\RRComSSys\RRComSSys.TransformationEngine.Tests\TestResources\AlternateWithWorkflow2.gcml";
+       // private const string XSLT_FILE_PATH = @"C:\Documents and Settings\jeanr\Desktop\RRComSSysTeam5\RRComSSys\RRComSSys.TransformationEngine\MappingMapToWXCML.xslt";
+       // private const string GCML_FILE_PATH = @"C:\Documents and Settings\jeanr\Desktop\RRComSSysTeam5\RRComSSys\RRComSSys.TransformationEngine.Tests\TestResources\AlternateWithWorkflow2.gcml";
+
+        private const string XSLT_FILE_PATH = @"F:\RRComSSys_Team5\RRComSSys\RRComSSys.TransformationEngine\MappingMapToWXCML.xslt";
+        private const string GCML_FILE_PATH = @"F:\RRComSSys_Team5\RRComSSys\RRComSSys.TransformationEngine.Tests\TestResources\AlternateWithWorkflow2.gcml";
 
         [SetUp]
         public void SetUp()

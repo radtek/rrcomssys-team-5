@@ -10,12 +10,15 @@ namespace RRComSSys.WorkflowEngine.Tests
     [TestFixture]
     public class WorkflowFactoryTF
     {
-        private const string GCML_FILE_PATH = @"C:\Documents and Settings\jeanr\Desktop\RRComSSysTeam5\RRComSSys\RRComSSys.TransformationEngine.Tests\TestResources\AlternateWithWorkflow2.gcml";
+        private const string GCML_FILE_PATH = @"F:\RRComSSys_Team5\RRComSSys\RRComSSys.TransformationEngine.Tests\TestResources\AlternateWithWorkflow2.gcml";
         [Test]
         public void Test()
         {
+            //SchemaTransformer 
+
             Workflow doc = SchemaTransformer.GetObjectModel(GCML_FILE_PATH);
-            WFRunner runner = WorkflowFactory.CreateWorkflowRuntime(doc);
+            WFRunner runner = new WorkflowFactory().CreateWorkflowRuntime(doc);
+
         }
     }
 }
