@@ -31,6 +31,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MbUnit.Framework, Version=2.4.2.355, Culture=neutral, PublicKeyToken=5e72ecd30bc408d5" />
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -45,7 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MockReceiver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CommandPatternTF.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RRComSSys.SynthesisEngine\RRComSSys.SynthesisEngine.csproj">
+      <Project>{65EB9D82-B02F-45D3-BAB8-94D27CD906D3}</Project>
+      <Name>RRComSSys.SynthesisEngine</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestResources\AlternateWithWorkflow2.gcml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TestResources\MappingMapToWXCML.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
