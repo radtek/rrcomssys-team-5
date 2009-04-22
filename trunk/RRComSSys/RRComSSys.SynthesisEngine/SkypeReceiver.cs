@@ -119,7 +119,34 @@ namespace RRComSSys.SynthesisEngine
 
         public void StartChat(string[] users)
         {
-            throw new NotImplementedException();
+            
+            foreach (string user in users)
+            {
+                if (string.IsNullOrEmpty(user))
+                    continue;
+                User skypeUser = skype.get_User(user);
+
+                if (skypeUser.OnlineStatus == TOnlineStatus.olsOffline)
+                {
+                    throw new UserIsOfflineException("User " + skypeUser.FullName + "is offline.");
+                }
+            }            
+
+            // Create channel
+            Chat chat;            
+            if (users.Length == 1)
+                chat = skype.CreateChatWith(users[0]);
+            else
+            {
+                UserCollectionClass skypeUsers = new UserCollectionClass();
+
+                foreach (string user in users)
+                {
+                    skypeUsers.Add(skype.get_User(user));
+                }
+
+                chat = skype.CreateChatMultiple(skypeUsers);
+            }
         }
 
         #endregion
