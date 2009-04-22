@@ -31,6 +31,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MbUnit.Framework, Version=2.4.2.355, Culture=neutral, PublicKeyToken=5e72ecd30bc408d5" />
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -46,6 +47,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WorkflowFactoryTF.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RRComSSys.TransformationEngine\RRComSSys.TransformationEngine.csproj">
+      <Project>{7E60066B-C794-4213-BCEA-B89ED858B295}</Project>
+      <Name>RRComSSys.TransformationEngine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RRComSSys.WorkflowEngine\RRComSSys.WorkflowEngine.csproj">
+      <Project>{973FD5E2-1ECA-4697-98D3-900079A73536}</Project>
+      <Name>RRComSSys.WorkflowEngine</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
