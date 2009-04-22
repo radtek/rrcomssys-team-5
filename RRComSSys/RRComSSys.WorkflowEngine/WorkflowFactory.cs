@@ -138,47 +138,6 @@ namespace RRComSSys.WorkflowEngine
                         BuildNextElement(runner, outElement, endElement, wfInstance);
                   }
               }
-              
-              //if (null != isDecision)
-              //{
-              // If the next item is a DECISION
-              //WFElement possibleElement = ElementExistsInWorkflow(runner, isDecision.activityID);
-              //if (null == possibleElement)
-              //{
-              //  // Add this call as a previous Element of this Element, and unroll
-              //  if (!possibleElement.PreviousElements.Contains(currentElement))
-              //    possibleElement.PreviousElements.Add(currentElement);
-             // }
-              //else
-              //{
-              //  outElement = new Decision(isDecision, wfInstance);
-              //  
-              //  // Add the Call to the Decision's PreviousElements
-              //  outElement.PreviousElements.Add(currentElement);
-              //  
-              //  // Add the Decision to the Workflow 
-              //  runner.WorkflowElements.Add(outElement);
-              //  
-              //  // Try to build next Element
-              //  BuildNextElement(runner, outElement, endElement, wfInstance);  
-              // }
-               //*/
-            //}
-            //else
-            //{
-            //   // Otherwise we've hit a boundary ( which should be the end boundary, but let's make sure
-            //    TransformationEngine.Boundary isBoundary =
-            //      wfInstance.Boundary[WorkflowFactory.IndexOfActivity(currentElement.nextActivityID())]; //.Find(x => x.activityID.Equals(currentElement.nextActivityID()));
-            //  
-            //  if (isBoundary.Type.Equals("End"))
-            //  {
-            //    endElement.PreviousElements.Add(currentElement);
-            //    // unroll 
-            //  }
-            //  else
-            //  {
-            //    throw new Exception("Boundary that isn't an end boundary encountered immediately after a Call activity");
-            //  }
             
           }
           else if (currentElement.GetType() == typeof(Decision))
@@ -186,13 +145,13 @@ namespace RRComSSys.WorkflowEngine
             TransformationEngine.Decision decision = ((Decision) currentElement).DecisionModel;
             string successID = decision.successPathID;
             string failID = decision.failPathID;
-            if (null != runner.WorkflowElements.Find(x => (x.getActivityID().Equals(successID))))
+            if (null == runner.WorkflowElements.Find(x => (x.getActivityID().Equals(successID))))
             {
               // Find the item that this is  
               // Construct the Success Branch
               ConstructDecisionBranch(runner,currentElement,successID,endElement,wfInstance);
             }
-            else if (null != runner.WorkflowElements.Find(x => x.getActivityID().Equals(failID)))
+            if (null == runner.WorkflowElements.Find(x => x.getActivityID().Equals(failID)))
             {
               // Find the item that this is  
               // Construct the Fail Branch
@@ -217,7 +176,7 @@ namespace RRComSSys.WorkflowEngine
               // We know it's a call
               // See if it's already within the workflow
               WFElement possibleElement = ElementExistsInWorkflow(runner,possibleCall.activityID);
-              if (null != possibleElement)
+              if (null == possibleElement)
               {
                 // If it isn't, add it, and keep recursing.   
                 WFElement outElement = new Call(possibleCall, wfInstance);
