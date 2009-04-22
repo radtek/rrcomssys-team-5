@@ -22,14 +22,15 @@ namespace RRComSSys.View
     {
         #region Initialization
 
-        private bool fileLoaded = false;
+        private bool _fileLoaded = false;
 
         public ExecutionWindow()
         {
             InitializeComponent();
             initializeCommands();
-            Log = new StringBuilder();
+            Log = "Error Log" + Environment.NewLine;
             Controller = new MainController(this);
+            this.DataContext = this;
         }
 
         private void initializeCommands()
@@ -41,7 +42,7 @@ namespace RRComSSys.View
             this.ExecuteButton.CommandBindings.Add(new CommandBinding(this.ExecuteClicked, ExecuteClicked_Executed, ExecuteClicked_CanExecute));
 
             this.LoadGCMLButton.Command = this.LoadClicked;
-            this.LoadGCMLButton.CommandBindings.Add(new CommandBinding(this.LoadClicked, ExecuteClicked_Executed));
+            this.LoadGCMLButton.CommandBindings.Add(new CommandBinding(this.LoadClicked, LoadClicked_Executed));
         }
 
         #endregion
@@ -58,31 +59,55 @@ namespace RRComSSys.View
 
         private void ExecuteClicked_Executed(object sender, ExecutedRoutedEventArgs e)
         {
+            
 
         }
 
         private void ExecuteClicked_CanExecute(object sender, CanExecuteRoutedEventArgs e)
         {
-            e.CanExecute = fileLoaded;
+            e.CanExecute = _fileLoaded;
         }
 
         private void LoadClicked_Executed(object sender, ExecutedRoutedEventArgs e)
         {
-            Controller.LoadFile();
             
+            Controller.LoadFile();
+            Controller.TransformGCML();
+            _fileLoaded = true;
         }
 
         #endregion
 
         #region IExecutionView members
 
-        public IMissingInfoView MissingInfoView { get; set; }
+        public string Log
+        {
+            get
+            {
+                return txtConnectionLog.Text;
+            }
+            set
+            {
+                txtConnectionLog.Text = value;
+            }
+        }
 
-        public StringBuilder Log { get; set; }
 
         public string getFilePath()
         {
             return FileHandler.getFilePath();
+        }
+
+        public string ShowMissingAttrForm(string attr)
+        {
+            MissingInfoForm mf = new MissingInfoForm(attr);
+            
+            mf.ShowDialog();
+
+            if(!string.IsNullOrEmpty(mf.ReturnValue))
+                return mf.ReturnValue;
+
+            return null;                
         }
 
         #endregion
