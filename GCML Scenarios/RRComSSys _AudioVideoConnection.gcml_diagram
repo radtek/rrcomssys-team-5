@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:gc="http://gcml.org" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.1/notation" xmi:id="_IIiIwC8OEd6k44yq7LIU6A" type="Gcml" name="RRComSSys%20_AudioVideoConnection.gcml_diagram" measurementUnit="Pixel">
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_IIiIwS8OEd6k44yq7LIU6A"/>
+  <element xmi:type="gc:Gcml" href="../RRComSSys%20_AudioVideoConnection.gcml#/"/>
+</notation:Diagram>
