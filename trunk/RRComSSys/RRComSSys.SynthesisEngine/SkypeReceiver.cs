@@ -14,19 +14,26 @@ namespace RRComSSys.SynthesisEngine
 
         public SkypeReceiver()
         {
-            skype.CallStatus += new _ISkypeEvents_CallStatusEventHandler(skype_CallStatus);
-            skype.MessageStatus += new _ISkypeEvents_MessageStatusEventHandler(skype_MessageStatus);
-            
-        }
-
-        void skype_MessageStatus(ChatMessage pMessage, TChatMessageStatus Status)
-        {
-            
+            skype.CallStatus += new _ISkypeEvents_CallStatusEventHandler(skype_CallStatus);            
         }
 
         void skype_CallStatus(Call pCall, TCallStatus Status)
         {
-            System.Console.WriteLine("Call ID" + pCall.Id + " Call Status" + Status.ToString());
+            switch (Status)
+            {
+                case TCallStatus.clsBusy:                    
+                case TCallStatus.clsCancelled:
+                case TCallStatus.clsFailed:
+                case TCallStatus.clsRefused:
+                    string msg = "Call between ";
+                    foreach(Participant participant in pCall.Participants)
+                    {
+                        msg += participant.Handle + ", ";
+                    }
+                    throw new CallWasUnsuccessfulException(msg + ".  Call " + Status.ToString() + ".");               
+                default:
+                    break;
+            }
         }
 
         #region IReceiver Members
@@ -47,9 +54,21 @@ namespace RRComSSys.SynthesisEngine
             Call call = placeCall(users);
         }
 
+        private bool isUserInContactList(string user)
+        {
+            foreach (Group group in skype.Groups)
+            {
+                foreach (User skypeUser in group.Users)
+                    if (skypeUser.Handle.Equals(user, StringComparison.OrdinalIgnoreCase))
+                        return true;
+            }
+
+            return false;
+        }
+
         private Call placeCall(string[] users)
         {
-            Call call;
+            Call call;            
 
             // If the user status is not "online", change user status to "online":
             if (skype.CurrentUserStatus == TUserStatus.cusOffline)
@@ -64,6 +83,9 @@ namespace RRComSSys.SynthesisEngine
                 //if any of the users don't exist
                 if (skypeUser == null)
                     throw new UserDoesNotExistException("The user " + user + " does not exist.");
+
+                if (!isUserInContactList(user))
+                    throw new UserIsNotInContactList(user + " is not in your contact list");
 
                 //if any of the users is offline
                 if (skypeUser.OnlineStatus == TOnlineStatus.olsOffline)
@@ -106,7 +128,20 @@ namespace RRComSSys.SynthesisEngine
                 PressKeys.sendString("TextConfig.txt");
 
                 t.Join(30000); */
+                User skypeUser = skype.get_User(user);
+
+                //if any of the users don't exist
+                if (skypeUser == null)
+                    throw new UserDoesNotExistException("The user " + user + " does not exist.");
                 
+                //If any of the users is not in Contact List
+                if (!isUserInContactList(user))
+                    throw new UserIsNotInContactList(user + " is not in your contact list");
+
+                //if any of the users is offline
+                if (skypeUser.OnlineStatus == TOnlineStatus.olsOffline)
+                    throw new UserIsOfflineException("The user " + user + " is offline.");
+
                 skype.Client.OpenFileTransferDialog(user, System.IO.Path.GetDirectoryName(filePath)); 
             }
         }
@@ -119,11 +154,15 @@ namespace RRComSSys.SynthesisEngine
 
 
         public void StartChat(string[] users)
-        {            
+        {
+            
             foreach (string user in users)
             {
                 if (string.IsNullOrEmpty(user))
                     continue;
+
+
+
                 User skypeUser = skype.get_User(user);
 
                 if (skypeUser == null)
@@ -136,7 +175,8 @@ namespace RRComSSys.SynthesisEngine
             }            
 
             // Create channel
-            Chat chat;            
+            Chat chat;
+            
             if (users.Length == 1)
                 chat = skype.CreateChatWith(users[0]);
             else
@@ -150,6 +190,11 @@ namespace RRComSSys.SynthesisEngine
 
                 chat = skype.CreateChatMultiple(skypeUsers);
             }
+
+            if (chat == null)
+                throw new ChatUnsuccessfulException("Couldn't establish Chat Connection");
+
+            chat.SendMessage("Welcome to skype through CVM");
         }
 
         #endregion
