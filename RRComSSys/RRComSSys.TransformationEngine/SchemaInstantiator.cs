@@ -27,6 +27,7 @@ namespace RRComSSys.TransformationEngine
             CheckDecision();
             CheckBoundary();
             CheckCall();
+
         }
 
         private string callMissingAttribute(string attrInfo)
@@ -72,33 +73,31 @@ namespace RRComSSys.TransformationEngine
             {
                 if (!string.IsNullOrEmpty(de.activityID))
                     de.activityID = callMissingAttribute("Decision Activity ID");
-
+                
                 if (!string.IsNullOrEmpty(de.successPathID))
-                    de.successPathID = callMissingAttribute("Decision Success Path ID");            
+                    de.successPathID = callMissingAttribute("Decision Success Path ID for " + de.activityID);            
 
                 if (!string.IsNullOrEmpty(de.failPathID))
                     de.failPathID = callMissingAttribute("Decision Fail Path ID");
 
                 if (!string.IsNullOrEmpty(de.successPathID))
-                    de.sourceActivityID = callMissingAttribute("Decision Source Activity ID");
+                    de.sourceActivityID = callMissingAttribute("Decision Source Activity ID for " + de.activityID);
             }
         }
 
         private void CheckBoundary()
-        {
-            
+        {            
             foreach (Boundary bd in Document.Boundary)
             {
                 if (!string.IsNullOrEmpty(bd.activityID))
-                    bd.activityID = callMissingAttribute("Boundary Activity ID");
+                    bd.activityID = callMissingAttribute("Boundary Activity ID for");
 
                 if (bd.TypeSpecified == false)
                 {
-                    if (callMissingAttribute("Boundary Type").Equals("start", StringComparison.OrdinalIgnoreCase))
+                    if(string.Equals(callMissingAttribute("Boundary Type missing for " + bd.activityID), "start", StringComparison.OrdinalIgnoreCase))
                         bd.Type = BoundaryType.Start;
                     else
                         bd.Type = BoundaryType.End;
-
                 }                
             }        
         }
