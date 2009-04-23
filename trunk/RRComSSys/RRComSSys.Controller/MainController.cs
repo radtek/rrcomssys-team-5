@@ -18,6 +18,7 @@ namespace RRComSSys.Controller
 
         public IExecutionView View { get; set; }
         public string FilePath { get; set; }
+        public string FilePathToSend { get; set; }
         public Workflow Document { get; set; }
 
         public void LoadFile()
@@ -48,6 +49,7 @@ namespace RRComSSys.Controller
             catch (Exception exc)
             {
                 addToLog("SchemaTransformer Error: " + exc.Message);
+                return;
             }
             
             try
@@ -66,6 +68,38 @@ namespace RRComSSys.Controller
         {
             View.Log += message + Environment.NewLine;
             System.Diagnostics.Debug.WriteLine(message);
+        }      
+
+        public void ExecuteXCML()
+        {
+            try
+            {
+                addToLog("Execution started");
+                WFRunner runner = new WorkflowFactory().CreateWorkflowRuntime(Document);
+                runner.ExecuteWorkflow();
+                addToLog("Execution completed");
+            }
+            catch( Exception exc)
+            {
+                addToLog(exc.Message);
+            }
+        }
+
+        public void SendFile()
+        {
+            string filePath = View.getFilePath();
+
+            if (string.IsNullOrEmpty(filePath))
+                addToLog("File Error : Please specify a file.");
+            else if (!File.Exists(filePath))
+                addToLog("File Error : The File you specified does not exist.");
+            else
+            {
+                FilePathToSend = filePath;
+                addToLog("File found.");
+            }
+
+            WFRunner.SendFile(FilePathToSend);
         }
 
         #region IMissingAttributeHandler Members
@@ -76,18 +110,5 @@ namespace RRComSSys.Controller
         }
 
         #endregion
-
-        public void ExecuteXCML()
-        {
-            try
-            {
-                WFRunner runner = new WorkflowFactory().CreateWorkflowRuntime(Document);
-                runner.ExecuteWorkflow();
-            }
-            catch( Exception exc)
-            {
-                addToLog(exc.Message);
-            }
-        }
     }    
 }

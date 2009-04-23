@@ -41,7 +41,7 @@
 						<GradientStop Color="#FF2A2A2F" Offset="1"/>
 					</LinearGradientBrush>
 				</Button.Background>
-				<Image Width="32" Height="32" Source="Images\mail-send-receive.png" Stretch="Fill" d:LayoutOverrides="Height, VerticalMargin" />
+				<Image Width="32" Height="32" Source="Images\mail-send-receive.png" Stretch="Fill" d:LayoutOverrides="Height, VerticalMargin" IsEnabled="False"  />
 			</Button>
 		</StackPanel>
         
