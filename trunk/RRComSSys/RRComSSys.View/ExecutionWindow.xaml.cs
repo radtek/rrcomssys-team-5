@@ -37,13 +37,18 @@ namespace RRComSSys.View
         {
             ExecuteClicked = new RoutedUICommand();
             LoadClicked = new RoutedUICommand();
+            SendFileClicked = new RoutedUICommand();
 
             this.ExecuteButton.Command = this.ExecuteClicked;
             this.ExecuteButton.CommandBindings.Add(new CommandBinding(this.ExecuteClicked, ExecuteClicked_Executed, ExecuteClicked_CanExecute));
 
             this.LoadGCMLButton.Command = this.LoadClicked;
             this.LoadGCMLButton.CommandBindings.Add(new CommandBinding(this.LoadClicked, LoadClicked_Executed));
+
+            this.SendFileButton.Command = this.SendFileClicked;
+            this.SendFileButton.CommandBindings.Add(new CommandBinding(this.SendFileClicked, SendFileClicked_Executed, SendFileClicked_CanExecute));
         }
+        
 
         #endregion
 
@@ -52,6 +57,7 @@ namespace RRComSSys.View
         public MainController Controller { get; set; }
         public RoutedUICommand ExecuteClicked { get; set; }
         public RoutedUICommand LoadClicked { get; set; }
+        public RoutedUICommand SendFileClicked { get; set; }
 
         #endregion
 
@@ -75,6 +81,17 @@ namespace RRComSSys.View
             Controller.TransformGCML();
             _fileLoaded = true;
         }
+
+        private void SendFileClicked_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            
+        }
+
+        private void SendFileClicked_CanExecute(object sender, CanExecuteRoutedEventArgs e)
+        {
+           
+        }
+        
 
         #endregion
 
@@ -110,6 +127,6 @@ namespace RRComSSys.View
             return null;                
         }
 
-        #endregion
+        #endregion        
     }
 }
