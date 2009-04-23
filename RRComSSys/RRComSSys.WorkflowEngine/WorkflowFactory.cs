@@ -188,6 +188,7 @@ namespace RRComSSys.WorkflowEngine
                           "Call Cannot be Connected to a Decision and End Elements without having parsed the Decision");
                   }
                   endElement.PreviousElements.Add(currentElement);
+                  return; // If I've hit an END Boundary node, no need to look at the Decision node
               }
           }
            
