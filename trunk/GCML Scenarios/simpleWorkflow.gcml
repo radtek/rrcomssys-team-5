@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gc:Gcml xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:gc="http://gcml.org">
+  <connection connectionID="conn1" fromDevice="//@device.0 //@device.1" ConnectionToCall="//@call.0" bandwidth="1mbps"/>
+  <person personID="jmrodriguez24" personName="Jean" personRole="Doctor" toIsAttached="//@isAttached.0"/>
+  <person personID="marcelo.lopezjr" personName="Marcelo" personRole="Patient" toIsAttached="//@isAttached.1"/>
+  <isAttached toDevice="//@device.0" fromPerson="jmrodriguez24"/>
+  <isAttached toDevice="//@device.1" fromPerson="marcelo.lopezjr"/>
+  <device isLocal="true" toConnection="//@connection.0" fromIsAttached="//@isAttached.0" deviceID="device1">
+    <deviceCapability>LiveAudio</deviceCapability>
+  </device>
+  <device toConnection="//@connection.0" fromIsAttached="//@isAttached.1">
+    <deviceCapability>LiveAudio</deviceCapability>
+  </device>
+  <call ActivityID="call1" CallToConnection="//@connection.0" CallToBoundary="//@boundary.1"/>
+  <boundary ActivityID="start1"/>
+  <boundary ActivityID="end1" Type="End" BoundaryToCall="//@call.0"/>
+</gc:Gcml>
