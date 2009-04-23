@@ -25,7 +25,7 @@ namespace RRComSSys.TransformationEngine
 
             if (exc != null)
             {
-                throw new ValidationException("Validation Error: " + exc.Message);
+                throw new ValidationException("Validation Error: " + exc.Message);                
             }
 
             return doc;
