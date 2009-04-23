@@ -42,7 +42,11 @@ namespace RRComSSys.WorkflowEngine
 
         public override string nextActivityID()
         {
-            return myActivity.ToActivity;
+            if (myActivity.ToActivity == null)
+                throw new Exception("Start Boundary Is not connected to a call");
+            else
+                return myActivity.ToActivity;
+
         }
 
         public override Type TypeOfActivity()
