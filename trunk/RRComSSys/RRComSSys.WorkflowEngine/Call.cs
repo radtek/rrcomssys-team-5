@@ -92,11 +92,13 @@ namespace RRComSSys.WorkflowEngine
                 else if (cap == Capability.LiveVideo)
                     type = CommandType.VideoCall;                
             }
-            
+
+            ExecutionArgs args = new ExecutionArgs(users.ToArray(), type, "");
+
             System.Threading.Thread t = new System.Threading.Thread(new System.Threading.ParameterizedThreadStart(ExecuteCall));
             t.SetApartmentState(System.Threading.ApartmentState.STA);
             
-            t.Start(new ExecutionArgs(users.ToArray(), type, ""));
+            t.Start(args);
             resetEvent.WaitOne();
 
             return true;
@@ -168,7 +170,7 @@ namespace RRComSSys.WorkflowEngine
             public ExecutionArgs (string [] users, CommandType type, string filePath)
 	        {
                 Users = users;
-                type = Type;
+                Type = type;
                 FilePath = filePath;
 	        }
         }
