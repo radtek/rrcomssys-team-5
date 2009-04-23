@@ -13,9 +13,9 @@ using System;
 namespace RRComSSys.WorkflowEngine
 {
     public interface IActivity {
-        bool processActivity();
-        string getActivityID();
-        string nextActivityID();
+        bool ProcessActivity();
+        string GetActivityID();
+        string NextActivityID();
         Type TypeOfActivity();
     }
 }

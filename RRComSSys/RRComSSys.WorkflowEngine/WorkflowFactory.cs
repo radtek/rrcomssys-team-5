@@ -42,8 +42,8 @@ namespace RRComSSys.WorkflowEngine
         private  void ConnectTheLines(Workflow wfObj, TransformationEngine.Boundary start, TransformationEngine.Boundary end, out WFRunner runner)
         {
             runner = new WFRunner();
-            WFElement currentElement = new Boundary(start);
-            WFElement endElement = new Boundary(end);
+            WFElement currentElement = new Boundary(start,wfObj);
+            WFElement endElement = new Boundary(end,wfObj);
             
             runner.WorkflowElements.Add(currentElement);
             // Recurse into the edges between the nodes....
@@ -68,10 +68,10 @@ namespace RRComSSys.WorkflowEngine
               // This should only be entered into during the top level invocation
               // i.e. for the "Start" boundary itself.
 
-              string nextActivity = currentElement.nextActivityID();
+              string nextActivity = currentElement.NextActivityID();
               //TransformationEngine.Call aCall =
               // wfInstance.Call.Find(x => x.activityID.Equals(nextActivity));
-              TransformationEngine.Call aCall = wfInstance.Call[WorkflowFactory.IndexOfActivity(nextActivity)];
+              TransformationEngine.Call aCall = wfInstance.Call.Find(x=>x.activityID.Equals(nextActivity));//[WorkflowFactory.IndexOfActivity(nextActivity)];
               if ( null != aCall )
               {
                 // Create and add the new call...set this boundary as one of it's predecessors  
@@ -82,7 +82,7 @@ namespace RRComSSys.WorkflowEngine
               }
               else
               {
-                if (currentElement.nextActivityID().Equals(endElement.getActivityID()))
+                if (currentElement.NextActivityID().Equals(endElement.GetActivityID()))
                 {
                   // Empty workflow...just add the start as a previous element to the end.
                   endElement.PreviousElements.Add(currentElement);
@@ -98,13 +98,16 @@ namespace RRComSSys.WorkflowEngine
             TransformationEngine.Decision decision = ((Decision) currentElement).DecisionModel;
             string successID = decision.successPathID;
             string failID = decision.failPathID;
-            if (null == runner.WorkflowElements.Find(x => (x.getActivityID().Equals(successID))))
+
+            currentElement.DefaultNextActivityID = successID;
+
+            if (null == runner.WorkflowElements.Find(x => (x.GetActivityID().Equals(successID))))
             {
               // Find the item that this is  
               // Construct the Success Branch
               ConstructDecisionBranch(runner,currentElement,successID,endElement,wfInstance);
             }
-            if (null == runner.WorkflowElements.Find(x => x.getActivityID().Equals(failID)))
+            if (null == runner.WorkflowElements.Find(x => x.GetActivityID().Equals(failID)))
             {
               // Find the item that this is  
               // Construct the Fail Branch
@@ -134,6 +137,7 @@ namespace RRComSSys.WorkflowEngine
                 // If it isn't, add it, and keep recursing.   
                 WFElement outElement = new Call(possibleCall, wfInstance);
                 outElement.PreviousElements.Add(currentElement);
+                currentElement.DefaultNextActivityID = outElement.GetActivityID();
                 runner.WorkflowElements.Add(outElement);
                 BuildNextElement(runner, outElement, endElement, wfInstance);
               }
@@ -142,6 +146,7 @@ namespace RRComSSys.WorkflowEngine
             {
               // MUST be the "End" boundary
               // Add this Decision to the "End" boundaries previousElements
+              
               endElement.PreviousElements.Add(currentElement);
               // return
             }
@@ -155,7 +160,7 @@ namespace RRComSSys.WorkflowEngine
         /// <returns></returns>
         private WFElement ElementExistsInWorkflow(WFRunner runner, string activityID)
         {
-          return runner.WorkflowElements.Find(x => x.getActivityID().Equals(activityID));
+          return runner.WorkflowElements.Find(x => x.GetActivityID().Equals(activityID));
         }
 
         /// <summary>
@@ -182,11 +187,12 @@ namespace RRComSSys.WorkflowEngine
           {
               if (calledBoundary.Type.Equals(TransformationEngine.BoundaryType.End))
               {
-                  if( (null != calledDecision ) && (null == currentElement.PreviousElements.Find(x=>x.getActivityID().Equals(calledDecision.activityID))))
+                  if( (null != calledDecision ) && (null == currentElement.PreviousElements.Find(x=>x.GetActivityID().Equals(calledDecision.activityID))))
                   {
                       throw new Exception(
                           "Call Cannot be Connected to a Decision and End Elements without having parsed the Decision");
                   }
+                  currentElement.DefaultNextActivityID = endElement.GetActivityID();
                   endElement.PreviousElements.Add(currentElement);
                   return; // If I've hit an END Boundary node, no need to look at the Decision node
               }
@@ -195,7 +201,7 @@ namespace RRComSSys.WorkflowEngine
           if (null != calledDecision)
           {
               if (null !=
-                  currentElement.PreviousElements.Find(x => x.getActivityID().Equals(calledDecision.activityID)))
+                  currentElement.PreviousElements.Find(x => x.GetActivityID().Equals(calledDecision.activityID)))
               {
                   throw new Exception("Decision was already connected to this Call"); 
 
@@ -206,7 +212,8 @@ namespace RRComSSys.WorkflowEngine
             
                     // Add the Call to the Decision's PreviousElements
                     outElement.PreviousElements.Add(currentElement);
-            
+                    // Set Default Next Activity ID
+                    currentElement.DefaultNextActivityID = outElement.GetActivityID();
                     // Add the Decision to the Workflow 
                     runner.WorkflowElements.Add(outElement);
             

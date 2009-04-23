@@ -18,15 +18,31 @@ namespace RRComSSys.WorkflowEngine
     {
         private TransformationEngine.Boundary myActivity=null;
 
-        public Boundary( TransformationEngine.Boundary obj)
+        public Boundary( TransformationEngine.Boundary obj, Workflow wfInstance)
         {
             myActivity = obj;
-        }    
+            ConnectToNextActivity(wfInstance);
+        }
+
+        private void ConnectToNextActivity(Workflow wfInstance)
+        {
+            if (myActivity.ToActivity != null)
+            {
+                if (myActivity.Type.Equals(BoundaryType.Start))
+                {
+                    string activityID =
+                        wfInstance.Call[WorkflowFactory.IndexOfActivity(myActivity.ToActivity)].activityID;
+                    DefaultNextActivityID = activityID;
+                }
+                
+            }
+  
+        }
 
         #region Overrides of WFElement
 
 
-        public override bool processActivity()
+        public override bool ProcessActivity()
         {
             return true; // For now....just step through the workflow
         }
@@ -35,19 +51,17 @@ namespace RRComSSys.WorkflowEngine
         /// Gets the activity ID.
         /// </summary>
         /// <returns></returns>
-        public override string getActivityID()
+        public override string GetActivityID()
         {
             return myActivity.activityID;
         }
 
-        public override string nextActivityID()
+        
+        public override string NextActivityID()
         {
-            if (myActivity.ToActivity == null)
-                throw new Exception("Start Boundary Is not connected to a call");
-            else
-                return myActivity.ToActivity;
-
+            return DefaultNextActivityID;
         }
+        
 
         public override Type TypeOfActivity()
         {

@@ -38,17 +38,17 @@ namespace RRComSSys.WorkflowEngine
 
         #region Overrides of WFElement
 
-        public override bool processActivity()
+        public override bool ProcessActivity()
         {
             return true; // simply an empty operation
         }
 
-        public override string getActivityID()
+        public override string GetActivityID()
         {
             return DecisionModel.activityID;
         }
 
-        public override string nextActivityID()
+        public override string NextActivityID()
         {
             return DecisionModel.successPathID;
         }

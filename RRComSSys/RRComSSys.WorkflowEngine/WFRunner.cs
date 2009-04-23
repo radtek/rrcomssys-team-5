@@ -38,7 +38,7 @@ namespace RRComSSys.WorkflowEngine
         public bool ExecuteWorkflow()
         {
             Boundary start = Start();
-            WFElement element = elements.Find(x => x.getActivityID().Equals(start.nextActivityID()));
+            WFElement element = elements.Find(x => x.GetActivityID().Equals(start.DefaultNextActivityID));
             processElement(element);
             return true;
         }
@@ -49,13 +49,14 @@ namespace RRComSSys.WorkflowEngine
         /// <param name="currentElem">The current elem.</param>
         private void processElement(WFElement currentElem)
         {
+          currentElement = currentElem;
           // Simple workflow loop
           do
           {
-              currentElem.processActivity();
-              currentElem = DetermineNextActivity();
+              currentElement.ProcessActivity();
+              currentElement = DetermineNextActivity();
               
-          } while (null != currentElem);
+          } while (null != currentElement);
         }
 
         /// <summary>
@@ -66,21 +67,14 @@ namespace RRComSSys.WorkflowEngine
         {
           WFElement nextElement = null;
           
-          Boundary end = (Boundary)elements.Find(x => ((x.TypeOfActivity() == typeof(Boundary)) && ((Boundary)x).Ends()));          
-          if (currentElement.nextActivityID().Equals(end.getActivityID()))
-          {
-            // Hit the end element.....exit the workflow
-            currentElement = null;
-            return currentElement;
-          }
-          
+          Boundary end = (Boundary)elements.Find(x => ((x.TypeOfActivity() == typeof(Boundary)) && ((Boundary)x).Ends())); 
           if ( currentElement.TypeOfActivity().Equals(typeof(Decision)))
           {
               Decision decisionElement = (Decision) currentElement;
-              WFElement callElement = decisionElement.PreviousElements[0];
+              WFElement callElement = FindPreviousActivity(decisionElement);
               if (callElement.Outcome)
               {
-                nextElement = elements.Find(x => x.getActivityID().Equals(decisionElement.DecisionModel.successPathID));
+                nextElement = elements.Find(x => x.GetActivityID().Equals(decisionElement.DecisionModel.successPathID));
                 if (null != nextElement)
                 {
                   currentElement = nextElement;
@@ -90,7 +84,7 @@ namespace RRComSSys.WorkflowEngine
               }
               else
               {
-                nextElement = elements.Find(x => x.getActivityID().Equals(decisionElement.DecisionModel.successPathID));
+                nextElement = elements.Find(x => x.GetActivityID().Equals(decisionElement.DecisionModel.failPathID));
                 if (null != nextElement)
                 {
                   currentElement = nextElement;
@@ -99,9 +93,15 @@ namespace RRComSSys.WorkflowEngine
                   currentElement = null; // THIS SHOULD NOT HAPPEN
               }
           }
+          else if (currentElement.DefaultNextActivityID.Equals(end.GetActivityID()))
+          {
+            // Hit the end element.....exit the workflow
+            currentElement = null;
+            return currentElement;
+          }
           else
           {
-            nextElement = elements.Find(x => x.getActivityID().Equals(currentElement.nextActivityID()));
+            nextElement = elements.Find(x => x.GetActivityID().Equals(currentElement.NextActivityID()));
             if (null != nextElement)
               currentElement = nextElement;
             else
@@ -113,7 +113,12 @@ namespace RRComSSys.WorkflowEngine
           return currentElement;
         }
 
-        /// <summary>
+      private WFElement FindPreviousActivity(Decision element)
+      {
+          return elements.Find(x => x.DefaultNextActivityID.Equals(element.GetActivityID()));
+      }
+
+      /// <summary>
         /// Starts this instance.
         /// </summary>
         /// <returns></returns>
