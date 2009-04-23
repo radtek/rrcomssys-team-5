@@ -56,7 +56,7 @@ namespace RRComSSys.WorkflowEngine
 
         public bool Starts()
         {
-            return myActivity.Type.Equals("Start");
+            return myActivity.Type.Equals(BoundaryType.Start);
         }
 
         public bool Ends()
