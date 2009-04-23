@@ -10,10 +10,12 @@ namespace RRComSSys.SynthesisEngine
 {
     public class SkypeReceiver : IReceiver
     {
-        private static Skype skype = new Skype();
+        private Skype skype;// = new Skype();
 
         public SkypeReceiver()
         {
+            skype = new Skype();
+
             skype.CallStatus += new _ISkypeEvents_CallStatusEventHandler(skype_CallStatus);            
         }
 
@@ -82,7 +84,11 @@ namespace RRComSSys.SynthesisEngine
 
                 //if any of the users don't exist
                 if (skypeUser == null)
+                {
+                    skype.CallStatus -= null;
                     throw new UserDoesNotExistException("The user " + user + " does not exist.");
+                }
+                   
 
                 if (!isUserInContactList(user))
                     throw new UserIsNotInContactList(user + " is not in your contact list");
