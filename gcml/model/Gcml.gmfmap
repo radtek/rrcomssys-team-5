@@ -109,11 +109,15 @@
           xsi:type="gmfmap:FeatureLabelMapping">
         <diagramLabel
             href="Gcml.gmfgraph#ConnectionBandwidth"/>
+        <features
+            href="Gcml.ecore#//Connection/bandwidth"/>
       </labelMappings>
       <labelMappings
           xsi:type="gmfmap:FeatureLabelMapping">
         <diagramLabel
             href="Gcml.gmfgraph#ConnectionConnectionID"/>
+        <features
+            href="Gcml.ecore#//Connection/connectionID"/>
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
@@ -132,6 +136,8 @@
           xsi:type="gmfmap:FeatureLabelMapping">
         <diagramLabel
             href="Gcml.gmfgraph#MediumMediumTypeName"/>
+        <features
+            href="Gcml.ecore#//Medium/mediumTypeName"/>
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
@@ -150,6 +156,8 @@
           xsi:type="gmfmap:FeatureLabelMapping">
         <diagramLabel
             href="Gcml.gmfgraph#CallActivityID"/>
+        <features
+            href="Gcml.ecore#//Activity/ActivityID"/>
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
@@ -168,6 +176,29 @@
           xsi:type="gmfmap:FeatureLabelMapping">
         <diagramLabel
             href="Gcml.gmfgraph#DecisionActivityID"/>
+        <features
+            href="Gcml.ecore#//Activity/ActivityID"/>
+      </labelMappings>
+      <labelMappings
+          xsi:type="gmfmap:FeatureLabelMapping">
+        <diagramLabel
+            href="Gcml.gmfgraph#DecisionSourceActivityID"/>
+        <features
+            href="Gcml.ecore#//Decision/sourceActivityID"/>
+      </labelMappings>
+      <labelMappings
+          xsi:type="gmfmap:FeatureLabelMapping">
+        <diagramLabel
+            href="Gcml.gmfgraph#DecisionSuccessPathID"/>
+        <features
+            href="Gcml.ecore#//Decision/successPathID"/>
+      </labelMappings>
+      <labelMappings
+          xsi:type="gmfmap:FeatureLabelMapping">
+        <diagramLabel
+            href="Gcml.gmfgraph#DecisionFailPathID"/>
+        <features
+            href="Gcml.ecore#//Decision/failPathID"/>
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"

@@ -47,8 +47,10 @@
     <descriptors
         name="ConnectionFigure">
       <actualFigure
-          xsi:type="gmfgraph:Rectangle"
-          name="ConnectionFigure">
+          xsi:type="gmfgraph:RoundedRectangle"
+          lineWidth="3"
+          cornerWidth="20"
+          cornerHeight="20">
         <layout
             xsi:type="gmfgraph:FlowLayout"/>
         <children
@@ -68,8 +70,10 @@
     <descriptors
         name="DeviceFigure">
       <actualFigure
-          xsi:type="gmfgraph:Rectangle"
-          name="DeviceFigure">
+          xsi:type="gmfgraph:RoundedRectangle"
+          lineWidth="3"
+          cornerWidth="20"
+          cornerHeight="20">
         <layout
             xsi:type="gmfgraph:FlowLayout"/>
         <children
@@ -115,8 +119,11 @@
     <descriptors
         name="FormFigure">
       <actualFigure
-          xsi:type="gmfgraph:Rectangle"
-          name="FormFigure">
+          xsi:type="gmfgraph:RoundedRectangle"
+          name=""
+          lineWidth="3"
+          cornerWidth="20"
+          cornerHeight="20">
         <layout
             xsi:type="gmfgraph:FlowLayout"/>
         <children
@@ -169,7 +176,8 @@
         name="IsAttachedFigure">
       <actualFigure
           xsi:type="gmfgraph:Rectangle"
-          name="IsAttachedFigure"/>
+          name="IsAttachedFigure"
+          lineWidth="3"/>
     </descriptors>
     <descriptors
         name="IsAttachedToDeviceFigure">
@@ -181,8 +189,11 @@
     <descriptors
         name="MediumFigure">
       <actualFigure
-          xsi:type="gmfgraph:Rectangle"
-          name="MediumFigure">
+          xsi:type="gmfgraph:RoundedRectangle"
+          name=""
+          lineWidth="3"
+          cornerWidth="20"
+          cornerHeight="20">
         <layout
             xsi:type="gmfgraph:FlowLayout"/>
         <children
@@ -221,8 +232,10 @@
     <descriptors
         name="PersonFigure">
       <actualFigure
-          xsi:type="gmfgraph:Rectangle"
-          name="PersonFigure">
+          xsi:type="gmfgraph:RoundedRectangle"
+          lineWidth="3"
+          cornerWidth="20"
+          cornerHeight="20">
         <layout
             xsi:type="gmfgraph:FlowLayout"/>
         <children
@@ -255,8 +268,11 @@
     <descriptors
         name="CallFigure">
       <actualFigure
-          xsi:type="gmfgraph:Rectangle"
-          name="CallFigure">
+          xsi:type="gmfgraph:RoundedRectangle"
+          name=""
+          lineWidth="3"
+          cornerWidth="20"
+          cornerHeight="20">
         <layout
             xsi:type="gmfgraph:FlowLayout"/>
         <children
@@ -297,8 +313,10 @@
     <descriptors
         name="DecisionFigure">
       <actualFigure
-          xsi:type="gmfgraph:Rectangle"
-          name="DecisionFigure">
+          xsi:type="gmfgraph:RoundedRectangle"
+          lineWidth="3"
+          cornerWidth="20"
+          cornerHeight="20">
         <layout
             xsi:type="gmfgraph:FlowLayout"/>
         <children
@@ -344,8 +362,11 @@
     <descriptors
         name="BoundaryFigure">
       <actualFigure
-          xsi:type="gmfgraph:Rectangle"
-          name="BoundaryFigure">
+          xsi:type="gmfgraph:RoundedRectangle"
+          name=""
+          lineWidth="3"
+          cornerWidth="20"
+          cornerHeight="20">
         <layout
             xsi:type="gmfgraph:FlowLayout"/>
         <children
