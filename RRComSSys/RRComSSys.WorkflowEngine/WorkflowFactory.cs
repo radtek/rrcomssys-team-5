@@ -91,54 +91,7 @@ namespace RRComSSys.WorkflowEngine
           }
           else if (currentElement.GetType() == typeof(Call))
           {
-              //TransformationEngine.Decision isDecision =
-              //  wfInstance.Decision[WorkflowFactory.IndexOfActivity(currentElement.nextActivityID())]; //Find(x => x.activityID.Equals(currentElement.nextActivityID()));
-              Call theCall = (Call) currentElement;
-              string callToDecision = theCall.CallModel().CallToDecision;
-              string callToBoundary = theCall.CallModel().CallToBoundary;
-
-              TransformationEngine.Boundary calledBoundary = (!string.IsNullOrEmpty(callToBoundary)) ? wfInstance.Boundary[WorkflowFactory.IndexOfActivity(callToBoundary)] 
-                                                                                                    : null;
-
-              TransformationEngine.Decision calledDecision = (!string.IsNullOrEmpty(callToDecision)) ? wfInstance.Decision[WorkflowFactory.IndexOfActivity(callToDecision)]
-                                                                                                    : null;
-
-              if (null != calledBoundary )
-              {
-                  if (calledBoundary.Type.Equals("End"))
-                  {
-                      if( (null != calledDecision ) && (null != currentElement.PreviousElements.Find(x=>x.getActivityID().Equals(calledDecision.activityID))))
-                      {
-                          throw new Exception(
-                              "Call Cannot be Connected to a Decision and End Elements without having parsed the Decision");
-                      }
-                      endElement.PreviousElements.Add(currentElement);
-                  }
-              }
-               
-              if (null != calledDecision)
-              {
-                  if (null !=
-                      currentElement.PreviousElements.Find(x => x.getActivityID().Equals(calledDecision.activityID)))
-                  {
-                      throw new Exception("Decision was already connected to this Call"); 
-
-                  }
-                  else
-                  {
-                        outElement = new Decision(calledDecision, wfInstance);
-                
-                        // Add the Call to the Decision's PreviousElements
-                        outElement.PreviousElements.Add(currentElement);
-                
-                        // Add the Decision to the Workflow 
-                        runner.WorkflowElements.Add(outElement);
-                
-                        // Try to build next Element
-                        BuildNextElement(runner, outElement, endElement, wfInstance);
-                  }
-              }
-            
+             ConstructCall(runner, currentElement, endElement, wfInstance);
           }
           else if (currentElement.GetType() == typeof(Decision))
           {
@@ -205,6 +158,56 @@ namespace RRComSSys.WorkflowEngine
           return runner.WorkflowElements.Find(x => x.getActivityID().Equals(activityID));
         }
 
+
+
+        private void ConstructCall(WFRunner runner, WFElement currentElement, WFElement endElement, Workflow wfInstance)
+        {
+              Call theCall = (Call) currentElement;
+              string callToDecision = theCall.CallModel().CallToDecision;
+              string callToBoundary = theCall.CallModel().CallToBoundary;
+
+              TransformationEngine.Boundary calledBoundary = (!string.IsNullOrEmpty(callToBoundary)) ? wfInstance.Boundary[WorkflowFactory.IndexOfActivity(callToBoundary)] 
+                                                                                                    : null;
+
+              TransformationEngine.Decision calledDecision = (!string.IsNullOrEmpty(callToDecision)) ? wfInstance.Decision[WorkflowFactory.IndexOfActivity(callToDecision)]
+                                                                                                    : null;
+
+              if (null != calledBoundary )
+              {
+                  if (calledBoundary.Type.Equals(TransformationEngine.BoundaryType.End))
+                  {
+                      if( (null != calledDecision ) && (null == currentElement.PreviousElements.Find(x=>x.getActivityID().Equals(calledDecision.activityID))))
+                      {
+                          throw new Exception(
+                              "Call Cannot be Connected to a Decision and End Elements without having parsed the Decision");
+                      }
+                      endElement.PreviousElements.Add(currentElement);
+                  }
+              }
+               
+              if (null != calledDecision)
+              {
+                  if (null !=
+                      currentElement.PreviousElements.Find(x => x.getActivityID().Equals(calledDecision.activityID)))
+                  {
+                      throw new Exception("Decision was already connected to this Call"); 
+
+                  }
+                  else
+                  {
+                        outElement = new Decision(calledDecision, wfInstance);
+                
+                        // Add the Call to the Decision's PreviousElements
+                        outElement.PreviousElements.Add(currentElement);
+                
+                        // Add the Decision to the Workflow 
+                        runner.WorkflowElements.Add(outElement);
+                
+                        // Try to build next Element
+                        BuildNextElement(runner, outElement, endElement, wfInstance);
+                  }
+              }
+        }
         /// <summary>
         /// Indexes the of activity.
         /// </summary>
