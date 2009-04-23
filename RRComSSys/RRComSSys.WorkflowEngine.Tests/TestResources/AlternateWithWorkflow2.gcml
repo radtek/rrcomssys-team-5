@@ -14,7 +14,7 @@
   <isAttached toDevice="//@device.1" fromPerson="marcelo"/>
   <isAttached toDevice="//@device.2" fromPerson="jmrodriguez24"/>
   <isAttached toDevice="//@device.3" fromPerson="denis"/>
-  <device toConnection="//@connection.0" fromIsAttached="//@isAttached.0" deviceID="device1">
+  <device toConnection="//@connection.0" fromIsAttached="//@isAttached.0" deviceID="device1" isLocal="true">
     <deviceCapability>Text</deviceCapability>
     <deviceCapability>LiveAudio</deviceCapability>
     <deviceCapability>LiveVideo</deviceCapability>
