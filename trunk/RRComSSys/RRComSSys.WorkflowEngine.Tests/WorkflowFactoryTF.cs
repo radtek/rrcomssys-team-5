@@ -10,15 +10,44 @@ namespace RRComSSys.WorkflowEngine.Tests
     [TestFixture]
     public class WorkflowFactoryTF
     {
-        private const string GCML_FILE_PATH = @"F:\RRComSSys_Team5\RRComSSys\RRComSSys.TransformationEngine.Tests\TestResources\AlternateWithWorkflow2.gcml";
+        
         [Test]
-        public void Test()
+        public void TestWorkflowWithAlternate()
         {
-            //SchemaTransformer 
-
+            string GCML_FILE_PATH = @"C:\Documents and Settings\jeanr\Desktop\RRComSSysTeam5\RRComSSys\RRComSSys.WorkflowEngine.Tests\TestResources\AlternateWithWorkflow2.gcml";
             Workflow doc = SchemaTransformer.GetObjectModel(GCML_FILE_PATH);
             WFRunner runner = new WorkflowFactory().CreateWorkflowRuntime(doc);
+            Assert.AreEqual(runner.WorkflowElements.Count, 5);
+            Assert.AreEqual(runner.WorkflowElements[0].TypeOfActivity().ToString(), "Boundary");
+            Assert.AreEqual(runner.WorkflowElements[1].TypeOfActivity().ToString(), "Call");
+            Assert.AreEqual(runner.WorkflowElements[2].TypeOfActivity().ToString(), "Decision");
+            Assert.AreEqual(runner.WorkflowElements[3].TypeOfActivity().ToString(), "Call");
+            Assert.AreEqual(runner.WorkflowElements[4].TypeOfActivity().ToString(), "Boundary");
+        }
 
+        [Test]
+        public void TestWorkflowWithRetry()
+        {
+            string GCML_FILE_PATH = @"C:\Documents and Settings\jeanr\Desktop\RRComSSysTeam5\RRComSSys\RRComSSys.WorkflowEngine.Tests\TestResources\AlternateWithWorkflow2.gcml";
+            Workflow doc = SchemaTransformer.GetObjectModel(GCML_FILE_PATH);
+            WFRunner runner = new WorkflowFactory().CreateWorkflowRuntime(doc);
+            Assert.AreEqual(runner.WorkflowElements.Count, 4);
+            Assert.AreEqual(runner.WorkflowElements[0].TypeOfActivity().ToString(), "Boundary");
+            Assert.AreEqual(runner.WorkflowElements[1].TypeOfActivity().ToString(), "Call");
+            Assert.AreEqual(runner.WorkflowElements[2].TypeOfActivity().ToString(), "Decision");
+            Assert.AreEqual(runner.WorkflowElements[3].TypeOfActivity().ToString(), "Boundary");
+        }
+
+        [Test]
+        public void TestSimpleWorkflow()
+        {
+            string GCML_FILE_PATH = @"C:\Documents and Settings\jeanr\Desktop\RRComSSysTeam5\RRComSSys\RRComSSys.WorkflowEngine.Tests\TestResources\AlternateWithWorkflow2.gcml";
+            Workflow doc = SchemaTransformer.GetObjectModel(GCML_FILE_PATH);
+            WFRunner runner = new WorkflowFactory().CreateWorkflowRuntime(doc);
+            Assert.AreEqual(runner.WorkflowElements.Count, 3);
+            Assert.AreEqual(runner.WorkflowElements[0].TypeOfActivity().ToString(), "Boundary");
+            Assert.AreEqual(runner.WorkflowElements[1].TypeOfActivity().ToString(), "Call");
+            Assert.AreEqual(runner.WorkflowElements[2].TypeOfActivity().ToString(), "Boundary");
         }
     }
 }
