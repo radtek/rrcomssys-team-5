@@ -13,6 +13,6 @@
   </device>
   <call ActivityID="call1" CallToConnection="//@connection.0" CallToDecision="//@decision.0" CallToBoundary="//@boundary.1"/>
   <decision ActivityID="decision1" sourceActivityID="call1" successPathID="end1" failPathID="call1" DecisionToCall="//@call.0" DecisionToBoundary="//@boundary.1"/>
-  <boundary ActivityID="start1"/>
-  <boundary ActivityID="end1" BoundaryToCall="//@call.0"/>
+  <boundary ActivityID="start1" Type="Start" BoundaryToCall="//@call.0" />
+  <boundary ActivityID="end1" Type="End" />
 </gc:Gcml>
