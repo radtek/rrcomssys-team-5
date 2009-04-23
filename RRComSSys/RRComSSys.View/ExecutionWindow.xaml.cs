@@ -46,7 +46,7 @@ namespace RRComSSys.View
             this.LoadGCMLButton.CommandBindings.Add(new CommandBinding(this.LoadClicked, LoadClicked_Executed));
 
             this.SendFileButton.Command = this.SendFileClicked;
-            this.SendFileButton.CommandBindings.Add(new CommandBinding(this.SendFileClicked, SendFileClicked_Executed, SendFileClicked_CanExecute));
+            this.SendFileButton.CommandBindings.Add(new CommandBinding(this.SendFileClicked, SendFileClicked_Executed));
         }
         
 
@@ -84,14 +84,10 @@ namespace RRComSSys.View
 
         private void SendFileClicked_Executed(object sender, ExecutedRoutedEventArgs e)
         {
-            
-        }
+            Controller.SendFile();
+        }        
 
-        private void SendFileClicked_CanExecute(object sender, CanExecuteRoutedEventArgs e)
-        {
-           
-        }
-        
+
 
         #endregion
 

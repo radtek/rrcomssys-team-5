@@ -30,6 +30,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'FinalRelease|AnyCPU' ">
+    <OutputPath>bin\FinalRelease\</OutputPath>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="MbUnit.Framework, Version=1.0.2768.20906, Culture=neutral, PublicKeyToken=5e72ecd30bc408d5">
       <SpecificVersion>False</SpecificVersion>
