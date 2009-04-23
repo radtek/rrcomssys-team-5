@@ -16,6 +16,7 @@ namespace RRComSSys.WorkflowEngine
 {
     public abstract class WFElement : IActivity
     {
+        private string defaultNextActivityID = null;
 
         private bool outcome = false;
         
@@ -34,11 +35,17 @@ namespace RRComSSys.WorkflowEngine
           set { previousElements = value; }
         }
 
-      #region Implementation of IActivity
+        public string DefaultNextActivityID
+        {
+            get { return defaultNextActivityID; }
+            set { defaultNextActivityID = value; }
+        }
 
-        public abstract bool processActivity();
-        public abstract string getActivityID();
-        public abstract string nextActivityID();
+        #region Implementation of IActivity
+
+        public abstract bool ProcessActivity();
+        public abstract string GetActivityID();
+        public abstract string NextActivityID();
         public abstract Type TypeOfActivity();
 
         #endregion

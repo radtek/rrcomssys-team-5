@@ -74,12 +74,12 @@ namespace RRComSSys.WorkflowEngine
         /// Processes the activity.
         /// </summary>
         /// <returns></returns>
-        public override bool processActivity()
+        public override bool ProcessActivity()
         {
 
             List<string> users = new List<string>();
             CommandType type = CommandType.Chat;
-            for (int i = 1; i < CallConnection.RemotelyConnectedDevices(); i++)
+            for (int i = 1; i < CallConnection.RemotelyConnectedDevices() + 1; i++)
             {
                 Person p = CallConnection.DeviceAt(i).DeviceAttachesToPerson();
                 users.Add(p.PersonID);
@@ -129,7 +129,7 @@ namespace RRComSSys.WorkflowEngine
         /// Gets the activity ID.
         /// </summary>
         /// <returns></returns>
-        public override string getActivityID()
+        public override string GetActivityID()
         {
             return myActivity.activityID;
         }
@@ -138,7 +138,7 @@ namespace RRComSSys.WorkflowEngine
         /// Nexts the activity ID.
         /// </summary>
         /// <returns></returns>
-        public override string nextActivityID()
+        public override string NextActivityID()
         {
             
             /*
@@ -147,7 +147,7 @@ namespace RRComSSys.WorkflowEngine
             if (string.IsNullOrEmpty(myActivity.CallToBoundary) && (!string.IsNullOrEmpty(myActivity.CallToDecision)))
                 return myActivity.CallToDecision;
              */
-            return string.Empty;
+            return DefaultNextActivityID;
         }
 
         public override Type TypeOfActivity()
