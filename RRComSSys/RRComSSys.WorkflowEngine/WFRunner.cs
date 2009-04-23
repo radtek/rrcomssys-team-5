@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using RRComSSys.WorkflowEngine;
+using RRComSSys.SynthesisEngine;
 
 namespace RRComSSys.WorkflowEngine
 {
@@ -135,6 +136,11 @@ namespace RRComSSys.WorkflowEngine
         public void returnValueHandler(int result)
         {
 
+        }
+
+        public static void SendFile(string filePath)
+        {
+            SEClient sec = new SEClient(CommandType.SendFile);            
         }
     }
 
