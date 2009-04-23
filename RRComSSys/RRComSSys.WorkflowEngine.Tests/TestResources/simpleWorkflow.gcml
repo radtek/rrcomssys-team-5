@@ -12,6 +12,6 @@
     <deviceCapability>LiveAudio</deviceCapability>
   </device>
   <call ActivityID="call1" CallToConnection="//@connection.0" CallToBoundary="//@boundary.1"/>
-  <boundary ActivityID="start1" Type="Start"/>
+  <boundary ActivityID="start1" Type="Start" BoundaryToCall="//@call.0" />
   <boundary ActivityID="end1" Type="End" BoundaryToCall="//@call.0"/>
 </gc:Gcml>
