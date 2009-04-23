@@ -36,7 +36,7 @@
 		</StackPanel>
         
 		<Grid Margin="0,0,0,0" Grid.Row="1" Grid.ColumnSpan="2">
-			<TextBox Text="Error Log" TextWrapping="Wrap" Margin="5,5,5,5" Background="#72FFFFFF" BorderBrush="#72000000" Foreground="#FFA22E2E" x:Name="txtConnectionLog" Focusable="False" IsTabStop="False" IsHitTestVisible="False"/>
+			<TextBox Text="Error Log" TextWrapping="Wrap" Margin="5,5,5,5" Background="#72FFFFFF" BorderBrush="#72000000" Foreground="#FFA22E2E" x:Name="txtConnectionLog" Focusable="False" IsTabStop="False" IsHitTestVisible="False" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" />
 		</Grid>
 		<Grid Margin="0,0,0.254,0">
 			<TextBox HorizontalAlignment="Stretch" Margin="5,5,5,5" Width="Auto" Text="Click the Load Button to browse for the gcml file you wish to use" TextWrapping="Wrap" Background="#72FFFFFF" BorderBrush="#72000000" Foreground="#FF1E6216" x:Name="txtHelpMessage" Focusable="False" IsTabStop="False" IsHitTestVisible="False"/>
