@@ -23,6 +23,14 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum BoundaryType implements Enumerator {
 	/**
+	 * The '<em><b>Null</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #NULL_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	NULL(0, "null", "null"), /**
 	 * The '<em><b>Start</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -30,7 +38,7 @@ public enum BoundaryType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	START(0, "Start", "Start"),
+	START(1, "Start", "Start"),
 
 	/**
 	 * The '<em><b>End</b></em>' literal object.
@@ -40,7 +48,22 @@ public enum BoundaryType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	END(1, "End", "End");
+	END(2, "End", "End");
+
+	/**
+	 * The '<em><b>Null</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Null</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #NULL
+	 * @model name="null"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int NULL_VALUE = 0;
 
 	/**
 	 * The '<em><b>Start</b></em>' literal value.
@@ -55,7 +78,7 @@ public enum BoundaryType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int START_VALUE = 0;
+	public static final int START_VALUE = 1;
 
 	/**
 	 * The '<em><b>End</b></em>' literal value.
@@ -70,7 +93,7 @@ public enum BoundaryType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int END_VALUE = 1;
+	public static final int END_VALUE = 2;
 
 	/**
 	 * An array of all the '<em><b>Boundary Type</b></em>' enumerators.
@@ -80,6 +103,7 @@ public enum BoundaryType implements Enumerator {
 	 */
 	private static final BoundaryType[] VALUES_ARRAY =
 		new BoundaryType[] {
+			NULL,
 			START,
 			END,
 		};
@@ -132,6 +156,7 @@ public enum BoundaryType implements Enumerator {
 	 */
 	public static BoundaryType get(int value) {
 		switch (value) {
+			case NULL_VALUE: return NULL;
 			case START_VALUE: return START;
 			case END_VALUE: return END;
 		}

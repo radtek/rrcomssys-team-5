@@ -26,6 +26,7 @@
       <genEnumLiterals ecoreEnumLiteral="Gcml.ecore#//Capability/LiveAV"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="Gcml.ecore#//BoundaryType">
+      <genEnumLiterals ecoreEnumLiteral="Gcml.ecore#//BoundaryType/null"/>
       <genEnumLiterals ecoreEnumLiteral="Gcml.ecore#//BoundaryType/Start"/>
       <genEnumLiterals ecoreEnumLiteral="Gcml.ecore#//BoundaryType/End"/>
     </genEnums>

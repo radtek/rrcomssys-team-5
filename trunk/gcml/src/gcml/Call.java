@@ -102,7 +102,6 @@ public interface Call extends Activity {
 
 	/**
 	 * Returns the value of the '<em><b>Call To Boundary</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link gcml.Boundary#getBoundaryToCall <em>Boundary To Call</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Call To Boundary</em>' reference isn't clear,
@@ -112,8 +111,7 @@ public interface Call extends Activity {
 	 * @return the value of the '<em>Call To Boundary</em>' reference.
 	 * @see #setCallToBoundary(Boundary)
 	 * @see gcml.GcmlPackage#getCall_CallToBoundary()
-	 * @see gcml.Boundary#getBoundaryToCall
-	 * @model opposite="BoundaryToCall"
+	 * @model
 	 * @generated
 	 */
 	Boundary getCallToBoundary();

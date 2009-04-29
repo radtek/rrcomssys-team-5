@@ -976,7 +976,7 @@ public class GcmlPackageImpl extends EPackageImpl implements GcmlPackage {
 		initEReference(getCall_CallToConnection(), this.getConnection(), this.getConnection_ConnectionToCall(), "CallToConnection", null, 0, -1, Call.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		getCall_CallToConnection().getEKeys().add(this.getConnection_ConnectionID());
 		initEReference(getCall_CallToDecision(), this.getDecision(), this.getDecision_DecisionToCall(), "CallToDecision", null, 0, 1, Call.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCall_CallToBoundary(), this.getBoundary(), this.getBoundary_BoundaryToCall(), "CallToBoundary", null, 0, 1, Call.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCall_CallToBoundary(), this.getBoundary(), null, "CallToBoundary", null, 0, 1, Call.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(decisionEClass, Decision.class, "Decision", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDecision_SourceActivityID(), theXMLTypePackage.getString(), "sourceActivityID", null, 0, 1, Decision.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -987,7 +987,7 @@ public class GcmlPackageImpl extends EPackageImpl implements GcmlPackage {
 
 		initEClass(boundaryEClass, Boundary.class, "Boundary", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getBoundary_Type(), this.getBoundaryType(), "Type", "", 1, 1, Boundary.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getBoundary_BoundaryToCall(), this.getCall(), this.getCall_CallToBoundary(), "BoundaryToCall", null, 0, 1, Boundary.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBoundary_BoundaryToCall(), this.getCall(), null, "BoundaryToCall", null, 0, 1, Boundary.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(actionEEnum, Action.class, "Action");
@@ -1010,6 +1010,7 @@ public class GcmlPackageImpl extends EPackageImpl implements GcmlPackage {
 		addEEnumLiteral(capabilityEEnum, Capability.LIVE_AV);
 
 		initEEnum(boundaryTypeEEnum, BoundaryType.class, "BoundaryType");
+		addEEnumLiteral(boundaryTypeEEnum, BoundaryType.NULL);
 		addEEnumLiteral(boundaryTypeEEnum, BoundaryType.START);
 		addEEnumLiteral(boundaryTypeEEnum, BoundaryType.END);
 

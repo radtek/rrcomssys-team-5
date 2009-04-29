@@ -7,13 +7,13 @@
   <form toConnection="//@connection.1"/>
   <form toConnection="//@connection.1"/>
   <person personID="jmrodriguez24" personName="Jean" personRole="Doctor" toIsAttached="//@isAttached.0"/>
-  <person personID="marcelo" personName="Marcelo" personRole="Patient" toIsAttached="//@isAttached.1"/>
+  <person personID="marcelo.lopezjr" personName="Marcelo" personRole="Patient" toIsAttached="//@isAttached.1"/>
   <person personID="jmrodriguez24" personName="Jean" personRole="Doctor" toIsAttached="//@isAttached.2"/>
-  <person personID="denis" personName="Denis" personRole="Patient" toIsAttached="//@isAttached.3"/>
+  <person personID="danto005" personName="Denis" personRole="Patient" toIsAttached="//@isAttached.3"/>
   <isAttached toDevice="//@device.0" fromPerson="jmrodriguez24"/>
-  <isAttached toDevice="//@device.1" fromPerson="marcelo"/>
+  <isAttached toDevice="//@device.1" fromPerson="marcelo.lopezjr"/>
   <isAttached toDevice="//@device.2" fromPerson="jmrodriguez24"/>
-  <isAttached toDevice="//@device.3" fromPerson="denis"/>
+  <isAttached toDevice="//@device.3" fromPerson="danto005"/>
   <device toConnection="//@connection.0" fromIsAttached="//@isAttached.0" deviceID="device1" isLocal="true">
     <deviceCapability>Text</deviceCapability>
     <deviceCapability>LiveAudio</deviceCapability>
@@ -24,7 +24,7 @@
     <deviceCapability>LiveAudio</deviceCapability>
     <deviceCapability>LiveVideo</deviceCapability>
   </device>
-  <device toConnection="//@connection.1" fromIsAttached="//@isAttached.2" deviceID="device3">
+  <device toConnection="//@connection.1" fromIsAttached="//@isAttached.2" deviceID="device3" isLocal="true">
     <deviceCapability>Text</deviceCapability>
     <deviceCapability>LiveAudio</deviceCapability>
     <deviceCapability>LiveVideo</deviceCapability>

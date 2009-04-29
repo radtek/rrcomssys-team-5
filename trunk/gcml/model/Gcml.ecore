@@ -115,8 +115,7 @@
         eType="#//Connection" eOpposite="#//Connection/ConnectionToCall" eKeys="#//Connection/connectionID"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="CallToDecision" eType="#//Decision"
         eOpposite="#//Decision/DecisionToCall"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="CallToBoundary" upperBound="2"
-        eType="#//Boundary" eOpposite="#//Boundary/BoundaryToCall"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CallToBoundary" eType="#//Boundary"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Decision" eSuperTypes="#//Activity">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="sourceActivityID" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
@@ -129,11 +128,11 @@
   <eClassifiers xsi:type="ecore:EClass" name="Boundary" eSuperTypes="#//Activity">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Type" lowerBound="1" eType="#//BoundaryType"
         defaultValueLiteral=""/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="BoundaryToCall" eType="#//Call"
-        eOpposite="#//Call/CallToBoundary"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="BoundaryToCall" eType="#//Call"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="BoundaryType">
-    <eLiterals name="Start"/>
-    <eLiterals name="End" value="1"/>
+    <eLiterals name="null" literal="null"/>
+    <eLiterals name="Start" value="1"/>
+    <eLiterals name="End" value="2"/>
   </eClassifiers>
 </ecore:EPackage>
