@@ -237,33 +237,11 @@ public class CallImpl extends ActivityImpl implements Call {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetCallToBoundary(Boundary newCallToBoundary, NotificationChain msgs) {
+	public void setCallToBoundary(Boundary newCallToBoundary) {
 		Boundary oldCallToBoundary = callToBoundary;
 		callToBoundary = newCallToBoundary;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GcmlPackage.CALL__CALL_TO_BOUNDARY, oldCallToBoundary, newCallToBoundary);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCallToBoundary(Boundary newCallToBoundary) {
-		if (newCallToBoundary != callToBoundary) {
-			NotificationChain msgs = null;
-			if (callToBoundary != null)
-				msgs = ((InternalEObject)callToBoundary).eInverseRemove(this, GcmlPackage.BOUNDARY__BOUNDARY_TO_CALL, Boundary.class, msgs);
-			if (newCallToBoundary != null)
-				msgs = ((InternalEObject)newCallToBoundary).eInverseAdd(this, GcmlPackage.BOUNDARY__BOUNDARY_TO_CALL, Boundary.class, msgs);
-			msgs = basicSetCallToBoundary(newCallToBoundary, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GcmlPackage.CALL__CALL_TO_BOUNDARY, newCallToBoundary, newCallToBoundary));
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GcmlPackage.CALL__CALL_TO_BOUNDARY, oldCallToBoundary, callToBoundary));
 	}
 
 	/**
@@ -281,10 +259,6 @@ public class CallImpl extends ActivityImpl implements Call {
 				if (callToDecision != null)
 					msgs = ((InternalEObject)callToDecision).eInverseRemove(this, GcmlPackage.DECISION__DECISION_TO_CALL, Decision.class, msgs);
 				return basicSetCallToDecision((Decision)otherEnd, msgs);
-			case GcmlPackage.CALL__CALL_TO_BOUNDARY:
-				if (callToBoundary != null)
-					msgs = ((InternalEObject)callToBoundary).eInverseRemove(this, GcmlPackage.BOUNDARY__BOUNDARY_TO_CALL, Boundary.class, msgs);
-				return basicSetCallToBoundary((Boundary)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -301,8 +275,6 @@ public class CallImpl extends ActivityImpl implements Call {
 				return ((InternalEList<?>)getCallToConnection()).basicRemove(otherEnd, msgs);
 			case GcmlPackage.CALL__CALL_TO_DECISION:
 				return basicSetCallToDecision(null, msgs);
-			case GcmlPackage.CALL__CALL_TO_BOUNDARY:
-				return basicSetCallToBoundary(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
