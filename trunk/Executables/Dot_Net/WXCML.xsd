@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid XML Studio 1.0.8.0 (http://www.liquid-technologies.com) -->
+<xsd:schema xmlns:wxc="http://workflowxcml.model" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://workflowxcml.model" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:simpleType name="Action">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="send" />
+      <xsd:enumeration value="doNotSend" />
+      <xsd:enumeration value="start" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Capability">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="TextFile" />
+      <xsd:enumeration value="BinaryFile" />
+      <xsd:enumeration value="StreamFile" />
+      <xsd:enumeration value="NonStreamFile" />
+      <xsd:enumeration value="AudioFile" />
+      <xsd:enumeration value="VideoFile" />
+      <xsd:enumeration value="AVFile" />
+      <xsd:enumeration value="Text" />
+      <xsd:enumeration value="LiveStream" />
+      <xsd:enumeration value="LiveAudio" />
+      <xsd:enumeration value="LiveVideo" />
+      <xsd:enumeration value="LiveAV" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="Connection">
+    <xsd:attribute name="bandwidth" type="xsd:string" />
+    <xsd:attribute name="fromDevice" use="required">
+      <xsd:simpleType>
+        <xsd:list itemType="xsd:string" />
+      </xsd:simpleType>
+    </xsd:attribute>
+    <xsd:attribute name="ConnectionID" type="xsd:string" />
+  </xsd:complexType>
+  <xsd:complexType name="Device">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" default="TextFile" name="deviceCapability" type="wxc:Capability" />
+    </xsd:sequence>
+    <xsd:attribute name="isLocal" type="xsd:boolean" />
+    <xsd:attribute name="isVirtual" type="xsd:boolean" />
+    <xsd:attribute name="toConnection" use="required">
+      <xsd:simpleType>
+        <xsd:list itemType="xsd:anyURI" />
+      </xsd:simpleType>
+    </xsd:attribute>
+    <xsd:attribute name="fromIsAttached" type="xsd:anyURI" use="required" />
+    <xsd:attribute name="DeviceID" type="xsd:string" />
+  </xsd:complexType>
+  <xsd:simpleType name="actionType">
+    <xsd:annotation>
+      <xsd:documentation>Imported Types from XCML 1.1
+     	***************************
+		actionType simpleType definition
+		***************************
+	 </xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="send" />
+      <xsd:enumeration value="doNotSend" />
+      <xsd:enumeration value="start" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="formType">
+    <xsd:annotation>
+      <xsd:documentation>
+     	***************************
+		formType compelxType definition
+		***************************
+	 </xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="form" type="wxc:formType" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="medium" type="wxc:mediumType" />
+    </xsd:sequence>
+    <xsd:attribute name="formDataType" type="xsd:string">
+      <xsd:annotation>
+        <xsd:documentation>
+					If formDataType is specified, it must refer to a
+					defined formTypeType. In this case the properties
+					are a union of the properties of this form instance
+					and the formType, where in case of conflicts (e.g.,
+					different voice commands) the form instance
+					properties receive precedence. If the form instance
+					and the formType do not have the exact same nesting
+					structure (not just isomorphic) then a parsing error
+					is created at validation.
+					
+					If formDataType is omitted then this is a user-defined
+					form with no predefined type.
+				</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="formID" type="xsd:string" use="required">
+      <xsd:annotation>
+        <xsd:documentation>
+					Every time a form is sent it must have a unique ID.
+				</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="suggestedApplication" type="xsd:string" />
+    <xsd:attribute name="voiceCommand" type="xsd:string" />
+    <xsd:attribute name="action" type="wxc:actionType" />
+    <xsd:attribute name="layoutSpecification" type="xsd:string">
+      <xsd:annotation>
+        <xsd:documentation>
+					The value of layoutSpecification attribute is the
+					URL of the xhtml layout file. The reason this file
+					is not inlined here is that it would complicate the
+					parsing as we would have to include the XML Schema
+					of xhtml inside our X-CML XML Schema. The mapping
+					between media of the formType and their location in
+					the layoutSpecification xhtml file is as follows:
+
+					(a) For images, videos and whatever else is
+					represented as a URL in the xhtml file, we use a CVM
+					URL in the layoutSpecification file instead of a
+					regulr URL. The CVM URL is denoted as
+					â€œCMLFORM/mediumNameâ€ is mapped to the medium of this
+					form with this mediumName. For example,
+					CMLFORM/imageMediumName1 would map to the
+					imageMediumName1 medium. Note that no duplicate
+					mediumNames are allowed within a Form.
+
+					(b) For text or other data that have to be inlined
+					in the xhtml, we use the following comment to denote
+					their position in the layoutSpecification file:
+					
+					(e.g.,
+					). Then the receiver CVM will replace this comment
+					by a link to this medium if the medium is inside a
+					form that has action=â€doNotSendâ€, or inline its
+					content in the layoutSpecification file otherwise.
+				
+CMLINCLUDE src=&amp;quot;CMLFORM/mediumName&amp;quot;CMLINCLUDE src=&amp;quot;CMLFORM/textMediumFile1&amp;quot;</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+  </xsd:complexType>
+  <xsd:complexType name="mediumType">
+    <xsd:attribute name="mediumDataType" type="xsd:string" />
+    <xsd:attribute name="mediumName" type="xsd:string" />
+    <xsd:attribute name="mediumURL" type="xsd:string" />
+    <xsd:attribute name="mediumSize" type="xsd:string" />
+    <xsd:attribute name="lastModifTime" type="xsd:time" />
+    <xsd:attribute name="validityPeriod" type="xsd:integer" />
+    <xsd:attribute name="firstTransferTime" type="xsd:time" />
+    <xsd:attribute name="voiceCommand" type="xsd:string" />
+  </xsd:complexType>
+  <xsd:complexType name="Form">
+    <xsd:annotation>
+      <xsd:documentation>End Imported Types from XCML 1.1</xsd:documentation>
+    </xsd:annotation>
+    <xsd:attribute name="formDataType" type="xsd:string" use="required" />
+    <xsd:attribute name="action" type="wxc:Action" />
+    <xsd:attribute name="formName" type="xsd:string" use="required" />
+    <xsd:attribute name="suggestedApplication" type="xsd:string" />
+    <xsd:attribute name="voiceCommand" type="xsd:string" />
+    <xsd:attribute name="toConnection" type="xsd:string" />
+    <xsd:attribute name="toParentForm" type="xsd:string" />
+  </xsd:complexType>
+  <xsd:complexType name="IsAttached">
+    <xsd:attribute name="toDevice" type="xsd:string" use="required" />
+    <xsd:attribute name="fromPerson" type="xsd:string" use="required" />
+  </xsd:complexType>
+  <xsd:complexType name="Medium">
+    <xsd:attribute name="mediumDataType" type="wxc:Capability" use="required" />
+    <xsd:attribute name="mediumName" type="xsd:string" />
+    <xsd:attribute name="suggestedApplication" type="xsd:string" />
+    <xsd:attribute name="voiceCommand" type="xsd:string" />
+    <xsd:attribute name="toConnection" type="xsd:string" />
+    <xsd:attribute name="toForm" type="xsd:string" />
+  </xsd:complexType>
+  <xsd:complexType name="Person">
+    <xsd:attribute name="personID" type="xsd:string" use="required" />
+    <xsd:attribute name="personName" type="xsd:string" use="required" />
+    <xsd:attribute name="personRole" type="xsd:string" use="required" />
+    <xsd:attribute name="toIsAttached" type="xsd:string" use="required" />
+  </xsd:complexType>
+  <xsd:simpleType name="BoundaryType">
+    <xsd:restriction base="xsd:NCName">
+      <xsd:enumeration value="Start" />
+      <xsd:enumeration value="End" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="Activity" abstract="true">
+    <xsd:attribute name="activityID" type="xsd:string" />
+  </xsd:complexType>
+  <xsd:complexType name="Call">
+    <xsd:complexContent mixed="false">
+      <xsd:extension base="wxc:Activity">
+        <xsd:choice minOccurs="0" maxOccurs="unbounded">
+          <xsd:element name="CallToConnection" type="wxc:Connection" />
+          <xsd:element name="CallToDecision" type="wxc:Decision" />
+          <xsd:element name="CallToBoundary" type="wxc:Boundary" />
+        </xsd:choice>
+        <xsd:attribute name="Outcome" type="xsd:boolean" />
+        <xsd:attribute name="CallToConnection" type="xsd:string" />
+        <xsd:attribute name="CallToDecision" type="xsd:string" />
+        <xsd:attribute name="CallToBoundary" type="xsd:string" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="Decision">
+    <xsd:complexContent mixed="false">
+      <xsd:extension base="wxc:Activity">
+        <xsd:choice minOccurs="0" maxOccurs="unbounded">
+          <xsd:element name="DecisionToCall" type="wxc:Call" />
+          <xsd:element name="DecisionToBoundary" type="wxc:Boundary" />
+        </xsd:choice>
+        <xsd:attribute name="sourceActivityID" type="xsd:string" />
+        <xsd:attribute name="successPathID" type="xsd:string" />
+        <xsd:attribute name="failPathID" type="xsd:string" />
+        <xsd:attribute name="DecisionToCall" type="xsd:string" />
+        <xsd:attribute name="DecisionToBoundary" type="xsd:string" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="Boundary">
+    <xsd:complexContent mixed="false">
+      <xsd:extension base="wxc:Activity">
+        <xsd:attribute name="Name" type="xsd:string" />
+        <xsd:attribute name="Type" type="wxc:BoundaryType" />
+        <xsd:attribute name="ToActivity" type="xsd:string" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="Workflow">
+    <xsd:sequence>
+      <xsd:element name="Activities">
+        <xsd:complexType>
+          <xsd:sequence minOccurs="2" maxOccurs="unbounded">
+            <xsd:element name="activityItem" type="wxc:Activity" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element minOccurs="2" maxOccurs="unbounded" name="Boundary" type="wxc:Boundary" />
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="Call" type="wxc:Call" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="Decision" type="wxc:Decision" />
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="Connection" type="wxc:Connection" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="Form" type="wxc:Form" />
+      <xsd:element minOccurs="2" maxOccurs="unbounded" name="Device" type="wxc:Device" />
+      <xsd:element minOccurs="2" maxOccurs="unbounded" name="Person" type="wxc:Person" />
+      <xsd:element minOccurs="2" maxOccurs="unbounded" name="IsAttached" type="wxc:IsAttached" />
+      <xsd:element minOccurs="2" maxOccurs="unbounded" name="Medium" type="wxc:Medium" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="Workflow" type="wxc:Workflow">
+    <xsd:annotation>
+      <xsd:documentation>This the root element in a XCML Workflow model</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="Boundary" type="wxc:Boundary" />
+  <xsd:element name="Call" type="wxc:Call" />
+  <xsd:element name="Decision" type="wxc:Decision" />
+  <xsd:element name="Connection" type="wxc:Connection" />
+  <xsd:element name="Form" type="wxc:Form" />
+  <xsd:element name="Device" type="wxc:Device" />
+  <xsd:element name="Person" type="wxc:Person" />
+  <xsd:element name="IsAttached" type="wxc:IsAttached" />
+  <xsd:element name="Medium" type="wxc:Medium" />
+</xsd:schema>
