@@ -1,0 +1,7 @@
+what,kind,bundleId,bundleVersion,description,time
+stopped,bundle,org.eclipse.m2m.qvt.oml.ui,1.0.1.v20080917-1645,org.eclipse.m2m.qvt.oml.ui,1240841629938
+stopped,bundle,org.eclipse.pde.api.tools.ui,1.0.0.v20080730_r341,org.eclipse.pde.api.tools.ui,1240841630016
+stopped,bundle,org.eclipse.pde.p2.ui,1.0.0.v20080604-2000,org.eclipse.pde.p2.ui,1240841630048
+stopped,bundle,org.eclipse.pde.runtime,3.4.0.v20080723-1000,org.eclipse.pde.runtime,1240841630079
+stopped,bundle,org.eclipse.pde.ui.templates,3.4.0.v20080514-1500,org.eclipse.pde.ui.templates,1240841630173
+stopped,bundle,org.eclipse.pde.ui,3.4.0.v20080803-1700,org.eclipse.pde.ui,1240841630235

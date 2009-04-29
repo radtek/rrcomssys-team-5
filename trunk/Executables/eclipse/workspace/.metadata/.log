@@ -1,0 +1,427 @@
+!SESSION 2009-04-23 16:27:56.092 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_13
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 4 0 2009-04-23 16:28:44.952
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.jface.resource.URLImageDescriptor.getFilePath(URLImageDescriptor.java:138)
+	at org.eclipse.jface.resource.URLImageDescriptor.createImage(URLImageDescriptor.java:157)
+	at org.eclipse.jface.resource.ImageDescriptor.createResource(ImageDescriptor.java:165)
+	at org.eclipse.jface.resource.DeviceResourceManager.allocate(DeviceResourceManager.java:56)
+	at org.eclipse.jface.resource.AbstractResourceManager.create(AbstractResourceManager.java:88)
+	at org.eclipse.jface.resource.LocalResourceManager.allocate(LocalResourceManager.java:82)
+	at org.eclipse.jface.resource.AbstractResourceManager.create(AbstractResourceManager.java:88)
+	at org.eclipse.jface.resource.ResourceManager.createImageWithDefault(ResourceManager.java:192)
+	at org.eclipse.jface.action.ActionContributionItem.updateImages(ActionContributionItem.java:1043)
+	at org.eclipse.jface.action.ActionContributionItem.update(ActionContributionItem.java:782)
+	at org.eclipse.jface.action.ActionContributionItem.fill(ActionContributionItem.java:341)
+	at org.eclipse.jface.action.ToolBarManager.update(ToolBarManager.java:349)
+	at org.eclipse.jface.action.ToolBarManager.createControl(ToolBarManager.java:111)
+	at org.eclipse.jface.action.ToolBarContributionItem.fill(ToolBarContributionItem.java:192)
+	at org.eclipse.jface.action.CoolBarManager.update(CoolBarManager.java:919)
+	at org.eclipse.jface.action.CoolBarManager.createControl(CoolBarManager.java:244)
+	at org.eclipse.jface.internal.provisional.action.CoolBarManager2.createControl2(CoolBarManager2.java:76)
+	at org.eclipse.jface.window.ApplicationWindow.createCoolBarControl(ApplicationWindow.java:522)
+	at org.eclipse.ui.internal.WorkbenchWindow.createDefaultContents(WorkbenchWindow.java:1051)
+	at org.eclipse.ui.internal.WorkbenchWindowConfigurer.createDefaultContents(WorkbenchWindowConfigurer.java:625)
+	at org.eclipse.ui.application.WorkbenchWindowAdvisor.createWindowContents(WorkbenchWindowAdvisor.java:268)
+	at org.eclipse.ui.internal.WorkbenchWindow.createContents(WorkbenchWindow.java:998)
+	at org.eclipse.jface.window.Window.create(Window.java:431)
+	at org.eclipse.ui.internal.Workbench$20.runWithException(Workbench.java:1014)
+	at org.eclipse.ui.internal.StartupThreading$StartupRunnable.run(StartupThreading.java:31)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:133)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3800)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3425)
+	at org.eclipse.ui.application.WorkbenchAdvisor.openWindows(WorkbenchAdvisor.java:803)
+	at org.eclipse.ui.internal.Workbench$27.runWithException(Workbench.java:1361)
+	at org.eclipse.ui.internal.StartupThreading$StartupRunnable.run(StartupThreading.java:31)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:178)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:150)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4251)
+	at org.eclipse.ui.internal.StartupThreading.runWithoutExceptions(StartupThreading.java:94)
+	at org.eclipse.ui.internal.Workbench.init(Workbench.java:1356)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2312)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2198)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:493)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:288)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:488)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at gcml.diagram.application.GcmlApplication.run(GcmlApplication.java:18)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.internal.app.EclipseAppContainer.callMethodWithException(EclipseAppContainer.java:574)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:195)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:386)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:549)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:504)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1236)
+!SESSION 2009-04-23 16:28:25.999 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_13
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.jface 2 0 2009-04-23 16:28:49.624
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2009-04-23 16:28:49.624
+!MESSAGE A conflict occurred for CTRL+U:
+Binding(CTRL+U,
+	ParameterizedCommand(Command(gcml.diagram.OpenURICommand,Open URI...,
+		Open file by URI,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+U,
+	ParameterizedCommand(Command(org.eclipse.jdt.debug.ui.commands.Execute,Execute,
+		Evaluate selected text,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.equinox.p2.ui.sdk 2 0 2009-04-23 16:28:50.077
+!MESSAGE Could not locate the running profile instance. The eclipse.p2.data.area and eclipse.p2.profile properties may not be set correctly in this application's config.ini file.
+!SESSION 2009-04-23 18:32:24.265 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_13
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.jface 2 0 2009-04-23 18:32:34.343
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2009-04-23 18:32:34.343
+!MESSAGE A conflict occurred for CTRL+U:
+Binding(CTRL+U,
+	ParameterizedCommand(Command(gcml.diagram.OpenURICommand,Open URI...,
+		Open file by URI,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+U,
+	ParameterizedCommand(Command(org.eclipse.jdt.debug.ui.commands.Execute,Execute,
+		Evaluate selected text,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.equinox.p2.ui.sdk 2 0 2009-04-23 18:32:35.031
+!MESSAGE Could not locate the running profile instance. The eclipse.p2.data.area and eclipse.p2.profile properties may not be set correctly in this application's config.ini file.
+!SESSION 2009-04-24 11:43:18.514 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_13
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.jface 2 0 2009-04-24 11:43:39.873
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2009-04-24 11:43:39.873
+!MESSAGE A conflict occurred for CTRL+U:
+Binding(CTRL+U,
+	ParameterizedCommand(Command(gcml.diagram.OpenURICommand,Open URI...,
+		Open file by URI,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+U,
+	ParameterizedCommand(Command(org.eclipse.jdt.debug.ui.commands.Execute,Execute,
+		Evaluate selected text,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.equinox.p2.ui.sdk 2 0 2009-04-24 11:43:40.904
+!MESSAGE Could not locate the running profile instance. The eclipse.p2.data.area and eclipse.p2.profile properties may not be set correctly in this application's config.ini file.
+!SESSION 2009-04-27 10:10:23.441 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_13
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.jface 2 0 2009-04-27 10:11:00.878
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2009-04-27 10:11:00.878
+!MESSAGE A conflict occurred for CTRL+U:
+Binding(CTRL+U,
+	ParameterizedCommand(Command(gcml.diagram.OpenURICommand,Open URI...,
+		Open file by URI,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+U,
+	ParameterizedCommand(Command(org.eclipse.jdt.debug.ui.commands.Execute,Execute,
+		Evaluate selected text,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SESSION 2009-04-27 10:10:03.738 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_13
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.jface 2 0 2009-04-27 10:11:00.878
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2009-04-27 10:11:00.878
+!MESSAGE A conflict occurred for CTRL+U:
+Binding(CTRL+U,
+	ParameterizedCommand(Command(gcml.diagram.OpenURICommand,Open URI...,
+		Open file by URI,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+U,
+	ParameterizedCommand(Command(org.eclipse.jdt.debug.ui.commands.Execute,Execute,
+		Evaluate selected text,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.gmf.runtime.common.ui.action 2 6 2009-04-27 10:11:01.628
+!MESSAGE cannot open system clipboard
+!STACK 0
+java.lang.IllegalStateException: cannot open system clipboard
+	at sun.awt.windows.WClipboard.openClipboard(Native Method)
+	at sun.awt.datatransfer.ClipboardTransferable.<init>(Unknown Source)
+	at sun.awt.datatransfer.SunClipboard.getContents(Unknown Source)
+	at org.eclipse.gmf.runtime.diagram.ui.render.clipboard.AWTClipboardHelper.hasCustomData(AWTClipboardHelper.java:82)
+	at org.eclipse.gmf.runtime.diagram.ui.render.internal.providers.ImageSupportGlobalActionHandler.canPaste(ImageSupportGlobalActionHandler.java:89)
+	at org.eclipse.gmf.runtime.diagram.ui.render.internal.providers.ImageSupportGlobalActionHandler.canHandle(ImageSupportGlobalActionHandler.java:73)
+	at org.eclipse.gmf.runtime.common.ui.action.global.GlobalAction.refresh(GlobalAction.java:161)
+	at org.eclipse.gmf.runtime.common.ui.action.AbstractActionHandler$2.partActivated(AbstractActionHandler.java:158)
+	at org.eclipse.ui.internal.PartListenerList$1.run(PartListenerList.java:72)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:37)
+	at org.eclipse.core.runtime.Platform.run(Platform.java:880)
+	at org.eclipse.ui.internal.PartListenerList.fireEvent(PartListenerList.java:57)
+	at org.eclipse.ui.internal.PartListenerList.firePartActivated(PartListenerList.java:70)
+	at org.eclipse.ui.internal.PartService.firePartActivated(PartService.java:186)
+	at org.eclipse.ui.internal.PartService.access$0(PartService.java:176)
+	at org.eclipse.ui.internal.PartService$PartActivated.fire(PartService.java:99)
+	at org.eclipse.ui.internal.PartService.processPartJobs(PartService.java:160)
+	at org.eclipse.ui.internal.PartService$PartListener.handleEvent(PartService.java:87)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1003)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1027)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1008)
+	at org.eclipse.swt.widgets.Control.WM_SIZE(Control.java:4435)
+	at org.eclipse.swt.widgets.Scrollable.WM_SIZE(Scrollable.java:359)
+	at org.eclipse.swt.widgets.Composite.WM_SIZE(Composite.java:1522)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:3860)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4528)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProcW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(OS.java:2366)
+	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:79)
+	at org.eclipse.swt.widgets.Control.WM_WINDOWPOSCHANGED(Control.java:4592)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:3870)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4541)
+	at org.eclipse.swt.internal.win32.OS.EndDeferWindowPos(Native Method)
+	at org.eclipse.swt.widgets.Composite.resizeChildren(Composite.java:822)
+	at org.eclipse.swt.widgets.Composite.resizeChildren(Composite.java:788)
+	at org.eclipse.swt.widgets.Composite.setResizeChildren(Composite.java:1012)
+	at org.eclipse.swt.widgets.Composite.WM_SIZE(Composite.java:1537)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:3860)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4528)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProcW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(OS.java:2366)
+	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:79)
+	at org.eclipse.swt.widgets.Control.WM_WINDOWPOSCHANGED(Control.java:4592)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:3870)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4541)
+	at org.eclipse.swt.internal.win32.OS.EndDeferWindowPos(Native Method)
+	at org.eclipse.swt.widgets.Composite.resizeChildren(Composite.java:822)
+	at org.eclipse.swt.widgets.Composite.resizeChildren(Composite.java:788)
+	at org.eclipse.swt.widgets.Composite.setResizeChildren(Composite.java:1012)
+	at org.eclipse.swt.widgets.ToolBar.setBounds(ToolBar.java:793)
+	at org.eclipse.swt.widgets.Control.setBounds(Control.java:2584)
+	at org.eclipse.swt.widgets.Control.setBounds(Control.java:2651)
+	at org.eclipse.ui.internal.presentations.PaneFolder.layout(PaneFolder.java:534)
+	at org.eclipse.ui.internal.presentations.defaultpresentation.DefaultTabFolder.layout(DefaultTabFolder.java:382)
+	at org.eclipse.ui.internal.presentations.util.PresentablePartFolder.layout(PresentablePartFolder.java:408)
+	at org.eclipse.ui.internal.presentations.util.PresentablePartFolder.setBounds(PresentablePartFolder.java:260)
+	at org.eclipse.ui.internal.presentations.util.TabbedStackPresentation.setBounds(TabbedStackPresentation.java:231)
+	at org.eclipse.ui.internal.PartStack.setBounds(PartStack.java:1198)
+	at org.eclipse.ui.internal.LayoutTree.doSetBounds(LayoutTree.java:547)
+	at org.eclipse.ui.internal.LayoutTree.setBounds(LayoutTree.java:538)
+	at org.eclipse.ui.internal.LayoutTreeNode.doSetBounds(LayoutTreeNode.java:537)
+	at org.eclipse.ui.internal.LayoutTree.setBounds(LayoutTree.java:538)
+	at org.eclipse.ui.internal.LayoutTreeNode.doSetBounds(LayoutTreeNode.java:536)
+	at org.eclipse.ui.internal.LayoutTree.setBounds(LayoutTree.java:538)
+	at org.eclipse.ui.internal.LayoutTreeNode.doSetBounds(LayoutTreeNode.java:505)
+	at org.eclipse.ui.internal.LayoutTree.setBounds(LayoutTree.java:538)
+	at org.eclipse.ui.internal.PartSashContainer.resizeSashes(PartSashContainer.java:811)
+	at org.eclipse.ui.internal.PartSashContainer.access$1(PartSashContainer.java:801)
+	at org.eclipse.ui.internal.PartSashContainer$1.controlResized(PartSashContainer.java:171)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:222)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1003)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1027)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1008)
+	at org.eclipse.swt.widgets.Control.WM_SIZE(Control.java:4435)
+	at org.eclipse.swt.widgets.Scrollable.WM_SIZE(Scrollable.java:359)
+	at org.eclipse.swt.widgets.Composite.WM_SIZE(Composite.java:1522)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:3860)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4528)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProcW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(OS.java:2366)
+	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:79)
+	at org.eclipse.swt.widgets.Control.WM_WINDOWPOSCHANGED(Control.java:4592)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:3870)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4541)
+	at org.eclipse.swt.internal.win32.OS.SetWindowPos(Native Method)
+	at org.eclipse.swt.widgets.Widget.SetWindowPos(Widget.java:1302)
+	at org.eclipse.swt.widgets.Control.setBounds(Control.java:2627)
+	at org.eclipse.swt.widgets.Composite.setBounds(Composite.java:892)
+	at org.eclipse.swt.widgets.Control.setBounds(Control.java:2588)
+	at org.eclipse.swt.widgets.Control.setBounds(Control.java:2584)
+	at org.eclipse.swt.widgets.Control.setBounds(Control.java:2651)
+	at org.eclipse.swt.custom.StackLayout.layout(StackLayout.java:120)
+	at org.eclipse.swt.widgets.Composite.updateLayout(Composite.java:1144)
+	at org.eclipse.swt.widgets.Composite.WM_SIZE(Composite.java:1533)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:3860)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4528)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProcW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(OS.java:2366)
+	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:79)
+	at org.eclipse.swt.widgets.Control.WM_WINDOWPOSCHANGED(Control.java:4592)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:3870)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4541)
+	at org.eclipse.swt.internal.win32.OS.EndDeferWindowPos(Native Method)
+	at org.eclipse.swt.widgets.Composite.resizeChildren(Composite.java:822)
+	at org.eclipse.swt.widgets.Composite.resizeChildren(Composite.java:788)
+	at org.eclipse.swt.widgets.Composite.setResizeChildren(Composite.java:1012)
+	at org.eclipse.swt.widgets.Composite.WM_SIZE(Composite.java:1537)
+	at org.eclipse.swt.widgets.Canvas.WM_SIZE(Canvas.java:449)
+	at org.eclipse.swt.widgets.Decorations.WM_SIZE(Decorations.java:1755)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:3860)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:337)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1576)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:1937)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4541)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProcW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(OS.java:2366)
+	at org.eclipse.swt.widgets.Shell.callWindowProc(Shell.java:477)
+	at org.eclipse.swt.widgets.Control.WM_WINDOWPOSCHANGED(Control.java:4592)
+	at org.eclipse.swt.widgets.Canvas.WM_WINDOWPOSCHANGED(Canvas.java:455)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:3870)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:337)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1576)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:1937)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4541)
+	at org.eclipse.swt.internal.win32.OS.ShowWindow(Native Method)
+	at org.eclipse.swt.widgets.Decorations.setVisible(Decorations.java:1361)
+	at org.eclipse.swt.widgets.Shell.setVisible(Shell.java:1764)
+	at org.eclipse.swt.widgets.Shell.open(Shell.java:1150)
+	at org.eclipse.jface.window.Window.open(Window.java:797)
+	at org.eclipse.ui.internal.WorkbenchWindow.open(WorkbenchWindow.java:778)
+	at org.eclipse.ui.internal.Workbench$61.runWithException(Workbench.java:3394)
+	at org.eclipse.ui.internal.StartupThreading$StartupRunnable.run(StartupThreading.java:31)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:133)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3800)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3425)
+	at org.eclipse.ui.application.WorkbenchAdvisor.openWindows(WorkbenchAdvisor.java:803)
+	at org.eclipse.ui.internal.Workbench$27.runWithException(Workbench.java:1361)
+	at org.eclipse.ui.internal.StartupThreading$StartupRunnable.run(StartupThreading.java:31)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:178)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:150)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4251)
+	at org.eclipse.ui.internal.StartupThreading.runWithoutExceptions(StartupThreading.java:94)
+	at org.eclipse.ui.internal.Workbench.init(Workbench.java:1356)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2312)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2198)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:493)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:288)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:488)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at gcml.diagram.application.GcmlApplication.run(GcmlApplication.java:18)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.internal.app.EclipseAppContainer.callMethodWithException(EclipseAppContainer.java:574)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:195)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:386)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:549)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:504)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1236)
+
+!ENTRY org.eclipse.equinox.p2.ui.sdk 2 0 2009-04-27 10:11:03.159
+!MESSAGE Could not locate the running profile instance. The eclipse.p2.data.area and eclipse.p2.profile properties may not be set correctly in this application's config.ini file.
+
+!ENTRY org.eclipse.equinox.p2.ui.sdk 2 0 2009-04-27 10:11:03.159
+!MESSAGE Could not locate the running profile instance. The eclipse.p2.data.area and eclipse.p2.profile properties may not be set correctly in this application's config.ini file.
+!SESSION 2009-04-27 10:11:02.065 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_13
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.jface 2 0 2009-04-27 10:11:12.597
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2009-04-27 10:11:12.597
+!MESSAGE A conflict occurred for CTRL+U:
+Binding(CTRL+U,
+	ParameterizedCommand(Command(gcml.diagram.OpenURICommand,Open URI...,
+		Open file by URI,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+U,
+	ParameterizedCommand(Command(org.eclipse.jdt.debug.ui.commands.Execute,Execute,
+		Evaluate selected text,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.equinox.p2.ui.sdk 2 0 2009-04-27 10:11:13.159
+!MESSAGE Could not locate the running profile instance. The eclipse.p2.data.area and eclipse.p2.profile properties may not be set correctly in this application's config.ini file.
